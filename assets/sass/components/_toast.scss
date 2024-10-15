@@ -1,0 +1,157 @@
+$toast-shadow: 0 3px 7px 0 rgb(0 0 0 / 25%);
+$toast-shadow-hover: 0 3px 9px 0 rgb(0 0 0 / 35%);
+
+.toasts {
+  pointer-events: none;
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  overflow: hidden;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 16px;
+
+  &-item {
+    pointer-events: auto;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-shrink: 0;
+    gap: 0.5em;
+    align-items: center;
+    width: auto;
+    min-width: 20rem;
+    max-width: 30rem;
+    padding: 0.75em 1em;
+    color: $white;
+    opacity: 0.9;
+    background: $theme;
+    border-radius: 0.25em;
+    box-shadow: $toast-shadow;
+    transition: $default-transition;
+    animation-name: toast-appear;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+
+    &:hover {
+      opacity: 1;
+      box-shadow: $toast-shadow-hover;
+    }
+
+    &.disappear {
+      animation-name: toast-disappear;
+    }
+
+    @each $color-name, $color-value in $colors {
+      &.#{$color-name} {
+        background: $color-value;
+
+        .toasts-icon {
+          &::before,
+          &::after {
+            background: $color-value;
+          }
+        }
+      }
+    }
+
+    &.warning,
+    &.error {
+      .toasts-icon {
+        &::before,
+        &::after {
+          top: 50%;
+          left: 50%;
+          width: 0.2em;
+          height: 0.85em;
+        }
+
+        &::after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &::before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      }
+    }
+  }
+
+  &-icon {
+    position: relative;
+    flex-shrink: 0;
+    width: 1.5em;
+    height: 1.5em;
+    background: $white;
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      transform: rotate(-45deg);
+      display: block;
+      background: $theme;
+      border-radius: 0.15em;
+    }
+
+    &::before {
+      top: 0.4em;
+      left: 0.8em;
+      transform: rotate(45deg);
+      width: 0.2em;
+      height: 0.8em;
+    }
+
+    &::after {
+      top: 0.65em;
+      left: 0.45em;
+      transform: rotate(-45deg);
+      width: 0.2em;
+      height: 0.5em;
+    }
+  }
+
+  &-text {
+    overflow: hidden;
+    height: 100%;
+    text-overflow: ellipsis;
+  }
+}
+
+@keyframes toast-appear {
+  0% {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-disappear {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+}
+
+// Example: 
+// <div class="toasts">
+//   <div class="toasts-item success">
+//     <div class="toasts-icon"></div>
+//     <div class="toasts-text">Hllo chrisnte</div>
+//   </div>
+// </div>

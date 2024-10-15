@@ -1,0 +1,34 @@
+.page-sc-pagination {
+    @include breakpoint-down(md){
+        flex-direction: column;
+    }
+
+    .pagination-show-block {
+        .form-select {
+            width: 54px;
+            height: 28px !important;
+            padding: 0 8px !important;
+            border-radius: 4px !important;
+            background-position: right 0.2rem center !important;
+        }
+    }
+
+    .pagination-numbers-block {
+        .page-item {
+            .page-link {
+                border-radius: 8px !important;
+                border: 1px solid #e7e7e7;
+                background: #f6f6f6;
+                color: #5d5d5d !important;
+
+                &.active,
+                &:hover {
+                    border-radius: 8px;
+                    border: 1px solid #c0e0fd !important;
+                    background: #eff7ff !important;
+                    color: #2975e7 !important;
+                }
+            }
+        }
+    }
+}

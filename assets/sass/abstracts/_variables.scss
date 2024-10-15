@@ -1,0 +1,172 @@
+// FONT STACK
+$font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+  "Droid Sans", "Helvetica Neue", sans-serif;
+$font-family-default: $font-family-system;
+$font-family-karla: "Karla", sans-serif;
+
+// FONT SIZES
+$font-sizes: (
+  "2xs": 10px,
+  "xs": 12px,
+  "sm": 14px,
+  "base": 16px,
+  "lg": 18px,
+  "xl": 20px,
+  "2xl": 24px,
+  "3xl": 28px,
+  "4xl": 32px,
+  "5xl": 36px,
+  "6xl": 40px,
+  "7xl": 44px,
+  "8xl": 56px
+);
+
+// FONT WEIGHTS
+$font-weights: (
+  "thin": 100,
+  "extralight": 200,
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "extrabold": 800,
+  "black": 900
+);
+
+// MEDIA BREAK POINTS
+$breakpoints-up: (
+  "xs": "480px",
+  "sm": "576px",
+  "md": "768px",
+  "lg": "992px",
+  "xl": "1200px",
+  "xxl": "1400px",
+  "xxxl": "1536px"
+);
+
+$breakpoints-down: (
+  "xs": "479.98px",
+  "sm": "575.98px",
+  "md": "767.98px",
+  "lg": "991.98px",
+  "xl": "1199.98px",
+  "xxl": "1399.98px",
+  "xxxl": "1535.98px",
+);
+
+$body-bg: $white !default;
+$text-color: $gray !default;
+
+// BASE FONT
+$font-family-base: $font-family-karla;
+$font-color-base: $text-color;
+$font-size-base: map-get($font-sizes, "base");
+$font-weight-base: map-get($font-weights, "semibold");
+
+// LEADING & TRACKING
+$leading-base: 1.4; // recommeded 1.5
+$tracking-base: -0.03em;
+
+// Z-INDEX
+$z-low: 10;
+$z-mid: 100;
+$z-high: 1000;
+
+// TRANSITION
+$default-transition-timing: ease-in-out;
+$default-transition-duration: 300ms;
+$default-transition: all $default-transition-timing $default-transition-duration;
+
+/* #### TYPOGRAPHY VARIABLES #### */
+// PARAGRAPHS
+$paragraph-margin-bottom: 0;
+
+// HEADINGS
+$headings-margin-bottom: 0;
+$headings-font-family: $font-family-base;
+$headings-font-weight: map-get($font-weights, "bold");
+$headings-line-height: 1.2;
+$headings-color: $night;
+
+// FONT SIZES FOR H1 - H6
+$h1-font-size: 2 * $font-size-base !default;
+$h2-font-size: 1.5 * $font-size-base !default;
+$h3-font-size: 1.17 * $font-size-base !default;
+$h4-font-size: 1 * $font-size-base !default;
+$h5-font-size: 0.83 * $font-size-base !default;
+$h6-font-size: 0.67 * $font-size-base !default;
+
+// LINKS
+$link-color: $gray;
+$link-visited-color: $gray;
+$link-decoration: none;
+$link-hover-color: darken($link-color, 10%);
+$link-active-color: darken($link-color, 10%);
+$line-hover-decoration: underline;
+
+// Z-INDEX
+$z-index-dropdown: 1000 !default; /* Z-Index For Dropdown Menus */
+$z-index-fixed-topbar: 1010 !default; /* Z-Index For Fixed Top Bar */
+$z-index-tooltip: 1020 !default; /* Z-Index For Hover Tooltips */
+$z-index-alert: 1030 !default; /* Z-Index For Alert Messages */
+$z-index-modal: 1100 !default; /* Z-Index For Modal Popups */
+
+// TRANSITION EASE
+$ease: (
+  in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53),
+  in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19),
+  in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22),
+  in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06),
+  in-sine: cubic-bezier(0.47, 0, 0.745, 0.715),
+  in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035),
+  in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335),
+  in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045),
+  out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1),
+  out-quart: cubic-bezier(0.165, 0.84, 0.44, 1),
+  out-quint: cubic-bezier(0.23, 1, 0.32, 1),
+  out-sine: cubic-bezier(0.39, 0.575, 0.565, 1),
+  out-expo: cubic-bezier(0.19, 1, 0.22, 1),
+  out-circ: cubic-bezier(0.075, 0.82, 0.165, 1),
+  out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955),
+  in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1),
+  in-out-quart: cubic-bezier(0.77, 0, 0.175, 1),
+  in-out-quint: cubic-bezier(0.86, 0, 0.07, 1),
+  in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95),
+  in-out-expo: cubic-bezier(1, 0, 0, 1),
+  in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86),
+  in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55)
+);
+
+@each $name, $value in $ease {
+  .ease-#{$name} {
+    transition-timing-function: #{$value};
+  }
+}
+
+// Z-INDEX
+$z-index: (
+  "pothole": -1,
+  "basement": 0,
+  "sidewalk": 1,
+  "bungalow": 40,
+  "bungalow-chimney": 50,
+  "house": 60,
+  "tower": 70,
+  "skyscrapper": 80,
+  "sky": 90,
+  "satellite": 100
+);
+
+$img-path: "../images/" !default; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
+$max-width: 1320px;
+
+// BOX SHADOW
+$navbar-shadow:
+  0px 173px 48px 0px rgba(138, 138, 138, 0),
+  0px 111px 44px 0px rgba(138, 138, 138, 0.01),
+  0px 62px 37px 0px rgba(138, 138, 138, 0.03),
+  0px 28px 28px 0px rgba(138, 138, 138, 0.04),
+  0px 7px 15px 0px rgba(138, 138, 138, 0.05);

@@ -1,0 +1,96 @@
+// Default Color
+$white: #fff;
+$black: #000;
+
+// Primary Brand Colors
+$theme: #3BB24A;
+$theme-light: lighten($theme, 20%);
+$theme-dark: darken($theme, 20%);
+$nyanza: #edffcf;
+$platinum: #e5e5e5;
+$whitesmoke: #f5f5f5;
+
+// Alert Colors
+$success: #01df82;
+$info: #3eb1ff;
+$warning: #ffce30;
+$error: #ff5151;
+
+// Grayscale Shades
+$gray-50: #fafafa; // Lightest gray, almost white
+$gray-100: #f0f0f0; // Very light gray
+$gray-200: #e0e0e0; // Light gray
+$gray-300: #cfcfcf; // Lighter medium gray
+$gray-400: #b0b0b0; // Medium light gray
+$gray-500: #8b8b8b; // Medium gray
+$gray-600: #6f6f6f; // Darker medium gray
+$gray-700: #505050; // Dark gray
+$gray-800: #303030; // Darker gray
+$gray-900: #1a1a1a; // Almost black
+$gray-950: #0f0f0f; // Darkest gray, close to black
+
+// Misc Colors
+$night: #121212;
+$gray: #757575;
+$cadet-gray: #9e9e9e;
+$timberwolf: #d1d1d1;
+$antiflash-white: #f1f1f1;
+$mdt-green-v1: #0d3f46;
+$mdt-green-v2: #03353c;
+$mdt-green-v3: #002b32;
+
+// Map of All Colors
+$colors: (
+  "primary": $theme,
+  "primary-light": $theme-light,
+  "primary-dark": $theme-dark,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "error": $error,
+  "white": $white,
+  "black": $black,
+  "nyanza": $nyanza,
+  "platinum": $platinum,
+  "whitesmoke": $whitesmoke,
+  "night": $night,
+  "gray": $gray,
+  "cadet-gray": $cadet-gray,
+  "timberwolf": $timberwolf,
+  "antiflash-white": $antiflash-white,
+  "mdt-green-v1": $mdt-green-v1,
+  "mdt-green-v2": $mdt-green-v2,
+  "mdt-green-v3": $mdt-green-v3,
+);
+
+$grayscale: (
+  "gray-50": $gray-50,
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+  "gray-950": $gray-950,
+);
+
+// CSS Custom Properties for Colors
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+  @each $name, $value in $grayscale {
+    --color-#{$name}: #{$value};
+  }
+}
+
+// Utility Function for Color Retrieval
+@function color($name, $map: $colors) {
+  @if map-has-key($map, $name) {
+    @return map-get($map, $name);
+  }
+  @warn "Color `#{$name}` not found in the specified map.";
+  @return null;
+}

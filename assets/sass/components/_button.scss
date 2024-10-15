@@ -1,0 +1,191 @@
+$btn-bg: map-get($colors, "primary");
+$btn-text-color: $white;
+$btn-font-weight: map-get($font-weights, "semibold");
+$btn-font-size: map-get($font-sizes, "base");
+$btn-padding-x: 12px;
+$btn-padding-y: 8px;
+$btn-border-color: map-get($colors, "primary");
+$btn-border-width: 1px;
+$btn-border-radius: 8px;
+
+$btn-hover-bg: darken(map-get($colors, "primary"), 10%);
+$btn-hover-text-color: $white;
+$btn-hover-border-color: map-get($colors, "primary");
+$btn-height: 40px;
+
+// BUTTON COLOR VARIANTS
+$button-variants: (
+  "primary": (
+    bg: color("primary"),
+    text: $white,
+    border-color: color("primary"),
+    hover-bg: darken(color("primary"), 10%),
+    hover-text-color: $white,
+    hover-border-color: darken(color("primary"), 10%)
+  ),
+  "transparent": (
+    bg: transparent,
+    text: color("primary"),
+    border-color: transparent,
+    hover-bg: transparent,
+    hover-text-color: darken(color("primary"), 10%),
+    hover-border-color: transparent
+  )
+);
+
+.btn {
+  @extend %flex-inline-center;
+  text-align: center;
+  font-weight: $btn-font-weight;
+  font-family: $font-family-karla;
+  font-size: $btn-font-size;
+  border-radius: $btn-border-radius;
+  column-gap: 4px;
+  height: $btn-height;
+  white-space: nowrap;
+  padding: $btn-padding-y $btn-padding-x;
+  border: $btn-border-width solid $btn-border-color;
+  background-color: $btn-bg;
+  color: $btn-text-color;
+  vertical-align: middle;
+  transition: $default-transition;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  background-image: none;
+  transform-origin: bottom;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  // EFFECTS
+  &:hover,
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background: $btn-hover-bg !important;
+    color: $btn-hover-text-color;
+    border-color: $btn-hover-border-color;
+    opacity: 1 !important;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: no-drop;
+    background: $btn-bg;
+  }
+
+  &.no-shadow {
+    box-shadow: none;
+    &:hover,
+    &:focus,
+    &.focus {
+      opacity: 0.8;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  // BUTTON INNER ELEMENTS
+  &-text {
+    font-weight: $btn-font-weight;
+  }
+
+  // BUTTON SIZE VARIANTS
+  &.btn-sm {
+    font-size: map-get($font-sizes, "sm");
+    height: 36px;
+  }
+
+  &.btn-xs {
+    font-size:  map-get($font-sizes, "xs");
+    height: 34px;
+  }
+
+  // BUTTON WIDTH VARIANTS
+  &.btn-wide {
+    min-width: 260px;
+  }
+}
+
+@each $variant, $props in $button-variants {
+  .btn-#{$variant} {
+    background: map-get($props, bg) !important;
+    color: map-get($props, text) !important;
+    border: $btn-border-width solid map-get($props, border-color) !important;
+
+    &:hover,
+    &:focus,
+    &:disabled,
+    &:active,
+    &.disabled,
+    &.active {
+      background: map-get($props, hover-bg) !important;
+      border-color: map-get($props, hover-border-color) !important;
+      color: map-get($props, hover-text-color) !important;
+    }
+
+    &:disabled,
+    &.disabled{
+      opacity: 0.8;
+    }
+  }
+}
+
+// BUTTON BLOCK - FULL WIDTH
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 0.5rem;
+}
+
+// BUTTON LINK
+.btn-link {
+  color: map-get($colors, "primary");
+  font-size: map-get($font-sizes, "sm");
+  font-weight: map-get($font-weights, "normal");
+  font-style: normal;
+  @extend %flex-inline-center;
+  column-gap: 8px;
+  background: transparent;
+
+  &:hover {
+    color: map-get($colors, "primary");
+    font-weight: 600;
+  }
+
+  .btn-icon {
+    width: 24px;
+    height: 24px;
+    @extend %flex-inline-center; 
+  }
+}
+
+// MISC BUTTON STYLINGS
+.icon-btn {
+  transition: $default-transition;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

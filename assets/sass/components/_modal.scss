@@ -1,0 +1,70 @@
+.modal-customized {
+    .btn-close{
+        box-shadow: none;
+    }
+    .modal-content {
+        padding: 24px;
+        border: 0 !important;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include breakpoint-down(md) {
+            padding: 20px !important;
+        }
+
+        @include breakpoint-down(sm) {
+            padding: 16px !important;
+        }
+    }
+    .modal-title {
+        color: $theme;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .modal-header {
+        padding: 0;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #e7e7e7;
+    }
+    .modal-body {
+        margin-top: 12px;
+        padding: 0;
+    }
+    .modal-footer {
+        border: 0;
+        padding: 0;
+        margin-top: 12px;
+    }
+
+    .btn-modal {
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .modal-body {
+        padding-right: 8px;
+        padding-left: 8px;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: $timberwolf;
+        }
+    }
+
+    .modal-dialog {
+        @include breakpoint-down(lg) {
+            --bs-modal-width: 90% !important;
+        }
+        @include breakpoint-down(md) {
+            --bs-modal-width: 95% !important;
+        }
+    }
+}

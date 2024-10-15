@@ -1,0 +1,184 @@
+// Typography
+html {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  letter-spacing: normal;
+  font-weight: $font-weight-base;
+  line-height: $leading-base;
+  // font: normal $font-size-base/$leading-base $font-family-poppins;
+}
+
+%text {
+  font-family: $font-family-base;
+  font-weight: map-get($font-weights, "semibold");
+  color: $gray;
+}
+p {
+  @extend %text;
+}
+
+// TEXT SIZE MAPPINGS
+$text-xs-sizes: (
+  null: "xs",
+  md: "2xs"
+);
+$text-sm-sizes: (
+  null: "sm",
+  md: "xs"
+);
+$text-base-sizes: (
+  null: "base",
+  md: "sm"
+);
+$text-lg-sizes: (
+  null: "lg",
+  md: "md"
+);
+$text-xl-sizes: (
+  null: "xl",
+  md: "lg"
+);
+$text-2xl-sizes: (
+  null: "2xl",
+  md: "xl",
+  sm: "lg"
+);
+
+$text-3xl-sizes: (
+  null: "3xl",
+  lg: "2xl",
+  sm: "xl"
+);
+
+$text-4xl-sizes: (
+  null: "4xl",
+  lg: "3xl",
+  sm: "2xl"
+);
+
+$text-5xl-sizes: (
+  null: "5xl",
+  lg: "4xl",
+  sm: "3xl"
+);
+
+$text-6xl-sizes: (
+  null: "6xl",
+  lg: "5xl",
+  sm: "4xl"
+);
+
+/* ### PARAGRAPH ### */
+@mixin make-text-font-sizes($fs-map, $fs-breakpoints: $breakpoints-down) {
+  @extend %text;
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: map-get($font-sizes, $fs-font-size) !important;
+    } @else {
+      // If $fs-font-size is a key that exists in $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+
+      @media screen and (max-width: $fs-breakpoint) {
+        font-size: map-get($font-sizes, $fs-font-size) !important;
+      }
+    }
+  }
+}
+
+$text-sizes: (
+  xs: $text-xs-sizes,
+  sm: $text-sm-sizes,
+  base: $text-base-sizes,
+  lg: $text-lg-sizes,
+  xl: $text-xl-sizes,
+  "2xl": $text-2xl-sizes,
+  "3xl": $text-3xl-sizes,
+  "4xl": $text-4xl-sizes,
+  "5xl": $text-5xl-sizes,
+  "6xl": $text-6xl-sizes
+);
+
+@each $size, $value in $text-sizes {
+  .text-#{$size} {
+    @include make-text-font-sizes($value);
+  }
+}
+
+/* #### HEADINGS #### */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  margin-bottom: $headings-margin-bottom;
+  line-height: $headings-line-height;
+  color: $headings-color;
+  letter-spacing: normal;
+}
+
+h1,
+.h1,
+.alpha {
+  font-size: $h1-font-size;
+}
+h2,
+.h2,
+.beta {
+  font-size: $h2-font-size;
+}
+h3,
+.h3,
+.gamma {
+  font-size: $h3-font-size;
+}
+h4,
+.h4,
+.delta {
+  font-size: $h4-font-size;
+}
+h5,
+.h5,
+.epsilon {
+  font-size: $h5-font-size;
+}
+h6,
+.h6,
+.zeta {
+  font-size: $h6-font-size;
+}
+
+// Only give these headings a margin-top if they are after other elements
+* + h1,
+* + .h1,
+* + .alpha,
+* + h2,
+* + .h2,
+* + .beta,
+* + h3,
+* + .h3,
+* + .gamma,
+* + h4,
+* + .h4,
+* + .delta {
+  margin-top: 12px;
+}
+
+a {
+  text-decoration: $link-decoration;
+  color: $link-color; // or unset can be used
+  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $line-hover-decoration;
+  }
+
+  &:visited,
+  &:link {
+    text-decoration: none;
+  }
+}
