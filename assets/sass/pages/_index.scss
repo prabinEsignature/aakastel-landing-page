@@ -1,0 +1,128 @@
+.atel-features {
+    .segment-heading {
+        max-width: 626px;
+    }
+
+    &-segment {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            height: 250px;
+            background: linear-gradient(0deg, rgba(13, 63, 70, 0.4) 0%, rgba(13, 63, 70, 0) 100%);
+        }
+    }
+}
+
+.atel-key-products {
+    margin-top: -120px;
+
+    .segment-heading {
+        max-width: 846px;
+    }
+    .key-products-block-group {
+        row-gap: 80px;
+    }
+    .key-products-block {
+        gap: 60px;
+
+        &:nth-child(even) {
+            .key-products-block-l {
+                order: 2;
+            }
+            .key-products-block-r {
+                order: 1;
+            }
+        }
+    }
+}
+
+.atel-who-we-help {
+    .segment-heading {
+        max-width: 860px;
+    }
+}
+
+.atel-who-we-help {
+    .atel-who-we-help-container {
+        max-width: 1480px !important;
+
+        @include breakpoint-down(xxxl) {
+            max-width: 1320px !important;
+        }
+
+        .atel-who-we-help-segment {
+            margin-left: 6%;
+
+            @include breakpoint-down(xxxl) {
+                margin-left: 0;
+            }
+        }
+    }
+    .who-we-help-cards {
+        margin-left: -10px;
+        margin-right: -10px;
+
+        .wwh-card-wrapper {
+            padding: 0 10px;
+        }
+        .card {
+            max-width: 300px;
+            height: 360px;
+            border-radius: 20px;
+
+            &-body {
+                min-height: 165px;
+                background: linear-gradient(
+                    180deg,
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(0, 0, 0, 0.24) 40%,
+                    rgba(0, 0, 0, 0.8) 100%
+                );
+            }
+        }
+    }
+}
+
+.atel-upgrade {
+    .container {
+        max-width: 1080px;
+    }
+
+    .segment-heading {
+        max-width: 680px;
+    }
+
+    .upgrade-compare {
+        .compare-item-img {
+            max-width: 160px;
+        }
+    }
+
+    .upgrade-compare-data {
+        .compare-data-item {
+            position: relative;
+            &-l{
+                min-height: 72px;
+            }
+            &-m {
+                width: 188px;
+                min-height: 100px;
+                box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.08);
+                position: absolute;
+                @include center;
+            }
+
+            &-r{
+                min-height: 72px;
+                .compare-data-item-icon{
+                    margin-left: 90px;
+                }
+            }
+        }
+    }
+}

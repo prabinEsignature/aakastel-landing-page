@@ -391,6 +391,13 @@ $rotations: (
 
 @include generate-border-radius-classes("rounded");
 
+.rounded-t-80{
+  border-top-right-radius: 80px!important;
+  border-top-left-radius: 80px!important;
+}
+.rounded-100{
+  border-radius: 100px;
+}
 .rounded-100vh {
   border-radius: 100vh !important;
 }
@@ -441,6 +448,7 @@ $spacing-values: (
   60: 60px,
   80: 80px,
   100: 100px,
+  120: 120px
 );
 
 $breakpoints: (
@@ -448,76 +456,41 @@ $breakpoints: (
   xs: 24px
 );
 
-// Generate utility classes for both margin and padding
 @each $size, $value in $spacing-values {
-  // Padding and Margin Directions
   @each $property in (p, m) {
-    // All directions (top, bottom)
-    .#{$property}y-#{$size} {
-      #{$property}-top: $value;
-      #{$property}-bottom: $value;
+    $css-property: if($property == p, padding, margin);
+
+    // All vertical directions (top, bottom)
+    .segment-#{$property}y-#{$size} {
+      #{$css-property}-top: $value;
+      #{$css-property}-bottom: $value;
 
       @each $breakpoint, $offset in $breakpoints {
         @include breakpoint-down($breakpoint) {
-          #{$property}-top: calc($value - $offset);
-          #{$property}-bottom: calc($value - $offset);
+          #{$css-property}-top: calc(#{$value} - #{$offset});
+          #{$css-property}-bottom: calc(#{$value} - #{$offset});
         }
       }
     }
-    
-    // Horizontal directions (left, right)
-    .#{$property}x-#{$size} {
-      #{$property}-left: $value;
-      #{$property}-right: $value;
 
-      @each $breakpoint, $offset in $breakpoints {
-        @include breakpoint-down($breakpoint) {
-          #{$property}-left: calc($value - $offset);
-          #{$property}-right: calc($value - $offset);
-        }
-      }
-    }
-    
     // Top only
-    .#{$property}t-#{$size} {
-      #{$property}-top: $value;
+    .segment-#{$property}t-#{$size} {
+      #{$css-property}-top: $value;
 
       @each $breakpoint, $offset in $breakpoints {
         @include breakpoint-down($breakpoint) {
-          #{$property}-top: calc($value - $offset);
+          #{$css-property}-top: calc(#{$value} - #{$offset});
         }
       }
     }
 
     // Bottom only
-    .#{$property}b-#{$size} {
-      #{$property}-bottom: $value;
+    .segment-#{$property}b-#{$size} {
+      #{$css-property}-bottom: $value;
 
       @each $breakpoint, $offset in $breakpoints {
         @include breakpoint-down($breakpoint) {
-          #{$property}-bottom: calc($value - $offset);
-        }
-      }
-    }
-
-    // Left only
-    .#{$property}l-#{$size} {
-      #{$property}-left: $value;
-
-      @each $breakpoint, $offset in $breakpoints {
-        @include breakpoint-down($breakpoint) {
-          #{$property}-left: calc($value - $offset);
-        }
-      }
-    }
-
-    // Right only
-    .#{$property}r-#{$size} {
-      #{$property}-right: $value;
-
-      @each $breakpoint, $offset in $breakpoints {
-        @include breakpoint-down($breakpoint) {
-          #{$property}-right: calc($value - $offset);
+          #{$css-property}-bottom: calc(#{$value} - #{$offset});
         }
       }
     }

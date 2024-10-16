@@ -1,31 +1,821 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Bootstrap CSS -->
-         <link rel = "stylesheet" href="assets/vendor/bootstrap_5.2.3/bootstrap.min.css" />
-        <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/main.css">
-    </head>
-    <body>
-        <button type="button" class="btn btn-transparent">Sign Up</button>
-        <button type="button" class="btn btn-primary">Sign In Buddy</button>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/vendor/bootstrap_5.2.3/bootstrap.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/sass/vendor/normalize.css" />
+    <!-- SLICK CSS -->
+    <link rel="stylesheet" href="assets/vendor/slick_1.8.1/slick.css" />
+    <link rel="stylesheet" href="assets/vendor/slick_1.8.1/slick-theme.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="atel-header">
+        <div class="container">
+          <nav
+            class="atel-navbar d-flex align-items-center justify-content-between"
+          >
+            <a
+              href="index.html"
+              class="navbar-brand d-inline-flex align-items-center justify-content-center"
+            >
+              <img
+                src="./assets/images/site/logo.svg"
+                alt="Aakash tel site logo"
+              />
+            </a>
 
-        <div class="grid lg-grid-cols-4">
-            <div class="bg-primary text-white border-night-1">1</div>
-            <div class="bg-primary text-white border-night-1">1</div>
-            <div class="bg-primary text-white border-night-1">1</div>
-            <div class="bg-primary text-white border-night-1">1</div>
+            <ul
+              class="atel-navbar-menu d-flex align-items-center justify-content-center"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="menu-item d-inline-flex align-items-center text-base font-semibold"
+                >
+                  <span class="menu-item-text default-transition"
+                    >Products</span
+                  >
+                  <span class="menu-item-icon icon-24">
+                    <img src="assets/icons/chevron_down_grey.svg" />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="menu-item d-inline-flex align-items-center text-base font-semibold"
+                >
+                  <span class="menu-item-text default-transition"
+                    >Solutions</span
+                  >
+                  <span class="menu-item-icon icon-24">
+                    <img src="assets/icons/chevron_down_grey.svg" />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="menu-item d-inline-flex align-items-center text-base font-semibold"
+                >
+                  <span class="menu-item-text default-transition">Pricing</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="menu-item d-inline-flex align-items-center text-base font-semibold"
+                >
+                  <span class="menu-item-text default-transition"
+                    >Developers</span
+                  >
+                  <span class="menu-item-icon icon-24">
+                    <img src="assets/icons/chevron_down_grey.svg" />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="menu-item d-inline-flex align-items-center text-base font-semibold"
+                >
+                  <span class="menu-item-text default-transition"
+                    >Resources</span
+                  >
+                  <span class="menu-item-icon icon-24">
+                    <img src="assets/icons/chevron_down_grey.svg" />
+                  </span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="atel-navbar-btns d-flex align-items-center">
+              <a href="#" class="btn btn-transparent">
+                <span class="btn-text">Sign In</span>
+                <span class="btn-icon">
+                  <img src="assets/icons/sign_in_green.svg" alt="" />
+                </span>
+              </a>
+              <a href="#" class="btn btn-primary">
+                <span class="btn-text">Try for Free</span>
+              </a>
+            </div>
+          </nav>
         </div>
-        
+      </header>
 
-        <!-- Bootstrap JS -->
-         <script src = "assets/vendor/bootstrap_5.2.3/bootstrap.min.js"></script>
-         <script src = "assets/vendor/bootstrap_5.2.3/popper.min.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+      <!-- TOP SECTION -->
+      <section class="atel-top-banner atel-home-pg">
+        <div class="container min-h-100vh">
+          <div class="top-banner-segment position-relative">
+            <div class="top-banner-text-group mx-auto text-center mb-5">
+              <h1 class="top-banner-ttl font-bold">
+                Top <span class="text-primary">Cloud Telephony Service</span> –
+                Trusted by Businesses in Nepal & Beyond
+              </h1>
+              <p
+                class="top-banner-lead font-semibold text-lg text-night mt-custom-6 mb-0"
+              >
+                Innovative communication solutions including IVR, Bulk SMS,
+                Voice Campaigns, and WhatsApp API.
+              </p>
+            </div>
+
+            <div>
+              <!-- TOTAL CALL DATA IMAGE -->
+              <img
+                class="top-banner-calls position-absolute"
+                src="assets/images/home/total_call_data.svg"
+                alt=""
+              />
+              <p class="text-sm font-semibold mb-0 text-center">
+                Never miss a call from your customer ever again !
+              </p>
+              <div
+                class="top-banner-btns d-flex align-items-center justify-content-center gap-3 mt-custom-4"
+              >
+                <a href="#" class="btn btn-primary btn-lg"> Try for Free </a>
+                <a href="#" class="btn btn-white-black btn-lg"
+                  >See Our Pricing</a
+                >
+              </div>
+              <div
+                class="top-banner-rating d-flex justify-content-center gap-x-3 mt-custom-4"
+              >
+                <span class="font-semibold text-lg text-night">4.8</span>
+                <ul class="unstyled d-inline-flex align-items-center">
+                  <li>
+                    <img src="assets/icons/star_filled_yellow.svg" alt="" />
+                  </li>
+                  <li>
+                    <img src="assets/icons/star_filled_yellow.svg" alt="" />
+                  </li>
+                  <li>
+                    <img src="assets/icons/star_filled_yellow.svg" alt="" />
+                  </li>
+                  <li>
+                    <img src="assets/icons/star_filled_yellow.svg" alt="" />
+                  </li>
+                  <li>
+                    <img src="assets/icons/star_filled_yellow.svg" alt="" />
+                  </li>
+                </ul>
+                <div class="bg-grey-3 h-separator-line"></div>
+                <a href="#" class="d-inline-flex align-items-center"
+                  ><img src="assets/icons/google.svg" alt=""
+                /></a>
+              </div>
+
+              <!-- AUDIO CALL -->
+              <div class="top-banner-audio position-absolute end-0">
+                <img
+                  class="audio-img"
+                  src="assets/images/home/audio_calls.png"
+                  alt=""
+                />
+                <div
+                  class="audio-player d-flex align-items-center gap-x-2 border-grey-2-1 rounded-8 p-custom-2 bg-white"
+                >
+                  <button
+                    type="button"
+                    class="audio-play-btn icon-btn btn-primary icon-28"
+                  >
+                    <img class="icon-20" src="assets/icons/play_white.svg" />
+                  </button>
+                  <div class="audio-play-time font-semibold text-night">
+                    1:12
+                  </div>
+                  <div class="audio-play-progress bg-grey-2 rounded-100vh">
+                    <div
+                      style="width: 27px"
+                      class="audio-play-progress-bar bg-primary rounded-100vh"
+                    ></div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <button
+                      type="button"
+                      class="audio-vol-btn icon-btn icon-btn-white icon-28"
+                    >
+                      <img
+                        class="icon-20"
+                        src="assets/icons/volume_grey.svg"
+                        alt=""
+                      />
+                      <img
+                        class="d-none hovered-state icon-20"
+                        src="assets/icons/volume_green.svg"
+                        alt=""
+                      />
+                    </button>
+                    <button
+                      type="button"
+                      class="audio-dots-btn icon-btn icon-btn-white icon-28"
+                    >
+                      <img
+                        class="icon-20"
+                        src="assets/icons/dots_grey.svg"
+                        alt=""
+                      />
+                      <img
+                        class="d-none hovered-state icon-20"
+                        src="assets/icons/dots_green.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF TOP SECTION -->
+
+      <!-- HOME FEATURES -->
+      <section class="atel-features bg-p-green-50">
+        <div
+          class="atel-features-wrapper bg-dark-cyprus segment-pt-100 rounded-t-80"
+        >
+          <div class="container">
+            <div class="atel-features-segment">
+              <div class="segment-heading text-center mx-auto">
+                <p class="text-primary text-lg font-semibold mb-custom-3">
+                  Features
+                </p>
+                <h2 class="segment-ttl text-white text-7xl">
+                  Building a Better Business with Next-Gen Communication
+                </h2>
+              </div>
+
+              <ul
+                class="features-tabs d-flex align-items-center justify-content-center gap-2 my-custom-5"
+              >
+                <li>
+                  <button
+                    type="button"
+                    class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2"
+                  >
+                    Inbound Calling
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2"
+                  >
+                    Outbound Calling
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="text-night text-base font-semibold text-center border-0 px-custom-3 py-custom-2 bg-p-green-50 rounded-8"
+                  >
+                    My CRM
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2"
+                  >
+                    Messaging
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2"
+                  >
+                    Analytics
+                  </button>
+                </li>
+              </ul>
+              <div class="features-tabs-content pt-custom-5">
+                <img
+                  src="assets/images/home/features_crm.svg"
+                  alt="features tabs image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF HOME FEATURES -->
+
+      <!-- KEY PRODUCTS -->
+      <section
+        class="atel-key-products bg-white rounded-t-80 position-relative"
+      >
+        <div class="container">
+          <div class="atel-key-products-segment segment-py-120">
+            <div class="segment-heading text-center mx-auto">
+              <p class="text-primary text-lg font-semibold mb-custom-3">
+                Key Products
+              </p>
+              <h2 class="segment-ttl text-night text-7xl">
+                Discover Our Suite of Advanced Telephony Solutions for Every
+                Business Need
+              </h2>
+            </div>
+
+            <div
+              class="key-products-block-group d-grid align-items-start segment-mt-60"
+            >
+              <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
+                <div class="key-products-block-l">
+                  <div
+                    class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12"
+                  >
+                    <img
+                      class="icon-32"
+                      src="assets/icons/grid_black.svg"
+                      alt=""
+                    />
+                  </div>
+                  <h3
+                    class="key-products-block-ttl text-4xl text-night font-bold my-custom-4"
+                  >
+                    Office IVR Solutions
+                  </h3>
+                  <p class="text-base text-night font-semibold pb-custom-4">
+                    Streamline call management with customizable IVR systems for
+                    efficient routing and customer interaction.
+                  </p>
+                  <a href="#" class="btn btn-transparent">
+                    <span class="btn-text">Learn more</span>
+                    <span class="btn-icon">
+                      <img src="assets/icons/chevron_right_green.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+                <div class="key-products-block-r">
+                  <img
+                    src="assets/images/home/office_ivr_solutionsi.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
+                <div class="key-products-block-l">
+                  <div
+                    class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12"
+                  >
+                    <img
+                      class="icon-32"
+                      src="assets/icons/mike_black.svg"
+                      alt=""
+                    />
+                  </div>
+                  <h3
+                    class="key-products-block-ttl text-4xl text-night font-bold my-custom-4"
+                  >
+                    Voice Call Campaign Solutions
+                  </h3>
+                  <p class="text-base text-night font-semibold pb-custom-4">
+                    Enhance outreach with automated voice campaigns and targeted
+                    messaging.
+                  </p>
+                  <a href="#" class="btn btn-transparent">
+                    <span class="btn-text">Learn more</span>
+                    <span class="btn-icon">
+                      <img src="assets/icons/chevron_right_green.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+                <div class="key-products-block-r">
+                  <img
+                    src="assets/images/home/voicecall_compaign_solutionsi.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
+                <div class="key-products-block-l">
+                  <div
+                    class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12"
+                  >
+                    <img
+                      class="icon-32"
+                      src="assets/icons/voicemail_black.svg"
+                      alt=""
+                    />
+                  </div>
+                  <h3
+                    class="key-products-block-ttl text-4xl text-night font-bold my-custom-4"
+                  >
+                    On-Premises Office IVR Solutions
+                  </h3>
+                  <p class="text-base text-night font-semibold pb-custom-4">
+                    Deploy customizable IVR systems on-site for complete control
+                    and local data storage.
+                  </p>
+                  <a href="#" class="btn btn-transparent">
+                    <span class="btn-text">Learn more</span>
+                    <span class="btn-icon">
+                      <img src="assets/icons/chevron_right_green.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+                <div class="key-products-block-r">
+                  <img
+                    src="assets/images/home/onpremises_ivr_solutions.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
+                <div class="key-products-block-l">
+                  <div
+                    class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12"
+                  >
+                    <img
+                      class="icon-32"
+                      src="assets/icons/sms_black.svg"
+                      alt=""
+                    />
+                  </div>
+                  <h3
+                    class="key-products-block-ttl text-4xl text-night font-bold my-custom-4"
+                  >
+                    Bulk SMS & SMS API Provider
+                  </h3>
+                  <p class="text-base text-night font-semibold pb-custom-4">
+                    Send high-volume SMS and integrate messaging into your
+                    systems with our robust API.
+                  </p>
+                  <a href="#" class="btn btn-transparent">
+                    <span class="btn-text">Learn more</span>
+                    <span class="btn-icon">
+                      <img src="assets/icons/chevron_right_green.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+                <div class="key-products-block-r">
+                  <img
+                    src="assets/images/home/sms_and_api_provider.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
+                <div class="key-products-block-l">
+                  <div
+                    class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-primary rounded-12"
+                  >
+                    <img
+                      class="icon-32"
+                      src="assets/icons/whatsapp_white.svg"
+                      alt=""
+                    />
+                  </div>
+                  <h3
+                    class="key-products-block-ttl text-4xl text-night font-bold my-custom-4"
+                  >
+                    WhatsApp Business API Gateway Provider
+                  </h3>
+                  <p class="text-base text-night font-semibold pb-custom-4">
+                    Enable seamless communication with customers through
+                    automated, secure WhatsApp messaging.
+                  </p>
+                  <a href="#" class="btn btn-transparent">
+                    <span class="btn-text">Learn more</span>
+                    <span class="btn-icon">
+                      <img src="assets/icons/chevron_right_green.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+                <div class="key-products-block-r">
+                  <img
+                    src="assets/images/home/whatsapp_api_provider.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF KEY PRODUCTS -->
+
+      <!-- KEY PRODUCTS -->
+      <section
+        class="atel-who-we-help bg-grey-1 position-relative segment-py-120"
+      >
+        <div class="container">
+          <div class="atel-who-we-help-segment">
+            <div class="segment-heading text-start">
+              <p class="text-primary text-lg font-semibold mb-custom-3">
+                Who We Help
+              </p>
+              <h2 class="segment-ttl text-night text-7xl">
+                Helping Every Team Stay Focused with Streamlined Communication
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="container atel-who-we-help-container">
+          <div class="atel-who-we-help-segment">
+            <div class="who-we-help-cards who-we-help-slider segment-mt-60">
+              <div class="wwh-card-wrapper">
+                <div
+                  class="card position-relative w-100 overflow-hidden border-0"
+                >
+                  <div class="card-img">
+                    <img src="assets/images/home/who_we_help1.png" alt="" />
+                  </div>
+                  <div
+                    class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start"
+                  >
+                    <h4
+                      class="card-title text-white text-2xl font-bold mb-custom-3"
+                    >
+                      Customer Support
+                    </h4>
+                    <p class="card-text text-base font-semibold text-white">
+                      Deliver better service with IVR, call routing, and
+                      real-time analytics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wwh-card-wrapper">
+                <div
+                  class="card position-relative w-100 overflow-hidden border-0"
+                >
+                  <div class="card-img">
+                    <img src="assets/images/home/who_we_help2.png" alt="" />
+                  </div>
+                  <div
+                    class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start"
+                  >
+                    <h4
+                      class="card-title text-white text-2xl font-bold mb-custom-3"
+                    >
+                      Sales
+                    </h4>
+                    <p class="card-text text-base font-semibold text-white">
+                      Drive sales with automated call campaigns and SMS
+                      outreach.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wwh-card-wrapper">
+                <div
+                  class="card position-relative w-100 overflow-hidden border-0"
+                >
+                  <div class="card-img">
+                    <img src="assets/images/home/who_we_help3.png" alt="" />
+                  </div>
+                  <div
+                    class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start"
+                  >
+                    <h4
+                      class="card-title text-white text-2xl font-bold mb-custom-3"
+                    >
+                      Marketing
+                    </h4>
+                    <p class="card-text text-base font-semibold text-white">
+                      Engage audiences with personalized voice and SMS
+                      campaigns.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wwh-card-wrapper">
+                <div
+                  class="card position-relative w-100 overflow-hidden border-0"
+                >
+                  <div class="card-img">
+                    <img src="assets/images/home/who_we_help4.png" alt="" />
+                  </div>
+                  <div
+                    class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start"
+                  >
+                    <h4
+                      class="card-title text-white text-2xl font-bold mb-custom-3"
+                    >
+                      Healthcare Providers
+                    </h4>
+                    <p class="card-text text-base font-semibold text-white">
+                      Patient care with auto reminders & secure communication.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wwh-card-wrapper">
+                <div
+                  class="card position-relative w-100 overflow-hidden border-0"
+                >
+                  <div class="card-img">
+                    <img src="assets/images/home/who_we_help5.png" alt="" />
+                  </div>
+                  <div
+                    class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start"
+                  >
+                    <h4
+                      class="card-title text-white text-2xl font-bold mb-custom-3"
+                    >
+                      SMBs
+                    </h4>
+                    <p class="card-text text-base font-semibold text-white">
+                      Scale cost-effectively with cloud-based communication
+                      solutions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF KEY PRODUCTS -->
+
+      <!-- UPGRADE -->
+      <section
+        class="atel-upgrade bg-dark-cyprus position-relative segment-py-120"
+      >
+        <div class="container">
+          <div class="atel-upgrade-segment">
+            <div class="segment-heading text-start text-center mx-auto">
+              <h2 class="segment-ttl text-white text-7xl mb-custom-5">
+                Tired of Unreliable Calls and Limited Reach? It’s Time to
+                Upgrade
+              </h2>
+              <p class="text-white text-base font-semibold">
+                Don’t settle for dropped calls and restricted connections. Our
+                advanced telephony solutions ensure seamless, reliable
+                communication with a global reach, so you can connect with every
+                customer, everywhere.
+              </p>
+            </div>
+          </div>
+
+          <div class="upgrade-compare d-grid sm-grid-cols-2 grid-cols-1 segment-mt-60">
+            <div
+              class="upgrade-compare-item d-flex align-items-center justify-content-center"
+            >
+              <img
+                class="compare-item-img"
+                src="assets/images/home/upgrade_telephone.svg"
+                alt=""
+              />
+              <div class="cimpare-item-info p-custom-5">
+                <p class="text-primary font-bold text-2xl mb-0">With</p>
+                <h4 class="text-white text-4xl font-bold mt-0">Aakashtel</h4>
+              </div>
+            </div>
+
+            <div
+              class="upgrade-compare-item d-flex align-items-center justify-content-center"
+            >
+              <img
+                class="compare-item-img"
+                src="assets/images/home/upgrade_aakashtel.svg"
+                alt=""
+              />
+              <div class="cimpare-item-info p-custom-5">
+                <p class="text-red-500 font-bold text-2xl mb-0">Before</p>
+                <h4 class="text-white text-4xl font-bold mt-0">Aakashtel</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="upgrade-compare-data d-grid gap-y-10 segment-mt-40">
+            <div class="compare-data-item d-flex align-items-center">
+                <div class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+                    <span class="compare-data-item-icon icon-24 bg-white rounded-4">
+                        <img class="icon-16" src="assets/icons/close_red.svg" alt="">
+                    </span>
+                    <p class="text-gray text-base font-semibold mb-0">Frequent call drops and poor audio quality.</p>
+                </div>
+                <div class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
+                    <span class="icon-40">
+                        <img class="icon-32" src="assets/icons/call_ring_red_200.svg" alt="">
+                    </span>
+                    <p class="mb-0 text-night font-semibold text-lg">Call Quality</p>
+                </div>
+                <div class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+                    <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
+                        <img class="icon-16" src="assets/icons/tick_white.svg" alt="">
+                    </span>
+                    <p class="text-white text-base font-semibold mb-0">Frequent call drops and poor audio quality.</p>
+                </div>
+            </div>
+            <div class="compare-data-item d-flex align-items-center">
+                <div class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+                    <span class="compare-data-item-icon icon-24 bg-white rounded-4">
+                        <img class="icon-16" src="assets/icons/close_red.svg" alt="">
+                    </span>
+                    <p class="text-gray text-base font-semibold mb-0">Challenges in acquiring local numbers in key markets.</p>
+                </div>
+                <div class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
+                    <span class="icon-40">
+                        <img class="icon-32" src="assets/icons/globe_red_200.svg" alt="">
+                    </span>
+                    <p class="mb-0 text-night font-semibold text-lg">Local Presence</p>
+                </div>
+                <div class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+                    <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
+                        <img class="icon-16" src="assets/icons/tick_white.svg" alt="">
+                    </span>
+                    <p class="text-white text-base font-semibold mb-0">Effortless access to local phone numbers across over 160 countries.</p>
+                </div>
+            </div>
+            <div class="compare-data-item d-flex align-items-center">
+                <div class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+                    <span class="compare-data-item-icon icon-24 bg-white rounded-4">
+                        <img class="icon-16" src="assets/icons/close_red.svg" alt="">
+                    </span>
+                    <p class="text-gray text-base font-semibold mb-0">Complicated integrations and tracking issues with your existing tools.</p>
+                </div>
+                <div class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
+                    <span class="icon-40">
+                        <img class="icon-32" src="assets/icons/gears_red_200.svg" alt="">
+                    </span>
+                    <p class="mb-0 text-night font-semibold text-lg">Integrations</p>
+                </div>
+                <div class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+                    <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
+                        <img class="icon-16" src="assets/icons/tick_white.svg" alt="">
+                    </span>
+                    <p class="text-white text-base font-semibold mb-0">Smooth integrations with your CRM, helpdesk, and other essential business systems.</p>
+                </div>
+            </div>
+            <div class="compare-data-item d-flex align-items-center">
+                <div class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+                    <span class="compare-data-item-icon icon-24 bg-white rounded-4">
+                        <img class="icon-16" src="assets/icons/close_red.svg" alt="">
+                    </span>
+                    <p class="text-gray text-base font-semibold mb-0">Struggling with complex and cumbersome phone systems.</p>
+                </div>
+                <div class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
+                    <span class="icon-40">
+                        <img class="icon-32" src="assets/icons/cursor_red_200.svg" alt="">
+                    </span>
+                    <p class="mb-0 text-night font-semibold text-lg">Ease of Use</p>
+                </div>
+                <div class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+                    <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
+                        <img class="icon-16" src="assets/icons/tick_white.svg" alt="">
+                    </span>
+                    <p class="text-white text-base font-semibold mb-0">User-friendly software designed for easy adoption and streamlined operations.</p>
+                </div>
+            </div>
+            <div class="compare-data-item d-flex align-items-center">
+                <div class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+                    <span class="compare-data-item-icon icon-24 bg-white rounded-4">
+                        <img class="icon-16" src="assets/icons/close_red.svg" alt="">
+                    </span>
+                    <p class="text-gray text-base font-semibold mb-0">Manual call tracking and limited insights.</p>
+                </div>
+                <div class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
+                    <span class="icon-40">
+                        <img class="icon-32" src="assets/icons/graph_red_200.svg" alt="">
+                    </span>
+                    <p class="mb-0 text-night font-semibold text-lg">Local Analytics</p>
+                </div>
+                <div class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+                    <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
+                        <img class="icon-16" src="assets/icons/tick_white.svg" alt="">
+                    </span>
+                    <p class="text-white text-base font-semibold mb-0">Advanced analytics with comprehensive conversation insights, delivered automatically.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF UPGRADE -->
+    </div>
+
+    <!-- JQUERY JS -->
+    <script src="assets/js/lib/jquery_3.7.1.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="assets/vendor/bootstrap_5.2.3/bootstrap.min.js"></script>
+    <script src="assets/vendor/bootstrap_5.2.3/popper.min.js"></script>
+    <!-- SLICK JS -->
+    <script src="assets/vendor/slick_1.8.1/slick.min.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

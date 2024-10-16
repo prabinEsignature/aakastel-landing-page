@@ -17,10 +17,10 @@ $btn-height: 40px;
 $button-variants: (
   "primary": (
     bg: color("primary"),
-    text: $white,
+    text: color("white"),
     border-color: color("primary"),
     hover-bg: darken(color("primary"), 10%),
-    hover-text-color: $white,
+    hover-text-color: color("white"),
     hover-border-color: darken(color("primary"), 10%)
   ),
   "transparent": (
@@ -30,6 +30,14 @@ $button-variants: (
     hover-bg: transparent,
     hover-text-color: darken(color("primary"), 10%),
     hover-border-color: transparent
+  ),
+  "white-black": (
+    bg: color("white"),
+    text: color("night"),
+    border-color: color("grey-2"),
+    hover-bg: transparent,
+    hover-text-color: color("primary"),
+    hover-border-color: color("grey-2")
   )
 );
 
@@ -100,13 +108,18 @@ $button-variants: (
   }
 
   // BUTTON SIZE VARIANTS
+  &.btn-lg {
+    height: 52px;
+    min-width: 146px;
+  }
+
   &.btn-sm {
     font-size: map-get($font-sizes, "sm");
     height: 36px;
   }
 
   &.btn-xs {
-    font-size:  map-get($font-sizes, "xs");
+    font-size: map-get($font-sizes, "xs");
     height: 34px;
   }
 
@@ -134,7 +147,7 @@ $button-variants: (
     }
 
     &:disabled,
-    &.disabled{
+    &.disabled {
       opacity: 0.8;
     }
   }
@@ -169,15 +182,37 @@ $button-variants: (
   .btn-icon {
     width: 24px;
     height: 24px;
-    @extend %flex-inline-center; 
+    @extend %flex-inline-center;
   }
 }
 
 // MISC BUTTON STYLINGS
 .icon-btn {
   transition: $default-transition;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   &:hover {
     opacity: 0.8;
+
+    img{
+      &:not(.hovered-state){
+        display: none;
+      }
+      &.hovered-state{
+        display: inline-flex!important;
+      }
+    }
+  }
+}
+
+.icon-btn {
+  &-white {
+    &:hover {
+      background: color("p-green-50");
+    }
   }
 }
 

@@ -8,3 +8,15 @@ $z-index-navbar: 1000;
 $z-index-navbar-toggler: 1010;
 
 
+.atel-navbar{
+    min-height: $navbar-height-desktop;
+    @include flex-center-vert;
+
+    .navbar-brand{
+        max-width: 152px;
+    }
+
+    .menu-item{
+        padding: 0 10px;
+    }
+}

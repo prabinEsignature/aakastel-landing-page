@@ -44,6 +44,8 @@ $tracking-base: -0.03em;
 
 // MEDIA BREAKPOINTS
 $breakpoints-up: (
+  "xxxs": "360px",
+  "xxs": "420px",
   "xs": "480px",
   "sm": "576px",
   "md": "768px",
@@ -54,6 +56,8 @@ $breakpoints-up: (
 );
 
 $breakpoints-down: (
+  "xxxs": "359.98px",
+  "xxs": "419.98px",
   "xs": "479.98px",
   "sm": "575.98px",
   "md": "767.98px",
@@ -95,6 +99,7 @@ $headings-config: (
   "font-weight": map-get($font-weights, "bold"),
   "line-height": 1.2,
   "color": $night,
+  "letter-spacing": -0.06em,
   "font-sizes": (
     "h1": 2 * $font-size-base,
     "h2": 1.5 * $font-size-base,
@@ -113,6 +118,7 @@ $headings-config: (
   line-height: map-get($headings-config, "line-height");
   color: map-get($headings-config, "color");
   font-size: map-get(map-get($headings-config, "font-sizes"), $level);
+  letter-spacing: map-get($headings-config, "letter-spacing");
 }
 
 
@@ -172,7 +178,7 @@ $easing-functions: (
   }
 }
 
-$img-path: "../images/" !default; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
+$img-path: "../../../assets/images/" !default; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
 $max-width: 1320px;
 
 

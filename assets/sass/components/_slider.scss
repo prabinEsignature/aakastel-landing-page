@@ -1,0 +1,24 @@
+.slick-slider{
+    .slick-prev, .slick-next{
+        &::before{
+            display: none!important;
+        }
+    }
+
+    .slick-slider-btn{
+        z-index: 10;
+    }
+}
+
+.who-we-help-slider{
+    .slick-prev{
+        top: -38%;
+        right: 5%;
+        left: auto;
+    }
+
+    .slick-next{
+        top: -38%;
+        right: 0;
+    }
+}

@@ -1,0 +1,76 @@
+.atel-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: $default-transition;
+
+    &.atel-header-fixed{
+        position: fixed;
+        background: color("white");
+    }
+}
+
+.atel-top-banner {
+    &.atel-home-pg {
+        min-height: 100vh;
+        background: url($img-path + "home/home_top_banner.png") center/cover no-repeat;
+        @include flex-center;
+
+        .top-banner-segment {
+            height: 100vh;
+            min-height: 760px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top-banner {
+            &-text-group {
+                max-width: 660px;
+            }
+            &-ttl {
+                font-size: 56px;
+                line-height: 1.1;
+            }
+
+            &-rating {
+                .h-separator-line {
+                    width: 1px;
+                    height: 33px;
+                }
+            }
+            &-calls {
+                max-width: 360px;
+                left: 0;
+                bottom: 113px;
+            }
+        }
+
+        .top-banner-audio {
+            bottom: 80px;
+
+            .audio-player {
+                position: absolute;
+                bottom: 30px;
+                left: -100px;
+                box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.08);
+            }
+
+            .audio-img {
+                max-width: 288px;
+            }
+
+            .audio-play-progress {
+                height: 8px;
+                width: 96px;
+
+                &-bar {
+                    height: 8px;
+                }
+            }
+        }
+    }
+}
