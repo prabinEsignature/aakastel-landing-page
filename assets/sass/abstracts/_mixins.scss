@@ -17,7 +17,7 @@
   }
 }
 
-// Mixins for media query
+/* ##### MEDIA QUERY MIXINS ##### */
 @mixin breakpoint-up($size) {
   @if (type-of($size) == number) {
     $size: #{$size}px;
@@ -96,14 +96,27 @@
   }
 }
 
-/* #### LIST #### */
+@mixin grid-auto-fit($min-width: 200px, $gap: 20px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $gap;
+}
+
+@mixin masonry-grid($row-height: 200px, $gap: 10px) {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: $row-height;
+  gap: $gap;
+}
+
+/* ##### MISCELLANEOUS MIXINS ##### */
 @mixin list-reset {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-// image
 @mixin object-cover {
   width: 100%;
   height: 100%;
@@ -307,7 +320,7 @@
 // Hide element scrollbar
 // Usage:
 // @include hideScrollBar;
-@mixin hide-scroll-bar {
+@mixin hide-scrollbar {
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
 
@@ -319,7 +332,7 @@
 // Center an element with specific position
 // Usage:
 // @include center(absolute);
-@mixin center($position) {
+@mixin center($position: absolute) {
   position: $position;
   top: 50%;
   left: 50%;
@@ -329,15 +342,11 @@
 // Set image (for example) as a cover
 // Usage:
 // @include cover;
-@mixin cover {
+@mixin image-fit-cover {
   display: block;
   width: 100%;
   height: 100%;
   @include object-fit(cover);
-}
-
-@function line-height($line-height, $font-size) {
-  @return $line-height / $font-size;
 }
 
 @mixin fullscreen-image(
@@ -399,7 +408,7 @@
   }
 }
 
-// ##### ANIMATIONS #####
+/* ##### ANIMATION MIXINS ##### */
 @mixin fade-in($duration: 1s, $delay: 0s) {
   animation: fadeIn $duration $delay forwards;
   @keyframes fadeIn {

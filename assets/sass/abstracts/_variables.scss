@@ -4,7 +4,7 @@ $font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxyg
 $font-family-default: $font-family-system;
 $font-family-karla: "Karla", sans-serif;
 
-// FONT SIZES
+// FONT CONFIGURATION
 $font-sizes: (
   "2xs": 10px,
   "xs": 12px,
@@ -34,7 +34,15 @@ $font-weights: (
   "black": 900
 );
 
-// MEDIA BREAK POINTS
+// BASE FONT
+$font-family-base: $font-family-karla;
+$font-weight-base: map-get($font-weights, "semibold");
+$font-size-base: map-get($font-sizes, "base");
+// LEADING & TRACKING
+$leading-base: 1.4;
+$tracking-base: -0.03em;
+
+// MEDIA BREAKPOINTS
 $breakpoints-up: (
   "xs": "480px",
   "sm": "576px",
@@ -55,49 +63,9 @@ $breakpoints-down: (
   "xxxl": "1535.98px",
 );
 
+// COLOR CONFIGURATION
 $body-bg: $white !default;
 $text-color: $gray !default;
-
-// BASE FONT
-$font-family-base: $font-family-karla;
-$font-color-base: $text-color;
-$font-size-base: map-get($font-sizes, "base");
-$font-weight-base: map-get($font-weights, "semibold");
-
-// LEADING & TRACKING
-$leading-base: 1.4; // recommeded 1.5
-$tracking-base: -0.03em;
-
-// Z-INDEX
-$z-low: 10;
-$z-mid: 100;
-$z-high: 1000;
-
-// TRANSITION
-$default-transition-timing: ease-in-out;
-$default-transition-duration: 300ms;
-$default-transition: all $default-transition-timing $default-transition-duration;
-
-/* #### TYPOGRAPHY VARIABLES #### */
-// PARAGRAPHS
-$paragraph-margin-bottom: 0;
-
-// HEADINGS
-$headings-margin-bottom: 0;
-$headings-font-family: $font-family-base;
-$headings-font-weight: map-get($font-weights, "bold");
-$headings-line-height: 1.2;
-$headings-color: $night;
-
-// FONT SIZES FOR H1 - H6
-$h1-font-size: 2 * $font-size-base !default;
-$h2-font-size: 1.5 * $font-size-base !default;
-$h3-font-size: 1.17 * $font-size-base !default;
-$h4-font-size: 1 * $font-size-base !default;
-$h5-font-size: 0.83 * $font-size-base !default;
-$h6-font-size: 0.67 * $font-size-base !default;
-
-// LINKS
 $link-color: $gray;
 $link-visited-color: $gray;
 $link-decoration: none;
@@ -105,15 +73,73 @@ $link-hover-color: darken($link-color, 10%);
 $link-active-color: darken($link-color, 10%);
 $line-hover-decoration: underline;
 
-// Z-INDEX
-$z-index-dropdown: 1000 !default; /* Z-Index For Dropdown Menus */
-$z-index-fixed-topbar: 1010 !default; /* Z-Index For Fixed Top Bar */
-$z-index-tooltip: 1020 !default; /* Z-Index For Hover Tooltips */
-$z-index-alert: 1030 !default; /* Z-Index For Alert Messages */
-$z-index-modal: 1100 !default; /* Z-Index For Modal Popups */
+@mixin font-settings($weight, $size, $line-height: $leading-base, $tracking: $tracking-base) {
+  font-weight: map-get($font-weights, $weight);
+  font-size: map-get($font-sizes, $size);
+  line-height: $line-height;
+  letter-spacing: $tracking;
+}
 
-// TRANSITION EASE
-$ease: (
+// Z-INDEX
+$z-low: 10;
+$z-mid: 100;
+$z-high: 1000;
+
+/* #### TYPOGRAPHY VARIABLES #### */
+$paragraph-margin-bottom: 0;
+
+// Headings Configuration Map
+$headings-config: (
+  "margin-bottom": 0,
+  "font-family": $font-family-base,
+  "font-weight": map-get($font-weights, "bold"),
+  "line-height": 1.2,
+  "color": $night,
+  "font-sizes": (
+    "h1": 2 * $font-size-base,
+    "h2": 1.5 * $font-size-base,
+    "h3": 1.17 * $font-size-base,
+    "h4": 1 * $font-size-base,
+    "h5": 0.83 * $font-size-base,
+    "h6": 0.67 * $font-size-base
+  )
+);
+
+// Mixin to Apply Heading Styles
+@mixin heading-styles($level) {
+  margin-bottom: map-get($headings-config, "margin-bottom");
+  font-family: map-get($headings-config, "font-family");
+  font-weight: map-get($headings-config, "font-weight");
+  line-height: map-get($headings-config, "line-height");
+  color: map-get($headings-config, "color");
+  font-size: map-get(map-get($headings-config, "font-sizes"), $level);
+}
+
+
+// Z-INDEX
+$z-index: (
+  "pothole": -1,
+  "basement": 0,
+  "sidewalk": 1,
+  "bungalow": 40,
+  "bungalow-chimney": 50,
+  "house": 60,
+  "tower": 70,
+  "skyscrapper": 80,
+  "sky": 90,
+  "satellite": 100,
+  "dropdown": 1000,
+  "fixed": 1010,
+  "tooltip": 1020,
+  "alert": 1030,
+  "modal": 1100
+);
+
+// TRANSITIONS AND EASING
+$default-transition-timing: ease-in-out;
+$default-transition-duration: 300ms;
+$default-transition: all $default-transition-timing $default-transition-duration;
+$easing-functions: (
   in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53),
   in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19),
   in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22),
@@ -140,33 +166,13 @@ $ease: (
   in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55)
 );
 
-@each $name, $value in $ease {
+@each $name, $value in $easing-functions {
   .ease-#{$name} {
     transition-timing-function: #{$value};
   }
 }
 
-// Z-INDEX
-$z-index: (
-  "pothole": -1,
-  "basement": 0,
-  "sidewalk": 1,
-  "bungalow": 40,
-  "bungalow-chimney": 50,
-  "house": 60,
-  "tower": 70,
-  "skyscrapper": 80,
-  "sky": 90,
-  "satellite": 100
-);
-
 $img-path: "../images/" !default; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
 $max-width: 1320px;
 
-// BOX SHADOW
-$navbar-shadow:
-  0px 173px 48px 0px rgba(138, 138, 138, 0),
-  0px 111px 44px 0px rgba(138, 138, 138, 0.01),
-  0px 62px 37px 0px rgba(138, 138, 138, 0.03),
-  0px 28px 28px 0px rgba(138, 138, 138, 0.04),
-  0px 7px 15px 0px rgba(138, 138, 138, 0.05);
+

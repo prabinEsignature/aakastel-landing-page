@@ -1,4 +1,7 @@
-// COLOR & BACKGROUND CLASSES
+// ----------------------------------------
+// MIXINS AND GENERATORS
+// ----------------------------------------
+// Color Utilities Generator
 @mixin generate-color-classes($color-map, $prefix, $property) {
   @each $color-name, $color in $color-map {
     #{$prefix}-#{"" + $color-name} {
@@ -12,7 +15,7 @@
 @include generate-color-classes($grayscale, ".text", "color");
 @include generate-color-classes($grayscale, ".bg", "background-color");
 
-// FONT WEIGHT CLASSES
+// Font Weight Utilities Generator
 @mixin generate-font-weight-classes($prefix, $property) {
   @each $weight-name, $weight in $font-weights {
     #{$prefix}-#{$weight-name} {
@@ -23,7 +26,7 @@
 
 @include generate-font-weight-classes(".font", "font-weight");
 
-// OPACITY CLASSES
+// Opacity Utilities Generator
 @mixin generate-opacity-classes($prefix, $property, $step: 5) {
   @for $i from 0 through 20 {
     #{$prefix}-#{$i * $step} {
@@ -38,6 +41,9 @@
 
 @include generate-opacity-classes(".opacity", "opacity");
 
+// ----------------------------------------
+// ADVANCED TYPOGRAPHY
+// ----------------------------------------
 // FONT STACK CLASSES
 $font-families: (
   karla: $font-family-karla,
@@ -52,23 +58,24 @@ $font-families: (
 }
 
 @include font-families($font-families);
-
-/* SMOOTH FADING */
+// ----------------------------------------
+// MISCELLANEOUS UTILITIES
+// ----------------------------------------
+// Smooth Fading
 .fade-on-hover:hover {
   opacity: 0.9;
   transition: $default-transition;
 }
 
-/* REMOVE TRANSITION & ANIMATINO ON WINDOW RESIZE */
+// Remove Transition on Window Resize
 .resize-animation-stopper * {
   -webkit-animation: none !important;
   animation: none !important;
   transition: none !important;
 }
 
-/* OVERFLOW UTILS */
+// Overflow Handling
 $overflow-values: (auto, hidden, clip, visible, scroll);
-
 @each $value in $overflow-values {
   .overflow-#{$value} {
     overflow: #{$value};
@@ -81,7 +88,7 @@ $overflow-values: (auto, hidden, clip, visible, scroll);
   }
 }
 
-/* MAX & MIN WIDTH/HEIGHT UTILS */
+// Dimension Utilities
 $dimension-properties: (
   0: 0,
   100: 100%,
@@ -103,12 +110,12 @@ $dimension-properties: (
 @include dimension-classes("min-w", "min-width", $dimension-properties);
 @include dimension-classes("min-h", "min-height", $dimension-properties);
 
-/* TRANSITION UTILS */
+// Transition Utilities
 .default-transition {
   transition: $default-transition;
 }
 
-/* CURSOR UTILS */
+// Cursor Utilities
 $cursor-styles: (
   pointer: pointer,
   default: default,
@@ -132,7 +139,7 @@ $cursor-styles: (
 
 @include cursor-classes($cursor-styles);
 
-/* RESIZE UTILS */
+// Resize Utilities
 $resize-directions: (none, vertical, horizontal, both);
 
 @each $direction in $resize-directions {
@@ -141,7 +148,7 @@ $resize-directions: (none, vertical, horizontal, both);
   }
 }
 
-/* OBJECT FITTING */
+// Object Fitting Utilities
 $object-fits: (contain, cover, fill, none, scale-down);
 
 @each $fit in $object-fits {
@@ -150,7 +157,7 @@ $object-fits: (contain, cover, fill, none, scale-down);
   }
 }
 
-// OBJECT POSITION
+// Object Position Utilities
 $object-positions: (
   bottom,
   center,
@@ -169,7 +176,7 @@ $object-positions: (
   }
 }
 
-/* FLEX UTILS */
+// Flex Utilities
 $flex-classes: (
   "flex-1": 1 1 0%,
   "flex-auto": 1 1 auto,
@@ -183,7 +190,7 @@ $flex-classes: (
   }
 }
 
-// Extend the grid-template mixin for responsive design
+// Grid Utilities
 @mixin responsive-grid-template($n) {
   @for $i from 1 through $n {
     .grid-cols-#{$i} {
@@ -202,142 +209,120 @@ $flex-classes: (
 
 @include responsive-grid-template(12);
 
-// Responsive Grid Column Start/End
-$grid-column-span-classes: (
-  "col-auto": "auto",
-  "col-span-1": "span 1 / span 1",
-  "col-span-2": "span 2 / span 2",
-  "col-span-3": "span 3 / span 3",
-  "col-span-4": "span 4 / span 4",
-  "col-span-5": "span 5 / span 5",
-  "col-span-6": "span 6 / span 6",
-  "col-span-7": "span 7 / span 7",
-  "col-span-8": "span 8 / span 8",
-  "col-span-9": "span 9 / span 9",
-  "col-span-10": "span 10 / span 10",
-  "col-span-11": "span 11 / span 11",
-  "col-span-12": "span 12 / span 12",
-  "col-span-full": "1 / -1",
+// Responsive Grid Column Utilities
+// Responsive Grid Column Utilities
+$grid-column-classes: (
+  span: (
+    "col-auto": "auto",
+    "col-span-1": "span 1 / span 1",
+    "col-span-2": "span 2 / span 2",
+    "col-span-3": "span 3 / span 3",
+    "col-span-4": "span 4 / span 4",
+    "col-span-5": "span 5 / span 5",
+    "col-span-6": "span 6 / span 6",
+    "col-span-7": "span 7 / span 7",
+    "col-span-8": "span 8 / span 8",
+    "col-span-9": "span 9 / span 9",
+    "col-span-10": "span 10 / span 10",
+    "col-span-11": "span 11 / span 11",
+    "col-span-12": "span 12 / span 12",
+    "col-span-full": "1 / -1",
+  ),
+  start: (
+    "col-start-1": "1",
+    "col-start-2": "2",
+    "col-start-3": "3",
+    "col-start-4": "4",
+    "col-start-5": "5",
+    "col-start-6": "6",
+    "col-start-7": "7",
+    "col-start-8": "8",
+    "col-start-9": "9",
+    "col-start-10": "10",
+    "col-start-11": "11",
+    "col-start-12": "12",
+    "col-start-13": "13",
+    "col-start-auto": "auto",
+  ),
+  end: (
+    "col-end-1": "1",
+    "col-end-2": "2",
+    "col-end-3": "3",
+    "col-end-4": "4",
+    "col-end-5": "5",
+    "col-end-6": "6",
+    "col-end-7": "7",
+    "col-end-8": "8",
+    "col-end-9": "9",
+    "col-end-10": "10",
+    "col-end-11": "11",
+    "col-end-12": "12",
+    "col-end-13": "13",
+    "col-end-auto": "auto",
+  ),
 );
 
-$grid-column-start-classes: (
-  "col-start-1": "1",
-  "col-start-2": "2",
-  "col-start-3": "3",
-  "col-start-4": "4",
-  "col-start-5": "5",
-  "col-start-6": "6",
-  "col-start-7": "7",
-  "col-start-8": "8",
-  "col-start-9": "9",
-  "col-start-10": "10",
-  "col-start-11": "11",
-  "col-start-12": "12",
-  "col-start-13": "13",
-  "col-start-auto": "auto",
-);
-
-$grid-column-end-classes: (
-  "col-end-1": "1",
-  "col-end-2": "2",
-  "col-end-3": "3",
-  "col-end-4": "4",
-  "col-end-5": "5",
-  "col-end-6": "6",
-  "col-end-7": "7",
-  "col-end-8": "8",
-  "col-end-9": "9",
-  "col-end-10": "10",
-  "col-end-11": "11",
-  "col-end-12": "12",
-  "col-end-13": "13",
-  "col-end-auto": "auto",
-);
-
-@each $class, $value in $grid-column-span-classes {
-  .#{$class} {
-    grid-column: #{$value};
+// Generate Grid Column Classes
+@each $type, $classes in $grid-column-classes {
+  @each $class, $value in $classes {
+    .#{$class} {
+      grid-#{$type}: #{$value};
+    }
   }
 }
 
-@each $class, $value in $grid-column-start-classes {
-  .#{$class} {
-    grid-column-start: #{$value};
-  }
-}
-
-@each $class, $value in $grid-column-end-classes {
-  .#{$class} {
-    grid-column-end: #{$value};
-  }
-}
-
-$grid-row-span-classes: (
-  "row-auto": "auto",
-  "row-span-1": "span 1 / span 1",
-  "row-span-2": "span 2 / span 2",
-  "row-span-3": "span 3 / span 3",
-  "row-span-4": "span 4 / span 4",
-  "row-span-5": "span 5 / span 5",
-  "row-span-6": "span 6 / span 6",
-  "row-span-7": "span 7 / span 7",
-  "row-span-8": "span 8 / span 8",
-  "row-span-9": "span 9 / span 9",
-  "row-span-10": "span 10 / span 10",
-  "row-span-11": "span 11 / span 11",
-  "row-span-12": "span 12 / span 12",
-  "row-span-full": "1 / -1",
+// Grid Row Utilities
+$grid-row-classes: (
+  span: (
+    "row-auto": "auto",
+    "row-span-1": "span 1 / span 1",
+    "row-span-2": "span 2 / span 2",
+    "row-span-3": "span 3 / span 3",
+    "row-span-4": "span 4 / span 4",
+    "row-span-5": "span 5 / span 5",
+    "row-span-6": "span 6 / span 6",
+    "row-span-7": "span 7 / span 7",
+    "row-span-8": "span 8 / span 8",
+    "row-span-9": "span 9 / span 9",
+    "row-span-10": "span 10 / span 10",
+    "row-span-11": "span 11 / span 11",
+    "row-span-12": "span 12 / span 12",
+    "row-span-full": "1 / -1",
+  ),
+  start: (
+    "row-start-1": "1",
+    "row-start-2": "2",
+    "row-start-3": "3",
+    "row-start-4": "4",
+    "row-start-5": "5",
+    "row-start-6": "6",
+    "row-start-7": "7",
+    "row-start-8": "8",
+    "row-start-9": "9",
+    "row-start-10": "10",
+    "row-start-auto": "auto",
+  ),
+  end: (
+    "row-end-1": "1",
+    "row-end-2": "2",
+    "row-end-3": "3",
+    "row-end-4": "4",
+    "row-end-5": "5",
+    "row-end-6": "6",
+    "row-end-7": "7",
+    "row-end-8": "8",
+    "row-end-9": "9",
+    "row-end-10": "10",
+    "row-end-auto": "auto",
+  ),
 );
 
-$grid-row-start-classes: (
-  "row-start-1": "1",
-  "row-start-2": "2",
-  "row-start-3": "3",
-  "row-start-4": "4",
-  "row-start-5": "5",
-  "row-start-6": "6",
-  "row-start-7": "7",
-  "row-start-8": "8",
-  "row-start-9": "9",
-  "row-start-10": "10",
-  "row-start-11": "11",
-  "row-start-12": "12",
-  "row-start-13": "13",
-  "row-start-auto": "auto",
-);
-
-$grid-row-end-classes: (
-  "row-end-1": "1",
-  "row-end-2": "2",
-  "row-end-3": "3",
-  "row-end-4": "4",
-  "row-end-5": "5",
-  "row-end-6": "6",
-  "row-end-7": "7",
-  "row-end-8": "8",
-  "row-end-9": "9",
-  "row-end-10": "10",
-  "row-end-11": "11",
-  "row-end-12": "12",
-  "row-end-13": "13",
-  "row-end-auto": "auto",
-);
-
-@each $class, $value in $grid-row-span-classes {
-  .#{$class} {
-    grid-row: #{$value};
-  }
-}
-
-@each $class, $value in $grid-row-start-classes {
-  .#{$class} {
-    grid-row-start: #{$value};
-  }
-}
-
-@each $class, $value in $grid-row-end-classes {
-  .#{$class} {
-    grid-row-end: #{$value};
+// Generate Grid Row Classes
+@each $type, $classes in $grid-row-classes {
+  @each $class, $value in $classes {
+    .#{$class} {
+      grid-#{$type}: #{$value};
+    }
   }
 }
 
@@ -367,40 +352,45 @@ $rotations: (
   }
 }
 
-/* BORDER RADIUS */
-@for $i from 0 through 20 {
-  .rounded-#{$i} {
-    border-radius: #{$i}px !important;
-  }
-  .rounded-tl-#{$i} {
-    border-top-left-radius: #{$i}px !important;
-  }
-  .rounded-tr-#{$i} {
-    border-top-right-radius: #{$i}px !important;
-  }
-  .rounded-bl-#{$i} {
-    border-bottom-left-radius: #{$i}px !important;
-  }
-  .rounded-br-#{$i} {
-    border-bottom-right-radius: #{$i}px !important;
-  }
-  .rounded-t-#{$i} {
-    border-top-left-radius: #{$i}px !important;
-    border-top-right-radius: #{$i}px !important;
-  }
-  .rounded-b-#{$i} {
-    border-bottom-left-radius: #{$i}px !important;
-    border-bottom-right-radius: #{$i}px !important;
-  }
-  .rounded-l-#{$i} {
-    border-top-left-radius: #{$i}px !important;
-    border-bottom-left-radius: #{$i}px !important;
-  }
-  .rounded-r-#{$i} {
-    border-top-right-radius: #{$i}px !important;
-    border-bottom-right-radius: #{$i}px !important;
+// Generate Border Radius Utilities
+@mixin generate-border-radius-classes($prefix) {
+  @for $i from 0 through 20 {
+    .#{$prefix}-#{$i} {
+      border-radius: #{$i}px !important;
+    }
+    .#{$prefix}-tl-#{$i} {
+      border-top-left-radius: #{$i}px !important;
+    }
+    .#{$prefix}-tr-#{$i} {
+      border-top-right-radius: #{$i}px !important;
+    }
+    .#{$prefix}-bl-#{$i} {
+      border-bottom-left-radius: #{$i}px !important;
+    }
+    .#{$prefix}-br-#{$i} {
+      border-bottom-right-radius: #{$i}px !important;
+    }
+    .#{$prefix}-t-#{$i} {
+      border-top-left-radius: #{$i}px !important;
+      border-top-right-radius: #{$i}px !important;
+    }
+    .#{$prefix}-b-#{$i} {
+      border-bottom-left-radius: #{$i}px !important;
+      border-bottom-right-radius: #{$i}px !important;
+    }
+    .#{$prefix}-l-#{$i} {
+      border-top-left-radius: #{$i}px !important;
+      border-bottom-left-radius: #{$i}px !important;
+    }
+    .#{$prefix}-r-#{$i} {
+      border-top-right-radius: #{$i}px !important;
+      border-bottom-right-radius: #{$i}px !important;
+    }
   }
 }
+
+@include generate-border-radius-classes("rounded");
+
 .rounded-100vh {
   border-radius: 100vh !important;
 }
@@ -411,6 +401,7 @@ $rotations: (
 // WIDTH & HEIGHT
 $wahrem-step: 0.5; // Step increment
 $wahrem-step: 0.5;
+// 5%, 10%, 15% .... 100%
 
 @for $i from 0 through 20 {
   .w-#{$i * 10 * $wahrem-step} {
@@ -443,8 +434,8 @@ $gap-count: 10;
   }
 }
 
-// PADDINGS
-$padding-values: (
+// SECTION PADDINGS & MARGINS
+$spacing-values: (
   32: 32px,
   40: 40px,
   60: 60px,
@@ -452,41 +443,83 @@ $padding-values: (
   100: 100px,
 );
 
-@each $padding, $value in $padding-values {
-  .page-sc-py-#{$padding} {
-    padding-top: $value;
-    padding-bottom: $value;
+$breakpoints: (
+  md: 16px,
+  xs: 24px
+);
 
-    @include breakpoint-down(md) {
-      padding-top: calc($value - 16px);
-      padding-bottom: calc($value - 16px);
+// Generate utility classes for both margin and padding
+@each $size, $value in $spacing-values {
+  // Padding and Margin Directions
+  @each $property in (p, m) {
+    // All directions (top, bottom)
+    .#{$property}y-#{$size} {
+      #{$property}-top: $value;
+      #{$property}-bottom: $value;
+
+      @each $breakpoint, $offset in $breakpoints {
+        @include breakpoint-down($breakpoint) {
+          #{$property}-top: calc($value - $offset);
+          #{$property}-bottom: calc($value - $offset);
+        }
+      }
+    }
+    
+    // Horizontal directions (left, right)
+    .#{$property}x-#{$size} {
+      #{$property}-left: $value;
+      #{$property}-right: $value;
+
+      @each $breakpoint, $offset in $breakpoints {
+        @include breakpoint-down($breakpoint) {
+          #{$property}-left: calc($value - $offset);
+          #{$property}-right: calc($value - $offset);
+        }
+      }
+    }
+    
+    // Top only
+    .#{$property}t-#{$size} {
+      #{$property}-top: $value;
+
+      @each $breakpoint, $offset in $breakpoints {
+        @include breakpoint-down($breakpoint) {
+          #{$property}-top: calc($value - $offset);
+        }
+      }
     }
 
-    @include breakpoint-down(xs) {
-      padding-top: calc($value - 24px);
-      padding-bottom: calc($value - 24px);
-    }
-  }
-  .page-sc-pt-#{$padding} {
-    padding-top: $value;
+    // Bottom only
+    .#{$property}b-#{$size} {
+      #{$property}-bottom: $value;
 
-    @include breakpoint-down(md) {
-      padding-top: calc($value - 16px);
-    }
-
-    @include breakpoint-down(xs) {
-      padding-top: calc($value - 24px);
-    }
-  }
-  .page-sc-pb-#{$padding} {
-    padding-bottom: $value;
-
-    @include breakpoint-down(md) {
-      padding-bottom: calc($value - 16px);
+      @each $breakpoint, $offset in $breakpoints {
+        @include breakpoint-down($breakpoint) {
+          #{$property}-bottom: calc($value - $offset);
+        }
+      }
     }
 
-    @include breakpoint-down(xs) {
-      padding-bottom: calc($value - 24px);
+    // Left only
+    .#{$property}l-#{$size} {
+      #{$property}-left: $value;
+
+      @each $breakpoint, $offset in $breakpoints {
+        @include breakpoint-down($breakpoint) {
+          #{$property}-left: calc($value - $offset);
+        }
+      }
+    }
+
+    // Right only
+    .#{$property}r-#{$size} {
+      #{$property}-right: $value;
+
+      @each $breakpoint, $offset in $breakpoints {
+        @include breakpoint-down($breakpoint) {
+          #{$property}-right: calc($value - $offset);
+        }
+      }
     }
   }
 }
@@ -561,10 +594,9 @@ $negative-margin-values: (
 @include generate-spacing-classes(margin, m);
 
 $border-colors: (
-  platinum: color(platinum),
-  timberwolf: color(timberwolf),
-  primary: color(primary),
-  gray: color(gray)
+  timberwolf: color("timberwolf"),
+  primary: color("primary"),
+  gray: color("gray")
 );
 
 $directions: (
