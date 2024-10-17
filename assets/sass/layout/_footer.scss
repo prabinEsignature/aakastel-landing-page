@@ -1,0 +1,19 @@
+.atel-footer{
+    .footer-segment-main{
+        grid-template-columns: 408px auto;
+        gap: 60px;
+    }
+
+    .footer-segment-cta{
+        background: url($img-path + "cta.png") center/cover no-repeat;
+        min-height: 540px;
+        padding: 60px 34px;
+
+        .cta-call-icon{
+            max-width: 80px;
+        }
+        .cta-call-ttl{
+
+        }
+    }
+}
