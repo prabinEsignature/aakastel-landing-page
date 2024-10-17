@@ -7,16 +7,55 @@ $navbar-hover-link-color: darken($gray, 10%);
 $z-index-navbar: 1000;
 $z-index-navbar-toggler: 1010;
 
-
-.atel-navbar{
+.atel-navbar {
     min-height: $navbar-height-desktop;
     @include flex-center-vert;
 
-    .navbar-brand{
+    &-menu {
+        position: relative;
+    }
+
+    .navbar-brand {
         max-width: 152px;
     }
 
-    .menu-item{
+    .menu-item {
         padding: 0 10px;
+    }
+
+    .submenu-item-block {
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        width: 880px;
+        transform: translateX(-50%);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        overflow: hidden;
+
+        &.products-nav {
+            .submenu {
+                &-item {
+                    &.active {
+                        background: color("p-green-50") !important;
+                        .submenu-item-chevron {
+                            display: inline-flex !important;
+                        }
+                    }
+
+                    &-chevron {
+                        display: none;
+                    }
+                }
+
+                &-item-main {
+                    grid-template-columns: 1fr 2fr;
+                }
+
+                &-grid-item {
+                    padding: 6px 8px;
+                }
+            }
+        }
     }
 }
