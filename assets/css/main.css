@@ -14567,11 +14567,14 @@ table td {
   position: absolute;
   top: 80px;
   left: 50%;
-  width: 880px;
   transform: translateX(-50%);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
+}
+.atel-navbar .submenu-item-block.products-nav {
+  display: none;
+  width: 880px;
 }
 .atel-navbar .submenu-item-block.products-nav .submenu-item.active {
   background: #e9f2ed !important;
@@ -14587,6 +14590,27 @@ table td {
 }
 .atel-navbar .submenu-item-block.products-nav .submenu-grid-item {
   padding: 6px 8px;
+}
+.atel-navbar .submenu-item-block.solutions-nav {
+  width: 940px;
+  display: none;
+}
+.atel-navbar .submenu-item-block.solutions-nav .submenu-grid {
+  padding-right: 20px;
+  border-right: 1px solid #e5e5e5;
+}
+.atel-navbar .submenu-item-block.solutions-nav .submenu-grid:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+.atel-navbar .submenu-item-block.solutions-nav .submenu-grid-item {
+  cursor: pointer;
+}
+.atel-navbar .submenu-item-block.solutions-nav .submenu-grid-item:hover {
+  background: #e9f2ed;
+}
+.atel-navbar .submenu-item-block.developers-nav {
+  width: 840px;
 }
 
 .atel-footer .footer-segment-main {

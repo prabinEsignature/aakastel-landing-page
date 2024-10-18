@@ -27,13 +27,15 @@ $z-index-navbar-toggler: 1010;
         position: absolute;
         top: 80px;
         left: 50%;
-        width: 880px;
         transform: translateX(-50%);
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         overflow: hidden;
 
         &.products-nav {
+            display: none;
+            width: 880px;
+
             .submenu {
                 &-item {
                     &.active {
@@ -56,6 +58,33 @@ $z-index-navbar-toggler: 1010;
                     padding: 6px 8px;
                 }
             }
+        }
+
+        &.solutions-nav{
+            width: 940px;
+            display: none;
+
+            .submenu-grid{
+                padding-right: 20px;
+                border-right: 1px solid color("grey-2");
+
+                &:last-child{
+                    padding-right: 0;
+                    border-right: 0;
+                }
+
+                &-item{
+                    cursor: pointer;
+
+                    &:hover{
+                        background: color("p-green-50");
+                    }
+                }
+            }
+        }
+
+        &.developers-nav{
+            width: 840px;
         }
     }
 }
