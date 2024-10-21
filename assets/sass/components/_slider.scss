@@ -8,12 +8,16 @@
     .slick-slider-btn{
         z-index: 10;
     }
+
+    .slick-dots{
+        bottom: -52px!important;
+    }
 }
 
 .who-we-help-slider{
     .slick-prev{
         top: -38%;
-        right: 5%;
+        right: 65px;
         left: auto;
     }
 

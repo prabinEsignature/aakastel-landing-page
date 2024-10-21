@@ -1,26 +1,97 @@
-.atel-footer{
-    .footer-segment-main{
+.atel-footer {
+    .footer-segment-main {
         grid-template-columns: 408px auto;
         gap: 60px;
+
+        @include breakpoint-down(xl) {
+            gap: 36px !important;
+            grid-template-columns: 360px auto;
+        }
+
+        @include breakpoint-down(lg) {
+            grid-template-columns: 100% !important;
+        }
     }
 
-    .footer-segment-cta{
+    .footer-segment-cta {
         background: url($img-path + "cta.png") center/cover no-repeat;
         min-height: 540px;
         padding: 60px 34px;
+        border-radius: 35px;
 
-        .cta-call-icon{
+        @include breakpoint-down(xl) {
+            padding: 32px 24px;
+            border-radius: 28px;
+            min-height: 500px;
+        }
+
+        @include breakpoint-down(lg) {
+            min-height: auto;
+        }
+
+        .cta-call-icon {
             max-width: 80px;
         }
-        .cta-call-btns{
-            .btn-white-black{
-                &:hover{
-                    background: color("p-green-50")!important;
+        .cta-call-btns {
+            .btn-white-black {
+                &:hover {
+                    background: color("p-green-50") !important;
                 }
             }
         }
     }
-    .footer-segment-links{
+    .footer-segment-links {
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+        @include breakpoint-down(sm){
+            @include breakpoint-down(sm){
+                grid-template-columns: repeat(1, 1fr)!important;
+            }
+        }
+
+        & > .footer-links-block{
+            .footer-links-list{
+                @include breakpoint-down(sm){
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+
+        .footer-links-block-group{
+            @include breakpoint-down(sm){
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    .footer-segment-contact {
+        @include breakpoint-down(md) {
+            flex-direction: column;
+        }
+
+        .contact-info-group{
+            @include breakpoint-down(sm) {
+                justify-content: center;
+                gap: 12px!important;
+            }
+        }
+    }
+
+    .footer-segment-bottom {
+        @include breakpoint-down(lg) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .tac-list{
+            @include breakpoint-down(lg){
+                justify-content: center;
+            }
+
+            @include breakpoint-down(md){
+                column-gap: 12px!important;
+                row-gap: 4px!important;
+            }
+        }
     }
 }

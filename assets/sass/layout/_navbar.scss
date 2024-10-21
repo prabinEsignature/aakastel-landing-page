@@ -13,6 +13,16 @@ $z-index-navbar-toggler: 1010;
 
     &-menu {
         position: relative;
+
+        @include breakpoint-down(lg){
+            display: none!important;
+        }
+    }
+
+    &-btns{
+        @include breakpoint-down(lg){
+            display: none!important;
+        }
     }
 
     .navbar-brand {
@@ -31,6 +41,8 @@ $z-index-navbar-toggler: 1010;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         overflow: hidden;
+
+        display: none;
 
         &.products-nav {
             display: none;

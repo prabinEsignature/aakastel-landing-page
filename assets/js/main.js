@@ -10,6 +10,21 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// PASSWORD ICONS TOGGLE
+const passwordFormElem = $(".password-form-elem .form-elem-icon");
+$(passwordFormElem).on("click", function (event) {
+  const button = $(this);
+  const input = button.siblings("input");
+
+  if (input.attr("type") === "password") {
+    input.attr("type", "text");
+    $(button).addClass("show-password");
+  } else {
+    input.attr("type", "password");
+    $(button).removeClass("show-password");
+  }
+});
+
 // WHO WE HELP SLIDER
 $(".who-we-help-slider").slick({
   dots: false,
@@ -25,4 +40,13 @@ $(".who-we-help-slider").slick({
     "<button type='button' class='slick-slider-btn slick-prev bg-white icon-52 border-grey-2-1 rounded-12'><img class='icon-24' src='./assets/icons/chevron_left_black.svg'></button>",
   nextArrow:
     "<button type='button' class='slick-slider-btn slick-next bg-white icon-52 border-grey-2-1 rounded-12'><img class='icon-24' src='./assets/icons/chevron_right_black.svg'></button>",
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
 });
