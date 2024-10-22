@@ -6,7 +6,7 @@
     z-index: 1000;
     transition: all 100ms ease-in-out;
 
-    &.atel-header-fixed{
+    &.atel-header-fixed {
         position: fixed;
         background: color("white");
     }
@@ -20,20 +20,53 @@
 
         .top-banner-segment {
             height: 100vh;
-            min-height: 760px;
+            min-height: 800px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            @include breakpoint-down(xl) {
+                height: auto !important;
+                margin: 80px auto;
+            }
         }
 
         .top-banner {
             &-text-group {
                 max-width: 660px;
+
+                @include breakpoint-down(xxl) {
+                    max-width: 580px;
+                }
+
+                @include breakpoint-down(sm){
+                    margin-bottom: 24px!important;
+                }
             }
             &-ttl {
                 font-size: 56px;
                 line-height: 1.1;
+
+                @include breakpoint-down(xl) {
+                    font-size: 48px;
+                }
+
+                @include breakpoint-down(lg){
+                    font-size: 44px;
+                }
+
+                @include breakpoint-down(md){
+                    font-size: 40px;
+                }
+
+                @include breakpoint-down(sm){
+                    font-size: 36px;
+                }
+
+                @include breakpoint-down(xs){
+                    font-size: 32px;
+                }
             }
 
             &-rating {
@@ -46,21 +79,52 @@
                 max-width: 360px;
                 left: 0;
                 bottom: 113px;
+
+                @include breakpoint-down(xxl) {
+                    max-width: 320px;
+                }
+
+                @include breakpoint-down(xl) {
+                    position: relative !important;
+                    display: none;
+                }
             }
         }
 
         .top-banner-audio {
             bottom: 80px;
 
+            @include breakpoint-down(xl) {
+                position: relative !important;
+                bottom: 0;
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+            }
+
+            @include breakpoint-down(sm){
+                margin-top: 28px!important;
+            }
+
             .audio-player {
                 position: absolute;
                 bottom: 30px;
                 left: -100px;
                 box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.08);
+
+                @include breakpoint-down(lg) {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 280px;
+                }
             }
 
             .audio-img {
                 max-width: 288px;
+
+                @include breakpoint-down(xxl) {
+                    max-width: 240px;
+                }
             }
 
             .audio-play-progress {

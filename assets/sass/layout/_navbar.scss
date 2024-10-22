@@ -13,7 +13,17 @@ $z-index-navbar-toggler: 1010;
 
   &-menu {
     position: relative;
+
+    @include breakpoint-down(lg) {
+      display: none !important;
+    }
   }
+
+  &-btns{
+    @include breakpoint-down(lg){
+        display: none!important;
+    }
+}
 
   .navbar-brand {
     max-width: 152px;
