@@ -119,16 +119,36 @@ $button-variants: (
   &.btn-lg {
     height: 52px;
     min-width: 146px;
+
+    @include breakpoint-down(md){
+      height: 48px;
+    }
+
+    @include breakpoint-down(sm){
+      height: 44px;
+    }
   }
 
   &.btn-sm {
     font-size: map-get($font-sizes, "sm");
     height: 36px;
+
+    @include breakpoint-down(md){
+      height: 34px;
+    }
+
+    @include breakpoint-down(sm){
+      height: 32px;
+    }
   }
 
   &.btn-xs {
     font-size: map-get($font-sizes, "xs");
     height: 34px;
+
+    @include breakpoint-down(md){
+      height: 32px;
+    }
   }
 
   // BUTTON WIDTH VARIANTS

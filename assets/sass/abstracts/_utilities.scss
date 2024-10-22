@@ -453,11 +453,15 @@ $spacing-values: (
 );
 
 $breakpoints: (
-  md: 16px,
-  xs: 24px
+  lg: 16px,
+  md: 20px,
+  sm: 24px
 );
 
 @each $size, $value in $spacing-values {
+  // Decrease the value by a large amount if the size is greater than 60
+  $adjusted-value: if($size > 60, $value * 0.7, $value); // Adjust value by 30% reduction
+
   @each $property in (p, m) {
     $css-property: if($property == p, padding, margin);
 
@@ -468,8 +472,8 @@ $breakpoints: (
 
       @each $breakpoint, $offset in $breakpoints {
         @include breakpoint-down($breakpoint) {
-          #{$css-property}-top: calc(#{$value} - #{$offset});
-          #{$css-property}-bottom: calc(#{$value} - #{$offset});
+          #{$css-property}-top: calc(#{$adjusted-value} - #{$offset});
+          #{$css-property}-bottom: calc(#{$adjusted-value} - #{$offset});
         }
       }
     }
@@ -480,7 +484,7 @@ $breakpoints: (
 
       @each $breakpoint, $offset in $breakpoints {
         @include breakpoint-down($breakpoint) {
-          #{$css-property}-top: calc(#{$value} - #{$offset});
+          #{$css-property}-top: calc(#{$adjusted-value} - #{$offset});
         }
       }
     }
@@ -491,7 +495,7 @@ $breakpoints: (
 
       @each $breakpoint, $offset in $breakpoints {
         @include breakpoint-down($breakpoint) {
-          #{$css-property}-bottom: calc(#{$value} - #{$offset});
+          #{$css-property}-bottom: calc(#{$adjusted-value} - #{$offset});
         }
       }
     }

@@ -56,6 +56,7 @@
     .segment-heading {
         max-width: 846px;
     }
+
     .key-products-block-group {
         row-gap: 80px;
 
@@ -67,6 +68,7 @@
             row-gap: 40px;
         }
     }
+
     .key-products-block {
         gap: 60px;
         align-items: center;
@@ -179,6 +181,10 @@
     }
 
     .upgrade-compare-data {
+        @include breakpoint-down(lg){
+            row-gap: 32px!important;
+        }
+
         .compare-data-item {
             position: relative;
 
@@ -195,6 +201,11 @@
                     min-height: 60px;
                     border-radius: 12px!important;
                     width: 100%;
+                }
+
+                @include breakpoint-down(sm){
+                    min-height: 48px;
+                    border-radius: 8px!important;
                 }
             }
             &-m {
@@ -226,6 +237,11 @@
                     width: 100%;
                 }
 
+                @include breakpoint-down(sm){
+                    min-height: 48px;
+                    border-radius: 8px!important;
+                }
+
                 .compare-data-item-icon {
                     margin-left: 90px;
 
@@ -242,6 +258,7 @@
     &-container {
         max-width: 1104px !important;
     }
+
     .support-industry-img {
         border-radius: 28px;
     }
@@ -252,6 +269,7 @@
         .accordion-item {
             margin-bottom: 20px;
         }
+
         .accordion-button {
             &::after {
                 display: none;
@@ -359,7 +377,6 @@
 
 .atel-presence {
     .presence-tabs {
-
         @include breakpoint-down(lg){
             max-width: 400px;
             margin-right: auto;
@@ -374,6 +391,7 @@
             outline: 2px solid color("grey-2") !important;
             outline-offset: -2px !important;
         }
+        
         .nav-link {
             margin: 0;
             border-radius: 0;
