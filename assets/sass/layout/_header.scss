@@ -173,4 +173,20 @@
             }
         }
     }
+
+    &.atel-office-ivr-pg{
+        background: url($img-path + "ivr_solution/office_ivr_solutions_banner.svg") center/cover no-repeat;
+        min-height: 800px;
+        padding-top: 80px;
+
+        .top-banner{
+            &-text-group{
+                max-width: 1062px;
+            }
+
+            &-video{
+                max-width: 1062px;
+            }
+        }
+    }
 }

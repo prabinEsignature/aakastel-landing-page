@@ -1,7 +1,18 @@
-.blog-cards{
-    .card{
-        &-img{
+.blog-cards {
+    .card {
+        &-img {
             height: 220px;
+        }
+    }
+}
+
+.plain-cards {
+    .plain-card {
+        &-item {
+            &:hover {
+                border-color: color("primary") !important;
+                box-shadow: map-get($shadows, "default");
+            }
         }
     }
 }

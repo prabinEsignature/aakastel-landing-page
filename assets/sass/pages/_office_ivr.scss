@@ -1,0 +1,36 @@
+.atel-office-ivr-vid {
+    margin-top: -290px;
+
+    .segment-office-ivr-vid {
+        max-width: 1062px;
+        min-height: 521px;
+
+        .vid-play-btn {
+            background: rgba-color($night, 0.4s);
+            transform: translate(-50%, -50%);
+
+            &:hover {
+                background: color("primary");
+            }
+        }
+    }
+}
+
+.atel-system-work {
+    .segment-system-work {
+        grid-template-columns: 40% auto;
+        gap: 40px;
+
+        @include breakpoint-down(lg) {
+            grid-template-columns: 100%;
+        }
+    }
+}
+
+.atel-call-solution {
+    background: url($img-path + "ivr_solution/calling_banner.svg") center/cover no-repeat;
+}
+
+.atel-automation-solution {
+    background: url($img-path + "ivr_solution/automation_banner.svg") center/cover no-repeat;
+}

@@ -13812,10 +13812,17 @@ input[type=button].btn-block {
   list-style-image: none;
 }
 
-.icon-16, .icon-20, .icon-24, .icon-28, .icon-32, .icon-36, .icon-40, .icon-52 {
+.icon-16, .icon-20, .icon-24, .icon-28, .icon-32, .icon-36, .icon-40, .icon-52, .icon-60 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.icon-60 {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
 }
 
 .icon-52 {
@@ -14583,6 +14590,11 @@ table td {
   height: 220px;
 }
 
+.plain-cards .plain-card-item:hover {
+  border-color: #3bb24a !important;
+  box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.08);
+}
+
 .atel-header {
   position: fixed;
   top: 0;
@@ -14752,6 +14764,17 @@ table td {
     margin-right: auto;
     margin-left: auto;
   }
+}
+.atel-top-banner.atel-office-ivr-pg {
+  background: url("../../../assets/images/ivr_solution/office_ivr_solutions_banner.svg") center/cover no-repeat;
+  min-height: 800px;
+  padding-top: 80px;
+}
+.atel-top-banner.atel-office-ivr-pg .top-banner-text-group {
+  max-width: 1062px;
+}
+.atel-top-banner.atel-office-ivr-pg .top-banner-video {
+  max-width: 1062px;
 }
 
 .atel-navbar {
@@ -15406,4 +15429,37 @@ table td {
 .atel-rel-solutions .rel-solutions-item:hover {
   border-color: #3bb24a !important;
   box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.08);
+}
+
+.atel-office-ivr-vid {
+  margin-top: -290px;
+}
+.atel-office-ivr-vid .segment-office-ivr-vid {
+  max-width: 1062px;
+  min-height: 521px;
+}
+.atel-office-ivr-vid .segment-office-ivr-vid .vid-play-btn {
+  background: rgba(18, 18, 18, 0.4);
+  transform: translate(-50%, -50%);
+}
+.atel-office-ivr-vid .segment-office-ivr-vid .vid-play-btn:hover {
+  background: #3bb24a;
+}
+
+.atel-system-work .segment-system-work {
+  grid-template-columns: 40% auto;
+  gap: 40px;
+}
+@media (max-width: 991.98px) {
+  .atel-system-work .segment-system-work {
+    grid-template-columns: 100%;
+  }
+}
+
+.atel-call-solution {
+  background: url("../../../assets/images/ivr_solution/calling_banner.svg") center/cover no-repeat;
+}
+
+.atel-automation-solution {
+  background: url("../../../assets/images/ivr_solution/automation_banner.svg") center/cover no-repeat;
 }/*# sourceMappingURL=main.css.map */
