@@ -38,6 +38,14 @@ $button-variants: (
     hover-bg: transparent,
     hover-text-color: color("primary"),
     hover-border-color: color("grey-2")
+  ),
+  "white-primary-outline": (
+    bg: color("white"),
+    text: color("night"),
+    border-color: color("grey-2"),
+    hover-bg: transparent,
+    hover-text-color: color("night"),
+    hover-border-color: color("primary")
   )
 );
 

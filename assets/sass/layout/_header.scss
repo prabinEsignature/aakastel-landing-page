@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    transition: $default-transition;
+    transition: all 100ms ease-in-out;
 
     &.atel-header-fixed{
         position: fixed;

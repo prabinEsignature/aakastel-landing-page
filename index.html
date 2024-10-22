@@ -1,821 +1,1889 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="assets/vendor/bootstrap_5.2.3/bootstrap.min.css"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/sass/vendor/normalize.css" />
-    <!-- SLICK CSS -->
-    <link rel="stylesheet" href="assets/vendor/slick_1.8.1/slick.css" />
-    <link rel="stylesheet" href="assets/vendor/slick_1.8.1/slick-theme.css" />
-  </head>
-  <body>
-    <div class="page-wrapper">
-      <header class="atel-header">
-        <div class="container">
-          <nav
-            class="atel-navbar d-flex align-items-center justify-content-between"
-          >
-            <a
-              href="index.html"
-              class="navbar-brand d-inline-flex align-items-center justify-content-center"
-            >
-              <img
-                src="./assets/images/site/logo.svg"
-                alt="Aakash tel site logo"
-              />
-            </a>
 
-            <ul
-              class="atel-navbar-menu d-flex align-items-center justify-content-center"
-            >
-              <li>
-                <a
-                  href="#"
-                  class="menu-item d-inline-flex align-items-center text-base font-semibold"
-                >
-                  <span class="menu-item-text default-transition"
-                    >Products</span
-                  >
-                  <span class="menu-item-icon icon-24">
-                    <img src="assets/icons/chevron_down_grey.svg" />
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="menu-item d-inline-flex align-items-center text-base font-semibold"
-                >
-                  <span class="menu-item-text default-transition"
-                    >Solutions</span
-                  >
-                  <span class="menu-item-icon icon-24">
-                    <img src="assets/icons/chevron_down_grey.svg" />
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="menu-item d-inline-flex align-items-center text-base font-semibold"
-                >
-                  <span class="menu-item-text default-transition">Pricing</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="menu-item d-inline-flex align-items-center text-base font-semibold"
-                >
-                  <span class="menu-item-text default-transition"
-                    >Developers</span
-                  >
-                  <span class="menu-item-icon icon-24">
-                    <img src="assets/icons/chevron_down_grey.svg" />
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="menu-item d-inline-flex align-items-center text-base font-semibold"
-                >
-                  <span class="menu-item-text default-transition"
-                    >Resources</span
-                  >
-                  <span class="menu-item-icon icon-24">
-                    <img src="assets/icons/chevron_down_grey.svg" />
-                  </span>
-                </a>
-              </li>
-            </ul>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap_5.2.3/bootstrap.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/sass/vendor/normalize.css" />
+  <!-- SLICK CSS -->
+  <link rel="stylesheet" href="assets/vendor/slick_1.8.1/slick.css" />
+  <link rel="stylesheet" href="assets/vendor/slick_1.8.1/slick-theme.css" />
+</head>
 
-            <div class="atel-navbar-btns d-flex align-items-center">
-              <a href="#" class="btn btn-transparent">
-                <span class="btn-text">Sign In</span>
-                <span class="btn-icon">
-                  <img src="assets/icons/sign_in_green.svg" alt="" />
+<body>
+  <div class="page-wrapper">
+    <header class="atel-header">
+      <div class="container">
+        <nav class="atel-navbar d-flex align-items-center justify-content-between">
+          <a href="index.html" class="navbar-brand d-inline-flex align-items-center justify-content-center">
+            <img src="./assets/images/site/logo.svg" alt="Aakash tel site logo" />
+          </a>
+
+          <ul class="atel-navbar-menu d-flex align-items-center justify-content-center">
+            <li class="menu-item-wrapper">
+              <a href="#" class="menu-item d-inline-flex align-items-center text-base font-semibold">
+                <span class="menu-item-text default-transition">Products</span>
+                <span class="menu-item-icon icon-24">
+                  <img src="assets/icons/chevron_down_grey.svg" />
                 </span>
               </a>
-              <a href="#" class="btn btn-primary">
-                <span class="btn-text">Try for Free</span>
-              </a>
-            </div>
-          </nav>
-        </div>
-      </header>
-
-      <!-- TOP SECTION -->
-      <section class="atel-top-banner atel-home-pg">
-        <div class="container min-h-100vh">
-          <div class="top-banner-segment position-relative">
-            <div class="top-banner-text-group mx-auto text-center mb-5">
-              <h1 class="top-banner-ttl font-bold">
-                Top <span class="text-primary">Cloud Telephony Service</span> –
-                Trusted by Businesses in Nepal & Beyond
-              </h1>
-              <p
-                class="top-banner-lead font-semibold text-lg text-night mt-custom-6 mb-0"
-              >
-                Innovative communication solutions including IVR, Bulk SMS,
-                Voice Campaigns, and WhatsApp API.
-              </p>
-            </div>
-
-            <div>
-              <!-- TOTAL CALL DATA IMAGE -->
-              <img
-                class="top-banner-calls position-absolute"
-                src="assets/images/home/total_call_data.svg"
-                alt=""
-              />
-              <p class="text-sm font-semibold mb-0 text-center">
-                Never miss a call from your customer ever again !
-              </p>
-              <div
-                class="top-banner-btns d-flex align-items-center justify-content-center gap-3 mt-custom-4"
-              >
-                <a href="#" class="btn btn-primary btn-lg"> Try for Free </a>
-                <a href="#" class="btn btn-white-black btn-lg"
-                  >See Our Pricing</a
-                >
-              </div>
-              <div
-                class="top-banner-rating d-flex justify-content-center gap-x-3 mt-custom-4"
-              >
-                <span class="font-semibold text-lg text-night">4.8</span>
-                <ul class="unstyled d-inline-flex align-items-center">
-                  <li>
-                    <img src="assets/icons/star_filled_yellow.svg" alt="" />
-                  </li>
-                  <li>
-                    <img src="assets/icons/star_filled_yellow.svg" alt="" />
-                  </li>
-                  <li>
-                    <img src="assets/icons/star_filled_yellow.svg" alt="" />
-                  </li>
-                  <li>
-                    <img src="assets/icons/star_filled_yellow.svg" alt="" />
-                  </li>
-                  <li>
-                    <img src="assets/icons/star_filled_yellow.svg" alt="" />
-                  </li>
-                </ul>
-                <div class="bg-grey-3 h-separator-line"></div>
-                <a href="#" class="d-inline-flex align-items-center"
-                  ><img src="assets/icons/google.svg" alt=""
-                /></a>
-              </div>
-
-              <!-- AUDIO CALL -->
-              <div class="top-banner-audio position-absolute end-0">
-                <img
-                  class="audio-img"
-                  src="assets/images/home/audio_calls.png"
-                  alt=""
-                />
+              <div class="submenu-item-block products-nav shadow-default border-grey-2-1">
+                <div class="submenu-item-main d-grid align-items-start">
+                  <ul
+                    class="py-custom-7 px-custom-5 h-100 submenu-list bg-light-cyprus d-grid align-items-start gap-y-2">
+                    <li>
+                      <a class="submenu-item rounded-12 active d-flex align-items-center gap-x-3 p-custom-3 text-decoration-none"
+                        href="javascript:void(0)">
+                        <span
+                          class="submenu-item-icon icon-40 d-inline-flex align-items-center justify-content-center bg-white rounded-8">
+                          <img class="icon-24" src="assets/icons/grid_black.svg" />
+                        </span>
+                        <span class="submenu-item-text font-semibold text-base text-night me-auto">Office IVR
+                          Solutions</span>
+                        <span class="submenu-item-chevron icon-24 d-none">
+                          <img src="assets/icons/chevron_right_gray.svg" />
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="submenu-item rounded-12 d-flex align-items-center gap-x-3 p-custom-3 text-decoration-none"
+                        href="javascript:void(0)">
+                        <span
+                          class="submenu-item-icon icon-40 d-inline-flex align-items-center justify-content-center bg-white rounded-8">
+                          <img class="icon-24" src="assets/icons/mike_black.svg" />
+                        </span>
+                        <span class="submenu-item-text font-semibold text-base text-night me-auto">Voice Call Campaign
+                          Solutions</span>
+                        <span class="submenu-item-chevron icon-24 d-none">
+                          <img src="assets/icons/chevron_right_gray.svg" />
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="submenu-item rounded-12 d-flex align-items-center gap-x-3 p-custom-3 text-decoration-none"
+                        href="javascript:void(0)">
+                        <span
+                          class="submenu-item-icon icon-40 d-inline-flex align-items-center justify-content-center bg-white rounded-8">
+                          <img class="icon-24" src="assets/icons/voicemail_black.svg" />
+                        </span>
+                        <span class="submenu-item-text font-semibold text-base text-night me-auto">On-Premises Office
+                          IVR Solutions</span>
+                        <span class="submenu-item-chevron icon-24 d-none">
+                          <img src="assets/icons/chevron_right_gray.svg" />
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="submenu-item rounded-12 d-flex align-items-center gap-x-3 p-custom-3 text-decoration-none"
+                        href="javascript:void(0)">
+                        <span
+                          class="submenu-item-icon icon-40 d-inline-flex align-items-center justify-content-center bg-white rounded-8">
+                          <img class="icon-24" src="assets/icons/sms_black.svg" />
+                        </span>
+                        <span class="submenu-item-text font-semibold text-base text-night me-auto">Bulk SMS & SMS API
+                          Provider</span>
+                        <span class="submenu-item-chevron icon-24 d-none">
+                          <img src="assets/icons/chevron_right_gray.svg" />
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="submenu-item rounded-12 d-flex align-items-center gap-x-3 p-custom-3 text-decoration-none"
+                        href="javascript:void(0)">
+                        <span
+                          class="submenu-item-icon icon-40 d-inline-flex align-items-center justify-content-center bg-white rounded-8">
+                          <img class="icon-24" src="assets/icons/whatsapp_black.svg" />
+                        </span>
+                        <span class="submenu-item-text font-semibold text-base text-night me-auto">WhatsApp Business API
+                          Gateway Provider</span>
+                        <span class="submenu-item-chevron icon-24 d-none">
+                          <img src="assets/icons/chevron_right_gray.svg" />
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul
+                    class="submenu-grid h-100 p-custom-7 bg-white d-grid align-items-start grid-cols-2 gap-x-3 gap-y-2">
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/extensions.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Extensions</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/voicemail_green.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/3_way_calling.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">3 Way Calling</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/call_transfers.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Call Transfers</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/campaigns.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Campaigns</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/smart_dailer.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Smart Dailer</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/power_dialer.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Power Dailer</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/voicemail_drop.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail Drop</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/click_to_call.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Click-to-Call</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/customer_details.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Customer Details</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/call_notes.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Call Notes</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/call_tagging.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Call Tagging</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/unlimited.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Unlimited Concurrent
+                        Calls</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/notification.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Notifications</span>
+                    </li>
+                    <li class="submenu-grid-item d-flex align-items-center gap-x-3">
+                      <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                        <img class="icon-20" src="assets/icons/personalized_messages.svg" alt="" />
+                      </span>
+                      <span class="submenu-grid-item-text text-night font-semibold text-base">Personalized
+                        Messages</span>
+                    </li>
+                  </ul>
+                </div>
                 <div
-                  class="audio-player d-flex align-items-center gap-x-2 border-grey-2-1 rounded-8 p-custom-2 bg-white"
-                >
-                  <button
-                    type="button"
-                    class="audio-play-btn icon-btn btn-primary icon-28"
-                  >
-                    <img class="icon-20" src="assets/icons/play_white.svg" />
-                  </button>
-                  <div class="audio-play-time font-semibold text-night">
-                    1:12
+                  class="submenu-item-foot bg-p-green-50 py-custom-5 px-custom-7 d-flex align-items-center justify-content-between gap-2">
+                  <div class="d-flex align-items-center justify-content-start gap-3">
+                    <div class="icon-52">
+                      <img src="assets/icons/green_50_cloud_and_phone.svg" />
+                    </div>
+                    <p class="font-semibold text-base text-night mb-0">
+                      <span class="text-primary">Never Miss a Call</span> from
+                      Your Customer Ever Again!
+                    </p>
                   </div>
-                  <div class="audio-play-progress bg-grey-2 rounded-100vh">
+                  <a href="#" class="btn-try-for-free btn btn-white-primary-outline">Try for Free</a>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item-wrapper">
+              <a href="#" class="menu-item d-inline-flex align-items-center text-base font-semibold">
+                <span class="menu-item-text default-transition">Solutions</span>
+                <span class="menu-item-icon icon-24">
+                  <img src="assets/icons/chevron_down_grey.svg" />
+                </span>
+              </a>
+              <div class="submenu-item-block solutions-nav shadow-default border-grey-2-1">
+                <div
+                  class="submenu-item-main d-grid align-items-start h-100 p-custom-7 bg-white d-grid align-items-start grid-cols-4 gap-5">
+                  <div class="submenu-grid">
+                    <p class="py-custom-3 px-custom-2 font-semibold text-lg text-primary">
+                      By Team
+                    </p>
+                    <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-2">
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/it_and_operations.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">IT & Operations</span>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/sales.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Sales</span>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/customer_support.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Customer support</span>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/company_wide.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Company-wide</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="submenu-grid">
+                    <p class="py-custom-3 px-custom-2 font-semibold text-lg text-primary">
+                      By Industry
+                    </p>
+                    <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-2">
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/software_and_tech.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Software & Tech</span>
+                      </li>
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/financial_services.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Financial
+                          Services</span>
+                      </li>
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/professional_services.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Professional
+                          services</span>
+                      </li>
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/education_and_elearning.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Education &
+                          E-learning</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="submenu-grid">
+                    <p class="py-custom-3 px-custom-2 font-semibold text-lg text-primary">
+                      By Use
+                    </p>
+                    <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-2">
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/remote_teams.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Remote Teams</span>
+                      </li>
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/business_phone_system.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Business Phone
+                          System</span>
+                      </li>
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/calling_for_salesforce.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Calling for
+                          Salesforce</span>
+                      </li>
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/calling_for_hubspot.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Calling for
+                          HubSpot</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="submenu-grid">
+                    <p class="py-custom-3 px-custom-2 font-semibold text-lg text-primary">
+                      By Size
+                    </p>
+                    <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-2">
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/it_and_operations.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">IT & Operations</span>
+                      </li>
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/sales.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Sales</span>
+                      </li>
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/customer_support.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Customer support</span>
+                      </li>
+                      <li
+                        class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
+                        <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
+                          <img class="icon-20" src="assets/icons/company_wide.svg" alt="" />
+                        </span>
+                        <span class="submenu-grid-item-text text-night font-semibold text-base">Company-wide</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="submenu-item-foot bg-p-green-50 py-custom-5 px-custom-7 d-flex align-items-center justify-content-between gap-2">
+                  <div class="d-flex align-items-center justify-content-start gap-3">
+                    <div class="icon-52">
+                      <img src="assets/icons/green_50_cloud_and_phone.svg" />
+                    </div>
+                    <p class="font-semibold text-base text-night mb-0">
+                      <span class="text-primary">Never Miss a Call</span> from
+                      Your Customer Ever Again!
+                    </p>
+                  </div>
+                  <a href="#" class="btn-try-for-free btn btn-white-primary-outline">Try for Free</a>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item-wrapper">
+              <a href="#" class="menu-item d-inline-flex align-items-center text-base font-semibold">
+                <span class="menu-item-text default-transition">Pricing</span>
+              </a>
+            </li>
+            <li class="menu-item-wrapper">
+              <a href="#" class="menu-item d-inline-flex align-items-center text-base font-semibold">
+                <span class="menu-item-text default-transition">Developers</span>
+                <span class="menu-item-icon icon-24">
+                  <img src="assets/icons/chevron_down_grey.svg" />
+                </span>
+              </a>
+              <div class="submenu-item-block developers-nav shadow-default border-grey-2-1">
+                <div
+                  class="submenu-item-main d-grid align-items-start h-100 bg-white d-grid align-items-start grid-cols-3">
+                  <div class="submenu-grid bg-light-cyprus py-custom-7 px-custom-5">
                     <div
-                      style="width: 27px"
-                      class="audio-play-progress-bar bg-primary rounded-100vh"
-                    ></div>
+                      class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2">
+                      <span class="bg-white icon-24 rounded-6">
+                        <img class="icon-16" src="assets/icons/documentation.svg" alt="" />
+                      </span>
+                      <span class="text-primary">Documentation</span>
+                    </div>
+                    <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-1 px-custom-2">
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Twilio Flex</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">SMS</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Voice</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Email</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">WhatsApp API</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Elastic SIP Trunking</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Verify</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Functions</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Studioi</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">CLI</a>
+                      </li>
+                    </ul>
+                    <div class="d-flex justify-content-center"><a href="#" class="mt-custom-5 btn btn-transparent">See
+                        all docs</a></div>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <button
-                      type="button"
-                      class="audio-vol-btn icon-btn icon-btn-white icon-28"
-                    >
-                      <img
-                        class="icon-20"
-                        src="assets/icons/volume_grey.svg"
-                        alt=""
-                      />
-                      <img
-                        class="d-none hovered-state icon-20"
-                        src="assets/icons/volume_green.svg"
-                        alt=""
-                      />
-                    </button>
-                    <button
-                      type="button"
-                      class="audio-dots-btn icon-btn icon-btn-white icon-28"
-                    >
-                      <img
-                        class="icon-20"
-                        src="assets/icons/dots_grey.svg"
-                        alt=""
-                      />
-                      <img
-                        class="d-none hovered-state icon-20"
-                        src="assets/icons/dots_green.svg"
-                        alt=""
-                      />
-                    </button>
+                  <div class="submenu-grid bg-white py-custom-7 px-custom-5">
+                    <div
+                      class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2">
+                      <span class="bg-p-green-50 icon-24 rounded-6">
+                        <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                      </span>
+                      <span class="text-primary">Community</span>
+                    </div>
+                    <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-5">
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <p class="mb-0 font-semibold text-base text-night">Ahoy!</p>
+                        <p class="mb-0 text-gray text-sm font-semibold">Get inspired by the latest from our developer
+                          community</p>
+                      </li>
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <p class="mb-0 font-semibold text-base text-night">Developer Blog</p>
+                        <p class="mb-0 text-gray text-sm font-semibold">Read tutorials, community projects, and product updates</p>
+                      </li>
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <p class="mb-0 font-semibold text-base text-night">Stack Overflow!</p>
+                        <p class="mb-0 text-gray text-sm font-semibold">Ask the community for help</p>
+                      </li>
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <p class="mb-0 font-semibold text-base text-night">Champions</p>
+                        <p class="mb-0 text-gray text-sm font-semibold">Become a community Champion</p>
+                      </li>
+                    </ul>
                   </div>
+                  <div class="submenu-grid bg-white py-custom-7 px-custom-5">
+                    <div
+                      class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2">
+                      <span class="bg-light-cyprus icon-24 rounded-6">
+                        <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                      </span>
+                      <span class="text-primary">Tools & Resources</span>
+                    </div>
+                    <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-5">
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <p class="mb-0 font-semibold text-base text-night">CodeExchange!</p>
+                        <p class="mb-0 text-gray text-sm font-semibold">Usable code samples for faster builds</p>
+                      </li>
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <p class="mb-0 font-semibold text-base text-night">Changelog</p>
+                        <p class="mb-0 text-gray text-sm font-semibold">See updates and additions to Twilio products</p>
+                      </li>
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <p class="mb-0 font-semibold text-base text-night">API Status</p>
+                        <p class="mb-0 text-gray text-sm font-semibold">Check real-time monitoring of APIs and all services</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="submenu-item-foot bg-p-green-50 py-custom-5 px-custom-7 d-flex align-items-center justify-content-between gap-2">
+                  <div class="d-flex align-items-center justify-content-start gap-3">
+                    <div class="icon-52">
+                      <img src="assets/icons/green_50_cloud_and_phone.svg" />
+                    </div>
+                    <p class="font-semibold text-base text-night mb-0">
+                      <span class="text-primary">Never Miss a Call</span> from
+                      Your Customer Ever Again!
+                    </p>
+                  </div>
+                  <a href="#" class="btn-try-for-free btn btn-white-primary-outline">Try for Free</a>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item-wrapper">
+              <a href="#" class="menu-item d-inline-flex align-items-center text-base font-semibold">
+                <span class="menu-item-text default-transition">Resources</span>
+                <span class="menu-item-icon icon-24">
+                  <img src="assets/icons/chevron_down_grey.svg" />
+                </span>
+              </a>
+              <div class="submenu-item-block resources-nav shadow-default border-grey-2-1">
+                <div
+                  class="submenu-item-main d-grid align-items-start h-100 bg-white d-grid align-items-start grid-cols-2 py-custom-7 px-custom-5">
+                  <div class="submenu-grid bg-white">
+                    <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-1">
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Blog</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Onboarding Portal</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Help Center</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Country Coverage</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="submenu-grid bg-white">
+                    <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-1">
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Apps</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Customer Stories</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Solutions</a>
+                      </li>
+                      <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                        <a href="#" class="font-semibold text-base text-night">Partners</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="submenu-item-foot bg-p-green-50 py-custom-5 px-custom-7 d-flex align-items-center justify-content-between gap-2">
+                  <div class="d-flex align-items-center justify-content-start gap-3">
+                    <div class="icon-52">
+                      <img src="assets/icons/green_50_cloud_and_phone.svg" />
+                    </div>
+                    <p class="font-semibold text-base text-night mb-0 submenu-item-foot-text">
+                      <span class="text-primary">Never Miss a Call</span> from
+                      Your Customer Ever Again!
+                    </p>
+                  </div>
+                  <a href="#" class="btn-try-for-free btn btn-white-primary-outline">Try for Free</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="atel-navbar-btns d-flex align-items-center">
+            <a href="#" class="btn btn-transparent">
+              <span class="btn-text">Sign In</span>
+              <span class="btn-icon">
+                <img src="assets/icons/sign_in_green.svg" alt="" />
+              </span>
+            </a>
+            <a href="#" class="btn btn-primary">
+              <span class="btn-text">Try for Free</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- TOP SECTION -->
+    <section class="atel-top-banner atel-home-pg">
+      <div class="container min-h-100vh">
+        <div class="top-banner-segment position-relative">
+          <div class="top-banner-text-group mx-auto text-center mb-5">
+            <h1 class="top-banner-ttl font-bold">
+              Top <span class="text-primary">Cloud Telephony Service</span> –
+              Trusted by Businesses in Nepal & Beyond
+            </h1>
+            <p class="top-banner-lead font-semibold text-lg text-night mt-custom-6 mb-0">
+              Innovative communication solutions including IVR, Bulk SMS,
+              Voice Campaigns, and WhatsApp API.
+            </p>
+          </div>
+
+          <div>
+            <!-- TOTAL CALL DATA IMAGE -->
+            <img class="top-banner-calls position-absolute" src="assets/images/home/total_call_data.svg" alt="" />
+            <p class="text-sm font-semibold mb-0 text-center">
+              Never miss a call from your customer ever again !
+            </p>
+            <div class="top-banner-btns d-flex align-items-center justify-content-center gap-3 mt-custom-4">
+              <a href="#" class="btn btn-primary btn-lg"> Try for Free </a>
+              <a href="#" class="btn btn-white-black btn-lg">See Our Pricing</a>
+            </div>
+            <div class="top-banner-rating d-flex justify-content-center gap-x-3 mt-custom-4">
+              <span class="font-semibold text-lg text-night">4.8</span>
+              <ul class="unstyled d-inline-flex align-items-center">
+                <li>
+                  <img src="assets/icons/star_filled_yellow.svg" alt="" />
+                </li>
+                <li>
+                  <img src="assets/icons/star_filled_yellow.svg" alt="" />
+                </li>
+                <li>
+                  <img src="assets/icons/star_filled_yellow.svg" alt="" />
+                </li>
+                <li>
+                  <img src="assets/icons/star_filled_yellow.svg" alt="" />
+                </li>
+                <li>
+                  <img src="assets/icons/star_filled_yellow.svg" alt="" />
+                </li>
+              </ul>
+              <div class="bg-grey-3 h-separator-line"></div>
+              <a href="#" class="d-inline-flex align-items-center"><img src="assets/icons/google.svg" alt="" /></a>
+            </div>
+
+            <!-- AUDIO CALL -->
+            <div class="top-banner-audio position-absolute end-0">
+              <img class="audio-img" src="assets/images/home/audio_calls.png" alt="" />
+              <div class="audio-player d-flex align-items-center gap-x-2 border-grey-2-1 rounded-8 p-custom-2 bg-white">
+                <button type="button" class="audio-play-btn icon-btn btn-primary icon-28">
+                  <img class="icon-20" src="assets/icons/play_white.svg" />
+                </button>
+                <div class="audio-play-time font-semibold text-night">
+                  1:12
+                </div>
+                <div class="audio-play-progress bg-grey-2 rounded-100vh">
+                  <div style="width: 27px" class="audio-play-progress-bar bg-primary rounded-100vh"></div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button type="button" class="audio-vol-btn icon-btn icon-btn-white icon-28">
+                    <img class="icon-20" src="assets/icons/volume_grey.svg" alt="" />
+                    <img class="d-none hovered-state icon-20" src="assets/icons/volume_green.svg" alt="" />
+                  </button>
+                  <button type="button" class="audio-dots-btn icon-btn icon-btn-white icon-28">
+                    <img class="icon-20" src="assets/icons/dots_grey.svg" alt="" />
+                    <img class="d-none hovered-state icon-20" src="assets/icons/dots_green.svg" alt="" />
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- END OF TOP SECTION -->
+      </div>
+    </section>
+    <!-- END OF TOP SECTION -->
 
-      <!-- HOME FEATURES -->
-      <section class="atel-features bg-p-green-50">
-        <div
-          class="atel-features-wrapper bg-dark-cyprus segment-pt-100 rounded-t-80"
-        >
-          <div class="container">
-            <div class="atel-features-segment">
-              <div class="segment-heading text-center mx-auto">
-                <p class="text-primary text-lg font-semibold mb-custom-3">
-                  Features
+    <!-- HOME FEATURES -->
+    <section class="atel-features bg-p-green-50">
+      <div class="atel-features-wrapper bg-dark-cyprus segment-pt-100 rounded-t-80">
+        <div class="container">
+          <div class="atel-features-segment">
+            <div class="segment-heading text-center mx-auto">
+              <p class="text-primary text-lg font-semibold mb-custom-3">
+                Features
+              </p>
+              <h2 class="segment-ttl text-white text-7xl">
+                Building a Better Business with Next-Gen Communication
+              </h2>
+            </div>
+
+            <ul class="features-tabs d-flex align-items-center justify-content-center gap-2 my-custom-5">
+              <li>
+                <button type="button"
+                  class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2">
+                  Inbound Calling
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2">
+                  Outbound Calling
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="text-night text-base font-semibold text-center border-0 px-custom-3 py-custom-2 bg-p-green-50 rounded-8">
+                  My CRM
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2">
+                  Messaging
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2">
+                  Analytics
+                </button>
+              </li>
+            </ul>
+            <div class="features-tabs-content pt-custom-5">
+              <img src="assets/images/home/features_crm.svg" alt="features tabs image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF HOME FEATURES -->
+
+    <!-- KEY PRODUCTS -->
+    <section class="atel-key-products bg-white rounded-t-80 position-relative">
+      <div class="container">
+        <div class="atel-key-products-segment segment-py-120">
+          <div class="segment-heading text-center mx-auto">
+            <p class="text-primary text-lg font-semibold mb-custom-3">
+              Key Products
+            </p>
+            <h2 class="segment-ttl text-night text-7xl">
+              Discover Our Suite of Advanced Telephony Solutions for Every
+              Business Need
+            </h2>
+          </div>
+
+          <div class="key-products-block-group d-grid align-items-start segment-mt-60">
+            <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
+              <div class="key-products-block-l">
+                <div
+                  class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12">
+                  <img class="icon-32" src="assets/icons/grid_black.svg" alt="" />
+                </div>
+                <h3 class="key-products-block-ttl text-4xl text-night font-bold my-custom-4">
+                  Office IVR Solutions
+                </h3>
+                <p class="text-base text-night font-semibold pb-custom-4">
+                  Streamline call management with customizable IVR systems for
+                  efficient routing and customer interaction.
                 </p>
-                <h2 class="segment-ttl text-white text-7xl">
-                  Building a Better Business with Next-Gen Communication
+                <a href="#" class="btn btn-transparent">
+                  <span class="btn-text">Learn more</span>
+                  <span class="btn-icon">
+                    <img src="assets/icons/chevron_right_green.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+              <div class="key-products-block-r">
+                <img src="assets/images/home/office_ivr_solutionsi.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
+              <div class="key-products-block-l">
+                <div
+                  class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12">
+                  <img class="icon-32" src="assets/icons/mike_black.svg" alt="" />
+                </div>
+                <h3 class="key-products-block-ttl text-4xl text-night font-bold my-custom-4">
+                  Voice Call Campaign Solutions
+                </h3>
+                <p class="text-base text-night font-semibold pb-custom-4">
+                  Enhance outreach with automated voice campaigns and targeted
+                  messaging.
+                </p>
+                <a href="#" class="btn btn-transparent">
+                  <span class="btn-text">Learn more</span>
+                  <span class="btn-icon">
+                    <img src="assets/icons/chevron_right_green.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+              <div class="key-products-block-r">
+                <img src="assets/images/home/voicecall_compaign_solutionsi.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
+              <div class="key-products-block-l">
+                <div
+                  class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12">
+                  <img class="icon-32" src="assets/icons/voicemail_black.svg" alt="" />
+                </div>
+                <h3 class="key-products-block-ttl text-4xl text-night font-bold my-custom-4">
+                  On-Premises Office IVR Solutions
+                </h3>
+                <p class="text-base text-night font-semibold pb-custom-4">
+                  Deploy customizable IVR systems on-site for complete control
+                  and local data storage.
+                </p>
+                <a href="#" class="btn btn-transparent">
+                  <span class="btn-text">Learn more</span>
+                  <span class="btn-icon">
+                    <img src="assets/icons/chevron_right_green.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+              <div class="key-products-block-r">
+                <img src="assets/images/home/onpremises_ivr_solutions.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
+              <div class="key-products-block-l">
+                <div
+                  class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12">
+                  <img class="icon-32" src="assets/icons/sms_black.svg" alt="" />
+                </div>
+                <h3 class="key-products-block-ttl text-4xl text-night font-bold my-custom-4">
+                  Bulk SMS & SMS API Provider
+                </h3>
+                <p class="text-base text-night font-semibold pb-custom-4">
+                  Send high-volume SMS and integrate messaging into your
+                  systems with our robust API.
+                </p>
+                <a href="#" class="btn btn-transparent">
+                  <span class="btn-text">Learn more</span>
+                  <span class="btn-icon">
+                    <img src="assets/icons/chevron_right_green.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+              <div class="key-products-block-r">
+                <img src="assets/images/home/sms_and_api_provider.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
+              <div class="key-products-block-l">
+                <div
+                  class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-primary rounded-12">
+                  <img class="icon-32" src="assets/icons/whatsapp_white.svg" alt="" />
+                </div>
+                <h3 class="key-products-block-ttl text-4xl text-night font-bold my-custom-4">
+                  WhatsApp Business API Gateway Provider
+                </h3>
+                <p class="text-base text-night font-semibold pb-custom-4">
+                  Enable seamless communication with customers through
+                  automated, secure WhatsApp messaging.
+                </p>
+                <a href="#" class="btn btn-transparent">
+                  <span class="btn-text">Learn more</span>
+                  <span class="btn-icon">
+                    <img src="assets/icons/chevron_right_green.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+              <div class="key-products-block-r">
+                <img src="assets/images/home/whatsapp_api_provider.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF KEY PRODUCTS -->
+
+    <!-- KEY PRODUCTS -->
+    <section class="atel-who-we-help bg-grey-1 position-relative segment-py-120">
+      <div class="container">
+        <div class="atel-who-we-help-segment">
+          <div class="segment-heading text-start">
+            <p class="text-primary text-lg font-semibold mb-custom-3">
+              Who We Help
+            </p>
+            <h2 class="segment-ttl text-night text-7xl">
+              Helping Every Team Stay Focused with Streamlined Communication
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="container atel-who-we-help-container">
+        <div class="atel-who-we-help-segment">
+          <div class="who-we-help-cards who-we-help-slider segment-mt-60">
+            <div class="wwh-card-wrapper">
+              <div class="card position-relative w-100 overflow-hidden border-0">
+                <div class="card-img">
+                  <img src="assets/images/home/who_we_help1.png" alt="" />
+                </div>
+                <div
+                  class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start">
+                  <h4 class="card-title text-white text-2xl font-bold mb-custom-3">
+                    Customer Support
+                  </h4>
+                  <p class="card-text text-base font-semibold text-white">
+                    Deliver better service with IVR, call routing, and
+                    real-time analytics.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="wwh-card-wrapper">
+              <div class="card position-relative w-100 overflow-hidden border-0">
+                <div class="card-img">
+                  <img src="assets/images/home/who_we_help2.png" alt="" />
+                </div>
+                <div
+                  class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start">
+                  <h4 class="card-title text-white text-2xl font-bold mb-custom-3">
+                    Sales
+                  </h4>
+                  <p class="card-text text-base font-semibold text-white">
+                    Drive sales with automated call campaigns and SMS
+                    outreach.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="wwh-card-wrapper">
+              <div class="card position-relative w-100 overflow-hidden border-0">
+                <div class="card-img">
+                  <img src="assets/images/home/who_we_help3.png" alt="" />
+                </div>
+                <div
+                  class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start">
+                  <h4 class="card-title text-white text-2xl font-bold mb-custom-3">
+                    Marketing
+                  </h4>
+                  <p class="card-text text-base font-semibold text-white">
+                    Engage audiences with personalized voice and SMS
+                    campaigns.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="wwh-card-wrapper">
+              <div class="card position-relative w-100 overflow-hidden border-0">
+                <div class="card-img">
+                  <img src="assets/images/home/who_we_help4.png" alt="" />
+                </div>
+                <div
+                  class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start">
+                  <h4 class="card-title text-white text-2xl font-bold mb-custom-3">
+                    Healthcare Providers
+                  </h4>
+                  <p class="card-text text-base font-semibold text-white">
+                    Patient care with auto reminders & secure communication.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="wwh-card-wrapper">
+              <div class="card position-relative w-100 overflow-hidden border-0">
+                <div class="card-img">
+                  <img src="assets/images/home/who_we_help5.png" alt="" />
+                </div>
+                <div
+                  class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start">
+                  <h4 class="card-title text-white text-2xl font-bold mb-custom-3">
+                    SMBs
+                  </h4>
+                  <p class="card-text text-base font-semibold text-white">
+                    Scale cost-effectively with cloud-based communication
+                    solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF KEY PRODUCTS -->
+
+    <!-- UPGRADE -->
+    <section class="atel-upgrade bg-dark-cyprus position-relative segment-py-120">
+      <div class="container">
+        <div class="atel-upgrade-segment">
+          <div class="segment-heading text-start text-center mx-auto">
+            <h2 class="segment-ttl text-white text-7xl mb-custom-5">
+              Tired of Unreliable Calls and Limited Reach? It’s Time to
+              Upgrade
+            </h2>
+            <p class="text-white text-base font-semibold">
+              Don’t settle for dropped calls and restricted connections. Our
+              advanced telephony solutions ensure seamless, reliable
+              communication with a global reach, so you can connect with every
+              customer, everywhere.
+            </p>
+          </div>
+        </div>
+
+        <div class="upgrade-compare d-grid sm-grid-cols-2 grid-cols-1 segment-mt-60">
+          <div class="upgrade-compare-item d-flex align-items-center justify-content-center">
+            <img class="compare-item-img" src="assets/images/home/upgrade_telephone.svg" alt="" />
+            <div class="cimpare-item-info p-custom-5">
+              <p class="text-primary font-bold text-2xl mb-0">With</p>
+              <h4 class="text-white text-4xl font-bold mt-0">Aakashtel</h4>
+            </div>
+          </div>
+
+          <div class="upgrade-compare-item d-flex align-items-center justify-content-center">
+            <img class="compare-item-img" src="assets/images/home/upgrade_aakashtel.svg" alt="" />
+            <div class="cimpare-item-info p-custom-5">
+              <p class="text-red-500 font-bold text-2xl mb-0">Before</p>
+              <h4 class="text-white text-4xl font-bold mt-0">Aakashtel</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="upgrade-compare-data d-grid gap-y-10 segment-mt-40">
+          <div class="compare-data-item d-flex align-items-center">
+            <div
+              class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+              <span class="compare-data-item-icon icon-24 bg-white rounded-4">
+                <img class="icon-16" src="assets/icons/close_red.svg" alt="" />
+              </span>
+              <p class="text-gray text-base font-semibold mb-0">
+                Frequent call drops and poor audio quality.
+              </p>
+            </div>
+            <div
+              class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
+              <span class="icon-40">
+                <img class="icon-32" src="assets/icons/call_ring_red_200.svg" alt="" />
+              </span>
+              <p class="mb-0 text-night font-semibold text-lg">
+                Call Quality
+              </p>
+            </div>
+            <div
+              class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+              <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
+                <img class="icon-16" src="assets/icons/tick_white.svg" alt="" />
+              </span>
+              <p class="text-white text-base font-semibold mb-0">
+                Frequent call drops and poor audio quality.
+              </p>
+            </div>
+          </div>
+          <div class="compare-data-item d-flex align-items-center">
+            <div
+              class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+              <span class="compare-data-item-icon icon-24 bg-white rounded-4">
+                <img class="icon-16" src="assets/icons/close_red.svg" alt="" />
+              </span>
+              <p class="text-gray text-base font-semibold mb-0">
+                Challenges in acquiring local numbers in key markets.
+              </p>
+            </div>
+            <div
+              class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
+              <span class="icon-40">
+                <img class="icon-32" src="assets/icons/globe_red_200.svg" alt="" />
+              </span>
+              <p class="mb-0 text-night font-semibold text-lg">
+                Local Presence
+              </p>
+            </div>
+            <div
+              class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+              <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
+                <img class="icon-16" src="assets/icons/tick_white.svg" alt="" />
+              </span>
+              <p class="text-white text-base font-semibold mb-0">
+                Effortless access to local phone numbers across over 160
+                countries.
+              </p>
+            </div>
+          </div>
+          <div class="compare-data-item d-flex align-items-center">
+            <div
+              class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+              <span class="compare-data-item-icon icon-24 bg-white rounded-4">
+                <img class="icon-16" src="assets/icons/close_red.svg" alt="" />
+              </span>
+              <p class="text-gray text-base font-semibold mb-0">
+                Complicated integrations and tracking issues with your
+                existing tools.
+              </p>
+            </div>
+            <div
+              class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
+              <span class="icon-40">
+                <img class="icon-32" src="assets/icons/gears_red_200.svg" alt="" />
+              </span>
+              <p class="mb-0 text-night font-semibold text-lg">
+                Integrations
+              </p>
+            </div>
+            <div
+              class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+              <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
+                <img class="icon-16" src="assets/icons/tick_white.svg" alt="" />
+              </span>
+              <p class="text-white text-base font-semibold mb-0">
+                Smooth integrations with your CRM, helpdesk, and other
+                essential business systems.
+              </p>
+            </div>
+          </div>
+          <div class="compare-data-item d-flex align-items-center">
+            <div
+              class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+              <span class="compare-data-item-icon icon-24 bg-white rounded-4">
+                <img class="icon-16" src="assets/icons/close_red.svg" alt="" />
+              </span>
+              <p class="text-gray text-base font-semibold mb-0">
+                Struggling with complex and cumbersome phone systems.
+              </p>
+            </div>
+            <div
+              class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
+              <span class="icon-40">
+                <img class="icon-32" src="assets/icons/cursor_red_200.svg" alt="" />
+              </span>
+              <p class="mb-0 text-night font-semibold text-lg">Ease of Use</p>
+            </div>
+            <div
+              class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+              <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
+                <img class="icon-16" src="assets/icons/tick_white.svg" alt="" />
+              </span>
+              <p class="text-white text-base font-semibold mb-0">
+                User-friendly software designed for easy adoption and
+                streamlined operations.
+              </p>
+            </div>
+          </div>
+          <div class="compare-data-item d-flex align-items-center">
+            <div
+              class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+              <span class="compare-data-item-icon icon-24 bg-white rounded-4">
+                <img class="icon-16" src="assets/icons/close_red.svg" alt="" />
+              </span>
+              <p class="text-gray text-base font-semibold mb-0">
+                Manual call tracking and limited insights.
+              </p>
+            </div>
+            <div
+              class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
+              <span class="icon-40">
+                <img class="icon-32" src="assets/icons/graph_red_200.svg" alt="" />
+              </span>
+              <p class="mb-0 text-night font-semibold text-lg">
+                Local Analytics
+              </p>
+            </div>
+            <div
+              class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
+              <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
+                <img class="icon-16" src="assets/icons/tick_white.svg" alt="" />
+              </span>
+              <p class="text-white text-base font-semibold mb-0">
+                Advanced analytics with comprehensive conversation insights,
+                delivered automatically.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF UPGRADE -->
+
+    <!-- SUPPORTING YOUR INDUSTRY -->
+    <section class="atel-support-industry bg-white position-relative segment-pt-160">
+      <div class="container atel-support-industry-container">
+        <div class="atel-support-industry-segment">
+          <div class="segment-heading text-start text-center mx-auto">
+            <h2 class="segment-ttl text-night text-7xl mb-custom-5">
+              Supporting Your Industry
+            </h2>
+          </div>
+
+          <div
+            class="support-industry-accordion d-grid align-items-start lg-grid-cols-2 grid-cols-1 segment-mt-60 segment-mb-100">
+            <div class="support-industry-img overflow-hidden">
+              <img src="assets/images/home/support_industry.png" alt="" />
+            </div>
+            <div class="accordion" id="supportIndustryAccordion">
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button text-2xl text-gray bg-white shadow-none pt-custom-5 pb-custom-3 px-custom-7 border-l-grey-2-3 rounded-0"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#supportCollapseOne" aria-expanded="true"
+                    aria-controls="supportCollapseOne">
+                    Software & Tech
+                  </button>
                 </h2>
+                <div id="supportCollapseOne" class="accordion-collapse collapse show border-l-primary-3"
+                  aria-labelledby="headingOne" data-bs-parent="#supportIndustryAccordion">
+                  <div class="accordion-body pt-0 ps-custom-7 pb-custom-5 pe-0">
+                    <p class="text-gray font-semibold text-base mb-0">
+                      Boost efficiency with features like power dialing and
+                      intelligent call routing. Close deals, resolve issues
+                      faster and get a 360 customer view with powerful CRM and
+                      helpdesk integrations.
+                    </p>
+                    <div class="industry-features mt-custom-7">
+                      <p class="text-sm text-primary font-semibold mb-custom-5">
+                        Favourite industry features
+                      </p>
+                      <div class="industry-feature-list d-flex flex-wrap gap-4">
+                        <div class="industry-feature-item d-inline-flex align-items-center gap-x-2">
+                          <span class="icon-24 bg-yellow-200 rounded-6">
+                            <img class="icon-16" src="assets/icons/blaze_black.svg" alt="" />
+                          </span>
+                          <p class="mb-0 text-night font-semibold text-base">
+                            Power Dialer
+                          </p>
+                        </div>
+                        <div class="industry-feature-item d-inline-flex align-items-center gap-x-2">
+                          <span class="icon-24 bg-red-200 rounded-6">
+                            <img class="icon-16" src="assets/icons/cursor_black.svg" alt="" />
+                          </span>
+                          <p class="mb-0 text-night font-semibold text-base">
+                            Click-to-Call
+                          </p>
+                        </div>
+                        <div class="industry-feature-item d-inline-flex align-items-center gap-x-2">
+                          <span class="icon-24 bg-blue-200 rounded-6">
+                            <img class="icon-16" src="assets/icons/tags_black.svg" alt="" />
+                          </span>
+                          <p class="mb-0 text-night font-semibold text-base">
+                            Automated Call Summary & Tags
+                          </p>
+                        </div>
+                        <div class="industry-feature-item d-inline-flex align-items-center gap-x-2">
+                          <span class="icon-24 bg-green-200 rounded-6">
+                            <img class="icon-16" src="assets/icons/emoji_black.svg" alt="" />
+                          </span>
+                          <p class="mb-0 text-night font-semibold text-base">
+                            Sentiment Analysis
+                          </p>
+                        </div>
+                        <div class="industry-feature-item d-inline-flex align-items-center gap-x-2">
+                          <span class="icon-24 bg-light-cyprus rounded-6">
+                            <img class="icon-16" src="assets/icons/hash_black.svg" alt="" />
+                          </span>
+                          <p class="mb-0 text-night font-semibold text-base">
+                            Number Porting
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="collapsed accordion-button text-2xl text-gray bg-white shadow-none pt-custom-5 pb-custom-3 px-custom-7 border-l-grey-2-3 rounded-0"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#supportCollapseTwo" aria-expanded="false"
+                    aria-controls="supportCollapseTwo">
+                    Financial Services
+                  </button>
+                </h2>
+                <div id="supportCollapseTwo" class="accordion-collapse collapse border-l-primary-3"
+                  aria-labelledby="headingTwo" data-bs-parent="#supportIndustryAccordion">
+                  <div class="accordion-body pt-0 ps-custom-7 pb-custom-5 pe-0">
+                    <p>Financial Services Content</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="collapsed accordion-button text-2xl text-gray bg-white shadow-none pt-custom-5 pb-custom-3 px-custom-7 border-l-grey-2-3 rounded-0"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#supportCollapseThree" aria-expanded="false"
+                    aria-controls="supportCollapseThree">
+                    Education & Learning
+                  </button>
+                </h2>
+                <div id="supportCollapseThree" class="accordion-collapse collapse border-l-primary-3"
+                  aria-labelledby="headingThree" data-bs-parent="#supportIndustryAccordion">
+                  <div class="accordion-body pt-0 ps-custom-7 pb-custom-5 pe-0">
+                    <p>Education & Learning Content</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="collapsed accordion-button text-2xl text-gray bg-white shadow-none pt-custom-5 pb-custom-3 px-custom-7 border-l-grey-2-3 rounded-0"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#supportCollapseFour" aria-expanded="false"
+                    aria-controls="supportCollapseFour">
+                    Professional Services
+                  </button>
+                </h2>
+                <div id="supportCollapseFour" class="accordion-collapse collapse border-l-primary-3 rounded-0"
+                  aria-labelledby="headingThree" data-bs-parent="#supportIndustryAccordion">
+                  <div class="accordion-body pt-0 ps-custom-7 pb-custom-5 pe-0">
+                    <p>Professional Services Content</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="business-companies d-flex flex-wrap align-items-center justify-content-between gap-10 pt-custom-10 pb-custom-5 border-t-grey-2-1">
+            <p class="text-lg business-companies-text">
+              Empowering 500+ Businesses Across Nepal
+            </p>
+            <img class="business-companies-logo" src="assets/images/home/business_brands.svg" alt="" />
+          </div>
+
+          <div
+            class="atel-downloads position-relative z-1 segment-mt-120 bg-light-cyprus rounded-20 p-custom-10 d-grid align-items-center gap-5">
+            <div class="segment-heading text-start">
+              <p class="text-primary text-lg font-semibold mb-custom-3">
+                Downloads
+              </p>
+              <h2 class="segment-ttl text-night text-7xl">
+                Apps for all your devices.
+              </h2>
+            </div>
+
+            <div class="segment-downloads-mobile bg-white rounded-12 p-custom-7">
+              <div class="downloads-mobile-icon icon-52 rounded-12 bg-blue-200 mb-custom-5">
+                <img class="icon-32" src="assets/icons/cellphone_black.svg" alt="mobile donwloads icon" />
               </div>
 
-              <ul
-                class="features-tabs d-flex align-items-center justify-content-center gap-2 my-custom-5"
-              >
-                <li>
-                  <button
-                    type="button"
-                    class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2"
-                  >
-                    Inbound Calling
+              <h3 class="font-bold text-4xl mt-0 text-night">Mobile</h3>
+              <p>Get work done on the go.</p>
+              <div class="d-flex align-items-center flex-wrap gap-3">
+                <a href="#" class="donwloads-app-link">
+                  <img src="assets/icons/google_play.svg" alt="google play icon" />
+                </a>
+                <a href="#" class="donwloads-app-link">
+                  <img src="assets/icons/appstore.svg" alt="app store icon" />
+                </a>
+              </div>
+            </div>
+
+            <div class="segment-downloads-desktop bg-white rounded-12 p-custom-7">
+              <div class="downloads-mobile-icon icon-52 rounded-12 bg-red-200 mb-custom-5">
+                <img class="icon-32" src="assets/icons/desktop_black.svg" alt="mobile donwloads icon" />
+              </div>
+
+              <h3 class="font-bold text-4xl mt-0 text-night">Desktop</h3>
+              <p>Get work done from your desktop.</p>
+              <div class="d-flex align-items-center flex-wrap gap-3">
+                <a href="#" class="donwloads-app-link">
+                  <img src="assets/icons/mac.svg" alt="mac icon" />
+                </a>
+                <a href="#" class="donwloads-app-link">
+                  <img src="assets/icons/windows.svg" alt="windows icon" />
+                </a>
+                <a href="#" class="donwloads-app-link">
+                  <img src="assets/icons/linux.svg" alt="linux icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF SUPPORTING YOUR INDUSTRY -->
+
+    <!-- LATEST BLOGS -->
+    <section class="atel-lt-blogs bg-grey-1 position-relative">
+      <div class="container">
+        <div class="atel-lt-blogs-segment segment-pt-100 segment-pb-120">
+          <div class="segment-heading d-flex align-items-center justify-content-between">
+            <h2 class="segment-ttl text-white text-7xl text-night">
+              Latest Blogs
+            </h2>
+            <a href="" class="btn-transparent btn">
+              <span class="btn-text">See more</span>
+              <span class="btn-icon">
+                <img src="assets/icons/chevron_right_green.svg" />
+              </span>
+            </a>
+          </div>
+
+          <div class="blog-cards segment-mt-40 d-grid align-items-start grid-cols-1 md-grid-cols-2 xl-grid-cols-3">
+            <div class="card border-0 bg-transparent">
+              <div class="card-img border-grey-2-1 rounded-12 overflow-hidden">
+                <img class="object-cover w-100 h-100 object-center" src="assets/images/home/blog1.png" alt="" />
+              </div>
+              <div class="card-body p-custom-5">
+                <div class="badge-group mb-custom-3">
+                  <span
+                    class="badge bg-grey-2 rounded-8 py-custom-1 px-custom-2 text-night text-sm font-semibold">Data</span>
+                </div>
+
+                <h3 class="card-title font-bold text-2xl text-night mb-custom-3">
+                  Thousands of Customers Love Us. You Will Too.
+                </h3>
+                <p class="text-base">
+                  Thousands of businesses trust CloudTalk to connect with
+                  prospects and customers worldwide. See what real users say
+                  on G2!
+                </p>
+              </div>
+            </div>
+
+            <div class="card border-0 bg-transparent">
+              <div class="card-img border-grey-2-1 rounded-12 overflow-hidden">
+                <img class="object-cover w-100 h-100 object-center" src="assets/images/home/blog2.png" alt="" />
+              </div>
+              <div class="card-body p-custom-5">
+                <div class="badge-group mb-custom-3">
+                  <span class="badge bg-grey-2 rounded-8 py-custom-1 px-custom-2 text-night text-sm font-semibold">Call
+                    Center</span>
+                  <span
+                    class="badge bg-grey-2 rounded-8 py-custom-1 px-custom-2 text-night text-sm font-semibold">Marketing</span>
+                </div>
+
+                <h3 class="card-title font-bold text-2xl text-night mb-custom-3">
+                  Expert Help When You Need It. Faster Than “Uh Oh!“
+                </h3>
+                <p class="text-base">
+                  Ditch the wait! Get the #1 rated support with lightning-fast
+                  resolutions, getting you back on track in no time.
+                </p>
+              </div>
+            </div>
+
+            <div class="card border-0 bg-transparent">
+              <div class="card-img border-grey-2-1 rounded-12 overflow-hidden">
+                <img class="object-cover w-100 h-100 object-center" src="assets/images/home/blog3.png" alt="" />
+              </div>
+              <div class="card-body p-custom-5">
+                <div class="badge-group mb-custom-3">
+                  <span class="badge bg-grey-2 rounded-8 py-custom-1 px-custom-2 text-night text-sm font-semibold">Phone
+                    System</span>
+                </div>
+
+                <h3 class="card-title font-bold text-2xl text-night mb-custom-3">
+                  Get more “Hello’s” with local numbers
+                </h3>
+                <p class="text-base">
+                  Unfamiliar, foreign numbers get ignored. CloudTalk bridges
+                  the gap with local phone numbers in 160+ countries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF LATEST BLOGS -->
+
+    <!-- SERVICE PRESENCE -->
+    <section class="atel-presence bg-grey-1 position-relative">
+      <div class="container atel-presence-container">
+        <div class="atel-presence-segment segment-pt-100 segment-pt-100 segment-pb-80">
+          <div class="segment-heading text-center mx-auto">
+            <h2 class="segment-ttl text-white text-7xl text-night mb-custom-4">
+              We are present all over Nepal
+            </h2>
+            <p class="segment-lead">
+              Connecting Nepal with Exceptional SMS Service Everywhere
+            </p>
+          </div>
+
+          <div class="presence-block d-grid align-items-start mt-custom-2">
+            <div class="presence-map">
+              <img src="assets/images/bulk_sms_presence.svg" alt="" />
+            </div>
+            <div class="presence-tabs shadow-default bg-white p-custom-5 rounded-20 border-0">
+              <ul class="nav nav-tabs bg-grey-2 rounded-8" id="presenceTabs" role="tablist">
+                <li class="nav-item d-flex align-items-center flex-1" role="presentation">
+                  <button class="nav-link font-semibold text-base text-gray px-custom-3 border-0 bg-transparent active"
+                    id="sms-tab" data-bs-toggle="tab" data-bs-target="#sms-tab-pane" type="button" role="tab"
+                    aria-controls="sms-tab-pane" aria-selected="true">
+                    Bulk SMS
                   </button>
                 </li>
-                <li>
-                  <button
-                    type="button"
-                    class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2"
-                  >
-                    Outbound Calling
+                <li class="nav-item d-flex align-items-center flex-1" role="presentation">
+                  <button class="nav-link font-semibold text-base text-gray px-custom-3 border-0 bg-transparent"
+                    id="voice-tab" data-bs-toggle="tab" data-bs-target="#voice-tab-pane" type="button" role="tab"
+                    aria-controls="voice-tab-pane" aria-selected="false">
+                    Voice
                   </button>
                 </li>
-                <li>
-                  <button
-                    type="button"
-                    class="text-night text-base font-semibold text-center border-0 px-custom-3 py-custom-2 bg-p-green-50 rounded-8"
-                  >
-                    My CRM
+                <li class="nav-item d-flex align-items-center flex-1" role="presentation">
+                  <button class="nav-link font-semibold text-base text-gray px-custom-3 border-0 bg-transparent"
+                    id="ivr-tab" data-bs-toggle="tab" data-bs-target="#ivr-tab-pane" type="button" role="tab"
+                    aria-controls="ivr-tab-pane" aria-selected="false">
+                    IVR
                   </button>
                 </li>
-                <li>
-                  <button
-                    type="button"
-                    class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2"
-                  >
-                    Messaging
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="text-light-cyprus text-base font-semibold text-center border-0 px-custom-3 py-custom-2"
-                  >
-                    Analytics
+                <li class="nav-item d-flex align-items-center flex-1" role="presentation">
+                  <button class="nav-link font-semibold text-base text-gray px-custom-3 border-0 bg-transparent"
+                    id="contact-tab" data-bs-toggle="tab" data-bs-target="#whatsapp-tab-pane" type="button" role="tab"
+                    aria-controls="whatsapp-tab-pane" aria-selected="false">
+                    WhatsApp
                   </button>
                 </li>
               </ul>
-              <div class="features-tabs-content pt-custom-5">
-                <img
-                  src="assets/images/home/features_crm.svg"
-                  alt="features tabs image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END OF HOME FEATURES -->
-
-      <!-- KEY PRODUCTS -->
-      <section
-        class="atel-key-products bg-white rounded-t-80 position-relative"
-      >
-        <div class="container">
-          <div class="atel-key-products-segment segment-py-120">
-            <div class="segment-heading text-center mx-auto">
-              <p class="text-primary text-lg font-semibold mb-custom-3">
-                Key Products
-              </p>
-              <h2 class="segment-ttl text-night text-7xl">
-                Discover Our Suite of Advanced Telephony Solutions for Every
-                Business Need
-              </h2>
-            </div>
-
-            <div
-              class="key-products-block-group d-grid align-items-start segment-mt-60"
-            >
-              <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
-                <div class="key-products-block-l">
-                  <div
-                    class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12"
-                  >
-                    <img
-                      class="icon-32"
-                      src="assets/icons/grid_black.svg"
-                      alt=""
-                    />
+              <div class="tab-content" id="presenceTabsContent">
+                <div class="tab-pane fade show active" id="sms-tab-pane" role="tabpanel" aria-labelledby="sms-tab"
+                  tabindex="0">
+                  <div class="d-grid grid-cols-1 md-grid-cols-2 gap-x-5 my-custom-5 presence-locations">
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Kathmandu</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Pokhara</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Lumbini</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Birgunj</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Janakpur</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Hetauda</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Biratnagar</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Dharan</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Bharatpur</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Gorkha</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Butwal</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Dhangadi</span>
                   </div>
-                  <h3
-                    class="key-products-block-ttl text-4xl text-night font-bold my-custom-4"
-                  >
-                    Office IVR Solutions
-                  </h3>
-                  <p class="text-base text-night font-semibold pb-custom-4">
-                    Streamline call management with customizable IVR systems for
-                    efficient routing and customer interaction.
-                  </p>
-                  <a href="#" class="btn btn-transparent">
-                    <span class="btn-text">Learn more</span>
-                    <span class="btn-icon">
-                      <img src="assets/icons/chevron_right_green.svg" alt="" />
-                    </span>
-                  </a>
-                </div>
-                <div class="key-products-block-r">
-                  <img
-                    src="assets/images/home/office_ivr_solutionsi.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
-                <div class="key-products-block-l">
-                  <div
-                    class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12"
-                  >
-                    <img
-                      class="icon-32"
-                      src="assets/icons/mike_black.svg"
-                      alt=""
-                    />
-                  </div>
-                  <h3
-                    class="key-products-block-ttl text-4xl text-night font-bold my-custom-4"
-                  >
-                    Voice Call Campaign Solutions
-                  </h3>
-                  <p class="text-base text-night font-semibold pb-custom-4">
-                    Enhance outreach with automated voice campaigns and targeted
-                    messaging.
-                  </p>
-                  <a href="#" class="btn btn-transparent">
-                    <span class="btn-text">Learn more</span>
-                    <span class="btn-icon">
-                      <img src="assets/icons/chevron_right_green.svg" alt="" />
-                    </span>
-                  </a>
-                </div>
-                <div class="key-products-block-r">
-                  <img
-                    src="assets/images/home/voicecall_compaign_solutionsi.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
-                <div class="key-products-block-l">
-                  <div
-                    class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12"
-                  >
-                    <img
-                      class="icon-32"
-                      src="assets/icons/voicemail_black.svg"
-                      alt=""
-                    />
-                  </div>
-                  <h3
-                    class="key-products-block-ttl text-4xl text-night font-bold my-custom-4"
-                  >
-                    On-Premises Office IVR Solutions
-                  </h3>
-                  <p class="text-base text-night font-semibold pb-custom-4">
-                    Deploy customizable IVR systems on-site for complete control
-                    and local data storage.
-                  </p>
-                  <a href="#" class="btn btn-transparent">
-                    <span class="btn-text">Learn more</span>
-                    <span class="btn-icon">
-                      <img src="assets/icons/chevron_right_green.svg" alt="" />
-                    </span>
-                  </a>
-                </div>
-                <div class="key-products-block-r">
-                  <img
-                    src="assets/images/home/onpremises_ivr_solutions.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
-                <div class="key-products-block-l">
-                  <div
-                    class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-p-green-50 rounded-12"
-                  >
-                    <img
-                      class="icon-32"
-                      src="assets/icons/sms_black.svg"
-                      alt=""
-                    />
-                  </div>
-                  <h3
-                    class="key-products-block-ttl text-4xl text-night font-bold my-custom-4"
-                  >
-                    Bulk SMS & SMS API Provider
-                  </h3>
-                  <p class="text-base text-night font-semibold pb-custom-4">
-                    Send high-volume SMS and integrate messaging into your
-                    systems with our robust API.
-                  </p>
-                  <a href="#" class="btn btn-transparent">
-                    <span class="btn-text">Learn more</span>
-                    <span class="btn-icon">
-                      <img src="assets/icons/chevron_right_green.svg" alt="" />
-                    </span>
-                  </a>
-                </div>
-                <div class="key-products-block-r">
-                  <img
-                    src="assets/images/home/sms_and_api_provider.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
-                <div class="key-products-block-l">
-                  <div
-                    class="key-products-block-icon d-flex align-items-center justify-content-center icon-52 bg-primary rounded-12"
-                  >
-                    <img
-                      class="icon-32"
-                      src="assets/icons/whatsapp_white.svg"
-                      alt=""
-                    />
-                  </div>
-                  <h3
-                    class="key-products-block-ttl text-4xl text-night font-bold my-custom-4"
-                  >
-                    WhatsApp Business API Gateway Provider
-                  </h3>
-                  <p class="text-base text-night font-semibold pb-custom-4">
-                    Enable seamless communication with customers through
-                    automated, secure WhatsApp messaging.
-                  </p>
-                  <a href="#" class="btn btn-transparent">
-                    <span class="btn-text">Learn more</span>
-                    <span class="btn-icon">
-                      <img src="assets/icons/chevron_right_green.svg" alt="" />
-                    </span>
-                  </a>
-                </div>
-                <div class="key-products-block-r">
-                  <img
-                    src="assets/images/home/whatsapp_api_provider.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END OF KEY PRODUCTS -->
-
-      <!-- KEY PRODUCTS -->
-      <section
-        class="atel-who-we-help bg-grey-1 position-relative segment-py-120"
-      >
-        <div class="container">
-          <div class="atel-who-we-help-segment">
-            <div class="segment-heading text-start">
-              <p class="text-primary text-lg font-semibold mb-custom-3">
-                Who We Help
-              </p>
-              <h2 class="segment-ttl text-night text-7xl">
-                Helping Every Team Stay Focused with Streamlined Communication
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div class="container atel-who-we-help-container">
-          <div class="atel-who-we-help-segment">
-            <div class="who-we-help-cards who-we-help-slider segment-mt-60">
-              <div class="wwh-card-wrapper">
-                <div
-                  class="card position-relative w-100 overflow-hidden border-0"
-                >
-                  <div class="card-img">
-                    <img src="assets/images/home/who_we_help1.png" alt="" />
-                  </div>
-                  <div
-                    class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start"
-                  >
-                    <h4
-                      class="card-title text-white text-2xl font-bold mb-custom-3"
-                    >
-                      Customer Support
-                    </h4>
-                    <p class="card-text text-base font-semibold text-white">
-                      Deliver better service with IVR, call routing, and
-                      real-time analytics.
-                    </p>
+                  <div class="py-custom-5">
+                    <a href="#" class="btn btn-transparent btn-block text-center">View All Locations</a>
                   </div>
                 </div>
-              </div>
-
-              <div class="wwh-card-wrapper">
-                <div
-                  class="card position-relative w-100 overflow-hidden border-0"
-                >
-                  <div class="card-img">
-                    <img src="assets/images/home/who_we_help2.png" alt="" />
+                <div class="tab-pane fade" id="voice-tab-pane" role="tabpanel" aria-labelledby="voice-tab" tabindex="0">
+                  <div class="d-grid grid-cols-1 md-grid-cols-2 gap-x-5 my-custom-5 presence-locations">
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Kathmandu</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Pokhara</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Lumbini</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Birgunj</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Janakpur</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Hetauda</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Biratnagar</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Dharan</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Bharatpur</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Gorkha</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Butwal</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Dhangadi</span>
                   </div>
-                  <div
-                    class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start"
-                  >
-                    <h4
-                      class="card-title text-white text-2xl font-bold mb-custom-3"
-                    >
-                      Sales
-                    </h4>
-                    <p class="card-text text-base font-semibold text-white">
-                      Drive sales with automated call campaigns and SMS
-                      outreach.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="wwh-card-wrapper">
-                <div
-                  class="card position-relative w-100 overflow-hidden border-0"
-                >
-                  <div class="card-img">
-                    <img src="assets/images/home/who_we_help3.png" alt="" />
-                  </div>
-                  <div
-                    class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start"
-                  >
-                    <h4
-                      class="card-title text-white text-2xl font-bold mb-custom-3"
-                    >
-                      Marketing
-                    </h4>
-                    <p class="card-text text-base font-semibold text-white">
-                      Engage audiences with personalized voice and SMS
-                      campaigns.
-                    </p>
+                  <div class="py-custom-5">
+                    <a href="#" class="btn btn-transparent btn-block text-center">View All Locations</a>
                   </div>
                 </div>
-              </div>
-
-              <div class="wwh-card-wrapper">
-                <div
-                  class="card position-relative w-100 overflow-hidden border-0"
-                >
-                  <div class="card-img">
-                    <img src="assets/images/home/who_we_help4.png" alt="" />
+                <div class="tab-pane fade" id="ivr-tab-pane" role="tabpanel" aria-labelledby="ivr-tab" tabindex="0">
+                  <div class="d-grid grid-cols-1 md-grid-cols-2 gap-x-5 my-custom-5 presence-locations">
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Kathmandu</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Pokhara</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Lumbini</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Birgunj</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Janakpur</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Hetauda</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Biratnagar</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Dharan</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Bharatpur</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Gorkha</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Butwal</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Dhangadi</span>
                   </div>
-                  <div
-                    class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start"
-                  >
-                    <h4
-                      class="card-title text-white text-2xl font-bold mb-custom-3"
-                    >
-                      Healthcare Providers
-                    </h4>
-                    <p class="card-text text-base font-semibold text-white">
-                      Patient care with auto reminders & secure communication.
-                    </p>
+                  <div class="py-custom-5">
+                    <a href="#" class="btn btn-transparent btn-block text-center">View All Locations</a>
                   </div>
                 </div>
-              </div>
-
-              <div class="wwh-card-wrapper">
-                <div
-                  class="card position-relative w-100 overflow-hidden border-0"
-                >
-                  <div class="card-img">
-                    <img src="assets/images/home/who_we_help5.png" alt="" />
+                <div class="tab-pane fade" id="whatsapp-tab-pane" role="tabpanel" aria-labelledby="whatsapp-tab"
+                  tabindex="0">
+                  <div class="d-grid grid-cols-1 md-grid-cols-2 gap-x-5 my-custom-5 presence-locations">
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Kathmandu</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Pokhara</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Lumbini</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Birgunj</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Janakpur</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Hetauda</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Biratnagar</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Dharan</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Bharatpur</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Gorkha</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Butwal</span>
+                    <span
+                      class="text-base font-semibold text-night py-custom-2 text-center px-custom-2 border-b-grey-2-1">Dhangadi</span>
                   </div>
-                  <div
-                    class="card-body position-absolute bottom-0 start-0 end-0 p-custom-5 d-flex flex-column justify-content-end align-items-start"
-                  >
-                    <h4
-                      class="card-title text-white text-2xl font-bold mb-custom-3"
-                    >
-                      SMBs
-                    </h4>
-                    <p class="card-text text-base font-semibold text-white">
-                      Scale cost-effectively with cloud-based communication
-                      solutions.
-                    </p>
+                  <div class="py-custom-5">
+                    <a href="#" class="btn btn-transparent btn-block text-center">View All Locations</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- END OF KEY PRODUCTS -->
+      </div>
+    </section>
+    <!-- END OF SERVICE PRESENCE -->
 
-      <!-- UPGRADE -->
-      <section
-        class="atel-upgrade bg-dark-cyprus position-relative segment-py-120"
-      >
-        <div class="container">
-          <div class="atel-upgrade-segment">
-            <div class="segment-heading text-start text-center mx-auto">
-              <h2 class="segment-ttl text-white text-7xl mb-custom-5">
-                Tired of Unreliable Calls and Limited Reach? It’s Time to
-                Upgrade
-              </h2>
-              <p class="text-white text-base font-semibold">
-                Don’t settle for dropped calls and restricted connections. Our
-                advanced telephony solutions ensure seamless, reliable
-                communication with a global reach, so you can connect with every
-                customer, everywhere.
-              </p>
-            </div>
-          </div>
-
-          <div class="upgrade-compare d-grid sm-grid-cols-2 grid-cols-1 segment-mt-60">
-            <div
-              class="upgrade-compare-item d-flex align-items-center justify-content-center"
-            >
-              <img
-                class="compare-item-img"
-                src="assets/images/home/upgrade_telephone.svg"
-                alt=""
-              />
-              <div class="cimpare-item-info p-custom-5">
-                <p class="text-primary font-bold text-2xl mb-0">With</p>
-                <h4 class="text-white text-4xl font-bold mt-0">Aakashtel</h4>
+    <footer class="atel-footer bg-dark-cyprus segment-pt-80 segment-pb-40">
+      <div class="container atel-footer-container">
+        <div class="atel-footer-segment">
+          <div class="footer-segment-main d-grid align-items-start mb-custom-5">
+            <div class="footer-segment-cta d-flex flex-column align-items-center justify-content-center">
+              <div class="cta-call-icon">
+                <img src="assets/icons/white_cloud_and_phone.svg" alt="" />
+              </div>
+              <h3 class="cta-call-ttl mt-custom-7 text-center text-7xl font-bold text-night">
+                <span class="text-primary">Never Miss a Call</span> from Your
+                Customer Ever Again!
+              </h3>
+              <div class="cta-call-btns d-flex flex-wrap gap-2 mt-custom-12">
+                <a href="#" class="btn btn-primary btn-lg flex-1">Try for Free</a>
+                <a href="#" class="btn btn-white-black btn-lg flex-1">See Our Pricing</a>
               </div>
             </div>
-
-            <div
-              class="upgrade-compare-item d-flex align-items-center justify-content-center"
-            >
-              <img
-                class="compare-item-img"
-                src="assets/images/home/upgrade_aakashtel.svg"
-                alt=""
-              />
-              <div class="cimpare-item-info p-custom-5">
-                <p class="text-red-500 font-bold text-2xl mb-0">Before</p>
-                <h4 class="text-white text-4xl font-bold mt-0">Aakashtel</h4>
+            <div class="footer-segment-block">
+              <div class="footer-segment-links d-grid align-items-start grid-cols-3 gap-5 segment-py-40">
+                <div class="footer-links-block">
+                  <p class="text-base font-semibold text-light-cyprus">
+                    Features
+                  </p>
+                  <ul class="unstyled footer-links-list d-grid align-items-start gap-y-2">
+                    <li>
+                      <a href="#"
+                        class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Internationl
+                        numbers</a>
+                    </li>
+                    <li>
+                      <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">SMS / Text
+                        messages</a>
+                    </li>
+                    <li>
+                      <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Improve
+                        Call Flows with IVR Technology</a>
+                    </li>
+                    <li>
+                      <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Call
+                        Center Analytics</a>
+                    </li>
+                    <li>
+                      <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Call
+                        Center Recording</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Interactive Voice
+                        Response</a>
+                    </li>
+                    <li>
+                      <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Call
+                        Monitoring</a>
+                    </li>
+                    <li>
+                      <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Click to
+                        Call</a>
+                    </li>
+                    <li>
+                      <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Smart
+                        Dialer</a>
+                    </li>
+                    <li>
+                      <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Power
+                        Dialer</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-links-block-group d-grid align-items-start gap-y-7">
+                  <div class="footer-links-block">
+                    <p class="text-base font-semibold text-light-cyprus">
+                      Products
+                    </p>
+                    <ul class="unstyled footer-links-list d-grid align-items-start gap-y-2">
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Office
+                          IVR Solutions</a>
+                      </li>
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Voice
+                          Call Campaign Solutions</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">On-Premises Office
+                          IVR Solutions</a>
+                      </li>
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Bulk SMS
+                          & SMS API Provider</a>
+                      </li>
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Whatsapp
+                          Business API Gateway Provider</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer-links-block">
+                    <p class="text-base font-semibold text-light-cyprus">
+                      Resources
+                    </p>
+                    <ul class="unstyled footer-links-list d-grid align-items-start gap-y-2">
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Blog</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Downloads</a>
+                      </li>
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Help
+                          Center</a>
+                      </li>
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">API
+                          Docs</a>
+                      </li>
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Country
+                          Coverage</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-links-block-group d-grid align-items-start gap-y-7">
+                  <div class="footer-links-block">
+                    <p class="text-base font-semibold text-light-cyprus">
+                      Features
+                    </p>
+                    <ul class="unstyled footer-links-list d-grid align-items-start gap-y-2">
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">SMS</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Voice</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Email</a>
+                      </li>
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Call
+                          Center Analytics</a>
+                      </li>
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">WhatsApp
+                          API</a>
+                      </li>
+                      <li>
+                        <a href="#" class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Elastic
+                          SIP Trunking</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Verify</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="footer-link-elem text-sm font-semibold text-light-cyprus opacity-60">Functions</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="d-grid align-items-start gap-y-3">
+                    <a href="#" class="text-base font-semibold text-light-cyprus">Pricing</a>
+                    <a href="#" class="text-base font-semibold text-light-cyprus">About</a>
+                    <a href="#" class="text-base font-semibold text-light-cyprus">Contact</a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="footer-segment-contact mt-custom-8 mb-custom-2 d-flex align-items-center justify-content-between gap-2">
+                <div class="contact-info-group d-flex flex-wrap gap-5">
+                  <div class="contact-info-item d-flex align-items-center gap-2">
+                    <span class="contact-info-icon icon-24 d-inline-flex align-items-center justify-content-center">
+                      <img class="icon-20" src="assets/icons/phone_green.svg" />
+                    </span>
+                    <span class="font-semibold text-base text-white">+977 9808139797</span>
+                  </div>
+                  <div class="contact-info-item d-flex align-items-center gap-2">
+                    <span class="contact-info-icon icon-24 d-inline-flex align-items-center justify-content-center">
+                      <img class="icon-20" src="assets/icons/envelope_green.svg" />
+                    </span>
+                    <span class="font-semibold text-base text-white">info@aakashtech.com.np</span>
+                  </div>
+                </div>
+                <div class="contact-social-link">
+                  <a href="#" class="contact-social-link-item icon-40">
+                    <img class="icon-20" src="assets/icons/facebook_gray.svg" alt="facebook icon" />
+                  </a>
+                  <a href="#" class="contact-social-link-item icon-40">
+                    <img class="icon-20" src="assets/icons/instagram_gray.svg" alt="instagram icon" />
+                  </a>
+                  <a href="#" class="contact-social-link-item icon-40">
+                    <img class="icon-20" src="assets/icons/linkedin_gray.svg" alt="linkedin icon" />
+                  </a>
+                  <a href="#" class="contact-social-link-item icon-40">
+                    <img class="icon-20" src="assets/icons/youtube_gray.svg" alt="youtube icon" />
+                  </a>
+                  <a href="#" class="contact-social-link-item icon-40">
+                    <img class="icon-20" src="assets/icons/discord_gray.svg" alt="pinterest icon" />
+                  </a>
+                  <a href="#" class="contact-social-link-item icon-40">
+                    <img class="icon-20" src="assets/icons/twitter_gray.svg" alt="twitter icon" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="upgrade-compare-data d-grid gap-y-10 segment-mt-40">
-            <div class="compare-data-item d-flex align-items-center">
-                <div class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
-                    <span class="compare-data-item-icon icon-24 bg-white rounded-4">
-                        <img class="icon-16" src="assets/icons/close_red.svg" alt="">
-                    </span>
-                    <p class="text-gray text-base font-semibold mb-0">Frequent call drops and poor audio quality.</p>
-                </div>
-                <div class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
-                    <span class="icon-40">
-                        <img class="icon-32" src="assets/icons/call_ring_red_200.svg" alt="">
-                    </span>
-                    <p class="mb-0 text-night font-semibold text-lg">Call Quality</p>
-                </div>
-                <div class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
-                    <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
-                        <img class="icon-16" src="assets/icons/tick_white.svg" alt="">
-                    </span>
-                    <p class="text-white text-base font-semibold mb-0">Frequent call drops and poor audio quality.</p>
-                </div>
-            </div>
-            <div class="compare-data-item d-flex align-items-center">
-                <div class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
-                    <span class="compare-data-item-icon icon-24 bg-white rounded-4">
-                        <img class="icon-16" src="assets/icons/close_red.svg" alt="">
-                    </span>
-                    <p class="text-gray text-base font-semibold mb-0">Challenges in acquiring local numbers in key markets.</p>
-                </div>
-                <div class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
-                    <span class="icon-40">
-                        <img class="icon-32" src="assets/icons/globe_red_200.svg" alt="">
-                    </span>
-                    <p class="mb-0 text-night font-semibold text-lg">Local Presence</p>
-                </div>
-                <div class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
-                    <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
-                        <img class="icon-16" src="assets/icons/tick_white.svg" alt="">
-                    </span>
-                    <p class="text-white text-base font-semibold mb-0">Effortless access to local phone numbers across over 160 countries.</p>
-                </div>
-            </div>
-            <div class="compare-data-item d-flex align-items-center">
-                <div class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
-                    <span class="compare-data-item-icon icon-24 bg-white rounded-4">
-                        <img class="icon-16" src="assets/icons/close_red.svg" alt="">
-                    </span>
-                    <p class="text-gray text-base font-semibold mb-0">Complicated integrations and tracking issues with your existing tools.</p>
-                </div>
-                <div class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
-                    <span class="icon-40">
-                        <img class="icon-32" src="assets/icons/gears_red_200.svg" alt="">
-                    </span>
-                    <p class="mb-0 text-night font-semibold text-lg">Integrations</p>
-                </div>
-                <div class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
-                    <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
-                        <img class="icon-16" src="assets/icons/tick_white.svg" alt="">
-                    </span>
-                    <p class="text-white text-base font-semibold mb-0">Smooth integrations with your CRM, helpdesk, and other essential business systems.</p>
-                </div>
-            </div>
-            <div class="compare-data-item d-flex align-items-center">
-                <div class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
-                    <span class="compare-data-item-icon icon-24 bg-white rounded-4">
-                        <img class="icon-16" src="assets/icons/close_red.svg" alt="">
-                    </span>
-                    <p class="text-gray text-base font-semibold mb-0">Struggling with complex and cumbersome phone systems.</p>
-                </div>
-                <div class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
-                    <span class="icon-40">
-                        <img class="icon-32" src="assets/icons/cursor_red_200.svg" alt="">
-                    </span>
-                    <p class="mb-0 text-night font-semibold text-lg">Ease of Use</p>
-                </div>
-                <div class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
-                    <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
-                        <img class="icon-16" src="assets/icons/tick_white.svg" alt="">
-                    </span>
-                    <p class="text-white text-base font-semibold mb-0">User-friendly software designed for easy adoption and streamlined operations.</p>
-                </div>
-            </div>
-            <div class="compare-data-item d-flex align-items-center">
-                <div class="compare-data-item-l flex-1 bg-light-cyprus px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
-                    <span class="compare-data-item-icon icon-24 bg-white rounded-4">
-                        <img class="icon-16" src="assets/icons/close_red.svg" alt="">
-                    </span>
-                    <p class="text-gray text-base font-semibold mb-0">Manual call tracking and limited insights.</p>
-                </div>
-                <div class="compare-data-item-m d-flex flex-column align-items-center justify-content-center rounded-100 bg-white">
-                    <span class="icon-40">
-                        <img class="icon-32" src="assets/icons/graph_red_200.svg" alt="">
-                    </span>
-                    <p class="mb-0 text-night font-semibold text-lg">Local Analytics</p>
-                </div>
-                <div class="compare-data-item-r flex-1 bg-primary px-custom-5 py-custom-1 rounded-20 d-flex align-items-center justify-content-start gap-x-3">
-                    <span class="compare-data-item-icon icon-24 bg-p-green-700 rounded-4">
-                        <img class="icon-16" src="assets/icons/tick_white.svg" alt="">
-                    </span>
-                    <p class="text-white text-base font-semibold mb-0">Advanced analytics with comprehensive conversation insights, delivered automatically.</p>
-                </div>
-            </div>
+          <div class="footer-segment-bottom d-flex align-items-center justify-content-between py-custom-7">
+            <span class="font-bold text-xs text-light-cyprus copyright-text tracking-04">Copyright © 2024
+              Aakashtech.</span>
+            <ul class="unstyled tac-list d-flex align-items-center flex-wrap gap-x-4 gap-y-2">
+              <li>
+                <a href="#" class="tack-link font-bold text-xs tracking-04 text-light-cyprus">Legal</a>
+              </li>
+              <li>
+                <a href="#" class="tack-link font-bold text-xs tracking-04 text-light-cyprus">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="#" class="tack-link font-bold text-xs tracking-04 text-light-cyprus">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="tack-link font-bold text-xs tracking-04 text-light-cyprus">Refund Policy</a>
+              </li>
+              <li>
+                <a href="#" class="tack-link font-bold text-xs tracking-04 text-light-cyprus">Cookies</a>
+              </li>
+              <li>
+                <a href="#" class="tack-link font-bold text-xs tracking-04 text-light-cyprus">Ncell - Terms &
+                  Conditions</a>
+              </li>
+              <li>
+                <a href="#" class="tack-link font-bold text-xs tracking-04 text-light-cyprus">NTC - Terms &
+                  Conditions</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-      <!-- END OF UPGRADE -->
-    </div>
+      </div>
+    </footer>
+  </div>
 
-    <!-- JQUERY JS -->
-    <script src="assets/js/lib/jquery_3.7.1.js"></script>
-    <!-- BOOTSTRAP JS -->
-    <script src="assets/vendor/bootstrap_5.2.3/bootstrap.min.js"></script>
-    <script src="assets/vendor/bootstrap_5.2.3/popper.min.js"></script>
-    <!-- SLICK JS -->
-    <script src="assets/vendor/slick_1.8.1/slick.min.js"></script>
-    <!-- CUSTOM JS -->
-    <script src="assets/js/main.js"></script>
-  </body>
+  <!-- JQUERY JS -->
+  <script src="assets/js/lib/jquery_3.7.1.js"></script>
+  <!-- BOOTSTRAP JS -->
+  <script src="assets/vendor/bootstrap_5.2.3/bootstrap.min.js"></script>
+  <script src="assets/vendor/bootstrap_5.2.3/popper.min.js"></script>
+  <!-- SLICK JS -->
+  <script src="assets/vendor/slick_1.8.1/slick.min.js"></script>
+  <!-- CUSTOM JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>

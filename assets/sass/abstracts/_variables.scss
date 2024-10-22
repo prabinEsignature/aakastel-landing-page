@@ -84,11 +84,6 @@ $line-hover-decoration: underline;
   letter-spacing: $tracking;
 }
 
-// Z-INDEX
-$z-low: 10;
-$z-mid: 100;
-$z-high: 1000;
-
 /* #### TYPOGRAPHY VARIABLES #### */
 $paragraph-margin-bottom: 0;
 
@@ -121,26 +116,50 @@ $headings-config: (
   letter-spacing: map-get($headings-config, "letter-spacing");
 }
 
-
-// Z-INDEX
+// Advanced Z-INDEX Configuration
 $z-index: (
-  "pothole": -1,
-  "basement": 0,
-  "sidewalk": 1,
-  "bungalow": 40,
-  "bungalow-chimney": 50,
-  "house": 60,
-  "tower": 70,
-  "skyscrapper": 80,
-  "sky": 90,
-  "satellite": 100,
-  "dropdown": 1000,
-  "fixed": 1010,
-  "tooltip": 1020,
-  "alert": 1030,
-  "modal": 1100
+  "pothole": -1,            // Below everything
+  "basement": 0,            // Default level
+  "1": 1,               // Basic stacking level 1
+  "2": 2,               // Basic stacking level 2
+  "3": 3,               // Basic stacking level 3
+  "4": 4,               // Basic stacking level 4
+  "5": 5,               // Basic stacking level 5
+  "6": 6,               // Basic stacking level 6
+  "7": 7,               // Basic stacking level 7
+  "8": 8,               // Basic stacking level 8
+  "9": 9,               // Basic stacking level 9
+  "10": 10,             // Basic stacking level 10
+  "ground": 15,             // Ground level
+  "sidewalk": 20,           // Elements just above the ground
+  "streetlight": 30,        // Elevated elements like floating labels
+  "bungalow": 40,           // Base elements like cards
+  "bungalow-chimney": 50,   // Overlapping elements on cards
+  "house": 60,              // Main content areas
+  "house-roof": 65,         // Slightly above main content
+  "tower": 70,              // Sticky headers, footers
+  "skyscraper": 80,         // Higher priority components
+  "skyscraper-roof": 85,    // Overlayed components
+  "sky": 90,                // Floating action buttons, widgets
+  "satellite": 100,         // Elements requiring higher stacking
+  "dropdown": 1000,         // Dropdown menus
+  "fixed": 1010,            // Fixed positioned elements
+  "tooltip": 1020,          // Tooltips
+  "alert": 1030,            // Alert messages
+  "modal-backdrop": 1040,   // Modal backdrop
+  "modal": 1100,            // Modal dialogs
+  "modal-header": 1110,     // Modal header elements
+  "modal-content": 1120,    // Modal main content
+  "toast": 1200,            // Toast notifications
+  "highest": 1300           // Highest level for urgent items
 );
 
+// Utility Classes for Z-INDEX
+@each $name, $value in $z-index {
+  .z-#{$name} {
+    z-index: $value;
+  }
+}
 // TRANSITIONS AND EASING
 $default-transition-timing: ease-in-out;
 $default-transition-duration: 300ms;

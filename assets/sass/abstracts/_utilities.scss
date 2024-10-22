@@ -448,7 +448,8 @@ $spacing-values: (
   60: 60px,
   80: 80px,
   100: 100px,
-  120: 120px
+  120: 120px,
+  160: 160px,
 );
 
 $breakpoints: (
@@ -609,37 +610,35 @@ $border-widths: (
   }
 }
 
-// SHADOW
+// Shadows Configuration
 $shadows: (
   "sm": 0 1px 2px 0 rgba(0, 0, 0, 0.05),
-  "": (
+  "base": (                    // Added a name for the default shadow
     0 1px 3px 0 rgba(0, 0, 0, 0.1),
-    0 1px 2px -1px rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.1)
   ),
   "md": (
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -2px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1)
   ),
   "lg": (
     0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -4px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1)
   ),
   "xl": (
     0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 8px 10px -6px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1)
   ),
   "2xl": 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+  "default": 0px 4px 28px 0px rgba(0, 0, 0, 0.08),
   "inner": inset 0 2px 4px 0 rgba(0, 0, 0, 0.05),
-  "none": none,
+  "none": none
 );
 
+// Utility Classes for Shadows
 @each $key, $value in $shadows {
-  .shadow#{$key} {
-    @if type-of($value) == list {
-      box-shadow: #{join($value, ", ")};
-    } @else {
-      box-shadow: $value;
-    }
+  .shadow-#{$key} {
+    box-shadow: $value;
   }
 }
 
@@ -667,4 +666,20 @@ $leading-classes: (
   }
 }
 
+$tracking-classes: (
+  "tracking-tighter": -0.05em,
+  "tracking-tight": -0.025em,
+  "tracking-normal": 0em,
+  "tracking-wide": 0.025em,
+  "tracking-wider": 0.05em,
+  "tracking-widest": 0.1em,
+  "tracking-04": -0.04em,
+  "tracking-06": -0.06em,
+  "tracking-03": -0.03em
+);
 
+@each $class, $value in $tracking-classes{
+  .#{$class}{
+    letter-spacing: $value!important;
+  }
+}
