@@ -6,8 +6,10 @@ const scrollThreshold = 40;
 const handleScroll = () => {
   if (window.scrollY > scrollThreshold) {
     navbar.classList.add("atel-header-fixed");
+    navbar.classList.add('shadow-default');
   } else {
     navbar.classList.remove("atel-header-fixed");
+    navbar.classList.remove('shadow-default');
   }
 };
 
@@ -72,6 +74,45 @@ $(passwordFormElem).on("click", function (event) {
   }
 });
 
+document.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll(".features-tabs-item");
+  const navLinks = document.querySelectorAll(".features-tabs-btn");
+
+  let currentSection = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (window.scrollY >= sectionTop - sectionHeight / 5) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").substring(1) === currentSection) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// JavaScript for smooth scrolling with offset adjustment
+document.querySelectorAll('.features-tabs li a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      const headerOffset = 110; 
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+      });
+  });
+});
+
 // WHO WE HELP SLIDER
 $(".who-we-help-slider").slick({
   dots: false,
@@ -87,13 +128,13 @@ $(".who-we-help-slider").slick({
     "<button type='button' class='slick-slider-btn slick-prev bg-white icon-52 border-grey-2-1 rounded-12'><img class='icon-24' src='./assets/icons/chevron_left_black.svg'></button>",
   nextArrow:
     "<button type='button' class='slick-slider-btn slick-next bg-white icon-52 border-grey-2-1 rounded-12'><img class='icon-24' src='./assets/icons/chevron_right_black.svg'></button>",
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          arrows: false,
-          dots: true
-        }
-      }
-    ]
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        arrows: false,
+        dots: true,
+      },
+    },
+  ],
 });

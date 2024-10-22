@@ -1,0 +1,83 @@
+.atel-success-pvmt {
+    .segment-heading {
+        max-width: 300px;
+    }
+    .success-pvmt-segment {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+.atel-solutions-block {
+    .solutions-block {
+        &-img{
+            border-radius: 28px;
+            overflow: hidden;
+        }
+
+        &-item {
+            border-top-right-radius: 80px;
+            border-top-left-radius: 80px;
+
+            & > .container {
+                max-width: 1096px !important;
+                gap: 80px;
+                min-height: 360px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            &:nth-child(1) {
+                position: sticky;
+                top: 100px;
+
+                & > .container {
+                    grid-template-columns: 37% auto;
+                    min-height: 400px;
+                }
+            }
+
+            &:nth-child(2){
+                margin-top: -100px;
+                position: sticky;
+                top: 120px;
+
+                .solutions-block{
+                    &-img{
+                        order: 2;
+                    }
+                    &-content{
+                        order: 1;
+                    }
+                }
+            }
+
+            &:nth-child(3){
+                margin-top: -100px;
+                position: sticky;
+                top: 140px;
+            }
+        }
+    }
+}
+
+
+.atel-solutions-offers{
+    .solutions-offers{
+        &-segment{
+            grid-template-columns: 21% auto;
+        }
+    }
+}
+
+.atel-rel-solutions{
+    margin-top: -100px;
+    background: url($img-path + "solution/related_solutions_banner.svg") center/cover no-repeat;
+
+    .rel-solutions{
+        &-item{
+            &:hover{
+                border-color: color("primary")!important;
+                box-shadow: map-get($shadows, "default");
+            }
+        }
+    }
+}

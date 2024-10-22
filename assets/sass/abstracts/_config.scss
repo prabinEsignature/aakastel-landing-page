@@ -29,7 +29,7 @@ html {
 
 body {
   min-height: 100vh;
-  overflow-x: hidden; /* Disabling Scrolling - For X Axis */
+  // overflow-x: hidden; /* Disabling Scrolling - For X Axis */
   padding: 0;
   margin: 0;
 
@@ -41,7 +41,7 @@ body {
 
 .page-wrapper {
   position: relative;
-  overflow: hidden !important; // Ensure no overflow
+  // overflow: hidden !important; // Ensure no overflow
   min-height: 100vh; // Expand to full viewport height
 }
 
