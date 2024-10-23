@@ -14794,29 +14794,29 @@ table td {
     font-size: 32px;
   }
 }
-.atel-top-banner.atel-solution-pg, .atel-top-banner.atel-onpremises-pg {
+.atel-top-banner.atel-solution-pg, .atel-top-banner.atel-onpremises-pg, .atel-top-banner.atel-product-sms-pg {
   background: url("../../../assets/images/solution/solution_banner.svg") center/cover no-repeat;
   min-height: 638px;
   padding-top: 80px;
 }
-.atel-top-banner.atel-solution-pg .top-banner-text-group, .atel-top-banner.atel-onpremises-pg .top-banner-text-group {
+.atel-top-banner.atel-solution-pg .top-banner-text-group, .atel-top-banner.atel-onpremises-pg .top-banner-text-group, .atel-top-banner.atel-product-sms-pg .top-banner-text-group {
   max-width: 700px;
 }
 @media (max-width: 991.98px) {
-  .atel-top-banner.atel-solution-pg .top-banner-text-group, .atel-top-banner.atel-onpremises-pg .top-banner-text-group {
+  .atel-top-banner.atel-solution-pg .top-banner-text-group, .atel-top-banner.atel-onpremises-pg .top-banner-text-group, .atel-top-banner.atel-product-sms-pg .top-banner-text-group {
     text-align: center;
   }
 }
-.atel-top-banner.atel-solution-pg .top-banner-segment, .atel-top-banner.atel-onpremises-pg .top-banner-segment {
+.atel-top-banner.atel-solution-pg .top-banner-segment, .atel-top-banner.atel-onpremises-pg .top-banner-segment, .atel-top-banner.atel-product-sms-pg .top-banner-segment {
   grid-template-columns: 55% auto;
 }
 @media (max-width: 991.98px) {
-  .atel-top-banner.atel-solution-pg .top-banner-segment, .atel-top-banner.atel-onpremises-pg .top-banner-segment {
+  .atel-top-banner.atel-solution-pg .top-banner-segment, .atel-top-banner.atel-onpremises-pg .top-banner-segment, .atel-top-banner.atel-product-sms-pg .top-banner-segment {
     grid-template-columns: 1fr;
   }
 }
 @media (max-width: 991.98px) {
-  .atel-top-banner.atel-solution-pg .top-banner-img, .atel-top-banner.atel-onpremises-pg .top-banner-img {
+  .atel-top-banner.atel-solution-pg .top-banner-img, .atel-top-banner.atel-onpremises-pg .top-banner-img, .atel-top-banner.atel-product-sms-pg .top-banner-img {
     max-width: 520px;
     margin-right: auto;
     margin-left: auto;
@@ -14863,6 +14863,16 @@ table td {
 }
 .atel-top-banner.atel-top-banner-invert .top-banner-ttl, .atel-top-banner.atel-top-banner-invert .top-banner-lead {
   color: #fff !important;
+}
+.atel-top-banner.atel-product-sms-pg {
+  background: url("../../../assets/images/product_sms/product_sms_banner.svg") center/cover no-repeat;
+  min-height: 684px;
+}
+.atel-top-banner.atel-product-sms-pg .top-banner-segment {
+  grid-template-columns: 57% auto;
+}
+.atel-top-banner.atel-product-sms-pg .top-banner-text-group {
+  max-width: 730px;
 }
 
 .atel-navbar {

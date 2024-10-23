@@ -142,16 +142,18 @@
         }
     }
 
-    &.atel-solution-pg, &.atel-onpremises-pg {
+    &.atel-solution-pg,
+    &.atel-onpremises-pg,
+    &.atel-product-sms-pg {
         background: url($img-path + "solution/solution_banner.svg") center/cover no-repeat;
         min-height: 638px;
         padding-top: 80px;
 
         .top-banner {
-            &-text-group{
+            &-text-group {
                 max-width: 700px;
 
-                @include breakpoint-down(lg){
+                @include breakpoint-down(lg) {
                     text-align: center;
                 }
             }
@@ -159,13 +161,13 @@
             &-segment {
                 grid-template-columns: 55% auto;
 
-                @include breakpoint-down(lg){
+                @include breakpoint-down(lg) {
                     grid-template-columns: 1fr;
                 }
             }
 
-            &-img{
-                @include breakpoint-down(lg){
+            &-img {
+                @include breakpoint-down(lg) {
                     max-width: 520px;
                     margin-right: auto;
                     margin-left: auto;
@@ -174,17 +176,17 @@
         }
     }
 
-    &.atel-office-ivr-pg{
+    &.atel-office-ivr-pg {
         background: url($img-path + "ivr_solution/office_ivr_solutions_banner.svg") center/cover no-repeat;
         min-height: 800px;
         padding-top: 80px;
 
-        .top-banner{
-            &-text-group{
+        .top-banner {
+            &-text-group {
                 max-width: 1062px;
             }
 
-            &-video{
+            &-video {
                 max-width: 1062px;
             }
         }
@@ -196,10 +198,10 @@
         padding-top: 80px;
 
         .top-banner {
-            &-text-group{
+            &-text-group {
                 max-width: 700px;
 
-                @include breakpoint-down(lg){
+                @include breakpoint-down(lg) {
                     text-align: center;
                 }
             }
@@ -207,13 +209,13 @@
             &-segment {
                 grid-template-columns: 55% auto;
 
-                @include breakpoint-down(lg){
+                @include breakpoint-down(lg) {
                     grid-template-columns: 1fr;
                 }
             }
 
-            &-img{
-                @include breakpoint-down(lg){
+            &-img {
+                @include breakpoint-down(lg) {
                     max-width: 520px;
                     margin-right: auto;
                     margin-left: auto;
@@ -222,10 +224,26 @@
         }
     }
 
-    &.atel-top-banner-invert{
+    &.atel-top-banner-invert {
+        .top-banner {
+            &-ttl,
+            &-lead {
+                color: color("white") !important;
+            }
+        }
+    }
+
+    &.atel-product-sms-pg {
+        background: url($img-path + "product_sms/product_sms_banner.svg") center/cover no-repeat;
+        min-height: 684px;
+
         .top-banner{
-            &-ttl, &-lead{
-                color: color("white")!important;
+            &-segment{
+                grid-template-columns: 57% auto;
+            }
+
+            &-text-group{
+                max-width: 730px;
             }
         }
     }
