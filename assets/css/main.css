@@ -14794,29 +14794,29 @@ table td {
     font-size: 32px;
   }
 }
-.atel-top-banner.atel-solution-pg {
+.atel-top-banner.atel-solution-pg, .atel-top-banner.atel-onpremises-pg {
   background: url("../../../assets/images/solution/solution_banner.svg") center/cover no-repeat;
   min-height: 638px;
   padding-top: 80px;
 }
-.atel-top-banner.atel-solution-pg .top-banner-text-group {
+.atel-top-banner.atel-solution-pg .top-banner-text-group, .atel-top-banner.atel-onpremises-pg .top-banner-text-group {
   max-width: 700px;
 }
 @media (max-width: 991.98px) {
-  .atel-top-banner.atel-solution-pg .top-banner-text-group {
+  .atel-top-banner.atel-solution-pg .top-banner-text-group, .atel-top-banner.atel-onpremises-pg .top-banner-text-group {
     text-align: center;
   }
 }
-.atel-top-banner.atel-solution-pg .top-banner-segment {
+.atel-top-banner.atel-solution-pg .top-banner-segment, .atel-top-banner.atel-onpremises-pg .top-banner-segment {
   grid-template-columns: 55% auto;
 }
 @media (max-width: 991.98px) {
-  .atel-top-banner.atel-solution-pg .top-banner-segment {
+  .atel-top-banner.atel-solution-pg .top-banner-segment, .atel-top-banner.atel-onpremises-pg .top-banner-segment {
     grid-template-columns: 1fr;
   }
 }
 @media (max-width: 991.98px) {
-  .atel-top-banner.atel-solution-pg .top-banner-img {
+  .atel-top-banner.atel-solution-pg .top-banner-img, .atel-top-banner.atel-onpremises-pg .top-banner-img {
     max-width: 520px;
     margin-right: auto;
     margin-left: auto;
@@ -15593,4 +15593,46 @@ table td {
 .atel-why-voice-broadcast .why-voice-broadcast-accordion {
   max-width: 1064px;
   gap: 80px;
+}
+
+.atel-configuration .atel-configuration-segment {
+  max-width: 1064px;
+}
+
+.atel-why-onpremises .why-onpremises-segment {
+  grid-template-columns: 23.5% auto;
+}
+@media (max-width: 1199.98px) {
+  .atel-why-onpremises .why-onpremises-segment {
+    grid-template-columns: 100%;
+  }
+}
+.atel-why-onpremises .why-onpremises-item {
+  min-height: 370px;
+}
+@media (max-width: 991.98px) {
+  .atel-why-onpremises .why-onpremises-item {
+    min-height: auto;
+  }
+}
+
+.atel-trust-compliance .segment-heading .segment-lead {
+  max-width: 618px;
+}
+.atel-trust-compliance .atel-trust-compliance-segment {
+  gap: 60px;
+  max-width: 1064px;
+}
+.atel-trust-compliance .trust-compliance-accordion .accordion-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.atel-trust-compliance .trust-compliance-accordion .accordion-item:last-child {
+  border-bottom: 0 !important;
+}
+.atel-trust-compliance .trust-compliance-accordion .accordion-item .accordion-button::after {
+  display: block !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c7e1e5'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.atel-trust-compliance .trust-compliance-accordion .accordion-item .accordion-button[aria-expanded=true] {
+  color: #fff !important;
 }/*# sourceMappingURL=main.css.map */

@@ -142,7 +142,7 @@
         }
     }
 
-    &.atel-solution-pg {
+    &.atel-solution-pg, &.atel-onpremises-pg {
         background: url($img-path + "solution/solution_banner.svg") center/cover no-repeat;
         min-height: 638px;
         padding-top: 80px;
