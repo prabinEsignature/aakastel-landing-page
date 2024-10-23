@@ -1,0 +1,34 @@
+.atel-power-voice{
+    .power-voice-img{
+        max-width: 920px;
+        max-height: 600px;
+    }
+
+    .segment-power-voice{
+        background: url($img-path + "vc_campaign/power_voice_banner.svg") center/cover no-repeat;
+        border-radius: 40px;
+        min-height: 673px;
+
+        .power-voice-img{
+            bottom: -6px;
+            left: -98px;
+        }
+    }
+
+    .segment-heading{
+        .segment-ttl{
+            line-height: 1.1;
+        }
+    }
+
+    .power-voice-content{
+        max-width: 420px;
+    }
+}
+
+.atel-why-voice-broadcast{
+    .why-voice-broadcast-accordion{
+        max-width: 1064px;
+        gap: 80px;
+    }
+}

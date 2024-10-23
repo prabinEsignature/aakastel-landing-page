@@ -1,0 +1,22 @@
+.accordion {
+    &-item {
+        margin-bottom: 20px;
+    }
+
+    &-button {
+        &::after {
+            display: none;
+        }
+
+        &[aria-expanded="true"] {
+            border-left-color: color("primary") !important;
+            color: color("night") !important;
+        }
+    }
+
+    &-body {
+        p {
+            display: inline-block;
+        }
+    }
+}

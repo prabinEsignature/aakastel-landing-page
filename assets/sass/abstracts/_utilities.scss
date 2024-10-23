@@ -688,3 +688,25 @@ $tracking-classes: (
     letter-spacing: $value!important;
   }
 }
+
+
+// After & Before - Utility Classes
+.after-none{
+  &::after{
+    display: none!important;
+  }
+}
+
+.before-none{
+  &::before{
+    display: none!important;
+  }
+}
+
+.btn{
+  &-transparent-white{
+    .btn-icon, img{
+      filter: invert(0) brightness(100);
+    }
+  }
+}

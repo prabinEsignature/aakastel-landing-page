@@ -305,27 +305,6 @@
 
     .support-industry-accordion {
         gap: 80px;
-
-        .accordion-item {
-            margin-bottom: 20px;
-        }
-
-        .accordion-button {
-            &::after {
-                display: none;
-            }
-
-            &[aria-expanded="true"] {
-                border-left-color: color("primary") !important;
-                color: color("night") !important;
-            }
-        }
-
-        .accordion-body {
-            p {
-                display: inline-block;
-            }
-        }
     }
 
     .business-companies {

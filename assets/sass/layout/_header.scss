@@ -189,4 +189,44 @@
             }
         }
     }
+
+    &.atel-vc-campaign-pg {
+        background: url($img-path + "vc_campaign/vc_campaign_banner.svg") center/cover no-repeat;
+        min-height: 638px;
+        padding-top: 80px;
+
+        .top-banner {
+            &-text-group{
+                max-width: 700px;
+
+                @include breakpoint-down(lg){
+                    text-align: center;
+                }
+            }
+
+            &-segment {
+                grid-template-columns: 55% auto;
+
+                @include breakpoint-down(lg){
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            &-img{
+                @include breakpoint-down(lg){
+                    max-width: 520px;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    &.atel-top-banner-invert{
+        .top-banner{
+            &-ttl, &-lead{
+                color: color("white")!important;
+            }
+        }
+    }
 }

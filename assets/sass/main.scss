@@ -36,6 +36,7 @@
         'components/table',
         'components/dropdown',
         'components/sekeleton',
+        'components/accordion',
         'components/badge',
         'components/card',
         'components/sidebar';
@@ -44,4 +45,5 @@
         'layout/footer';
 @import "pages/index", 
         "pages/solution",
-        "pages/office_ivr";
+        "pages/office_ivr",
+        "pages/campaign";

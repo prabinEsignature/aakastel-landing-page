@@ -19,11 +19,11 @@ $z-index-navbar-toggler: 1010;
     }
   }
 
-  &-btns{
-    @include breakpoint-down(lg){
-        display: none!important;
+  &-btns {
+    @include breakpoint-down(lg) {
+      display: none !important;
     }
-}
+  }
 
   .navbar-brand {
     max-width: 152px;
@@ -111,6 +111,26 @@ $z-index-navbar-toggler: 1010;
 
       .btn-try-for-free {
         min-width: 130px;
+      }
+    }
+  }
+}
+
+.atel-header {
+  &:not(.atel-header-fixed) {
+    .atel-navbar {
+      &.atel-navbar-invert {
+        .menu-item{
+          &-text{
+            color: color("white");
+          }
+
+          &-icon{
+            img{
+              filter: invert(0) brightness(100);
+            }
+          }
+        }
       }
     }
   }

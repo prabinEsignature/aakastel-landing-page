@@ -12621,6 +12621,18 @@
   letter-spacing: -0.03em !important;
 }
 
+.after-none::after {
+  display: none !important;
+}
+
+.before-none::before {
+  display: none !important;
+}
+
+.btn-transparent-white .btn-icon, .btn-transparent-white img {
+  filter: invert(0) brightness(100);
+}
+
 html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -13488,6 +13500,7 @@ a:visited, a:link {
 }
 .scrollbar-x::-webkit-scrollbar-track {
   border-radius: 10px;
+  background-color: #fff;
 }
 .scrollbar-x::-webkit-scrollbar-thumb {
   border-radius: 10px;
@@ -13508,6 +13521,7 @@ a:visited, a:link {
 }
 .scrollbar-y::-webkit-scrollbar-track {
   border-radius: 10px;
+  background-color: #fff;
 }
 .scrollbar-y::-webkit-scrollbar-thumb {
   border-radius: 10px;
@@ -13681,6 +13695,34 @@ Output
   color: #2e8c3a !important;
 }
 .btn-transparent:disabled, .btn-transparent.disabled {
+  opacity: 0.8;
+}
+
+.btn-transparent-white {
+  background: transparent !important;
+  color: #fff !important;
+  border: 1px solid transparent !important;
+}
+.btn-transparent-white:hover, .btn-transparent-white:focus, .btn-transparent-white:disabled, .btn-transparent-white:active, .btn-transparent-white.disabled, .btn-transparent-white.active {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: #e6e6e6 !important;
+}
+.btn-transparent-white:disabled, .btn-transparent-white.disabled {
+  opacity: 0.8;
+}
+
+.btn-white-primary {
+  background: #fff !important;
+  color: #3bb24a !important;
+  border: 1px solid #e5e5e5 !important;
+}
+.btn-white-primary:hover, .btn-white-primary:focus, .btn-white-primary:disabled, .btn-white-primary:active, .btn-white-primary.disabled, .btn-white-primary.active {
+  background: #3bb24a !important;
+  border-color: #3bb24a !important;
+  color: #fff !important;
+}
+.btn-white-primary:disabled, .btn-white-primary.disabled {
   opacity: 0.8;
 }
 
@@ -14278,6 +14320,7 @@ input[type=button].btn-block {
 }
 .select2-container .select2-results__options::-webkit-scrollbar-track {
   border-radius: 10px;
+  background-color: #fff;
 }
 .select2-container .select2-results__options::-webkit-scrollbar-thumb {
   border-radius: 10px;
@@ -14571,6 +14614,20 @@ table td {
   }
 }
 
+.accordion-item {
+  margin-bottom: 20px;
+}
+.accordion-button::after {
+  display: none;
+}
+.accordion-button[aria-expanded=true] {
+  border-left-color: #3bb24a !important;
+  color: #121212 !important;
+}
+.accordion-body p {
+  display: inline-block;
+}
+
 .badge-group {
   display: flex;
   align-items: center;
@@ -14776,6 +14833,37 @@ table td {
 .atel-top-banner.atel-office-ivr-pg .top-banner-video {
   max-width: 1062px;
 }
+.atel-top-banner.atel-vc-campaign-pg {
+  background: url("../../../assets/images/vc_campaign/vc_campaign_banner.svg") center/cover no-repeat;
+  min-height: 638px;
+  padding-top: 80px;
+}
+.atel-top-banner.atel-vc-campaign-pg .top-banner-text-group {
+  max-width: 700px;
+}
+@media (max-width: 991.98px) {
+  .atel-top-banner.atel-vc-campaign-pg .top-banner-text-group {
+    text-align: center;
+  }
+}
+.atel-top-banner.atel-vc-campaign-pg .top-banner-segment {
+  grid-template-columns: 55% auto;
+}
+@media (max-width: 991.98px) {
+  .atel-top-banner.atel-vc-campaign-pg .top-banner-segment {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-top-banner.atel-vc-campaign-pg .top-banner-img {
+    max-width: 520px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.atel-top-banner.atel-top-banner-invert .top-banner-ttl, .atel-top-banner.atel-top-banner-invert .top-banner-lead {
+  color: #fff !important;
+}
 
 .atel-navbar {
   min-height: 80px;
@@ -14860,6 +14948,13 @@ table td {
 }
 .atel-navbar .submenu-item-block.resources-nav .btn-try-for-free {
   min-width: 130px;
+}
+
+.atel-header:not(.atel-header-fixed) .atel-navbar.atel-navbar-invert .menu-item-text {
+  color: #fff;
+}
+.atel-header:not(.atel-header-fixed) .atel-navbar.atel-navbar-invert .menu-item-icon img {
+  filter: invert(0) brightness(100);
 }
 
 .atel-footer .footer-segment-main {
@@ -15233,19 +15328,6 @@ table td {
 .atel-support-industry .support-industry-accordion {
   gap: 80px;
 }
-.atel-support-industry .support-industry-accordion .accordion-item {
-  margin-bottom: 20px;
-}
-.atel-support-industry .support-industry-accordion .accordion-button::after {
-  display: none;
-}
-.atel-support-industry .support-industry-accordion .accordion-button[aria-expanded=true] {
-  border-left-color: #3bb24a !important;
-  color: #121212 !important;
-}
-.atel-support-industry .support-industry-accordion .accordion-body p {
-  display: inline-block;
-}
 .atel-support-industry .business-companies-text {
   max-width: 223px;
 }
@@ -15462,4 +15544,53 @@ table td {
 
 .atel-automation-solution {
   background: url("../../../assets/images/ivr_solution/automation_banner.svg") center/cover no-repeat;
+}
+
+.atel-faq .segment-heading {
+  max-width: 600px;
+  margin-left: 0 !important;
+}
+.atel-faq .segment-heading .segment-img {
+  max-width: 80px;
+}
+.atel-faq .segment-faq {
+  grid-template-columns: 28% auto;
+  max-width: 1162px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (max-width: 991.98px) {
+  .atel-faq .segment-faq {
+    grid-template-columns: 100%;
+    gap: 20px !important;
+  }
+}
+.atel-faq .accordion-button::after {
+  display: block !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23757575'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.atel-power-voice .power-voice-img {
+  max-width: 920px;
+  max-height: 600px;
+}
+.atel-power-voice .segment-power-voice {
+  background: url("../../../assets/images/vc_campaign/power_voice_banner.svg") center/cover no-repeat;
+  border-radius: 40px;
+  min-height: 673px;
+}
+.atel-power-voice .segment-power-voice .power-voice-img {
+  bottom: -6px;
+  left: -98px;
+}
+.atel-power-voice .segment-heading .segment-ttl {
+  line-height: 1.1;
+}
+.atel-power-voice .power-voice-content {
+  max-width: 420px;
+}
+
+.atel-why-voice-broadcast .why-voice-broadcast-accordion {
+  max-width: 1064px;
+  gap: 80px;
 }/*# sourceMappingURL=main.css.map */
