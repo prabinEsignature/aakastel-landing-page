@@ -31,7 +31,7 @@ $button-variants: (
     hover-text-color: darken(color("primary"), 10%),
     hover-border-color: transparent
   ),
-  'transparent-white': (
+  "transparent-white": (
     bg: transparent,
     text: color("white"),
     border-color: transparent,
@@ -62,6 +62,22 @@ $button-variants: (
     hover-bg: transparent,
     hover-text-color: color("night"),
     hover-border-color: color("primary")
+  ),
+  "grey-2-outline": (
+    bg: color("white"),
+    text: color("primary"),
+    border-color: color("grey-2"),
+    hover-bg: color("p-green-50"),
+    hover-text-color: color("primary"),
+    hover-border-color: color("grey-2")
+  ),
+  "transparent-white-outline": (
+    bg: transparent,
+    text: color("white"),
+    border-color: color("grey-2"),
+    hover-bg: color("white"),
+    hover-text-color: color("primary"),
+    hover-border-color: color("white")
   )
 );
 
@@ -136,11 +152,11 @@ $button-variants: (
     height: 52px;
     min-width: 146px;
 
-    @include breakpoint-down(md){
+    @include breakpoint-down(md) {
       height: 48px;
     }
 
-    @include breakpoint-down(sm){
+    @include breakpoint-down(sm) {
       height: 44px;
     }
   }
@@ -149,11 +165,11 @@ $button-variants: (
     font-size: map-get($font-sizes, "sm");
     height: 36px;
 
-    @include breakpoint-down(md){
+    @include breakpoint-down(md) {
       height: 34px;
     }
 
-    @include breakpoint-down(sm){
+    @include breakpoint-down(sm) {
       height: 32px;
     }
   }
@@ -162,12 +178,18 @@ $button-variants: (
     font-size: map-get($font-sizes, "xs");
     height: 34px;
 
-    @include breakpoint-down(md){
+    @include breakpoint-down(md) {
       height: 32px;
     }
   }
 
   // BUTTON WIDTH VARIANTS
+  &.btn-narrow {
+    min-width: 100px;
+  }
+  &.btn-middle {
+    min-width: 180px;
+  }
   &.btn-wide {
     min-width: 260px;
   }
@@ -241,12 +263,12 @@ $button-variants: (
   &:hover {
     opacity: 0.8;
 
-    img{
-      &:not(.hovered-state){
+    img {
+      &:not(.hovered-state) {
         display: none;
       }
-      &.hovered-state{
-        display: inline-flex!important;
+      &.hovered-state {
+        display: inline-flex !important;
       }
     }
   }

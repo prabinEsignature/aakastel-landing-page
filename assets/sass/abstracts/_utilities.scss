@@ -46,7 +46,7 @@
 // ----------------------------------------
 // FONT STACK CLASSES
 $font-families: (
-  karla: $font-family-karla,
+  karla: $font-family-karla
 );
 
 @mixin font-families($fonts) {
@@ -92,7 +92,7 @@ $overflow-values: (auto, hidden, clip, visible, scroll);
 $dimension-properties: (
   0: 0,
   100: 100%,
-  100vh: 100vh,
+  100vh: 100vh
 );
 
 // Mixin to generate max/min width and height classes
@@ -126,7 +126,7 @@ $cursor-styles: (
   move: move,
   not-allowed: not-allowed,
   crosshair: crosshair,
-  none: none,
+  none: none
 );
 
 @mixin cursor-classes($styles) {
@@ -158,17 +158,7 @@ $object-fits: (contain, cover, fill, none, scale-down);
 }
 
 // Object Position Utilities
-$object-positions: (
-  bottom,
-  center,
-  left,
-  left-bottom,
-  left-top,
-  right,
-  right-bottom,
-  right-top,
-  top
-);
+$object-positions: (bottom, center, left, left-bottom, left-top, right, right-bottom, right-top, top);
 
 @each $position in $object-positions {
   .object-#{$position} {
@@ -181,7 +171,7 @@ $flex-classes: (
   "flex-1": 1 1 0%,
   "flex-auto": 1 1 auto,
   "flex-initial": 0 1 auto,
-  "flex-none": none,
+  "flex-none": none
 );
 
 @each $class, $value in $flex-classes {
@@ -226,7 +216,7 @@ $grid-column-classes: (
     "col-span-10": "span 10 / span 10",
     "col-span-11": "span 11 / span 11",
     "col-span-12": "span 12 / span 12",
-    "col-span-full": "1 / -1",
+    "col-span-full": "1 / -1"
   ),
   start: (
     "col-start-1": "1",
@@ -242,7 +232,7 @@ $grid-column-classes: (
     "col-start-11": "11",
     "col-start-12": "12",
     "col-start-13": "13",
-    "col-start-auto": "auto",
+    "col-start-auto": "auto"
   ),
   end: (
     "col-end-1": "1",
@@ -258,8 +248,8 @@ $grid-column-classes: (
     "col-end-11": "11",
     "col-end-12": "12",
     "col-end-13": "13",
-    "col-end-auto": "auto",
-  ),
+    "col-end-auto": "auto"
+  )
 );
 
 // Generate Grid Column Classes
@@ -287,7 +277,7 @@ $grid-row-classes: (
     "row-span-10": "span 10 / span 10",
     "row-span-11": "span 11 / span 11",
     "row-span-12": "span 12 / span 12",
-    "row-span-full": "1 / -1",
+    "row-span-full": "1 / -1"
   ),
   start: (
     "row-start-1": "1",
@@ -300,7 +290,7 @@ $grid-row-classes: (
     "row-start-8": "8",
     "row-start-9": "9",
     "row-start-10": "10",
-    "row-start-auto": "auto",
+    "row-start-auto": "auto"
   ),
   end: (
     "row-end-1": "1",
@@ -313,8 +303,8 @@ $grid-row-classes: (
     "row-end-8": "8",
     "row-end-9": "9",
     "row-end-10": "10",
-    "row-end-auto": "auto",
-  ),
+    "row-end-auto": "auto"
+  )
 );
 
 // Generate Grid Row Classes
@@ -343,7 +333,7 @@ $rotations: (
   12: 12deg,
   45: 45deg,
   90: 90deg,
-  180: 180deg,
+  180: 180deg
 );
 
 @each $key, $value in $rotations {
@@ -391,11 +381,11 @@ $rotations: (
 
 @include generate-border-radius-classes("rounded");
 
-.rounded-t-80{
-  border-top-right-radius: 80px!important;
-  border-top-left-radius: 80px!important;
+.rounded-t-80 {
+  border-top-right-radius: 80px !important;
+  border-top-left-radius: 80px !important;
 }
-.rounded-100{
+.rounded-100 {
   border-radius: 100px;
 }
 .rounded-100vh {
@@ -521,7 +511,7 @@ $breakpoints: (
 $negative-margin-values: (
   1: 4px,
   2: 8px,
-  3: 12px,
+  3: 12px
 );
 
 @each $key, $value in $negative-margin-values {
@@ -583,7 +573,7 @@ $directions: (
   "b-": bottom,
   "t-": top,
   "r-": right,
-  "l-": left,
+  "l-": left
 );
 
 $border-widths: (
@@ -596,7 +586,7 @@ $border-widths: (
   7: 7px,
   8: 8px,
   9: 9px,
-  10: 10px,
+  10: 10px
 );
 
 @each $color-name, $color-value in $colors {
@@ -604,9 +594,7 @@ $border-widths: (
     @each $width-key, $width-value in $border-widths {
       .border-#{$direction-prefix}#{$color-name}-#{$width-key} {
         @if ($direction-name) {
-          border-#{$direction-name}: #{$width-value}
-            solid
-            #{$color-value} !important;
+          border-#{$direction-name}: #{$width-value} solid #{$color-value} !important;
         } @else {
           border: #{$width-value} solid #{$color-value} !important;
         }
@@ -618,7 +606,8 @@ $border-widths: (
 // Shadows Configuration
 $shadows: (
   "sm": 0 1px 2px 0 rgba(0, 0, 0, 0.05),
-  "base": (                    // Added a name for the default shadow
+  "base": (
+    // Added a name for the default shadow
     0 1px 3px 0 rgba(0, 0, 0, 0.1),
     0 1px 2px -1px rgba(0, 0, 0, 0.1)
   ),
@@ -649,20 +638,28 @@ $shadows: (
 
 // LINE HEIGHTS
 $leading-classes: (
-  "leading-3": 0.75rem, // 12px
-  "leading-4": 1rem, // 16px
-  "leading-5": 1.25rem, // 20px
-  "leading-6": 1.5rem, // 24px
-  "leading-7": 1.75rem, // 28px
-  "leading-8": 2rem, // 32px
-  "leading-9": 2.25rem, // 36px
-  "leading-10": 2.5rem, // 40px
+  "leading-3": 0.75rem,
+  // 12px
+  "leading-4": 1rem,
+  // 16px
+  "leading-5": 1.25rem,
+  // 20px
+  "leading-6": 1.5rem,
+  // 24px
+  "leading-7": 1.75rem,
+  // 28px
+  "leading-8": 2rem,
+  // 32px
+  "leading-9": 2.25rem,
+  // 36px
+  "leading-10": 2.5rem,
+  // 40px
   "leading-none": 1,
   "leading-tight": 1.25,
   "leading-snug": 1.375,
   "leading-normal": 1.5,
   "leading-relaxed": 1.625,
-  "leading-loose": 2,
+  "leading-loose": 2
 );
 
 @each $class, $value in $leading-classes {
@@ -683,30 +680,36 @@ $tracking-classes: (
   "tracking-03": -0.03em
 );
 
-@each $class, $value in $tracking-classes{
-  .#{$class}{
-    letter-spacing: $value!important;
+@each $class, $value in $tracking-classes {
+  .#{$class} {
+    letter-spacing: $value !important;
   }
 }
-
 
 // After & Before - Utility Classes
-.after-none{
-  &::after{
-    display: none!important;
+.after-none {
+  &::after {
+    display: none !important;
   }
 }
 
-.before-none{
-  &::before{
-    display: none!important;
+.before-none {
+  &::before {
+    display: none !important;
   }
 }
 
-.btn{
-  &-transparent-white{
-    .btn-icon, img{
+.btn {
+  &-transparent-white {
+    .btn-icon,
+    img {
       filter: invert(0) brightness(100);
     }
+  }
+}
+
+code {
+  &.code-customized {
+    white-space: break-spaces;
   }
 }

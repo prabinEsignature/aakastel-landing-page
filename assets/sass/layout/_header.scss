@@ -237,12 +237,16 @@
         background: url($img-path + "product_sms/product_sms_banner.svg") center/cover no-repeat;
         min-height: 684px;
 
-        .top-banner{
-            &-segment{
+        .top-banner {
+            &-segment {
                 grid-template-columns: 57% auto;
+
+                @include breakpoint-down(lg) {
+                    grid-template-columns: 1fr;
+                }
             }
 
-            &-text-group{
+            &-text-group {
                 max-width: 730px;
             }
         }

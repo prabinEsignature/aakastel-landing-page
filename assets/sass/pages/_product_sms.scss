@@ -1,0 +1,163 @@
+.atel-benefits {
+    margin-top: -76px;
+    .benefits-item {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            background: color("grey-3");
+            height: 80px;
+        }
+
+        &:nth-child(1) {
+            .benefits-item-icon {
+                max-width: 48px;
+            }
+        }
+
+        &:nth-child(2) {
+            .benefits-item-icon {
+                max-width: 40px;
+            }
+        }
+
+        &:nth-child(3) {
+            .benefits-item-icon {
+                max-width: 86px;
+            }
+        }
+
+        &:nth-child(4) {
+            .benefits-item-icon {
+                max-width: 56px;
+            }
+        }
+
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+
+        &:nth-child(even) {
+            @include breakpoint-down(md) {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.atel-sms-gateway {
+    .atel-sms-gateway-segment {
+        gap: 80px;
+
+        .sms-gateway-btns {
+            .btn {
+                min-width: 180px;
+            }
+        }
+    }
+}
+
+.atel-sms-features {
+    .atel-sms-features-segment {
+        max-width: 1064px;
+    }
+}
+
+.atel-textline-working {
+    .textline-list {
+        .textline-item {
+            position: relative;
+
+            @include breakpoint-down(sm) {
+                text-align: center;
+                margin-bottom: 60px;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                bottom: -60px;
+                height: 60px;
+                width: 1px;
+                border-left: 1px dashed color("primary");
+                left: 50%;
+                transform: translateX(-50%);
+
+                @include breakpoint-up(sm) {
+                    display: none;
+                }
+            }
+
+            &:last-child {
+                .textline-item-dotted-line {
+                    display: none !important;
+                }
+            }
+
+            &-dotted-line {
+                width: 100%;
+                height: 1px;
+                border-top: 2px dashed color("primary");
+            }
+
+            &-icon {
+                @include breakpoint-down(sm) {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+
+.atel-engagement {
+    .segment-heading {
+        max-width: 732px;
+    }
+    .atel-engagement-segment {
+        max-width: 1064px;
+    }
+}
+
+.atel-dev-resource {
+    .atel-dev-resource-segment {
+        grid-template-columns: 40% auto;
+    }
+
+    .dev-resource-tabs {
+        border: 1px solid rgba-color(color("white"), 0.2);
+
+        .nav-tabs {
+            .nav-link {
+                border-top-left-radius: 12px !important;
+                border-top-right-radius: 12px !important;
+
+                &.active {
+                    background: color("mdt-green-v3") !important;
+                    color: color("primary")!important;
+                }
+            }
+        }
+        .tab-content {
+            border-top-right-radius: 0 !important;
+            border-top-left-radius: 0 !important;
+        }
+    }
+}
+
+.atel-sms-service{
+    .slider-cards {
+        .card {
+            height: 380px;
+        }
+    }
+}

@@ -152,51 +152,6 @@
     }
 }
 
-.atel-who-we-help {
-    .atel-who-we-help-container {
-        max-width: 1480px !important;
-
-        @include breakpoint-down(xxxl) {
-            max-width: 1320px !important;
-        }
-
-        .atel-who-we-help-segment {
-            margin-left: 6%;
-
-            @include breakpoint-down(xxxl) {
-                margin-left: 0;
-            }
-        }
-    }
-    .who-we-help-cards {
-        margin-left: -10px;
-        margin-right: -10px;
-
-        @include breakpoint-down(xxl) {
-            margin-right: 0 !important;
-        }
-
-        .wwh-card-wrapper {
-            padding: 0 10px;
-        }
-        .card {
-            max-width: 300px;
-            height: 360px;
-            border-radius: 20px;
-
-            &-body {
-                min-height: 165px;
-                background: linear-gradient(
-                    180deg,
-                    rgba(0, 0, 0, 0) 0%,
-                    rgba(0, 0, 0, 0.24) 40%,
-                    rgba(0, 0, 0, 0.8) 100%
-                );
-            }
-        }
-    }
-}
-
 .atel-upgrade {
     .container {
         max-width: 1104px !important;

@@ -6,10 +6,10 @@ const scrollThreshold = 40;
 const handleScroll = () => {
   if (window.scrollY > scrollThreshold) {
     navbar.classList.add("atel-header-fixed");
-    navbar.classList.add('shadow-default');
+    navbar.classList.add("shadow-default");
   } else {
     navbar.classList.remove("atel-header-fixed");
-    navbar.classList.remove('shadow-default');
+    navbar.classList.remove("shadow-default");
   }
 };
 
@@ -96,25 +96,25 @@ document.addEventListener("scroll", () => {
 });
 
 // JavaScript for smooth scrolling with offset adjustment
-document.querySelectorAll('.features-tabs li a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+document.querySelectorAll(".features-tabs li a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
 
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      const headerOffset = 110; 
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    const headerOffset = 110;
+    const elementPosition = targetElement.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
-      window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-      });
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
   });
 });
 
 // WHO WE HELP SLIDER
-$(".who-we-help-slider").slick({
+$(".who-we-help-slider, .sms-service-slider").slick({
   dots: false,
   infinite: true,
   speed: 300,
