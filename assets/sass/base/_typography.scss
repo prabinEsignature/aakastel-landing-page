@@ -120,7 +120,7 @@ $text-sizes: (
     font-size: $font-size;
     margin-bottom: map-get($headings-config, "margin-bottom");
     font-family: map-get($headings-config, "font-family");
-    font-weight: map-get($headings-config, "font-weight");
+    font-weight: map-get($headings-config, "font-weight")!important;
     line-height: map-get($headings-config, "line-height");
     color: map-get($headings-config, "color");
     letter-spacing: map-get($headings-config, "letter-spacing")!important;

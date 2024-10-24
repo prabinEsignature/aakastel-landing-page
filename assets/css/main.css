@@ -13036,7 +13036,7 @@ h1,
   font-size: 32px;
   margin-bottom: 0;
   font-family: "Karla", sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 1.2;
   color: #121212;
   letter-spacing: -0.06em !important;
@@ -13048,7 +13048,7 @@ h2,
   font-size: 24px;
   margin-bottom: 0;
   font-family: "Karla", sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 1.2;
   color: #121212;
   letter-spacing: -0.06em !important;
@@ -13060,7 +13060,7 @@ h3,
   font-size: 18.72px;
   margin-bottom: 0;
   font-family: "Karla", sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 1.2;
   color: #121212;
   letter-spacing: -0.06em !important;
@@ -13072,7 +13072,7 @@ h4,
   font-size: 16px;
   margin-bottom: 0;
   font-family: "Karla", sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 1.2;
   color: #121212;
   letter-spacing: -0.06em !important;
@@ -13084,7 +13084,7 @@ h5,
   font-size: 13.28px;
   margin-bottom: 0;
   font-family: "Karla", sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 1.2;
   color: #121212;
   letter-spacing: -0.06em !important;
@@ -13096,7 +13096,7 @@ h6,
   font-size: 10.72px;
   margin-bottom: 0;
   font-family: "Karla", sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 1.2;
   color: #121212;
   letter-spacing: -0.06em !important;
@@ -14400,6 +14400,7 @@ input[type=button].btn-block {
 
 .slider-container {
   max-width: 1480px !important;
+  overflow: hidden;
 }
 @media (max-width: 1535.98px) {
   .slider-container {
@@ -14739,6 +14740,9 @@ table td {
   z-index: 1000;
   transition: all 100ms ease-in-out;
 }
+.atel-header > .container {
+  max-width: 1400px !important;
+}
 .atel-header.atel-header-fixed {
   position: fixed;
   background: #fff;
@@ -14957,6 +14961,66 @@ table td {
 }
 .atel-top-banner.atel-product-sms-pg .top-banner-text-group {
   max-width: 730px;
+}
+.atel-top-banner.atel-whatsapp-business-pg {
+  margin-top: 80px;
+}
+.atel-top-banner.atel-whatsapp-business-pg > .container {
+  max-width: 1400px !important;
+}
+.atel-top-banner.atel-whatsapp-business-pg .top-banner-segment {
+  min-height: 640px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: url("../../../assets/images/whatsapp_business/whatsapp_api_banner.png") center/cover no-repeat;
+  padding: 80px;
+}
+@media (max-width: 1199.98px) {
+  .atel-top-banner.atel-whatsapp-business-pg .top-banner-segment {
+    padding: 60px;
+    border-radius: 32px;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-top-banner.atel-whatsapp-business-pg .top-banner-segment {
+    padding: 60px 40px;
+    border-radius: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .atel-top-banner.atel-whatsapp-business-pg .top-banner-segment {
+    padding: 40px 24px;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-top-banner.atel-whatsapp-business-pg .top-banner-segment {
+    padding: 32px 16px;
+  }
+}
+.atel-top-banner.atel-whatsapp-business-pg .top-banner-text-group {
+  max-width: 440px;
+}
+@media (max-width: 991.98px) {
+  .atel-top-banner.atel-whatsapp-business-pg .top-banner-text-group {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+}
+.atel-top-banner.atel-whatsapp-business-pg .top-banner-img {
+  max-width: 388px;
+  margin-left: auto;
+}
+@media (max-width: 1199.98px) {
+  .atel-top-banner.atel-whatsapp-business-pg .top-banner-img {
+    max-width: 320px;
+  }
+}
+@media (max-width: 1199.98px) and (max-width: 991.98px) {
+  .atel-top-banner.atel-whatsapp-business-pg .top-banner-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .atel-navbar {
@@ -15790,6 +15854,16 @@ table td {
 .atel-dev-resource .atel-dev-resource-segment {
   grid-template-columns: 40% auto;
 }
+@media (max-width: 1399.98px) {
+  .atel-dev-resource .atel-dev-resource-segment {
+    grid-template-columns: 30% auto;
+  }
+}
+@media (max-width: 1199.98px) {
+  .atel-dev-resource .atel-dev-resource-segment {
+    grid-template-columns: 100%;
+  }
+}
 .atel-dev-resource .dev-resource-tabs {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -15808,4 +15882,53 @@ table td {
 
 .atel-sms-service .slider-cards .card {
   height: 380px;
+}
+
+.atel-whatsapp-msgs .whatsapp-msgs-lead {
+  max-width: 740px;
+}
+
+.atel-miss-moment .atel-miss-moment-segment {
+  max-width: 1064px;
+  grid-template-columns: 53% auto;
+}
+@media (max-width: 767.98px) {
+  .atel-miss-moment .atel-miss-moment-segment {
+    grid-template-columns: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .atel-miss-moment .segment-heading {
+    text-align: center !important;
+  }
+}
+.atel-miss-moment .miss-moment-img img {
+  max-width: 337px;
+  margin-left: auto;
+}
+@media (max-width: 767.98px) {
+  .atel-miss-moment .miss-moment-img img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.atel-build-better .atel-build-better-segment {
+  border-radius: 40px;
+  max-width: 1064px;
+}
+
+.atel-adv-msg-features .atel-adv-msg-features-segment {
+  border-radius: 40px;
+  max-width: 1064px;
+  padding: 100px;
+  gap: 80px;
+  background: url("../../../assets/images/whatsapp_business/advance_messaging_banner.svg") center/cover no-repeat;
+}
+.atel-adv-msg-features .btn-white-black:hover {
+  background: #fff !important;
+}
+.atel-adv-msg-features .adv-msg-features-img img {
+  max-width: 332px;
+  margin-bottom: -176px;
 }/*# sourceMappingURL=main.css.map */

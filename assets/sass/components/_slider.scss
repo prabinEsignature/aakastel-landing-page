@@ -1,5 +1,6 @@
 .slider-container {
     max-width: 1480px !important;
+    overflow: hidden;
 
     @include breakpoint-down(xxxl) {
         max-width: 1320px !important;

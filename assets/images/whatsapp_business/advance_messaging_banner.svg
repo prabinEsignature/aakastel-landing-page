@@ -1,0 +1,29 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1055 470" width="1055" height="470">
+	<title>Frame 1597882731-svg</title>
+	<defs>
+		<radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-559.553,-559.553,559.553,-559.553,1017.381,666.712)">
+			<stop offset=".85" stop-color="#ffffff" stop-opacity="0"/>
+			<stop offset="1" stop-color="#ffffff" stop-opacity="1"/>
+		</radialGradient>
+		<radialGradient id="g2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-444.983,-444.983,444.983,-444.983,1012.197,661.147)">
+			<stop offset=".85" stop-color="#ffffff" stop-opacity="0"/>
+			<stop offset="1" stop-color="#ffffff" stop-opacity="1"/>
+		</radialGradient>
+		<radialGradient id="g3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-282.334,-282.334,282.334,-282.334,948.168,598.27)">
+			<stop offset=".85" stop-color="#ffffff" stop-opacity="0"/>
+			<stop offset="1" stop-color="#ffffff" stop-opacity="1"/>
+		</radialGradient>
+	</defs>
+	<style>
+		.s0 { fill: #3bb24a } 
+		.s1 { fill: url(#g1) } 
+		.s2 { fill: url(#g2) } 
+		.s3 { fill: url(#g3) } 
+	</style>
+	<path class="s0" d="m0-8h1064v480h-1064z"/>
+	<g style="opacity: .2">
+		<path class="s1" d="m1096.6 747.1c-176.8 176.7-462.6 176.7-639.4 0-176.7-176.8-176.7-462.6 0-639.4 176.8-176.7 462.6-176.7 639.4 0 176.7 176.8 176.7 462.6 0 639.4z"/>
+		<path class="s2" d="m1075.2 725c-140.6 140.6-367.9 140.6-508.5 0-140.5-140.5-140.5-367.8 0-508.4 140.6-140.5 367.9-140.5 508.5 0 140.5 140.6 140.5 367.9 0 508.4z"/>
+		<path class="s3" d="m988.1 638.8c-89.5 89.5-234 89.8-323.1 0.6-89.2-89.2-89-233.7 0.5-323.2 89.6-89.5 234-89.7 323.2-0.6 89.2 89.2 88.9 233.7-0.6 323.2z"/>
+	</g>
+</svg>

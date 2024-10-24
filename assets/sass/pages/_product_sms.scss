@@ -131,6 +131,14 @@
 .atel-dev-resource {
     .atel-dev-resource-segment {
         grid-template-columns: 40% auto;
+
+        @include breakpoint-down(xxl){
+            grid-template-columns: 30% auto;
+        }
+
+        @include breakpoint-down(xl){
+            grid-template-columns: 100%;
+        }
     }
 
     .dev-resource-tabs {

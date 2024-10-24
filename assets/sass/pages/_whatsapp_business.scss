@@ -1,0 +1,66 @@
+.atel-whatsapp-msgs {
+    .whatsapp-msgs {
+        &-lead {
+            max-width: 740px;
+        }
+    }
+}
+
+.atel-miss-moment {
+    .atel-miss-moment-segment {
+        max-width: 1064px;
+        grid-template-columns: 53% auto;
+
+        @include breakpoint-down(md) {
+            grid-template-columns: 100%;
+        }
+    }
+
+    .segment-heading {
+        @include breakpoint-down(md) {
+            text-align: center !important;
+        }
+    }
+
+    .miss-moment-img {
+        img {
+            max-width: 337px;
+            margin-left: auto;
+
+            @include breakpoint-down(md) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.atel-build-better {
+    .atel-build-better-segment {
+        border-radius: 40px;
+        max-width: 1064px;
+    }
+}
+
+.atel-adv-msg-features {
+    .atel-adv-msg-features-segment {
+        border-radius: 40px;
+        max-width: 1064px;
+        padding: 100px;
+        gap: 80px;
+        background: url($img-path + "whatsapp_business/advance_messaging_banner.svg") center/cover no-repeat;
+    }
+
+    .btn-white-black {
+        &:hover {
+            background: color("white") !important;
+        }
+    }
+
+    .adv-msg-features-img{
+        img{
+            max-width: 332px;
+            margin-bottom: -176px;
+        }
+    }
+}
