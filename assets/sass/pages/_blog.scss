@@ -1,0 +1,11 @@
+.blogs-segment {
+    &-jumbotron {
+        .card-grid {
+            .card-body {
+                @include breakpoint-down(lg) {
+                    padding: 0 !important;
+                }
+            }
+        }
+    }
+}
