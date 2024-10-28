@@ -84,8 +84,13 @@ $text-sizes: (
   ),
   "8xl": (
     null: "8xl",
-    lg: "7xl",
-    sm: "6xl",
+    xxl: "7xl",
+    xl: "6xl",
+    lg: "5xl",
+    sm: "4xl",
+    xs: "3xl",
+    xxs: "2xl",
+    xxxs: "xl"
   ),
 );
 
