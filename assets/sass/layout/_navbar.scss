@@ -14,8 +14,27 @@ $z-index-navbar-toggler: 1010;
   &-menu {
     position: relative;
 
+    &-parent {
+      @include breakpoint-down(lg) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 16px !important;
+        background: color("white");
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
     @include breakpoint-down(lg) {
-      display: none !important;
+      padding: 0;
+      flex-direction: column;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+      gap: 8px;
     }
   }
 
@@ -27,10 +46,26 @@ $z-index-navbar-toggler: 1010;
 
   .navbar-brand {
     max-width: 152px;
+    display: inline-flex;
   }
 
   .menu-item {
     padding: 0 10px;
+
+    @include breakpoint-down(lg){
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+    }
+
+    &-wrapper {
+      @include breakpoint-down(lg) {
+        border: 1px solid color("grey-2");
+        border-radius: 8px;
+        width: 100%;
+      }
+    }
   }
 
   .submenu-item-block {
@@ -43,17 +78,36 @@ $z-index-navbar-toggler: 1010;
     overflow: hidden;
     transition: $default-transition;
 
+    @include breakpoint-down(xl) {
+      max-width: 800px !important;
+    }
+
+    @include breakpoint-down(lg){
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none!important;
+      width: 100%;
+    }
+
     &.show {
       transform: translate(-50%, 0%);
     }
 
     &.products-nav {
-      width: 880px;
+      width: 920px;
 
       .submenu {
         &-item {
-          &.active {
+          @include breakpoint-down(xl) {
+            padding: 4px 8px !important;
+          }
+
+          &.active,
+          &:hover {
             background: color("p-green-50") !important;
+            transition: $default-transition;
+
             .submenu-item-chevron {
               display: inline-flex !important;
             }
@@ -64,12 +118,29 @@ $z-index-navbar-toggler: 1010;
           }
         }
 
+        &-list {
+          @include breakpoint-down(xl) {
+            padding: 12px !important;
+          }
+        }
+
+        &-grid {
+          @include breakpoint-down(xl) {
+            padding: 12px !important;
+          }
+        }
+
         &-item-main {
           grid-template-columns: 1fr 2fr;
+          background: color("white");
         }
 
         &-grid-item {
           padding: 6px 8px;
+
+          @include breakpoint-down(xl) {
+            padding: 4px 8px !important;
+          }
         }
       }
     }
@@ -77,9 +148,22 @@ $z-index-navbar-toggler: 1010;
     &.solutions-nav {
       width: 940px;
 
+      .submenu-item {
+        &-main {
+          @include breakpoint-down(xl) {
+            padding: 12px !important;
+            gap: 12px !important;
+          }
+        }
+      }
+
       .submenu-grid {
         padding-right: 20px;
         border-right: 1px solid color("grey-2");
+
+        @include breakpoint-down(xl) {
+          padding-right: 12px !important;
+        }
 
         &:last-child {
           padding-right: 0;
@@ -88,6 +172,10 @@ $z-index-navbar-toggler: 1010;
 
         &-item {
           cursor: pointer;
+
+          @include breakpoint-down(xl) {
+            padding: 4px 8px !important;
+          }
 
           &:hover {
             background: color("p-green-50");
@@ -98,12 +186,54 @@ $z-index-navbar-toggler: 1010;
 
     &.developers-nav {
       width: 840px;
+
+      .submenu-item {
+        &-main {
+          @include breakpoint-down(xl) {
+            gap: 12px !important;
+          }
+        }
+      }
+
+      .submenu-grid {
+        @include breakpoint-down(xl) {
+          padding: 12px !important;
+        }
+
+        &-list {
+          gap: 12px !important;
+        }
+
+        &-item {
+          a {
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
     }
 
     &.resources-nav {
       width: 506px;
 
+      .submenu-grid {
+        &-item {
+          a {
+            transition: $default-transition;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+
       .submenu-item {
+        &-main {
+          @include breakpoint-down(xl) {
+            padding: 12px !important;
+          }
+        }
         &-foot-text {
           max-width: 206px;
         }
@@ -120,18 +250,34 @@ $z-index-navbar-toggler: 1010;
   &:not(.atel-header-fixed) {
     .atel-navbar {
       &.atel-navbar-invert {
-        .menu-item{
-          &-text{
+        .menu-item {
+          &-text {
             color: color("white");
           }
 
-          &-icon{
-            img{
+          &-icon {
+            img {
               filter: invert(0) brightness(100);
             }
           }
         }
       }
+    }
+  }
+}
+
+// NAVBAR
+.submenu-01-body-list {
+  .submenu-01-body-item {
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+    transition: $default-transition;
+
+    &.show {
+      display: grid !important;
+      visibility: visible;
+      opacity: 1;
     }
   }
 }

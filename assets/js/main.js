@@ -74,6 +74,26 @@ const resetNavbarMenu = () => {
     .forEach((menuItem) => menuItem.classList.remove("active"));
 };
 
+const subMenuHeadItems = document.querySelectorAll(".submenu-01-head-item");
+const subMenuBodyItems = document.querySelectorAll(".submenu-01-body-item");
+
+if (subMenuBodyItems.length > 0) {
+  subMenuBodyItems[0].classList.add("show");
+}
+
+subMenuHeadItems.forEach((subMenuHeadItem, index) => {
+  subMenuHeadItem.addEventListener("mouseenter", () => {
+    subMenuBodyItems.forEach((bodyItem) => bodyItem.classList.remove("show"));
+
+    subMenuBodyItems[index].classList.add("show");
+  });
+
+  subMenuHeadItem.addEventListener("mouseleave", () => {
+    subMenuBodyItems.forEach((bodyItem) => bodyItem.classList.remove("show"));
+    subMenuBodyItems[0].classList.add("show");
+  });
+});
+
 // PASSWORD ICONS TOGGLE
 const passwordFormElem = $(".password-form-elem .form-elem-icon");
 $(passwordFormElem).on("click", function (event) {
