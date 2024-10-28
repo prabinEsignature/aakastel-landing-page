@@ -49,6 +49,21 @@ menuItems.forEach((item) => {
   });
 });
 
+// Close the menu when clicking outside
+document.addEventListener("click", (event) => {
+  // Check if the click target is not within the active menu item or submenu
+  if (
+    activeMenuItem &&
+    !activeMenuItem.contains(event.target) &&
+    activeSubMenu &&
+    !activeSubMenu.contains(event.target)
+  ) {
+    resetNavbarMenu();
+    activeSubMenu = null;
+    activeMenuItem = null;
+  }
+});
+
 const resetNavbarMenu = () => {
   document
     .querySelectorAll(".submenu-item-block")
@@ -74,26 +89,26 @@ $(passwordFormElem).on("click", function (event) {
   }
 });
 
-document.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll(".features-tabs-item");
-  const navLinks = document.querySelectorAll(".features-tabs-btn");
+// document.addEventListener("scroll", () => {
+//   const sections = document.querySelectorAll(".features-tabs-item");
+//   const navLinks = document.querySelectorAll(".features-tabs-btn");
 
-  let currentSection = "";
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (window.scrollY >= sectionTop - sectionHeight / 5) {
-      currentSection = section.getAttribute("id");
-    }
-  });
+//   let currentSection = "";
+//   sections.forEach((section) => {
+//     const sectionTop = section.offsetTop;
+//     const sectionHeight = section.clientHeight;
+//     if (window.scrollY >= sectionTop - sectionHeight / 5) {
+//       currentSection = section.getAttribute("id");
+//     }
+//   });
 
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href").substring(1) === currentSection) {
-      link.classList.add("active");
-    }
-  });
-});
+//   navLinks.forEach((link) => {
+//     link.classList.remove("active");
+//     if (link.getAttribute("href").substring(1) === currentSection) {
+//       link.classList.add("active");
+//     }
+//   });
+// });
 
 // JavaScript for smooth scrolling with offset adjustment
 document.querySelectorAll(".features-tabs li a").forEach((anchor) => {
