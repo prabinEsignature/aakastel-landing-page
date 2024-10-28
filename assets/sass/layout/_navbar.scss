@@ -35,6 +35,8 @@ $z-index-navbar-toggler: 1010;
       align-items: flex-start !important;
       justify-content: flex-start !important;
       gap: 8px;
+      max-height: 100vh;
+      overflow-y: scroll;
     }
   }
 
@@ -86,12 +88,21 @@ $z-index-navbar-toggler: 1010;
       position: relative;
       top: 0;
       left: 0;
+      margin: 0 16px;
       transform: none!important;
-      width: 100%;
+      width: calc(100% - 32px)!important;
+      max-width: 100%!important;
+      margin-right: auto;
+      margin-left: auto;
+      display: none;
     }
 
     &.show {
       transform: translate(-50%, 0%);
+
+      @include breakpoint-down(lg){
+        display: block;
+      }
     }
 
     &.products-nav {
