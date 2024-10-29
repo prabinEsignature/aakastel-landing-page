@@ -19,6 +19,17 @@ handleScroll();
 // Attach the scroll event listener
 window.addEventListener("scroll", handleScroll);
 
+// SIDEBAR TOGGLE
+const navbarSideMenuOpenBtn = document.querySelector(".btn-navbar-menu-open");
+const navbarSideMenuCloseBtn = document.querySelector(".btn-navbar-menu-close");
+const navbarMenuParent = document.querySelector(".atel-navbar-menu-parent");
+navbarSideMenuOpenBtn.addEventListener("click", () => {
+  navbarMenuParent.classList.add("show");
+});
+navbarSideMenuCloseBtn.addEventListener("click", () => {
+  navbarMenuParent.classList.remove("show");
+});
+
 // NAVBAR MENU TOGGLE
 const menuItems = document.querySelectorAll(".menu-item");
 let activeSubMenu = null;
@@ -92,6 +103,63 @@ subMenuHeadItems.forEach((subMenuHeadItem, index) => {
     subMenuBodyItems.forEach((bodyItem) => bodyItem.classList.remove("show"));
     subMenuBodyItems[0].classList.add("show");
   });
+});
+
+const subMenuHeadItemsLink = document.querySelectorAll(
+  ".submenu-01-head-list a.submenu-item"
+);
+
+subMenuHeadItemsLink.forEach((subMenuHeadItemLink, index) => {
+  subMenuHeadItemLink.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    document
+      .querySelectorAll(".submenu-grid-sp-wrapper.show")
+      .forEach((openMenu) => {
+        if (
+          openMenu !==
+          subMenuHeadItemLink.parentElement.querySelector(
+            ".submenu-grid-sp-wrapper"
+          )
+        ) {
+          openMenu.classList.remove("show");
+        }
+      });
+
+    const subMenuHeadItemGrid = subMenuHeadItemLink.parentElement.querySelector(
+      ".submenu-grid-sp-wrapper"
+    );
+    subMenuHeadItemGrid.classList.toggle("show");
+  });
+});
+
+const submenuGridBtnTtl = document.querySelectorAll(".submenu-grid-ttl-btn");
+submenuGridBtnTtl.forEach((submenuGridBtnTtl, index) => {
+  submenuGridBtnTtl.addEventListener("click", (event) => {
+    event.preventDefault();
+    document
+      .querySelectorAll(".solutions-nav .submenu-grid-list.show")
+      .forEach((openMenu) => {
+        if (
+          openMenu !==
+          submenuGridBtnTtl.parentElement.querySelector(".submenu-grid-list")
+        ) {
+          openMenu.classList.remove("show");
+        }
+      });
+    const subMenuGridListBlock =
+      submenuGridBtnTtl.parentElement.querySelector(".submenu-grid-list");
+    subMenuGridListBlock.classList.toggle("show");
+  });
+});
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+  document.body.classList.add("resize-animation-stopper");
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove("resize-animation-stopper");
+  }, 400);
 });
 
 // PASSWORD ICONS TOGGLE

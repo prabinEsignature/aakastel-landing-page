@@ -26,6 +26,19 @@ $z-index-navbar-toggler: 1010;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        transform: translateX(100%);
+        transition: $default-transition;
+        z-index: $z-index-navbar;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        &.show{
+          transform: translateX(0);
+          transition: $default-transition;
+          @include breakpoint-down(lg) {
+            overflow-y: auto;
+          }
+        }
       }
     }
 
@@ -37,10 +50,12 @@ $z-index-navbar-toggler: 1010;
       gap: 8px;
       max-height: 100vh;
       overflow-y: scroll;
+      @include scrollbar("y");
     }
   }
 
   &-btns {
+    gap: 6px;
     @include breakpoint-down(lg) {
       display: none !important;
     }
@@ -54,7 +69,7 @@ $z-index-navbar-toggler: 1010;
   .menu-item {
     padding: 0 10px;
 
-    @include breakpoint-down(lg){
+    @include breakpoint-down(lg) {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -63,9 +78,14 @@ $z-index-navbar-toggler: 1010;
 
     &-wrapper {
       @include breakpoint-down(lg) {
-        border: 1px solid color("grey-2");
-        border-radius: 8px;
+        border-bottom: 2px solid color("grey-2");
         width: 100%;
+      }
+
+      &:has(.submenu-item-block.show) {
+        @include breakpoint-down(lg) {
+          padding-bottom: 20px;
+        }
       }
     }
   }
@@ -84,24 +104,30 @@ $z-index-navbar-toggler: 1010;
       max-width: 800px !important;
     }
 
-    @include breakpoint-down(lg){
+    @include breakpoint-down(lg) {
       position: relative;
-      top: 0;
+      top: 2px;
       left: 0;
-      margin: 0 16px;
-      transform: none!important;
-      width: calc(100% - 32px)!important;
-      max-width: 100%!important;
+      transform: none !important;
+      width: 100% !important;
+      max-height: 0;
+      overflow: hidden;
+      transition: $default-transition;
+      border-radius: 4px !important;
+      max-width: calc(100% - 32px) !important;
       margin-right: auto;
       margin-left: auto;
-      display: none;
+    }
+
+    @include breakpoint-down(sm){
+      max-width: 100%!important;
     }
 
     &.show {
       transform: translate(-50%, 0%);
 
-      @include breakpoint-down(lg){
-        display: block;
+      @include breakpoint-down(lg) {
+        max-height: 1000px;
       }
     }
 
@@ -111,7 +137,26 @@ $z-index-navbar-toggler: 1010;
       .submenu {
         &-item {
           @include breakpoint-down(xl) {
-            padding: 4px 8px !important;
+            padding: 8px !important;
+          }
+
+          @include breakpoint-down(lg) {
+            margin-bottom: 8px;
+          }
+
+          & + .submenu-grid-sp-wrapper {
+            display: none !important;
+
+            @include breakpoint-down(lg) {
+              display: grid !important;
+              max-height: 0;
+              overflow: hidden;
+              transition: $default-transition;
+
+              &.show {
+                max-height: 1000px;
+              }
+            }
           }
 
           &.active,
@@ -139,11 +184,19 @@ $z-index-navbar-toggler: 1010;
           @include breakpoint-down(xl) {
             padding: 12px !important;
           }
+
+          @include breakpoint-down(sm){
+            padding: 8px!important;
+          }
         }
 
         &-item-main {
           grid-template-columns: 1fr 2fr;
           background: color("white");
+
+          @include breakpoint-down(lg) {
+            grid-template-columns: 100%;
+          }
         }
 
         &-grid-item {
@@ -165,6 +218,14 @@ $z-index-navbar-toggler: 1010;
             padding: 12px !important;
             gap: 12px !important;
           }
+
+          @include breakpoint-down(lg){
+            gap: 0!important;
+          }
+
+          @include breakpoint-down(sm){
+            padding: 8px!important;
+          }
         }
       }
 
@@ -174,6 +235,14 @@ $z-index-navbar-toggler: 1010;
 
         @include breakpoint-down(xl) {
           padding-right: 12px !important;
+        }
+        
+        @include breakpoint-down(lg){
+          border-right: 0;
+          &-ttl-btn{
+            margin-bottom: 0!important;
+            cursor: pointer;
+          }
         }
 
         &:last-child {
@@ -192,6 +261,23 @@ $z-index-navbar-toggler: 1010;
             background: color("p-green-50");
           }
         }
+
+        &-list{
+          @include breakpoint-down(lg){
+            grid-template-columns: repeat(2, 1fr);
+            max-height: 0;
+            overflow: hidden;
+            transition: $default-transition;
+
+            &.show{
+              max-height: 1000px;
+            }
+          }
+
+          @include breakpoint-down(sm){
+            grid-template-columns: 100%;
+          }
+        }
       }
     }
 
@@ -203,6 +289,11 @@ $z-index-navbar-toggler: 1010;
           @include breakpoint-down(xl) {
             gap: 12px !important;
           }
+
+          @include breakpoint-down(lg){
+            grid-template-columns: 100%;
+            gap: 0!important;
+          }
         }
       }
 
@@ -211,11 +302,30 @@ $z-index-navbar-toggler: 1010;
           padding: 12px !important;
         }
 
+        @include breakpoint-down(sm){
+          padding: 8px!important;
+        }
+
+        &-head{
+          @include breakpoint-down(lg){
+            margin-bottom: 0!important;
+          }
+        }
+
         &-list {
           gap: 12px !important;
+
+          @include breakpoint-down(lg){
+            gap: 4px!important;
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
 
         &-item {
+          @include breakpoint-down(lg){
+            padding: 4px!important;
+          }
+
           a {
             &:hover {
               opacity: 0.8;
@@ -244,7 +354,12 @@ $z-index-navbar-toggler: 1010;
           @include breakpoint-down(xl) {
             padding: 12px !important;
           }
+
+          @include breakpoint-down(sm){
+            padding: 8px!important;
+          }
         }
+
         &-foot-text {
           max-width: 206px;
         }
@@ -254,6 +369,10 @@ $z-index-navbar-toggler: 1010;
         min-width: 130px;
       }
     }
+  }
+
+  .submenu-item-foot{
+    padding: 12px!important;
   }
 }
 
@@ -277,6 +396,14 @@ $z-index-navbar-toggler: 1010;
   }
 }
 
+.btn-navbar-menu-close{
+  transition: $default-transition;
+  &:hover{
+    opacity: 0.9;
+    scale: 1.1;
+  }
+}
+
 // NAVBAR
 .submenu-01-body-list {
   .submenu-01-body-item {
@@ -290,5 +417,9 @@ $z-index-navbar-toggler: 1010;
       visibility: visible;
       opacity: 1;
     }
+  }
+
+  @include breakpoint-down(lg) {
+    display: none !important;
   }
 }

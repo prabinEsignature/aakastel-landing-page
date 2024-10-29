@@ -96,13 +96,21 @@
     }
 
     .select2-search__field{
-        // display: none!important;
+        display: none!important;
     }
     .select2-results__options{
         @include scrollbar("y");
 
         .flag-icon{
             width: 45px!important;
+        }
+
+        
+    }
+
+    .select2-results__option{
+        &__option--highlighted{
+            background: color("primary")!important;
         }
     }
 
