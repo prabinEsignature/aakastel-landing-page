@@ -76,6 +76,13 @@ $z-index-navbar-toggler: 1010;
       padding: 12px;
     }
 
+    &.active{
+      .menu-item-icon{
+        transform: rotate(180deg);
+        transition: $default-transition;
+      }
+    }
+
     &-wrapper {
       @include breakpoint-down(lg) {
         border-bottom: 2px solid color("grey-2");
@@ -136,6 +143,8 @@ $z-index-navbar-toggler: 1010;
 
       .submenu {
         &-item {
+          transition: $default-transition;
+
           @include breakpoint-down(xl) {
             padding: 8px !important;
           }
@@ -162,10 +171,13 @@ $z-index-navbar-toggler: 1010;
           &.active,
           &:hover {
             background: color("p-green-50") !important;
-            transition: $default-transition;
 
             .submenu-item-chevron {
               display: inline-flex !important;
+              
+              @include breakpoint-down(lg){
+                transform: rotate(90deg);
+              }
             }
           }
 
