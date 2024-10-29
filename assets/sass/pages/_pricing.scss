@@ -1,2 +1,49 @@
 .atel-pricing-pg{
+    .pricing-body-segment{
+        .nav-tabs{
+            padding: 6px;
+            min-height: 60px;
+        }
+
+        button{
+            &.nav-link{
+                min-width: 173px;
+
+                &.active{
+                    background: color("dark-cyprus");
+                    color: color("light-cyprus")!important;
+                }
+            }
+
+            .discount-percent{
+                padding: 2px 8px;
+                min-height: 24px;
+            }
+        }
+    }
+
+    .pricing-cards{
+        .pricing{
+            &-top{
+                .pricing-tag{
+                    min-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+.atel-compare-plans{
+    .plan-block-head{
+        min-height: 121px;
+        border-bottom: 1px solid color("grey-3");
+    }
+    div[class*='plan-label']{
+        border-bottom: 1px solid color("grey-3");
+        min-height: 73px;
+
+        &:last-child{
+            border-bottom: 0;
+        }
+    }
 }

@@ -42,6 +42,7 @@ $blue-200: #81d4fa;
 $yellow-500: #ffca28;
 $red-500: #fe4d16;
 $light-cyprus: #c7e1e5;
+$light-cyprus-50: #bdd7db;
 $dark-cyprus: #0d3f46;
 $p-green-50: #e9f2ed;
 $p-green-700: #269137;
@@ -77,6 +78,7 @@ $colors: (
   "yellow-500": $yellow-500,
   "red-500": $red-500,
   "light-cyprus": $light-cyprus,
+  "light-cyprus-50": $light-cyprus-50,
   "dark-cyprus": $dark-cyprus,
   "p-green-50": $p-green-50,
   "p-green-700": $p-green-700,
@@ -84,7 +86,7 @@ $colors: (
   "grey-1": $grey-1,
   "grey-2": $grey-2,
   "grey-3": $grey-3,
-  "grey-4": $grey-4,
+  "grey-4": $grey-4
 );
 
 $grayscale: (
@@ -97,7 +99,7 @@ $grayscale: (
   "gray-600": $gray-600,
   "gray-800": $gray-800,
   "gray-900": $gray-900,
-  "gray-950": $gray-950,
+  "gray-950": $gray-950
 );
 
 // CSS Custom Properties for Colors

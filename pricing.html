@@ -2960,9 +2960,13 @@
           </div>
           <div class="pricing-body-segment py-custom-7">
             <nav class="d-flex justify-content-center">
-              <div class="nav nav-tabs d-inline-flex justify-content-center" id="pricing-nav-tab" role="tablist">
+              <div
+                class="nav nav-tabs border-0 d-inline-flex justify-content-center bg-grey-2 border-grey-3-1 rounded-16"
+                id="pricing-nav-tab"
+                role="tablist"
+              >
                 <button
-                  class="nav-link font-semibold text-lg text-gray d-inline-flex align-items-center justify-content-center gap-x-3 py-custom-3 px-custom-6 active"
+                  class="nav-link font-semibold text-lg text-gray d-inline-flex align-items-center justify-content-center gap-x-3 py-custom-3 px-custom-6 rounded-12 border-0 active"
                   id="nav-pricing-01-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#nav-pricing-01"
@@ -2972,10 +2976,13 @@
                   aria-selected="true"
                 >
                   Annually
-                  <span class="discount-percent">-25%</span>
+                  <span
+                    class="discount-percent bg-white rounded-8 text-sm font-semibold text-night d-inline-flex align-items-center justify-content-center"
+                    >-25%</span
+                  >
                 </button>
                 <button
-                  class="nav-link font-semibold text-lg text-gray d-inline-flex align-items-center justify-content-center gap-x-3 py-custom-3 px-custom-6"
+                  class="nav-link font-semibold text-lg text-gray d-inline-flex align-items-center justify-content-center gap-x-3 py-custom-3 px-custom-6 rounded-12 border-0"
                   id="nav-pricing-02-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#nav-pricing-02"
@@ -2991,18 +2998,412 @@
             <div class="tab-content" id="nav-tabContent">
               <div
                 class="tab-pane fade show active"
-                id="nav-home"
+                id="nav-pricing-01"
                 role="tabpanel"
-                aria-labelledby="nav-home-tab"
+                aria-labelledby="nav-pricing-01-tab"
                 tabindex="0"
               >
-                ...
+                <div
+                  class="pricing-cards segment-mt-40 d-grid align-items-start grid-cols-1 md-grid-cols-2 lg-grid-cols-3 xl-grid-cols-4 gap-5"
+                >
+                  <div
+                    class="pricing-card rounded-20 overflow-hidden bg-grey-1"
+                  >
+                    <div
+                      class="pricing-head p-custom-7 bg-grey-2 border-grey-2-1 d-grid align-items-center gap-y-3"
+                    >
+                      <h3 class="text-p-green-700 text-2xl font-bold">
+                        Starter
+                      </h3>
+                      <div
+                        class="pricing-price leading-tight d-flex align-items-center gap-2"
+                      >
+                        <span
+                          class="text-uppercase pricing-currency text-lg text-night font-semibold"
+                          >nrs.</span
+                        >
+                        <span
+                          class="pricing-price-val text-7xl font-bold text-night"
+                          >9999</span
+                        >
+                      </div>
+                    </div>
+                    <div class="pricing-body p-custom-7">
+                      <h4 class="tracking-04 font-bold text-2xl text-night">
+                        What's included?
+                      </h4>
+                      <ul class="px-0 mx-0 pricing-features-list mt-custom-5">
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            Nrs.
+                            <span class="text-primary text-lg">4999</span>
+                            Rental
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            Nrs.
+                            <span class="text-primary text-lg">5000</span>
+                            Credits
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            ATPhone 1
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            2 Agents
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            3 Channel
+                          </p>
+                        </li>
+                      </ul>
+                      <button
+                        type="button"
+                        class="btn btn-white-black btn-block btn-lg mt-custom-5"
+                      >
+                        Renew Package
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="pricing-card rounded-20 overflow-hidden bg-grey-1 border-primary-2"
+                  >
+                    <div
+                      class="pricing-top bg-primary d-flex align-items-center justify-content-between py-custom-2 px-custom-5"
+                    >
+                      <div class="text-white d-flex align-items-center gap-2">
+                        <img
+                          class="icon-24"
+                          src="assets/icons/star_white.svg"
+                          alt=""
+                        />
+                        <span class="font-semibold text-base text-white"
+                          >Best Value</span
+                        >
+                      </div>
+                      <div
+                        class="font-semibold text-night text-sm px-custom-2 bg-white pricing-tag rounded-8 d-inline-flex align-items-center justify-content-center"
+                      >
+                        Save 20%
+                      </div>
+                    </div>
+                    <div
+                      class="pricing-head p-custom-7 bg-white border-grey-2-1 d-grid align-items-center gap-y-3"
+                    >
+                      <h3 class="text-primary text-2xl font-bold">
+                        Most Popular
+                      </h3>
+                      <div
+                        class="pricing-price leading-tight d-flex align-items-center gap-2"
+                      >
+                        <span
+                          class="text-uppercase pricing-currency text-lg text-night font-semibold"
+                          >nrs.</span
+                        >
+                        <span
+                          class="pricing-price-val text-7xl font-bold text-night"
+                          >19,999</span
+                        >
+                      </div>
+                    </div>
+                    <div class="pricing-body bg-p-green-50 p-custom-7">
+                      <h4 class="tracking-04 font-bold text-2xl text-night">
+                        What's included?
+                      </h4>
+                      <ul class="px-0 mx-0 pricing-features-list mt-custom-5">
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            Nrs.
+                            <span class="text-primary text-lg">10,499</span>
+                            Rental
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            Nrs.
+                            <span class="text-primary text-lg">9500</span>
+                            Credits
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            ATPhone 1
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            5 Agents
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            3 Channel
+                          </p>
+                        </li>
+                      </ul>
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-block btn-lg mt-custom-5"
+                      >
+                        Upgrade Package
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="pricing-card rounded-20 overflow-hidden bg-light-cyprus"
+                  >
+                    <div
+                      class="pricing-head p-custom-7 bg-light-cyprus-50 border-grey-2-1 d-grid align-items-center gap-y-3"
+                    >
+                      <h3 class="text-p-green-700 text-2xl font-bold">
+                        Influencer Package
+                      </h3>
+                      <div
+                        class="pricing-price leading-tight d-flex align-items-center gap-2"
+                      >
+                        <span
+                          class="text-uppercase pricing-currency text-lg text-night font-semibold"
+                          >nrs.</span
+                        >
+                        <span
+                          class="pricing-price-val text-7xl font-bold text-night"
+                          >49,999</span
+                        >
+                      </div>
+                    </div>
+                    <div class="pricing-body p-custom-7">
+                      <h4 class="tracking-04 font-bold text-2xl text-night">
+                        What's included?
+                      </h4>
+                      <ul class="px-0 mx-0 pricing-features-list mt-custom-5">
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            Nrs.
+                            <span class="text-primary text-lg">20,499</span>
+                            Rental
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            Nrs.
+                            <span class="text-primary text-lg">20000</span>
+                            Credits
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            ATPhone 5
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            10 Agents
+                          </p>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 py-custom-2">
+                          <span
+                            class="bg-white rounded-6 d-inline-flex align-items-center justify-content-center icon-24"
+                          >
+                            <img
+                              class="icon-20"
+                              src="assets/icons/tick_primary.svg"
+                              alt=""
+                            />
+                          </span>
+                          <p class="text-base font-semibold text-night mb-0">
+                            10 Channel
+                          </p>
+                        </li>
+                      </ul>
+                      <button
+                        type="button"
+                        class="btn btn-white-black btn-block btn-lg mt-custom-5"
+                      >
+                        Upgrade Package
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="pricing-card rounded-20 overflow-hidden bg-mdt-green-v1"
+                  >
+                    <div
+                      class="pricing-head bg-mdt-green-v3 p-custom-7 border-mdt-green-v1-1 d-grid align-items-center gap-y-3"
+                    >
+                      <h3 class="text-p-green-700 text-2xl font-bold">
+                        Custom
+                      </h3>
+                      <h2 class="text-white text-4xl font-bold">
+                        Contact us for Tailor-made Offer
+                      </h2>
+                    </div>
+                    <div class="pricing-body p-custom-7">
+                      <p class="text-white font-semibold text-base">
+                        We work with some of the top tech-driven companies in
+                        Nepal and help them with customized cloud telephony
+                        solutions.
+                      </p>
+                      <div class="d-flex gap-x-3 align-items-center">
+                        <span class="icon-28">
+                          <img src="assets/icons/phone_primary.svg" alt="" />
+                        </span>
+                        <div class="d-flex flex-column">
+                          <span
+                            class="font-bold text-2xl text-white leading-tight"
+                            >+977 9808139797,</span
+                          >
+                          <span
+                            class="font-bold text-2xl text-white leading-tight"
+                            >+977 9851300024</span
+                          >
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        class="btn btn-white-black btn-block btn-lg mt-custom-5"
+                      >
+                        Contact Us
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div
                 class="tab-pane fade"
-                id="nav-profile"
+                id="nav-pricing-02"
                 role="tabpanel"
-                aria-labelledby="nav-profile-tab"
+                aria-labelledby="nav-pricing-02-tab"
                 tabindex="0"
               >
                 ...
@@ -3012,6 +3413,81 @@
         </div>
       </section>
       <!-- END OF PRICING SECTION -->
+
+      <!-- COMPARE PLANS SECTION -->
+      <section class="atel-compare-plans segment-py-80">
+        <div class="container">
+          <div class="segment-heading segment-pb-40">
+            <h2 class="segment-ttl text-center text-4xl font-bold text-night">
+              Compare plans
+            </h2>
+          </div>
+          <div class="compare-plans-segment border-grey-2-1 rounded-20 d-grid grid-cols-4">
+            <div class="plan-block plan-block-labels">
+              <div class="plan-block-head empty"></div>
+              <div class="plan-label-item font-semibold text-base text-night py-custom-3 px-custom-7">Price per user per month (billed annually)</div>
+              <div class="plan-label-item font-semibold text-base text-night py-custom-3 px-custom-7">Minimum number of users</div>
+              <div class="plan-label-item font-semibold text-base text-night py-custom-3 px-custom-7">Maximum number of users</div>
+              <div class="plan-label-item font-semibold text-base text-night py-custom-3 px-custom-7">Maximumn number of groups</div>
+              <div class="plan-label-item font-semibold text-base text-night py-custom-3 px-custom-7">Phone number included in the plan</div>
+              <div class="plan-label-item font-semibold text-base text-night py-custom-3 px-custom-7">Price of each additional number per month</div>
+              <div class="plan-label-item font-semibold text-base text-night py-custom-3 px-custom-7">Maximum number of callers in queue</div>
+              <div class="plan-label-item font-semibold text-base text-night py-custom-3 px-custom-7">Unlimited inboudn & intracompany calls</div>
+            </div>
+            <div class="plan-block plan-block-content">
+              <div class="plan-block-head bg-grey-2 d-flex flex-column gap-3 py-custom-5 px-custom-7 text-center">
+                <h3 class="text-2xl font-bold text-p-green-700 tracking-04">Starter</h3>
+                <a href="#" class="btn btn-white-black btn-block">Renew Package</a>
+              </div>
+              <div class="plan-label-info bg-grey-1 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">25</div>
+              <div class="plan-label-info bg-grey-1 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">1</div>
+              <div class="plan-label-info bg-grey-1 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">Unlimited</div>
+              <div class="plan-label-info bg-grey-1 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">Unlimited</div>
+              <div class="plan-label-info bg-grey-1 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">1 standard local number free</div>
+              <div class="plan-label-info bg-grey-1 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">from $6</div>
+              <div class="plan-label-info bg-grey-1 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">Unlimited</div>
+              <div class="plan-label-info bg-grey-1 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">
+                <img src="assets/icons/circle_check_primary.svg" class="icon-24" alt = "" />
+              </div>
+            </div>
+            <div class="plan-block plan-block-content">
+              <div class="plan-block-head text-center bg-p-green-50 d-flex flex-column gap-3 py-custom-5 px-custom-7">
+                <h3 class="text-2xl font-bold text-p-green-700 tracking-04">Most Popular</h3>
+                <a href="#" class="btn btn-primary btn-block">Upgrade Package</a>
+              </div>
+              <div class="plan-label-info bg-p-green-50 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">30</div>
+              <div class="plan-label-info bg-p-green-50 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">1</div>
+              <div class="plan-label-info bg-p-green-50 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">Unlimited</div>
+              <div class="plan-label-info bg-p-green-50 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">Unlimited</div>
+              <div class="plan-label-info bg-p-green-50 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">1 standard local number free</div>
+              <div class="plan-label-info bg-p-green-50 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">from $6</div>
+              <div class="plan-label-info bg-p-green-50 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">Unlimited</div>
+              <div class="plan-label-info bg-p-green-50 text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">
+                <img src="assets/icons/circle_check_primary.svg" class="icon-24" alt = "" />
+              </div>
+            </div>
+            <div class="plan-block plan-block-content">
+              <div class="plan-block-head text-center bg-light-cyprus-50 d-flex flex-column gap-3 py-custom-5 px-custom-7">
+                <h3 class="text-2xl font-bold text-p-green-700 tracking-04">Starter</h3>
+                <a href="#" class="btn btn-white-black btn-block">Renew Package</a>
+              </div>
+              <div class="plan-label-info bg-light-cyprus text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">
+                <a href="#" class="btn btn-white-black">Contact Us</a>
+              </div>
+              <div class="plan-label-info bg-light-cyprus text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">10</div>
+              <div class="plan-label-info bg-light-cyprus text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">Unlimited</div>
+              <div class="plan-label-info bg-light-cyprus text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">Unlimited</div>
+              <div class="plan-label-info bg-light-cyprus text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">1 standard local number free</div>
+              <div class="plan-label-info bg-light-cyprus text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">from $6</div>
+              <div class="plan-label-info bg-light-cyprus text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">Unlimited</div>
+              <div class="plan-label-info bg-light-cyprus text-center text-sm font-semibold text-gray py-custom-3 px-custom-7">
+                <img src="assets/icons/circle_check_primary.svg" class="icon-24" alt = "" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF COMPARE PLANS SECTION -->
 
       <!-- FOOTER SECTION -->
       <footer class="atel-footer bg-dark-cyprus segment-pt-80 segment-pb-40">

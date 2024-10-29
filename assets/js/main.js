@@ -216,6 +216,55 @@ document.querySelectorAll(".features-tabs li a").forEach((anchor) => {
   });
 });
 
+// MATCH HEIGHT
+function setEqualHeights() {
+  const planBlockHeads = document.querySelectorAll(".plan-block-head");
+  const planLabelItems = document.querySelectorAll(".plan-label-item");
+  const planLabelInfos = document.querySelectorAll(".plan-label-info");
+
+  // Reset heights to auto
+  [...planBlockHeads, ...planLabelItems, ...planLabelInfos].forEach((el) => {
+    el.style.height = "auto";
+  });
+
+  // Delay for DOM rendering
+  setTimeout(() => {
+    // Calculate maximum height for each group of elements
+    let maxLabelHeight = 0;
+
+    planLabelItems.forEach((item, index) => {
+      const labelHeight = planLabelItems[index].getBoundingClientRect().height;
+      const infoHeight = planLabelInfos[index].getBoundingClientRect().height;
+      maxLabelHeight = Math.max(maxLabelHeight, labelHeight, infoHeight);
+    });
+
+    // Apply the max height to both planLabelItems and planLabelInfos
+    planLabelItems.forEach((item) => {
+      item.style.height = `${maxLabelHeight}px`;
+    });
+    planLabelInfos.forEach((info) => {
+      info.style.height = `${maxLabelHeight}px`;
+    });
+
+    // Calculate maximum height for planBlockHeads
+    const maxHeadHeight = Math.max(
+      ...[...planBlockHeads].map((head) => head.getBoundingClientRect().height)
+    );
+
+    // Apply the max height to all planBlockHeads
+    planBlockHeads.forEach((head) => {
+      head.style.height = `${maxHeadHeight}px`;
+    });
+  }, 100); // Adjust delay if necessary
+}
+
+// Attach event listeners
+window.addEventListener("load", () => {
+  setTimeout(setEqualHeights, 150);
+});
+window.addEventListener("resize", setEqualHeights);
+
+
 // WHO WE HELP SLIDER
 $(".who-we-help-slider, .sms-service-slider").slick({
   dots: false,
