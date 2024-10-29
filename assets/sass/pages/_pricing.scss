@@ -1,31 +1,31 @@
-.atel-pricing-pg{
-    .pricing-body-segment{
-        .nav-tabs{
+.atel-pricing-pg {
+    .pricing-body-segment {
+        .nav-tabs {
             padding: 6px;
             min-height: 60px;
         }
 
-        button{
-            &.nav-link{
+        button {
+            &.nav-link {
                 min-width: 173px;
 
-                &.active{
+                &.active {
                     background: color("dark-cyprus");
-                    color: color("light-cyprus")!important;
+                    color: color("light-cyprus") !important;
                 }
             }
 
-            .discount-percent{
+            .discount-percent {
                 padding: 2px 8px;
                 min-height: 24px;
             }
         }
     }
 
-    .pricing-cards{
-        .pricing{
-            &-top{
-                .pricing-tag{
+    .pricing-cards {
+        .pricing {
+            &-top {
+                .pricing-tag {
                     min-height: 24px;
                 }
             }
@@ -33,17 +33,43 @@
     }
 }
 
-.atel-compare-plans{
-    .plan-block-head{
-        min-height: 121px;
+.atel-compare-plans {
+    .plan-block-head {
         border-bottom: 1px solid color("grey-3");
-    }
-    div[class*='plan-label']{
-        border-bottom: 1px solid color("grey-3");
-        min-height: 73px;
 
-        &:last-child{
-            border-bottom: 0;
+        @include breakpoint-down(xl){
+            padding: 16px!important;
         }
+
+        @include breakpoint-down(lg){
+            padding: 12px!important;
+        }
+    }
+    div[class*="plan-label"] {
+        border-bottom: 1px solid color("grey-3");
+        min-height: 68px;
+
+        @include breakpoint-down(xl){
+            padding: 12px 16px!important;
+        }
+
+        @include breakpoint-down(lg){
+            padding: 12px!important;
+            min-height: auto;
+        }
+    }
+
+    .plan-block-row{
+        &:last-child{
+            div[class*="plan-label"]{
+                border-bottom: 0;
+            }
+        }
+    }
+
+    .plan-label-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
