@@ -85,8 +85,18 @@ $z-index-navbar-toggler: 1010;
 
     &-wrapper {
       @include breakpoint-down(lg) {
-        border-bottom: 1px solid color("grey-2");
+        border: 1.5px solid color("grey-2");
         width: 100%;
+        border-radius: 4px;
+        transition: $default-transition;
+        
+        &:hover{
+          border-color: color("primary");
+
+          .menu-item-text{
+            color: color("primary");
+          }
+        }
       }
 
       &:has(.submenu-item-block.show) {

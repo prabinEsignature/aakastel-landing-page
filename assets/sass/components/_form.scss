@@ -15,6 +15,10 @@
     &::placeholder {
       color: color("grey-4") !important;
     }
+
+    @include breakpoint-down(lg){
+      font-size: 14px;
+    }
   }
 
   .form-control {

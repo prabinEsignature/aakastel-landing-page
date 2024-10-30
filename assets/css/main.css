@@ -14533,12 +14533,42 @@ input[type=button].btn-block {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
+@media (max-width: 991.98px) {
+  .modal-customized .modal-header {
+    padding: 16px 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .modal-customized .modal-header {
+    padding: 16px;
+  }
+}
 .modal-customized .modal-body {
   padding: 20px 40px;
+}
+@media (max-width: 991.98px) {
+  .modal-customized .modal-body {
+    padding: 16px 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .modal-customized .modal-body {
+    padding: 16px;
+  }
 }
 .modal-customized .modal-footer {
   border: 0;
   padding: 28px 40px 20px 40px;
+}
+@media (max-width: 991.98px) {
+  .modal-customized .modal-footer {
+    padding: 16px 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .modal-customized .modal-footer {
+    padding: 16px;
+  }
 }
 .modal-customized .btn-close {
   position: absolute;
@@ -14555,6 +14585,23 @@ input[type=button].btn-block {
 .modal-customized .btn-close:hover {
   transform: scale(0.95);
 }
+@media (max-width: 767.98px) {
+  .modal-customized .btn-close {
+    width: 16px;
+    height: 16px;
+    top: -8px;
+    right: -8px;
+  }
+}
+@media (max-width: 575.98px) {
+  .modal-customized .btn-close {
+    width: 14px;
+    height: 14px;
+    top: 16px;
+    right: 16px;
+    font-size: 12px;
+  }
+}
 .modal-customized .modal-body::-webkit-scrollbar {
   width: 8px;
 }
@@ -14568,11 +14615,13 @@ input[type=button].btn-block {
 @media (max-width: 991.98px) {
   .modal-customized .modal-dialog {
     --bs-modal-width: 90% !important;
+    min-width: auto !important;
   }
 }
 @media (max-width: 767.98px) {
   .modal-customized .modal-dialog {
     --bs-modal-width: 95% !important;
+    min-width: auto !important;
   }
 }
 .modal-customized#tryForFreeModal .modal-dialog {
@@ -14580,6 +14629,25 @@ input[type=button].btn-block {
 }
 .modal-customized#getInTouchModal .modal-dialog {
   min-width: 800px;
+}
+@media (max-width: 767.98px) {
+  .modal-customized#getInTouchModal .sign-up-steps {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .modal-customized#getInTouchModal .sign-up-steps {
+    grid-template-columns: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .modal-customized#getInTouchModal .sign-up-steps .sign-up-step-item .icon-40 {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+  }
 }
 
 .form-elem-phone {
@@ -14745,6 +14813,11 @@ input[type=button].btn-block {
 }
 .form-custom .form-select::placeholder, .form-custom .form-control::placeholder {
   color: #9e9e9e !important;
+}
+@media (max-width: 991.98px) {
+  .form-custom .form-select, .form-custom .form-control {
+    font-size: 14px;
+  }
 }
 .form-custom .form-control {
   background: #fff;
@@ -15474,8 +15547,16 @@ table td {
 }
 @media (max-width: 991.98px) {
   .atel-navbar .menu-item-wrapper {
-    border-bottom: 1px solid #e5e5e5;
+    border: 1.5px solid #e5e5e5;
     width: 100%;
+    border-radius: 4px;
+    transition: all ease-in-out 300ms;
+  }
+  .atel-navbar .menu-item-wrapper:hover {
+    border-color: #3bb24a;
+  }
+  .atel-navbar .menu-item-wrapper:hover .menu-item-text {
+    color: #3bb24a;
   }
 }
 @media (max-width: 991.98px) {
@@ -15885,6 +15966,16 @@ table td {
          column-gap: 12px !important;
     row-gap: 4px !important;
   }
+}
+.atel-footer .footer-links-block-group .footer-link-elem, .atel-footer .footer-links-block-group a {
+  transition: all ease-in-out 300ms;
+}
+.atel-footer .footer-links-block-group .footer-link-elem:hover, .atel-footer .footer-links-block-group a:hover {
+  opacity: 1 !important;
+  color: #fff !important;
+}
+.atel-footer .contact-social-link-item:hover img {
+  filter: invert(1) brightness(100);
 }
 
 .atel-features {

@@ -43,6 +43,7 @@
             }
         }
     }
+
     .footer-segment-links {
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
@@ -94,6 +95,26 @@
             @include breakpoint-down(md){
                 column-gap: 12px!important;
                 row-gap: 4px!important;
+            }
+        }
+    }
+
+    .footer-links-block-group{
+        .footer-link-elem, a{
+            transition: $default-transition;
+            &:hover{
+                opacity: 1!important;
+                color: color("white")!important;
+            }
+        }
+    }
+
+    .contact-social-link{
+        &-item{
+            &:hover{
+                img{
+                    filter: invert(1) brightness(100);
+                }
             }
         }
     }
