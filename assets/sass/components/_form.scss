@@ -18,6 +18,17 @@
 
     @include breakpoint-down(lg){
       font-size: 14px;
+      height: 48px!important;
+    }
+
+    @include breakpoint-down(sm){
+      height: 44px!important;
+      padding-left: 10px!important;
+      padding-right: 10px!important;
+    }
+
+    @include breakpoint-down(xs){
+      height: 40px!important;
     }
   }
 
