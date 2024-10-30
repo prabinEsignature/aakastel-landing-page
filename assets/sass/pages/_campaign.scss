@@ -2,6 +2,10 @@
     .power-voice-img{
         max-width: 920px;
         max-height: 600px;
+
+        @include breakpoint-down(xxl){
+            max-width: 750px;
+        }
     }
 
     .segment-power-voice{
@@ -9,9 +13,32 @@
         border-radius: 40px;
         min-height: 673px;
 
+        @include breakpoint-down(xl){
+            min-height: 516px;
+        }
+
+        @include breakpoint-down(lg){
+            border-radius: 24px;
+            flex-direction: column-reverse;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+
         .power-voice-img{
             bottom: -6px;
             left: -98px;
+
+            @include breakpoint-down(xl){
+                bottom: 0;
+                max-width: 540px;
+            }
+
+            @include breakpoint-down(lg){
+                position: relative!important;
+                max-width: 100%;
+                width: 100%;
+                left: 0;
+            }
         }
     }
 
@@ -19,10 +46,27 @@
         .segment-ttl{
             line-height: 1.1;
         }
+
+        @include breakpoint-down(lg){
+            margin-bottom: 20px!important;
+        }
     }
 
     .power-voice-content{
         max-width: 420px;
+
+        @include breakpoint-down(lg){
+            max-width: 100%;
+            padding: 40px;
+        }
+
+        @include breakpoint-down(md){
+            padding: 24px;
+        }
+
+        @include breakpoint-down(sm){
+            padding: 16px;
+        }
     }
 }
 
@@ -30,5 +74,14 @@
     .why-voice-broadcast-accordion{
         max-width: 1064px;
         gap: 80px;
+    }
+}
+
+.atel-explore-campaign{
+    .atel-explore-campaign-segment{
+        @include breakpoint-down(lg){
+            padding-left: 24px!important;
+            padding-right: 24px!important;
+        }
     }
 }

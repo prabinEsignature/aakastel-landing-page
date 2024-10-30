@@ -39,6 +39,10 @@
     .atel-build-better-segment {
         border-radius: 40px;
         max-width: 1064px;
+
+        @include breakpoint-down(lg){
+            border-radius: 20px;
+        }
     }
 }
 

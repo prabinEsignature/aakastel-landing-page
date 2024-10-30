@@ -1,6 +1,15 @@
 .accordion {
     &-item {
         margin-bottom: 20px;
+
+        @include breakpoint-down(lg) {
+            margin-bottom: 16px;
+        }
+
+        @include breakpoint-down(md){
+            padding-top: 8px!important;
+            padding-bottom: 8px!important;
+        }
     }
 
     &-button {

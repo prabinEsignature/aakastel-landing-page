@@ -32,7 +32,7 @@ $z-index-navbar-toggler: 1010;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
 
-        &.show{
+        &.show {
           transform: translateX(0);
           transition: $default-transition;
           @include breakpoint-down(lg) {
@@ -76,8 +76,8 @@ $z-index-navbar-toggler: 1010;
       padding: 12px;
     }
 
-    &.active{
-      .menu-item-icon{
+    &.active {
+      .menu-item-icon {
         transform: rotate(180deg);
         transition: $default-transition;
       }
@@ -85,7 +85,7 @@ $z-index-navbar-toggler: 1010;
 
     &-wrapper {
       @include breakpoint-down(lg) {
-        border-bottom: 2px solid color("grey-2");
+        border-bottom: 1px solid color("grey-2");
         width: 100%;
       }
 
@@ -113,7 +113,7 @@ $z-index-navbar-toggler: 1010;
 
     @include breakpoint-down(lg) {
       position: relative;
-      top: 2px;
+      top: 0;
       left: 0;
       transform: none !important;
       width: 100% !important;
@@ -124,10 +124,11 @@ $z-index-navbar-toggler: 1010;
       max-width: calc(100% - 32px) !important;
       margin-right: auto;
       margin-left: auto;
+      border: 1px solid color("white") !important;
     }
 
-    @include breakpoint-down(sm){
-      max-width: 100%!important;
+    @include breakpoint-down(sm) {
+      max-width: 100% !important;
     }
 
     &.show {
@@ -135,6 +136,7 @@ $z-index-navbar-toggler: 1010;
 
       @include breakpoint-down(lg) {
         max-height: 1000px;
+        border: 1px solid color("grey-2") !important;
       }
     }
 
@@ -174,8 +176,8 @@ $z-index-navbar-toggler: 1010;
 
             .submenu-item-chevron {
               display: inline-flex !important;
-              
-              @include breakpoint-down(lg){
+
+              @include breakpoint-down(lg) {
                 transform: rotate(90deg);
               }
             }
@@ -197,8 +199,8 @@ $z-index-navbar-toggler: 1010;
             padding: 12px !important;
           }
 
-          @include breakpoint-down(sm){
-            padding: 8px!important;
+          @include breakpoint-down(sm) {
+            padding: 8px !important;
           }
         }
 
@@ -231,12 +233,12 @@ $z-index-navbar-toggler: 1010;
             gap: 12px !important;
           }
 
-          @include breakpoint-down(lg){
-            gap: 0!important;
+          @include breakpoint-down(lg) {
+            gap: 0 !important;
           }
 
-          @include breakpoint-down(sm){
-            padding: 8px!important;
+          @include breakpoint-down(sm) {
+            padding: 8px !important;
           }
         }
       }
@@ -248,11 +250,11 @@ $z-index-navbar-toggler: 1010;
         @include breakpoint-down(xl) {
           padding-right: 12px !important;
         }
-        
-        @include breakpoint-down(lg){
+
+        @include breakpoint-down(lg) {
           border-right: 0;
-          &-ttl-btn{
-            margin-bottom: 0!important;
+          &-ttl-btn {
+            margin-bottom: 0 !important;
             cursor: pointer;
           }
         }
@@ -274,19 +276,19 @@ $z-index-navbar-toggler: 1010;
           }
         }
 
-        &-list{
-          @include breakpoint-down(lg){
+        &-list {
+          @include breakpoint-down(lg) {
             grid-template-columns: repeat(2, 1fr);
             max-height: 0;
             overflow: hidden;
             transition: $default-transition;
 
-            &.show{
+            &.show {
               max-height: 1000px;
             }
           }
 
-          @include breakpoint-down(sm){
+          @include breakpoint-down(sm) {
             grid-template-columns: 100%;
           }
         }
@@ -302,9 +304,9 @@ $z-index-navbar-toggler: 1010;
             gap: 12px !important;
           }
 
-          @include breakpoint-down(lg){
+          @include breakpoint-down(lg) {
             grid-template-columns: 100%;
-            gap: 0!important;
+            gap: 0 !important;
           }
         }
       }
@@ -314,28 +316,28 @@ $z-index-navbar-toggler: 1010;
           padding: 12px !important;
         }
 
-        @include breakpoint-down(sm){
-          padding: 8px!important;
+        @include breakpoint-down(sm) {
+          padding: 8px !important;
         }
 
-        &-head{
-          @include breakpoint-down(lg){
-            margin-bottom: 0!important;
+        &-head {
+          @include breakpoint-down(lg) {
+            margin-bottom: 0 !important;
           }
         }
 
         &-list {
           gap: 12px !important;
 
-          @include breakpoint-down(lg){
-            gap: 4px!important;
+          @include breakpoint-down(lg) {
+            gap: 4px !important;
             grid-template-columns: repeat(2, 1fr);
           }
         }
 
         &-item {
-          @include breakpoint-down(lg){
-            padding: 4px!important;
+          @include breakpoint-down(lg) {
+            padding: 4px !important;
           }
 
           a {
@@ -367,8 +369,15 @@ $z-index-navbar-toggler: 1010;
             padding: 12px !important;
           }
 
-          @include breakpoint-down(sm){
-            padding: 8px!important;
+          @include breakpoint-down(sm) {
+            padding: 8px !important;
+          }
+        }
+
+        &-footer {
+          @include breakpoint-down(sm) {
+            flex-direction: column;
+            gap: 4px !important;
           }
         }
 
@@ -383,12 +392,33 @@ $z-index-navbar-toggler: 1010;
     }
   }
 
-  .submenu-item-foot{
-    padding: 12px!important;
+  .submenu-item-foot {
+    padding: 12px !important;
   }
 }
 
 .atel-header {
+  .atel-navbar{
+    &.atel-navbar-invert {
+      .navbar-logo-default {
+        display: none;
+      }
+    }
+  }
+
+  &.atel-header-fixed{
+    .atel-navbar{
+      &.atel-navbar-invert{
+        .navbar-logo-white{
+          display: none;
+        }
+        .navbar-logo-default {
+          display: block;
+        }
+      }
+    }
+  }
+
   &:not(.atel-header-fixed) {
     .atel-navbar {
       &.atel-navbar-invert {
@@ -408,9 +438,9 @@ $z-index-navbar-toggler: 1010;
   }
 }
 
-.btn-navbar-menu-close{
+.btn-navbar-menu-close {
   transition: $default-transition;
-  &:hover{
+  &:hover {
     opacity: 0.9;
     scale: 1.1;
   }

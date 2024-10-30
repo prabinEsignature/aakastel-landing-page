@@ -36,6 +36,10 @@
                 margin-right: auto;
                 margin-left: auto;
             }
+
+            @include breakpoint-down(md){
+                max-width: 100%;
+            }
         }
 
         &-item {
@@ -71,9 +75,12 @@
                     gap: 40px;
                 }
 
+                @include breakpoint-down(lg){
+                    column-gap: 16px;
+                }
+
                 @include breakpoint-down(md){
                     grid-template-columns: 100%!important;
-                    row-gap: 16px;
                 }
             }
 
@@ -95,9 +102,15 @@
                 .solutions-block{
                     &-img{
                         order: 2;
+                        @include breakpoint-down(lg){
+                            order: 1;
+                        }
                     }
                     &-content{
                         order: 1;
+                        @include breakpoint-down(lg){
+                            order: 2;
+                        }
                     }
                 }
             }
@@ -110,8 +123,12 @@
         }
 
         &-content{
-            @include breakpoint-down(lg){
+            @include breakpoint-down(md){
                 padding-bottom: 80px;
+
+                &:last-child{
+                    padding-bottom: 0;
+                }
             }
         }
     }
@@ -122,6 +139,15 @@
     .solutions-offers{
         &-segment{
             grid-template-columns: 21% auto;
+
+            @include breakpoint-down(xxl){
+                grid-template-columns: 100%;
+            }
+
+            @include breakpoint-down(lg){
+                padding-left: 20px!important;
+                padding-right: 20px!important;
+            }
         }
     }
 }
@@ -129,6 +155,10 @@
 .atel-rel-solutions{
     margin-top: -100px;
     background: url($img-path + "solution/related_solutions_banner.svg") center/cover no-repeat;
+
+    @include breakpoint-down(lg){
+        margin-top: -60px;
+    }
 
     .rel-solutions{
         &-item{

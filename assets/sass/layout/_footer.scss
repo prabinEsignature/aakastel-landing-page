@@ -18,7 +18,7 @@
         background: url($img-path + "cta.png") center/cover no-repeat;
         min-height: 540px;
         padding: 60px 34px;
-        border-radius: 35px;
+        border-radius: 36px;
 
         @include breakpoint-down(xl) {
             padding: 32px 24px;
@@ -28,6 +28,8 @@
 
         @include breakpoint-down(lg) {
             min-height: auto;
+            padding: 24px 16px;
+            border-radius: 20px;
         }
 
         .cta-call-icon {
