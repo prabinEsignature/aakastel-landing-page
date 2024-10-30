@@ -43,6 +43,10 @@
         @include breakpoint-down(lg){
             border-radius: 20px;
         }
+
+        @include breakpoint-down(sm){
+            border-radius: 16px;
+        }
     }
 }
 
@@ -53,6 +57,14 @@
         padding: 100px;
         gap: 80px;
         background: url($img-path + "whatsapp_business/advance_messaging_banner.svg") center/cover no-repeat;
+
+        @include breakpoint-down(lg){
+            border-radius: 20px;
+        }
+
+        @include breakpoint-down(sm){
+            border-radius: 16px;
+        }
     }
 
     .btn-white-black {

@@ -12845,6 +12845,7 @@
 
 code.code-customized {
   white-space: break-spaces;
+  font-family: "Karla", sans-serif;
 }
 
 .resize-animation-stopper * {
@@ -16701,6 +16702,11 @@ table td {
     border-radius: 20px;
   }
 }
+@media (max-width: 575.98px) {
+  .atel-build-better .atel-build-better-segment {
+    border-radius: 16px;
+  }
+}
 
 .atel-adv-msg-features .atel-adv-msg-features-segment {
   border-radius: 40px;
@@ -16708,6 +16714,16 @@ table td {
   padding: 100px;
   gap: 80px;
   background: url("../../../assets/images/whatsapp_business/advance_messaging_banner.svg") center/cover no-repeat;
+}
+@media (max-width: 991.98px) {
+  .atel-adv-msg-features .atel-adv-msg-features-segment {
+    border-radius: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-adv-msg-features .atel-adv-msg-features-segment {
+    border-radius: 16px;
+  }
 }
 .atel-adv-msg-features .btn-white-black:hover {
   background: #fff !important;
