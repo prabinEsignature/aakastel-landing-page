@@ -11,6 +11,10 @@ $z-index-navbar-toggler: 1010;
   min-height: $navbar-height-desktop;
   @include flex-center-vert;
 
+  @include breakpoint-down(sm){
+    min-height: 72px;
+  }
+
   &-menu {
     position: relative;
 
@@ -64,6 +68,14 @@ $z-index-navbar-toggler: 1010;
   .navbar-brand {
     max-width: 152px;
     display: inline-flex;
+
+    @include breakpoint-down(sm){
+      max-width: 140px;
+    }
+
+    @include breakpoint-down(xs){
+      max-width: 130px;
+    }
   }
 
   .menu-item {

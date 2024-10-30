@@ -15171,6 +15171,16 @@ table td {
     margin: 80px auto;
   }
 }
+@media (max-width: 991.98px) {
+  .atel-top-banner.atel-home-pg .top-banner-segment {
+    margin: 60px auto;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-top-banner.atel-home-pg .top-banner-segment {
+    margin: 40px auto;
+  }
+}
 .atel-top-banner.atel-home-pg .top-banner-text-group {
   max-width: 660px;
 }
@@ -15483,6 +15493,11 @@ table td {
   display: flex;
   align-items: center;
 }
+@media (max-width: 575.98px) {
+  .atel-navbar {
+    min-height: 72px;
+  }
+}
 .atel-navbar-menu {
   position: relative;
 }
@@ -15554,6 +15569,16 @@ table td {
 .atel-navbar .navbar-brand {
   max-width: 152px;
   display: inline-flex;
+}
+@media (max-width: 575.98px) {
+  .atel-navbar .navbar-brand {
+    max-width: 140px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-navbar .navbar-brand {
+    max-width: 130px;
+  }
 }
 .atel-navbar .menu-item {
   padding: 0 10px;
