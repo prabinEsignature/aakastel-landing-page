@@ -264,7 +264,6 @@ document.querySelectorAll(".features-tabs li a").forEach((anchor) => {
 // });
 // window.addEventListener("resize", setEqualHeights);
 
-
 // WHO WE HELP SLIDER
 $(".who-we-help-slider, .sms-service-slider").slick({
   dots: false,
@@ -284,6 +283,14 @@ $(".who-we-help-slider, .sms-service-slider").slick({
     {
       breakpoint: 992,
       settings: {
+        arrows: false,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        variableWidth: false,
         arrows: false,
         dots: true,
       },

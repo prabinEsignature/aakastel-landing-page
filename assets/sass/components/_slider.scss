@@ -20,6 +20,14 @@
         &::before {
             display: none !important;
         }
+
+        @include breakpoint-down(xxl) {
+            min-width: 40px!important;
+            min-height: 40px!important;
+            width: 40px!important;
+            height: 40px!important;
+            border-radius: 8px!important;
+        }
     }
 
     .slick-slider-btn {
@@ -28,18 +36,56 @@
 
     .slick-dots {
         bottom: -52px !important;
+
+        li{
+            button{
+                width: 12px;
+                height: 12px;
+                background: rgba-color(color("black"), 0.25);
+                border-radius: 100%;
+
+                &::before{
+                    color: transparent!important;
+                }
+            }
+
+            &.slick-active{
+                button{
+                    background: color("primary");
+                }
+            }
+        }
     }
 }
 
-.who-we-help-slider {
+.slider-container {
     .slick-prev {
         top: -38%;
         right: 65px;
         left: auto;
+
+        @include breakpoint-down(xl){
+            top: -30%;
+        }
     }
 
     .slick-next {
         top: -38%;
         right: 0;
+
+        @include breakpoint-down(xl){
+            top: -30%;
+        }
+    }
+}
+
+
+.slider-cards{
+    .card{
+        @include breakpoint-down(md){
+            max-width: 100%!important;
+            min-height: 400px;
+            height: 100%!important;
+        }
     }
 }

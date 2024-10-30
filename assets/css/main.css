@@ -14671,21 +14671,61 @@ input[type=button].btn-block {
 .slick-slider .slick-next::before {
   display: none !important;
 }
+@media (max-width: 1399.98px) {
+  .slick-slider .slick-prev,
+  .slick-slider .slick-next {
+    min-width: 40px !important;
+    min-height: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+  }
+}
 .slick-slider .slick-slider-btn {
   z-index: 10;
 }
 .slick-slider .slick-dots {
   bottom: -52px !important;
 }
+.slick-slider .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+}
+.slick-slider .slick-dots li button::before {
+  color: transparent !important;
+}
+.slick-slider .slick-dots li.slick-active button {
+  background: #3bb24a;
+}
 
-.who-we-help-slider .slick-prev {
+.slider-container .slick-prev {
   top: -38%;
   right: 65px;
   left: auto;
 }
-.who-we-help-slider .slick-next {
+@media (max-width: 1199.98px) {
+  .slider-container .slick-prev {
+    top: -30%;
+  }
+}
+.slider-container .slick-next {
   top: -38%;
   right: 0;
+}
+@media (max-width: 1199.98px) {
+  .slider-container .slick-next {
+    top: -30%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .slider-cards .card {
+    max-width: 100% !important;
+    min-height: 400px;
+    height: 100% !important;
+  }
 }
 
 .form-custom .form-select, .form-custom .form-control {
@@ -14971,6 +15011,15 @@ table td {
   max-width: 300px;
   height: 360px;
   border-radius: 20px;
+}
+.slider-cards .card-img {
+  height: 100%;
+}
+.slider-cards .card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .slider-cards .card-body {
   min-height: 165px;
