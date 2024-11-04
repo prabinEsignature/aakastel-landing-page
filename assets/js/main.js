@@ -299,8 +299,5 @@ $(document).ready(function () {
     ],
   });
 
-  AOS.init({
-    // startEvent: "DOMContentLoaded",
-    duration: 600,
-  });
+  AOS.init({});
 });
