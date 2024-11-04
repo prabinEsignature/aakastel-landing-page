@@ -416,6 +416,10 @@ $z-index-navbar-toggler: 1010;
 
   .submenu-item-foot {
     padding: 12px !important;
+
+    @include breakpoint-down(sm){
+      flex-direction: column;
+    }
   }
 }
 

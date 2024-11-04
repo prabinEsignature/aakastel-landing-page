@@ -113,6 +113,10 @@
                 @include breakpoint-down(xxl) {
                     max-width: 240px;
                 }
+
+                @include breakpoint-down(sm){
+                    max-width: 100%;
+                }
             }
 
             .audio-play-progress {

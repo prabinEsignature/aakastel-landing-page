@@ -57,6 +57,7 @@
             .footer-links-list{
                 @include breakpoint-down(sm){
                     grid-template-columns: repeat(2, 1fr);
+                    column-gap: 12px;
                 }
             }
         }
@@ -64,6 +65,7 @@
         .footer-links-block-group{
             @include breakpoint-down(sm){
                 grid-template-columns: repeat(2, 1fr);
+                column-gap: 12px;
             }
         }
     }
@@ -99,7 +101,7 @@
         }
     }
 
-    .footer-links-block-group{
+    .footer-links-block{
         .footer-link-elem, a{
             transition: $default-transition;
             &:hover{
@@ -115,6 +117,15 @@
                 img{
                     filter: invert(1) brightness(100);
                 }
+            }
+        }
+    }
+
+    .tac-list{
+        .tac-link{
+            transition: $default-transition;
+            &:hover{
+                color: color("white")!important;
             }
         }
     }

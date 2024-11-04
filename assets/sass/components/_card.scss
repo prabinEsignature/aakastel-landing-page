@@ -32,6 +32,9 @@
 }
 
 .blog-cards {
+    @include breakpoint-down(lg){
+        gap: 24px!important;
+    }
     .card {
         &-img {
             height: 220px;
