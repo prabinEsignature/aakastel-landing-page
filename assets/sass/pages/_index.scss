@@ -1,14 +1,6 @@
 .atel-features {
     position: sticky;
-    top: -40px;
-
-    @include breakpoint-down(lg) {
-        top: 0;
-    }
-
-    @include breakpoint-down(md) {
-        top: 10px;
-    }
+    top: 100px;
 
     .segment-heading {
         max-width: 626px;
@@ -264,6 +256,16 @@
         border-radius: 28px;
     }
 
+    .accordion{
+        .accordion-button{
+            transition: $default-transition;
+            &:hover{
+                color: color("night")!important;
+                border-color: color("primary")!important;
+            }
+        }
+    }
+
     .support-industry-accordion {
         gap: 80px;
 
@@ -277,6 +279,13 @@
 
         @include breakpoint-down(xs) {
             gap: 24px;
+        }
+
+        .industry-feature-item, .industry-feature-item p{
+            transition: $default-transition;
+            &:hover{
+                color: color("primary")!important;
+            }
         }
     }
 
@@ -323,9 +332,14 @@
             }
         }
 
-        .donwloads-app-link {
+        .downloads-app-link {
+            transition: $default-transition;
             img {
                 max-width: 135px;
+            }
+
+            &:hover{
+                scale: 1.05;
             }
         }
     }

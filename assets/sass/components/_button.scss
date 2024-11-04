@@ -19,17 +19,21 @@ $button-variants: (
     bg: color("primary"),
     text: color("white"),
     border-color: color("primary"),
-    hover-bg: darken(color("primary"), 10%),
+    // hover-bg: darken(color("primary"), 10%),
+    hover-bg: color("night"),
     hover-text-color: color("white"),
-    hover-border-color: darken(color("primary"), 10%)
+    // hover-border-color: darken(color("primary"), 10%)
+    hover-border-color: color("night")
   ),
   "transparent": (
     bg: transparent,
     text: color("primary"),
     border-color: transparent,
-    hover-bg: transparent,
+    // hover-bg: transparent,
+    hover-bg: color("white"),
     hover-text-color: darken(color("primary"), 10%),
-    hover-border-color: transparent
+    // hover-border-color: transparent
+    hover-border-color: color("primary")
   ),
   "transparent-white": (
     bg: transparent,
@@ -51,9 +55,11 @@ $button-variants: (
     bg: color("white"),
     text: color("night"),
     border-color: color("grey-2"),
-    hover-bg: transparent,
+    // hover-bg: transparent,
+    hover-bg: color("white"),
     hover-text-color: color("primary"),
-    hover-border-color: color("grey-2")
+    // hover-border-color: color("grey-2")
+    hover-border-color: color("primary")
   ),
   "white-primary-outline": (
     bg: color("white"),

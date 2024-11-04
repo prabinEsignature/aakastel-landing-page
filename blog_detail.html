@@ -24,13 +24,15 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css"
     />
+    <!-- AOS -->
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
   </head>
   <body>
     <div class="page-wrapper">
       <header class="atel-header">
         <div class="container">
           <nav
-            class="atel-navbar d-flex align-items-center justify-content-between"
+            class="atel-navbar d-flex align-items-stretch justify-content-between"
           >
             <a
               href="index.html"
@@ -2930,12 +2932,12 @@
       <section class="atel-blogs-details-pg bg-white d-flex">
         <div class="container">
           <div class="blogs-details-body-segment">
-            <div class="blogs-segment-jumbotron segment-py-40">
+            <div class="blogs-segment-jumbotron segment-py-40 overflow-x-hidden">
               <div
                 class="card card-grid d-grid gap-10 align-items-center border-0 bg-transparent"
               >
                 <div
-                  class="card-img border-grey-2-1 rounded-12 overflow-hidden order-2"
+                  class="card-img border-grey-2-1 rounded-12 overflow-hidden order-2" data-aos="fade-right"
                 >
                   <img
                     class="object-cover w-100 h-100 object-center"
@@ -2943,7 +2945,7 @@
                     alt=""
                   />
                 </div>
-                <div class="card-body p-0 order-1">
+                <div class="card-body p-0 order-1" data-aos="fade-left">
                   <div class="badge-group mb-custom-3">
                     <span
                       class="badge bg-grey-2 rounded-8 py-custom-1 px-custom-2 text-night text-sm font-semibold"
@@ -3091,11 +3093,11 @@
       <!-- END OF BLOGS SECTION -->
 
       <!-- RECOMMEDED FOR YOU SECTION -->
-      <section class="atel-common-blogs bg-grey-1 position-relative">
+      <section class="atel-common-blogs bg-grey-1 position-relative overflow-x-hidden">
         <div class="container">
           <div class="atel-common-blogs-segment segment-pt-100 segment-pb-120">
             <div
-              class="segment-heading d-flex align-items-center justify-content-between"
+              class="segment-heading d-flex align-items-center justify-content-between" data-aos="fade-up"
             >
               <h2 class="segment-ttl text-white text-7xl text-night">
                 Latest Blogs
@@ -3109,7 +3111,7 @@
             </div>
 
             <div
-              class="blog-cards segment-mt-40 d-grid align-items-start grid-cols-1 md-grid-cols-2 xl-grid-cols-3 gap-10"
+              class="blog-cards segment-mt-40 d-grid align-items-start grid-cols-1 md-grid-cols-2 xl-grid-cols-3 gap-10" data-aos="fade-up"
             >
               <div class="card border-0 bg-transparent">
                 <div
@@ -3219,7 +3221,7 @@
               class="footer-segment-main d-grid align-items-start mb-custom-5"
             >
               <div
-                class="footer-segment-cta d-flex flex-column align-items-center justify-content-center"
+                class="footer-segment-cta d-flex flex-column align-items-center justify-content-center" data-aos="fade-up" data-aos-duration="600"
               >
                 <div class="cta-call-icon">
                   <img src="assets/icons/white_cloud_and_phone.svg" alt="" />
@@ -3243,7 +3245,7 @@
                 <div
                   class="footer-segment-links d-grid align-items-start grid-cols-3 gap-5 segment-py-40"
                 >
-                  <div class="footer-links-block">
+                  <div class="footer-links-block" data-aos="fade-up" data-aos-duration="800">
                     <p class="text-base font-semibold text-light-cyprus">
                       Features
                     </p>
@@ -3323,7 +3325,7 @@
                     </ul>
                   </div>
                   <div
-                    class="footer-links-block-group d-grid align-items-start gap-y-7"
+                    class="footer-links-block-group d-grid align-items-start gap-y-7" data-aos="fade-up" data-aos-duration="1000"
                   >
                     <div class="footer-links-block">
                       <p class="text-base font-semibold text-light-cyprus">
@@ -3415,7 +3417,7 @@
                     </div>
                   </div>
                   <div
-                    class="footer-links-block-group d-grid align-items-start gap-y-7"
+                    class="footer-links-block-group d-grid align-items-start gap-y-7" data-aos="fade-up" data-aos-duration="1200"
                   >
                     <div class="footer-links-block">
                       <p class="text-base font-semibold text-light-cyprus">
@@ -3912,6 +3914,8 @@
     <script src="assets/vendor/slick_1.8.1/slick.min.js"></script>
     <!-- SELECT 2 -->
     <script src="assets/vendor/select2/select2.full.min.js"></script>
+    <!-- AOS -->
+    <script src="assets/vendor/aos/aos.js"></script>
     <!-- CUSTOM JS -->
     <script src="assets/js/main.js"></script>
     <script>

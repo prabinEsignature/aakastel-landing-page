@@ -11,12 +11,13 @@ $z-index-navbar-toggler: 1010;
   min-height: $navbar-height-desktop;
   @include flex-center-vert;
 
-  @include breakpoint-down(sm){
+  @include breakpoint-down(sm) {
     min-height: 72px;
   }
 
   &-menu {
     position: relative;
+    height: 100%;
 
     &-parent {
       @include breakpoint-down(lg) {
@@ -69,17 +70,32 @@ $z-index-navbar-toggler: 1010;
     max-width: 152px;
     display: inline-flex;
 
-    @include breakpoint-down(sm){
+    @include breakpoint-down(sm) {
       max-width: 140px;
     }
 
-    @include breakpoint-down(xs){
+    @include breakpoint-down(xs) {
       max-width: 130px;
     }
   }
 
   .menu-item {
     padding: 0 10px;
+    height: 100%;
+    position: relative;
+
+    &:hover {
+      & + .submenu-item-block {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+
+        @include breakpoint-down(lg) {
+          max-height: 1000px;
+          border: 1px solid color("grey-2") !important;
+        }
+      }
+    }
 
     @include breakpoint-down(lg) {
       width: 100%;
@@ -96,16 +112,17 @@ $z-index-navbar-toggler: 1010;
     }
 
     &-wrapper {
+      height: 100%;
       @include breakpoint-down(lg) {
         border: 1.5px solid color("grey-2");
         width: 100%;
         border-radius: 4px;
         transition: $default-transition;
-        
-        &:hover{
+
+        &:hover {
           border-color: color("primary");
 
-          .menu-item-text{
+          .menu-item-text {
             color: color("primary");
           }
         }
@@ -121,13 +138,20 @@ $z-index-navbar-toggler: 1010;
 
   .submenu-item-block {
     position: absolute;
-    top: 45px;
+    top: 60px;
     left: 50%;
-    transform: translate(-50%, -150%);
+    // transform: translate(-50%, -150%);
+    transform: translateX(-50%);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     overflow: hidden;
-    transition: $default-transition;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease,
+      visibility 0.3s ease;
 
     @include breakpoint-down(xl) {
       max-width: 800px !important;
@@ -154,7 +178,10 @@ $z-index-navbar-toggler: 1010;
     }
 
     &.show {
-      transform: translate(-50%, 0%);
+      opacity: 1;
+      visibility: visible;
+      display: block;
+      // transform: translate(-50%, 0%);
 
       @include breakpoint-down(lg) {
         max-height: 1000px;
@@ -417,14 +444,14 @@ $z-index-navbar-toggler: 1010;
   .submenu-item-foot {
     padding: 12px !important;
 
-    @include breakpoint-down(sm){
+    @include breakpoint-down(sm) {
       flex-direction: column;
     }
   }
 }
 
 .atel-header {
-  .atel-navbar{
+  .atel-navbar {
     &.atel-navbar-invert {
       .navbar-logo-default {
         display: none;
@@ -432,10 +459,10 @@ $z-index-navbar-toggler: 1010;
     }
   }
 
-  &.atel-header-fixed{
-    .atel-navbar{
-      &.atel-navbar-invert{
-        .navbar-logo-white{
+  &.atel-header-fixed {
+    .atel-navbar {
+      &.atel-navbar-invert {
+        .navbar-logo-white {
           display: none;
         }
         .navbar-logo-default {

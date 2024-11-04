@@ -29,6 +29,30 @@
                     min-height: 24px;
                 }
             }
+
+            &-head{
+                @include breakpoint-down(sm){
+                    padding: 20px!important;
+                }
+            }
+
+            &-body{
+                @include breakpoint-down(sm){
+                    padding: 20px!important;
+                }
+            }
+
+            &-card{
+                @include breakpoint-down(xl){
+                    height: 100%;
+                }
+            }
+        }
+
+        .btn-white-black {
+            &:hover {
+                background: color("p-green-50") !important;
+            }
         }
     }
 }
@@ -37,31 +61,31 @@
     .plan-block-head {
         border-bottom: 1px solid color("grey-3");
 
-        @include breakpoint-down(xl){
-            padding: 16px!important;
+        @include breakpoint-down(xl) {
+            padding: 16px !important;
         }
 
-        @include breakpoint-down(lg){
-            padding: 12px!important;
+        @include breakpoint-down(lg) {
+            padding: 12px !important;
         }
     }
     div[class*="plan-label"] {
         border-bottom: 1px solid color("grey-3");
         min-height: 68px;
 
-        @include breakpoint-down(xl){
-            padding: 12px 16px!important;
+        @include breakpoint-down(xl) {
+            padding: 12px 16px !important;
         }
 
-        @include breakpoint-down(lg){
-            padding: 12px!important;
+        @include breakpoint-down(lg) {
+            padding: 12px !important;
             min-height: auto;
         }
     }
 
-    .plan-block-row{
-        &:last-child{
-            div[class*="plan-label"]{
+    .plan-block-row {
+        &:last-child {
+            div[class*="plan-label"] {
                 border-bottom: 0;
             }
         }
@@ -71,5 +95,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .plan-block{
+        .btn-white-black {
+            &:hover, &:active, &:focus {
+                background: color("p-green-50") !important;
+                border-color: color("primary")!important;
+            }
+        }
     }
 }

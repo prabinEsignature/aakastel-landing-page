@@ -34,56 +34,61 @@ navbarSideMenuCloseBtn.addEventListener("click", () => {
 const menuItems = document.querySelectorAll(".menu-item");
 let activeSubMenu = null;
 let activeMenuItem = null;
+let leaveTimeout;
 
 menuItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    const subMenuBlock = item.nextElementSibling;
+  const subMenuBlock = item.nextElementSibling;
 
-    if (subMenuBlock === activeSubMenu) {
-      subMenuBlock.classList.toggle("show");
-      item.classList.toggle("active");
-    } else {
-      resetNavbarMenu();
-      if (
-        subMenuBlock &&
-        subMenuBlock.classList.contains("submenu-item-block")
-      ) {
-        subMenuBlock.classList.add("show");
-        item.classList.add("active");
-        activeSubMenu = subMenuBlock;
-        activeMenuItem = item;
-      } else {
-        activeSubMenu = null;
-        activeMenuItem = null;
-      }
-    }
-  });
+  // item.addEventListener("mouseenter", () => {
+  //   clearTimeout(leaveTimeout); 
+  //   resetNavbarMenu();
+
+  //   if (subMenuBlock && subMenuBlock.classList.contains("submenu-item-block")) {
+  //     subMenuBlock.classList.add("show");
+  //     item.classList.add("active");
+  //     activeSubMenu = subMenuBlock;
+  //     activeMenuItem = item;
+  //   }
+  // });
+
+  // item.addEventListener("mouseleave", () => {
+  //   leaveTimeout = setTimeout(() => {
+  //     if (subMenuBlock) {
+  //       subMenuBlock.classList.remove("show");
+  //       item.classList.remove("active");
+  //       activeSubMenu = null;
+  //       activeMenuItem = null;
+  //     }
+  //   }, 100); // Adjust delay time as needed
+  // });
 });
+
 
 // Close the menu when clicking outside
-document.addEventListener("click", (event) => {
-  // Check if the click target is not within the active menu item or submenu
-  if (
-    activeMenuItem &&
-    !activeMenuItem.contains(event.target) &&
-    activeSubMenu &&
-    !activeSubMenu.contains(event.target)
-  ) {
-    resetNavbarMenu();
-    activeSubMenu = null;
-    activeMenuItem = null;
-  }
-});
+// document.addEventListener("click", (event) => {
+//   // Check if the click target is not within the active menu item or submenu
+//   if (
+//     activeMenuItem &&
+//     !activeMenuItem.contains(event.target) &&
+//     activeSubMenu &&
+//     !activeSubMenu.contains(event.target)
+//   ) {
+//     resetNavbarMenu();
+//     activeSubMenu = null;
+//     activeMenuItem = null;
+//   }
+// });
 
-const resetNavbarMenu = () => {
-  document
-    .querySelectorAll(".submenu-item-block")
-    .forEach((subMenuBlock) => subMenuBlock.classList.remove("show"));
+// Reset function to clear all active menus
+// const resetNavbarMenu = () => {
+//   document
+//     .querySelectorAll(".submenu-item-block")
+//     .forEach((subMenuBlock) => subMenuBlock.classList.remove("show"));
 
-  document
-    .querySelectorAll(".menu-item")
-    .forEach((menuItem) => menuItem.classList.remove("active"));
-};
+//   document
+//     .querySelectorAll(".menu-item")
+//     .forEach((menuItem) => menuItem.classList.remove("active"));
+// };
 
 const subMenuHeadItems = document.querySelectorAll(".submenu-01-head-item");
 const subMenuBodyItems = document.querySelectorAll(".submenu-01-body-item");

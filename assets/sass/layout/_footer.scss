@@ -80,6 +80,17 @@
                 justify-content: center;
                 gap: 12px!important;
             }
+
+            .contact-info-item{
+                span{
+                    transition: $default-transition;
+                }
+                &:hover{
+                    span{
+                        color: color("primary")!important;
+                    }
+                }
+            }
         }
     }
 
@@ -107,6 +118,7 @@
             &:hover{
                 opacity: 1!important;
                 color: color("white")!important;
+                text-decoration: underline;
             }
         }
     }
@@ -126,6 +138,7 @@
             transition: $default-transition;
             &:hover{
                 color: color("white")!important;
+                text-decoration: underline;
             }
         }
     }

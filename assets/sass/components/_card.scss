@@ -36,6 +36,7 @@
         gap: 24px!important;
     }
     .card {
+        transition: $default-transition;
         &-img {
             height: 220px;
         }
@@ -44,6 +45,15 @@
             @include breakpoint-down(sm) {
                 padding-right: 0 !important;
                 padding-left: 0 !important;
+            }
+        }
+
+        &:hover{
+            background: color("white")!important;
+
+            .badge{
+                background: color("primary")!important;
+                color: color("white")!important;
             }
         }
     }
