@@ -300,7 +300,7 @@ $(document).ready(function () {
   });
 
   AOS.init({
-    startEvent: "DOMContentLoaded",
+    // startEvent: "DOMContentLoaded",
     duration: 600,
   });
 });
