@@ -83,9 +83,10 @@ $z-index-navbar-toggler: 1010;
     padding: 0 10px;
     height: 100%;
     position: relative;
+    cursor: pointer;
 
     &:hover {
-      & + .submenu-item-block {
+      .submenu-item-block {
         opacity: 1;
         visibility: visible;
         display: block;
@@ -390,8 +391,9 @@ $z-index-navbar-toggler: 1010;
           }
 
           a {
+            transition: $default-transition;
             &:hover {
-              opacity: 0.8;
+              text-decoration: underline;
             }
           }
         }
@@ -406,7 +408,7 @@ $z-index-navbar-toggler: 1010;
           a {
             transition: $default-transition;
             &:hover {
-              opacity: 0.8;
+              text-decoration: underline;
             }
           }
         }

@@ -15098,6 +15098,7 @@ table td {
   justify-content: center;
   min-height: 28px;
   min-width: 46px;
+  transition: all ease-in-out 300ms;
 }
 
 .slider-cards {
@@ -15618,14 +15619,15 @@ table td {
   padding: 0 10px;
   height: 100%;
   position: relative;
+  cursor: pointer;
 }
-.atel-navbar .menu-item:hover + .submenu-item-block {
+.atel-navbar .menu-item:hover .submenu-item-block {
   opacity: 1;
   visibility: visible;
   display: block;
 }
 @media (max-width: 991.98px) {
-  .atel-navbar .menu-item:hover + .submenu-item-block {
+  .atel-navbar .menu-item:hover .submenu-item-block {
     max-height: 1000px;
     border: 1px solid #e5e5e5 !important;
   }
@@ -15902,8 +15904,11 @@ table td {
     padding: 4px !important;
   }
 }
+.atel-navbar .submenu-item-block.developers-nav .submenu-grid-item a {
+  transition: all ease-in-out 300ms;
+}
 .atel-navbar .submenu-item-block.developers-nav .submenu-grid-item a:hover {
-  opacity: 0.8;
+  text-decoration: underline;
 }
 .atel-navbar .submenu-item-block.resources-nav {
   width: 506px;
@@ -15912,7 +15917,7 @@ table td {
   transition: all ease-in-out 300ms;
 }
 .atel-navbar .submenu-item-block.resources-nav .submenu-grid-item a:hover {
-  opacity: 0.8;
+  text-decoration: underline;
 }
 @media (max-width: 1199.98px) {
   .atel-navbar .submenu-item-block.resources-nav .submenu-item-main {
