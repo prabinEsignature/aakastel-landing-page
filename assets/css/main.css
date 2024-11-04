@@ -15558,6 +15558,11 @@ table td {
   display: flex;
   align-items: center;
 }
+@media (max-width: 991.98px) {
+  .atel-navbar {
+    align-items: center !important;
+  }
+}
 @media (max-width: 575.98px) {
   .atel-navbar {
     min-height: 72px;
@@ -15652,6 +15657,12 @@ table td {
   position: relative;
   cursor: pointer;
 }
+@media (max-width: 991.98px) {
+  .atel-navbar .menu-item-text-icon {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 .atel-navbar .menu-item:hover .submenu-item-block {
   opacity: 1;
   visibility: visible;
@@ -15669,6 +15680,9 @@ table td {
     display: flex;
     justify-content: space-between;
     padding: 12px;
+    flex-direction: column;
+    align-items: flex-start !important;
+    width: 100%;
   }
 }
 .atel-navbar .menu-item.active .menu-item-icon {
@@ -15684,6 +15698,7 @@ table td {
     width: 100%;
     border-radius: 4px;
     transition: all ease-in-out 300ms;
+    height: auto;
   }
   .atel-navbar .menu-item-wrapper:hover {
     border-color: #3bb24a;
@@ -15726,10 +15741,10 @@ table td {
     overflow: hidden;
     transition: all ease-in-out 300ms;
     border-radius: 4px !important;
-    max-width: calc(100% - 32px) !important;
     margin-right: auto;
     margin-left: auto;
     border: 1px solid #fff !important;
+    margin-top: 12px;
   }
 }
 @media (max-width: 575.98px) {
