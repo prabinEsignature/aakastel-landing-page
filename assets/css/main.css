@@ -16296,6 +16296,12 @@ table td {
 .atel-who-we-help .segment-heading {
   max-width: 860px;
 }
+.atel-who-we-help .slider-card-wrapper .card-img img {
+  transition: all ease-in-out 300ms;
+}
+.atel-who-we-help .slider-card-wrapper .card:hover .card-img img {
+  transform: scale(1.1);
+}
 
 .atel-upgrade .container {
   max-width: 1104px !important;

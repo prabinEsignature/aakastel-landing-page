@@ -140,6 +140,23 @@
     .segment-heading {
         max-width: 860px;
     }
+
+    .slider-card-wrapper{
+        .card{
+            &-img{
+                img{
+                    transition: $default-transition;
+                }
+            }
+            &:hover{
+                .card-img{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .atel-upgrade {
