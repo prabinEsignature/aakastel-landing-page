@@ -15273,6 +15273,9 @@ table td {
     width: 280px;
   }
 }
+.atel-top-banner.atel-home-pg .top-banner-audio .audio-play-file {
+  display: none;
+}
 .atel-top-banner.atel-home-pg .top-banner-audio .audio-img {
   max-width: 288px;
 }
@@ -15292,6 +15295,34 @@ table td {
 }
 .atel-top-banner.atel-home-pg .top-banner-audio .audio-play-progress-bar {
   height: 8px;
+}
+.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn {
+  position: relative;
+}
+.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn:hover {
+  opacity: 1 !important;
+}
+.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn .audio-options-dropdown {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 10px;
+  border-radius: 8px;
+  width: 140px;
+}
+.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn .audio-options-list {
+  padding: 0;
+  margin: 0;
+}
+.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn .audio-option {
+  color: #3bb24a;
+  font-size: 12px;
+  padding: 6px 0;
+  border-radius: 6px;
+}
+.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn .audio-option:hover {
+  background: #e9f2ed;
 }
 .atel-top-banner .top-banner-ttl {
   font-size: 56px;

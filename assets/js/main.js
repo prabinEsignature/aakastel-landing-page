@@ -40,7 +40,7 @@ menuItems.forEach((item) => {
   const subMenuBlock = item.nextElementSibling;
 
   // item.addEventListener("mouseenter", () => {
-  //   clearTimeout(leaveTimeout); 
+  //   clearTimeout(leaveTimeout);
   //   resetNavbarMenu();
 
   //   if (subMenuBlock && subMenuBlock.classList.contains("submenu-item-block")) {
@@ -62,7 +62,6 @@ menuItems.forEach((item) => {
   //   }, 100); // Adjust delay time as needed
   // });
 });
-
 
 // Close the menu when clicking outside
 // document.addEventListener("click", (event) => {
@@ -219,6 +218,105 @@ document.querySelectorAll(".features-tabs li a").forEach((anchor) => {
       behavior: "smooth",
     });
   });
+});
+
+// AUDIO PLAYER
+const audio = document.querySelector(".audio-play-file");
+const playButton = document.querySelector(".audio-play-btn");
+const playIcon = playButton.querySelector("img");
+const progressBarContainer = document.querySelector(".audio-play-progress");
+const progressBar = document.querySelector(".audio-play-progress-bar");
+const timeDisplay = document.querySelector(".audio-play-time");
+const volumeButton = document.querySelector(".audio-vol-btn");
+const volumeIcon = volumeButton.querySelector("img");
+const dotsButton = document.querySelector('.audio-dots-btn');
+const dropdown = document.querySelector('.audio-options-dropdown');
+const downloadOption = document.getElementById('download-option');
+const speedOption = document.getElementById('speed-option');
+const loopOption = document.getElementById('loop-option');
+
+const formatTime = (seconds) => {
+  const minutes = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60)
+    .toString()
+    .padStart(2, "0");
+  return `${minutes}:${secs}`;
+};
+
+playButton.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    playIcon.src = "assets/icons/play_white.svg"; // Change to pause icon
+  } else {
+    audio.pause();
+    playIcon.src = "assets/icons/play_white.svg"; // Change back to play icon
+  }
+});
+
+// Update progress bar and time display as audio plays
+audio.addEventListener("timeupdate", () => {
+  const currentTime = audio.currentTime;
+  const duration = audio.duration;
+  const progressPercent = (currentTime / duration) * 100;
+
+  progressBar.style.width = `${progressPercent}%`;
+  timeDisplay.textContent = formatTime(currentTime);
+});
+
+// Seek functionality when clicking on progress bar
+progressBarContainer.addEventListener("click", (e) => {
+  const clickX = e.offsetX;
+  const width = progressBarContainer.clientWidth;
+  const duration = audio.duration;
+
+  audio.currentTime = (clickX / width) * duration;
+});
+
+// Volume control toggle (mute/unmute)
+volumeButton.addEventListener("click", () => {
+  audio.muted = !audio.muted;
+  volumeIcon.src = audio.muted
+    ? "assets/icons/volume_grey.svg" // Change to muted icon
+    : "assets/icons/volume_grey.svg"; // Change back to volume icon
+});
+
+// Toggle dropdown visibility
+dotsButton.addEventListener('click', () => {
+  dropdown.classList.toggle('d-none');
+});
+
+// Close dropdown if clicked outside
+document.addEventListener('click', (event) => {
+  if (!dotsButton.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.classList.add('d-none');
+  }
+});
+
+// Download audio file
+downloadOption.addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.href = audio.querySelector('source').src;
+  link.download = './assets/audio/banner_audio.mp4';
+  link.click();
+  dropdown.classList.add('d-none');
+});
+
+// Toggle loop functionality
+let isLooping = false;
+loopOption.addEventListener('click', () => {
+  isLooping = !isLooping;
+  audio.loop = isLooping;
+  loopOption.textContent = isLooping ? 'Disable Loop' : 'Enable Loop';
+  dropdown.classList.add('d-none');
+});
+
+// Adjust playback speed
+speedOption.addEventListener('click', () => {
+  let currentSpeed = audio.playbackRate;
+  const newSpeed = currentSpeed === 1 ? 1.5 : currentSpeed === 1.5 ? 2 : 1;
+  audio.playbackRate = newSpeed;
+  speedOption.textContent = `Speed: ${newSpeed}x`;
+  dropdown.classList.add('d-none');
 });
 
 // // MATCH HEIGHT

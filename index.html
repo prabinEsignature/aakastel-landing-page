@@ -3036,6 +3036,11 @@
                       src="assets/icons/play_white.svg"
                     />
                   </button>
+                  <audio controls class="audio-play-file">
+                    <source src="./assets/audio/banner_audio.mp4" type="audio/ogg" />
+                    <source src="./assets/audio/banner_audio.mp4" type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
                   <div class="audio-play-time font-semibold text-night">
                     1:12
                   </div>
@@ -3075,6 +3080,14 @@
                         src="assets/icons/dots_green.svg"
                         alt=""
                       />
+
+                      <div class="audio-options-dropdown d-none shadow-default">
+                        <ul class="audio-options-list">
+                          <li class="audio-option" id="download-option">Download</li>
+                          <li class="audio-option" id="speed-option">Playback Speed</li>
+                          <li class="audio-option" id="loop-option">Loop</li>
+                        </ul>
+                      </div>
                     </button>
                   </div>
                 </div>
