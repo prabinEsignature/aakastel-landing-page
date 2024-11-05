@@ -526,5 +526,12 @@
             outline: 2px solid color("white");
             outline-offset: -2px;
         }
+
+        .presence-location-name{
+            transition: $default-transition;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
     }
 }

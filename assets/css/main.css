@@ -16756,6 +16756,12 @@ table td {
   outline: 2px solid #fff;
   outline-offset: -2px;
 }
+.atel-presence .presence-tabs .presence-location-name {
+  transition: all ease-in-out 300ms;
+}
+.atel-presence .presence-tabs .presence-location-name:hover {
+  opacity: 0.8;
+}
 
 .atel-success-pvmt .segment-heading {
   max-width: 300px;
