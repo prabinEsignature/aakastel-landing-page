@@ -16008,6 +16008,9 @@ table td {
   width: 840px;
   left: 20%;
 }
+.atel-navbar .submenu-item-block.developers-nav .submenu-item-main {
+  grid-template-columns: 1fr 2fr;
+}
 @media (max-width: 1199.98px) {
   .atel-navbar .submenu-item-block.developers-nav .submenu-item-main {
     gap: 12px !important;
@@ -16018,6 +16021,9 @@ table td {
     grid-template-columns: 100%;
     gap: 0 !important;
   }
+}
+.atel-navbar .submenu-item-block.developers-nav .submenu-grid {
+  height: 100%;
 }
 @media (max-width: 1199.98px) {
   .atel-navbar .submenu-item-block.developers-nav .submenu-grid {
@@ -16040,12 +16046,13 @@ table td {
 @media (max-width: 991.98px) {
   .atel-navbar .submenu-item-block.developers-nav .submenu-grid-list {
     gap: 4px !important;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 100%;
   }
 }
 @media (max-width: 991.98px) {
   .atel-navbar .submenu-item-block.developers-nav .submenu-grid-item {
     padding: 4px !important;
+    flex-direction: column;
   }
 }
 .atel-navbar .submenu-item-block.developers-nav .submenu-grid-item a {
@@ -16053,6 +16060,25 @@ table td {
 }
 .atel-navbar .submenu-item-block.developers-nav .submenu-grid-item a:hover {
   text-decoration: underline;
+}
+.atel-navbar .submenu-item-block.developers-nav .submenu-grid-item .submenu-grid-sp-wrapper {
+  display: none !important;
+}
+@media (max-width: 991.98px) {
+  .atel-navbar .submenu-item-block.developers-nav .submenu-grid-item .submenu-grid-sp-wrapper {
+    display: grid !important;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 300ms;
+  }
+  .atel-navbar .submenu-item-block.developers-nav .submenu-grid-item .submenu-grid-sp-wrapper.show {
+    max-height: 1000px;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-navbar .submenu-item-block.developers-nav .submenu-grid-sp-wrapper .submenu-03-body-item {
+    margin-top: 12px !important;
+  }
 }
 .atel-navbar .submenu-item-block.resources-nav {
   width: 506px;
@@ -16131,6 +16157,23 @@ table td {
 }
 @media (max-width: 991.98px) {
   .submenu-01-body-list {
+    display: none !important;
+  }
+}
+
+.submenu-03-body-list .submenu-03-body-item {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease-in-out 300ms;
+}
+.submenu-03-body-list .submenu-03-body-item.show {
+  display: grid !important;
+  visibility: visible;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .submenu-03-body-list {
     display: none !important;
   }
 }
