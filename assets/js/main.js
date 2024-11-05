@@ -229,11 +229,11 @@ const progressBar = document.querySelector(".audio-play-progress-bar");
 const timeDisplay = document.querySelector(".audio-play-time");
 const volumeButton = document.querySelector(".audio-vol-btn");
 const volumeIcon = volumeButton?.querySelector("img");
-const dotsButton = document.querySelector('.audio-dots-btn');
-const dropdown = document.querySelector('.audio-options-dropdown');
-const downloadOption = document.getElementById('download-option');
-const speedOption = document.getElementById('speed-option');
-const loopOption = document.getElementById('loop-option');
+const dotsButton = document.querySelector(".audio-dots-btn");
+const dropdown = document.querySelector(".audio-options-dropdown");
+const downloadOption = document.getElementById("download-option");
+const speedOption = document.getElementById("speed-option");
+const loopOption = document.getElementById("loop-option");
 
 const formatTime = (seconds) => {
   const minutes = Math.floor(seconds / 60);
@@ -281,43 +281,67 @@ volumeButton?.addEventListener("click", () => {
 });
 
 // Toggle dropdown visibility
-dotsButton?.addEventListener('click', () => {
-  dropdown.classList.toggle('d-none');
+dotsButton?.addEventListener("click", () => {
+  dropdown.classList.toggle("d-none");
 });
 
 // Close dropdown if clicked outside
-document.addEventListener('click', (event) => {
+document.addEventListener("click", (event) => {
   if (!dotsButton.contains(event.target) && !dropdown.contains(event.target)) {
-    dropdown.classList.add('d-none');
+    dropdown.classList.add("d-none");
   }
 });
 
 // Download audio file
-downloadOption?.addEventListener('click', () => {
-  const link = document.createElement('a');
-  link.href = audio.querySelector('source').src;
-  link.download = './assets/audio/banner_audio.mp4';
+downloadOption?.addEventListener("click", () => {
+  const link = document.createElement("a");
+  link.href = audio.querySelector("source").src;
+  link.download = "./assets/audio/banner_audio.mp4";
   link.click();
-  dropdown.classList.add('d-none');
+  dropdown.classList.add("d-none");
 });
 
 // Toggle loop functionality
 let isLooping = false;
-loopOption?.addEventListener('click', () => {
+loopOption?.addEventListener("click", () => {
   isLooping = !isLooping;
   audio.loop = isLooping;
-  loopOption.textContent = isLooping ? 'Disable Loop' : 'Enable Loop';
-  dropdown.classList.add('d-none');
+  loopOption.textContent = isLooping ? "Disable Loop" : "Enable Loop";
+  dropdown.classList.add("d-none");
 });
 
 // Adjust playback speed
-speedOption?.addEventListener('click', () => {
+speedOption?.addEventListener("click", () => {
   let currentSpeed = audio.playbackRate;
   const newSpeed = currentSpeed === 1 ? 1.5 : currentSpeed === 1.5 ? 2 : 1;
   audio.playbackRate = newSpeed;
   speedOption.textContent = `Speed: ${newSpeed}x`;
-  dropdown.classList.add('d-none');
+  dropdown.classList.add("d-none");
 });
+
+// document.querySelectorAll('.accordion-button').forEach(button => {
+//   button.addEventListener('mouseover', () => {
+//       // Close all accordion panels
+//       document.querySelectorAll('.accordion-collapse').forEach(collapse => {
+//           if (collapse.classList.contains('show')) {
+//               new bootstrap.Collapse(collapse, { toggle: true });
+//           }
+//       });
+
+//       // Open the targeted accordion panel
+//       const target = document.querySelector(button.getAttribute('data-bs-target'));
+//       if (!target.classList.contains('show')) {
+//           new bootstrap.Collapse(target, { show: true });
+//       }
+//   });
+
+//   button.addEventListener('mouseleave', () => {
+//       // Close the current item when mouse leaves
+//       const target = document.querySelector(button.getAttribute('data-bs-target'));
+//       new bootstrap.Collapse(target, { hide: true });
+//   });
+// });
+
 
 // // MATCH HEIGHT
 // function setEqualHeights() {
