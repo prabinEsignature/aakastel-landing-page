@@ -223,12 +223,12 @@ document.querySelectorAll(".features-tabs li a").forEach((anchor) => {
 // AUDIO PLAYER
 const audio = document.querySelector(".audio-play-file");
 const playButton = document.querySelector(".audio-play-btn");
-const playIcon = playButton.querySelector("img");
+const playIcon = playButton?.querySelector("img");
 const progressBarContainer = document.querySelector(".audio-play-progress");
 const progressBar = document.querySelector(".audio-play-progress-bar");
 const timeDisplay = document.querySelector(".audio-play-time");
 const volumeButton = document.querySelector(".audio-vol-btn");
-const volumeIcon = volumeButton.querySelector("img");
+const volumeIcon = volumeButton?.querySelector("img");
 const dotsButton = document.querySelector('.audio-dots-btn');
 const dropdown = document.querySelector('.audio-options-dropdown');
 const downloadOption = document.getElementById('download-option');
@@ -243,7 +243,7 @@ const formatTime = (seconds) => {
   return `${minutes}:${secs}`;
 };
 
-playButton.addEventListener("click", () => {
+playButton?.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
     playIcon.src = "assets/icons/play_white.svg"; // Change to pause icon
@@ -254,7 +254,7 @@ playButton.addEventListener("click", () => {
 });
 
 // Update progress bar and time display as audio plays
-audio.addEventListener("timeupdate", () => {
+audio?.addEventListener("timeupdate", () => {
   const currentTime = audio.currentTime;
   const duration = audio.duration;
   const progressPercent = (currentTime / duration) * 100;
@@ -264,7 +264,7 @@ audio.addEventListener("timeupdate", () => {
 });
 
 // Seek functionality when clicking on progress bar
-progressBarContainer.addEventListener("click", (e) => {
+progressBarContainer?.addEventListener("click", (e) => {
   const clickX = e.offsetX;
   const width = progressBarContainer.clientWidth;
   const duration = audio.duration;
@@ -273,7 +273,7 @@ progressBarContainer.addEventListener("click", (e) => {
 });
 
 // Volume control toggle (mute/unmute)
-volumeButton.addEventListener("click", () => {
+volumeButton?.addEventListener("click", () => {
   audio.muted = !audio.muted;
   volumeIcon.src = audio.muted
     ? "assets/icons/volume_grey.svg" // Change to muted icon
@@ -281,7 +281,7 @@ volumeButton.addEventListener("click", () => {
 });
 
 // Toggle dropdown visibility
-dotsButton.addEventListener('click', () => {
+dotsButton?.addEventListener('click', () => {
   dropdown.classList.toggle('d-none');
 });
 
@@ -293,7 +293,7 @@ document.addEventListener('click', (event) => {
 });
 
 // Download audio file
-downloadOption.addEventListener('click', () => {
+downloadOption?.addEventListener('click', () => {
   const link = document.createElement('a');
   link.href = audio.querySelector('source').src;
   link.download = './assets/audio/banner_audio.mp4';
@@ -303,7 +303,7 @@ downloadOption.addEventListener('click', () => {
 
 // Toggle loop functionality
 let isLooping = false;
-loopOption.addEventListener('click', () => {
+loopOption?.addEventListener('click', () => {
   isLooping = !isLooping;
   audio.loop = isLooping;
   loopOption.textContent = isLooping ? 'Disable Loop' : 'Enable Loop';
@@ -311,7 +311,7 @@ loopOption.addEventListener('click', () => {
 });
 
 // Adjust playback speed
-speedOption.addEventListener('click', () => {
+speedOption?.addEventListener('click', () => {
   let currentSpeed = audio.playbackRate;
   const newSpeed = currentSpeed === 1 ? 1.5 : currentSpeed === 1.5 ? 2 : 1;
   audio.playbackRate = newSpeed;

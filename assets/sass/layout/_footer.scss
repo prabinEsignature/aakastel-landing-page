@@ -125,7 +125,11 @@
 
     .contact-social-link{
         &-item{
+            transition: $default-transition;
             &:hover{
+                background: color("primary")!important;
+                border-radius: 4px;
+                box-shadow: map-get($shadows, "sm");
                 img{
                     filter: invert(1) brightness(100);
                 }
