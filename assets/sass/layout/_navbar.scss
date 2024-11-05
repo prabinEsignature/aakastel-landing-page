@@ -176,7 +176,7 @@ $z-index-navbar-toggler: 1010;
     @include breakpoint-down(lg) {
       position: relative;
       top: 0;
-      left: 0;
+      left: 0!important;
       transform: none !important;
       width: 100% !important;
       max-height: 0;
