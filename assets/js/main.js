@@ -434,33 +434,72 @@ document.addEventListener("DOMContentLoaded", function () {
   let lastScrollTop = 0; // Variable to keep track of the last scroll position
 
   const handleScroll = (event) => {
-      const rect = stickySection.getBoundingClientRect();
-      const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+    const rect = stickySection.getBoundingClientRect();
+    const currentScrollTop =
+      window.scrollY || document.documentElement.scrollTop;
 
-      // Check if the sticky section is exactly at the top position of 140px
-      const isStickyAt140px = Math.abs(rect.top - 140) < 1; // Allow a small margin of error for calculations
+    // Check if the sticky section is exactly at the top position of 140px
+    const isStickyAt140px = Math.abs(rect.top - 140) < 1; // Allow a small margin of error for calculations
 
-      if (isStickyAt140px && rect.bottom > 0) {
-          wrapper.style.pointerEvents = "auto"; 
-          event.preventDefault(); // Prevent default scrolling behavior when sticky section is at 140px
-          
-          // If scrolling up and the sticky section has been crossed
-          if (currentScrollTop < lastScrollTop) {
-              // Reset scroll position to top
-              wrapper.scrollTop = 0;
-          }
-      } else {
-          wrapper.style.pointerEvents = "none"; 
-          // If the sticky section is not at 140px, prevent scrolling
+    if (isStickyAt140px && rect.bottom > 0) {
+      wrapper.style.pointerEvents = "auto";
+      event.preventDefault(); // Prevent default scrolling behavior when sticky section is at 140px
+
+      // If scrolling up and the sticky section has been crossed
+      if (currentScrollTop < lastScrollTop) {
+        // Reset scroll position to top
+        wrapper.scrollTop = 0;
       }
+    } else {
+      wrapper.style.pointerEvents = "none";
+      // If the sticky section is not at 140px, prevent scrolling
+    }
 
-      // Update lastScrollTop to current scroll position
-      lastScrollTop = currentScrollTop;
+    // Update lastScrollTop to current scroll position
+    lastScrollTop = currentScrollTop;
   };
 
   // Initial call to set the correct state
-  handleScroll({ preventDefault: () => {} }); 
+  handleScroll({ preventDefault: () => {} });
 
   // Add scroll event listener to the window
   window.addEventListener("scroll", handleScroll, { passive: false });
+});
+
+const changePathColor = (locationId) => {
+  const color = "#3bb24a";
+  const path = document.getElementById(locationId);
+
+  if (path && color) {
+    path.style.fill = color;
+    const svg = document.getElementById("nepal-map");
+    svg.appendChild(path);
+
+    const bbox = path.getBBox();
+    const xOffset = (1 - zoomScale) * (bbox.x + bbox.width / 2);
+    const yOffset = (1 - zoomScale) * (bbox.y + bbox.height / 2);
+    path.setAttribute(
+      "transform",
+      `translate(${xOffset}, ${yOffset}) scale(${zoomScale})`
+    );
+  }
+};
+
+const zoomScale = 1.5;
+
+const resetPathColor = () => {
+  const paths = document.querySelectorAll("svg path");
+  paths.forEach((path) => {
+    path.style.fill = "#C7E1E5";
+    path.setAttribute("transform", "");
+  });
+};
+
+const locationItems = document.querySelectorAll(".presence-location-name");
+locationItems.forEach((locationItem) => {
+  locationItem.addEventListener("click", () => {
+    let dataLocationId = locationItem.getAttribute("data-location-id");
+    resetPathColor();
+    changePathColor(dataLocationId);
+  });
 });
