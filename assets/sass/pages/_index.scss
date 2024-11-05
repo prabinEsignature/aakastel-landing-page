@@ -58,6 +58,8 @@
 
 .atel-key-products {
     margin-top: -120px;
+    position: sticky;
+    top: 140px;
 
     @include breakpoint-down(lg) {
         margin-top: 80px;
@@ -80,6 +82,12 @@
     @include breakpoint-down(xs) {
         border-top-right-radius: 24px !important;
         border-top-left-radius: 24px !important;
+    }
+
+    &-wrapper {
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+        scroll-behavior: smooth;
     }
 
     .segment-heading {
@@ -135,22 +143,34 @@
     }
 }
 
+.atel-key-products-wrapper::-webkit-scrollbar {
+    width: 0;
+}
+
+.atel-key-products-wrapper::-webkit-scrollbar-thumb {
+    background: color("white");
+}
+
+.atel-key-products-wrapper::-webkit-scrollbar-thumb:hover {
+    background: color("white");
+}
+
 .atel-who-we-help {
     overflow-x: hidden !important;
     .segment-heading {
         max-width: 860px;
     }
 
-    .slider-card-wrapper{
-        .card{
-            &-img{
-                img{
+    .slider-card-wrapper {
+        .card {
+            &-img {
+                img {
                     transition: $default-transition;
                 }
             }
-            &:hover{
-                .card-img{
-                    img{
+            &:hover {
+                .card-img {
+                    img {
                         transform: scale(1.1);
                     }
                 }
@@ -203,8 +223,20 @@
                 flex-direction: column;
             }
 
+            &-icon {
+                transition: $default-transition;
+            }
+
             &-l {
                 min-height: 72px;
+
+                p {
+                    margin-right: 90px;
+
+                    @include breakpoint-down(sm) {
+                        margin-right: 0;
+                    }
+                }
 
                 @include breakpoint-down(lg) {
                     order: 2;
@@ -219,11 +251,37 @@
                 }
             }
             &-m {
-                width: 188px;
-                min-height: 100px;
+                width: 184px;
+                min-height: 96px;
                 box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.08);
                 position: absolute;
                 @include center;
+                z-index: 1;
+                transition: $default-transition;
+                border: 2px solid color("white");
+                cursor: pointer;
+
+                &:hover {
+                    background: color("primary") !important;
+                    border-color: color("white");
+
+                    * {
+                        color: color("white") !important;
+                        transition: $default-transition;
+                    }
+
+                    img {
+                        filter: invert(0) brightness(100);
+                    }
+
+                    & + .compare-data-item-r {
+                        background: color("white") !important;
+
+                        p {
+                            color: color("night") !important;
+                        }
+                    }
+                }
 
                 @include breakpoint-down(lg) {
                     position: relative;
@@ -239,6 +297,20 @@
 
             &-r {
                 min-height: 72px;
+                transition: $default-transition;
+                cursor: pointer;
+
+                p{
+                    transition: $default-transition;
+                }
+
+                &:hover {
+                    background: color("white") !important;
+
+                    p {
+                        color: color("night") !important;
+                    }
+                }
 
                 @include breakpoint-down(lg) {
                     order: 3;
@@ -273,12 +345,12 @@
         border-radius: 28px;
     }
 
-    .accordion{
-        .accordion-button{
+    .accordion {
+        .accordion-button {
             transition: $default-transition;
-            &:hover{
-                color: color("night")!important;
-                border-color: color("primary")!important;
+            &:hover {
+                color: color("night") !important;
+                border-color: color("primary") !important;
             }
         }
     }
@@ -298,10 +370,11 @@
             gap: 24px;
         }
 
-        .industry-feature-item, .industry-feature-item p{
+        .industry-feature-item,
+        .industry-feature-item p {
             transition: $default-transition;
-            &:hover{
-                color: color("primary")!important;
+            &:hover {
+                color: color("primary") !important;
             }
         }
     }
@@ -355,7 +428,7 @@
                 max-width: 135px;
             }
 
-            &:hover{
+            &:hover {
                 scale: 1.05;
             }
         }

@@ -342,7 +342,6 @@ speedOption?.addEventListener("click", () => {
 //   });
 // });
 
-
 // // MATCH HEIGHT
 // function setEqualHeights() {
 //   const planBlockHeads = document.querySelectorAll(".plan-block-head");
@@ -427,4 +426,41 @@ $(document).ready(function () {
   });
 
   AOS.init({});
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const wrapper = document.querySelector(".atel-key-products-wrapper");
+  const stickySection = document.querySelector(".atel-key-products");
+  let lastScrollTop = 0; // Variable to keep track of the last scroll position
+
+  const handleScroll = (event) => {
+      const rect = stickySection.getBoundingClientRect();
+      const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      // Check if the sticky section is exactly at the top position of 140px
+      const isStickyAt140px = Math.abs(rect.top - 140) < 1; // Allow a small margin of error for calculations
+
+      if (isStickyAt140px && rect.bottom > 0) {
+          wrapper.style.pointerEvents = "auto"; 
+          event.preventDefault(); // Prevent default scrolling behavior when sticky section is at 140px
+          
+          // If scrolling up and the sticky section has been crossed
+          if (currentScrollTop < lastScrollTop) {
+              // Reset scroll position to top
+              wrapper.scrollTop = 0;
+          }
+      } else {
+          wrapper.style.pointerEvents = "none"; 
+          // If the sticky section is not at 140px, prevent scrolling
+      }
+
+      // Update lastScrollTop to current scroll position
+      lastScrollTop = currentScrollTop;
+  };
+
+  // Initial call to set the correct state
+  handleScroll({ preventDefault: () => {} }); 
+
+  // Add scroll event listener to the window
+  window.addEventListener("scroll", handleScroll, { passive: false });
 });

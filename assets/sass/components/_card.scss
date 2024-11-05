@@ -28,6 +28,12 @@
             min-height: 165px;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.24) 40%, rgba(0, 0, 0, 0.8) 100%);
         }
+
+        &:hover{
+            .card-title{
+                text-decoration: underline!important;
+            }
+        }
     }
 }
 
@@ -54,6 +60,10 @@
             .badge{
                 background: color("primary")!important;
                 color: color("white")!important;
+            }
+
+            .card-title{
+                text-decoration: underline!important;
             }
         }
     }
