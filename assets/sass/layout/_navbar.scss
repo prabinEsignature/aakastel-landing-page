@@ -162,7 +162,7 @@ $z-index-navbar-toggler: 1010;
   // SUBMENU ITEM BLOCK
   .submenu-item-block {
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
     border-bottom-left-radius: 20px;
@@ -597,3 +597,5 @@ $z-index-navbar-toggler: 1010;
     display: none !important;
   }
 }
+
+

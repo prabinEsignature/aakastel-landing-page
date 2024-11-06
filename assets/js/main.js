@@ -110,8 +110,6 @@ const subMenuHeadItemsLink = document.querySelectorAll(
 
 subMenuHeadItemsLink.forEach((subMenuHeadItemLink, index) => {
   subMenuHeadItemLink.addEventListener("click", (event) => {
-    event.preventDefault();
-
     document
       .querySelectorAll(".submenu-01-head-list .submenu-grid-sp-wrapper.show")
       .forEach((openMenu) => {
@@ -449,29 +447,31 @@ document.addEventListener("DOMContentLoaded", function () {
   let lastScrollTop = 0; // Variable to keep track of the last scroll position
 
   const handleScroll = (event) => {
-    const rect = stickySection.getBoundingClientRect();
-    const currentScrollTop =
-      window.scrollY || document.documentElement.scrollTop;
+    if (stickySection) {
+      const rect = stickySection.getBoundingClientRect();
+      const currentScrollTop =
+        window.scrollY || document.documentElement.scrollTop;
 
-    // Check if the sticky section is exactly at the top position of 140px
-    const isStickyAt140px = Math.abs(rect.top - 140) < 1; // Allow a small margin of error for calculations
+      // Check if the sticky section is exactly at the top position of 140px
+      const isStickyAt140px = Math.abs(rect.top - 140) < 1; // Allow a small margin of error for calculations
 
-    if (isStickyAt140px && rect.bottom > 0) {
-      wrapper.style.pointerEvents = "auto";
-      event.preventDefault(); // Prevent default scrolling behavior when sticky section is at 140px
+      if (isStickyAt140px && rect.bottom > 0) {
+        wrapper.style.pointerEvents = "auto";
+        event.preventDefault(); // Prevent default scrolling behavior when sticky section is at 140px
 
-      // If scrolling up and the sticky section has been crossed
-      if (currentScrollTop < lastScrollTop) {
-        // Reset scroll position to top
-        wrapper.scrollTop = 0;
+        // If scrolling up and the sticky section has been crossed
+        if (currentScrollTop < lastScrollTop) {
+          // Reset scroll position to top
+          wrapper.scrollTop = 0;
+        }
+      } else {
+        wrapper.style.pointerEvents = "none";
+        // If the sticky section is not at 140px, prevent scrolling
       }
-    } else {
-      wrapper.style.pointerEvents = "none";
-      // If the sticky section is not at 140px, prevent scrolling
-    }
 
-    // Update lastScrollTop to current scroll position
-    lastScrollTop = currentScrollTop;
+      // Update lastScrollTop to current scroll position
+      lastScrollTop = currentScrollTop;
+    }
   };
 
   // Initial call to set the correct state
