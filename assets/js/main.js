@@ -420,15 +420,17 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", handleScroll, { passive: false });
 });
 
+/* ####### PRESENCE MAP - DISTRICT MAPPING ####### */
+const zoomScale = 1.5;
+const svgElement = document.getElementById("nepal-map");
+const presenceInfoDiv = document.getElementById("presence-info");
+
 const changePathColor = (locationId) => {
-  const color = "#3bb24a";
+  const color = "#3bb24a";  
   const path = document.getElementById(locationId);
 
-  if (path && color) {
+  if (path) {
     path.style.fill = color;
-    const svg = document.getElementById("nepal-map");
-    svg.appendChild(path);
-
     const bbox = path.getBBox();
     const xOffset = (1 - zoomScale) * (bbox.x + bbox.width / 2);
     const yOffset = (1 - zoomScale) * (bbox.y + bbox.height / 2);
@@ -436,24 +438,35 @@ const changePathColor = (locationId) => {
       "transform",
       `translate(${xOffset}, ${yOffset}) scale(${zoomScale})`
     );
+
+    placeDivAtPathPosition(bbox);
   }
 };
-
-const zoomScale = 1.5;
 
 const resetPathColor = () => {
   const paths = document.querySelectorAll("svg path");
   paths.forEach((path) => {
-    path.style.fill = "#C7E1E5";
+    path.style.fill = "#C7E1E5";  
     path.setAttribute("transform", "");
   });
 };
 
+function placeDivAtPathPosition(bbox) {
+  // Calculate the center of the path
+  const x = bbox.x + bbox.width / 2;
+  const y = bbox.y + bbox.height / 2;
+  presenceInfoDiv.style.left = `${x - 100}px`;
+  presenceInfoDiv.style.top = `${y + bbox.height}px`;
+  presenceInfoDiv.style.position = "absolute";
+  presenceInfoDiv.classList.remove("d-none");
+}
+
 const locationItems = document.querySelectorAll(".presence-location-name");
 locationItems.forEach((locationItem) => {
   locationItem.addEventListener("click", () => {
-    let dataLocationId = locationItem.getAttribute("data-location-id");
+    const dataLocationId = locationItem.getAttribute("data-location-id");
     resetPathColor();
     changePathColor(dataLocationId);
   });
 });
+/* ####### EOF PRESENCE MAP - DISTRICT MAPPING ####### */

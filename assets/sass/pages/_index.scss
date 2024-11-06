@@ -477,6 +477,7 @@
 
 .atel-presence {
     .presence-tabs {
+        margin: 30px 0;
         @include breakpoint-down(lg) {
             max-width: 400px;
             margin-right: auto;
@@ -532,6 +533,24 @@
             &:hover{
                 opacity: 0.8;
             }
+        }
+    }
+
+    #presence-info{
+        width: 180px;
+        z-index: 1;
+        
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom: 10px solid color("white");
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid transparent;
         }
     }
 }
