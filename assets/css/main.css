@@ -778,6 +778,7 @@
 }
 
 .resize-animation-stopper * {
+  -webkit-animation: none !important;
   animation: none !important;
   transition: none !important;
 }
@@ -951,73 +952,59 @@
 }
 
 .object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .object-fill {
-  -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
 }
 
 .object-none {
-  -o-object-fit: none;
-     object-fit: none;
+  object-fit: none;
 }
 
 .object-scale-down {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  object-fit: scale-down;
 }
 
 .object-bottom {
-  -o-object-position: bottom;
-     object-position: bottom;
+  object-position: bottom;
 }
 
 .object-center {
-  -o-object-position: center;
-     object-position: center;
+  object-position: center;
 }
 
 .object-left {
-  -o-object-position: left;
-     object-position: left;
+  object-position: left;
 }
 
 .object-left-bottom {
-  -o-object-position: left bottom;
-     object-position: left bottom;
+  object-position: left bottom;
 }
 
 .object-left-top {
-  -o-object-position: left top;
-     object-position: left top;
+  object-position: left top;
 }
 
 .object-right {
-  -o-object-position: right;
-     object-position: right;
+  object-position: right;
 }
 
 .object-right-bottom {
-  -o-object-position: right bottom;
-     object-position: right bottom;
+  object-position: right bottom;
 }
 
 .object-right-top {
-  -o-object-position: right top;
-     object-position: right top;
+  object-position: right top;
 }
 
 .object-top {
-  -o-object-position: top;
-     object-position: top;
+  object-position: top;
 }
 
 .flex-1 {
@@ -3144,8 +3131,7 @@
 }
 
 .gap-x-05 {
-  -moz-column-gap: 2px;
-       column-gap: 2px;
+  column-gap: 2px;
 }
 
 .gap-1 {
@@ -3157,8 +3143,7 @@
 }
 
 .gap-x-1 {
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
 }
 
 .gap-2 {
@@ -3170,8 +3155,7 @@
 }
 
 .gap-x-2 {
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
 }
 
 .gap-3 {
@@ -3183,8 +3167,7 @@
 }
 
 .gap-x-3 {
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
 }
 
 .gap-4 {
@@ -3196,8 +3179,7 @@
 }
 
 .gap-x-4 {
-  -moz-column-gap: 16px;
-       column-gap: 16px;
+  column-gap: 16px;
 }
 
 .gap-5 {
@@ -3209,8 +3191,7 @@
 }
 
 .gap-x-5 {
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 
 .gap-6 {
@@ -3222,8 +3203,7 @@
 }
 
 .gap-x-6 {
-  -moz-column-gap: 24px;
-       column-gap: 24px;
+  column-gap: 24px;
 }
 
 .gap-7 {
@@ -3235,8 +3215,7 @@
 }
 
 .gap-x-7 {
-  -moz-column-gap: 28px;
-       column-gap: 28px;
+  column-gap: 28px;
 }
 
 .gap-8 {
@@ -3248,8 +3227,7 @@
 }
 
 .gap-x-8 {
-  -moz-column-gap: 32px;
-       column-gap: 32px;
+  column-gap: 32px;
 }
 
 .gap-9 {
@@ -3261,8 +3239,7 @@
 }
 
 .gap-x-9 {
-  -moz-column-gap: 36px;
-       column-gap: 36px;
+  column-gap: 36px;
 }
 
 .gap-10 {
@@ -3274,8 +3251,7 @@
 }
 
 .gap-x-10 {
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  column-gap: 40px;
 }
 
 .segment-py-32 {
@@ -13927,6 +13903,7 @@ a:visited, a:link {
   *:after {
     background: transparent !important;
     color: #000 !important; /* Black prints faster */
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -14194,11 +14171,6 @@ a:visited, a:link {
     transform: rotate(360deg);
   }
 }
-::-moz-selection {
-  background: #3bb24a !important;
-  color: #fff;
-  text-shadow: none;
-}
 ::selection {
   background: #3bb24a !important;
   color: #fff;
@@ -14271,7 +14243,6 @@ a:visited, a:link {
 .scrollbar-x::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #3bb24a;
-  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 .scrollbar-x::-webkit-scrollbar-thumb:hover {
@@ -14292,7 +14263,6 @@ a:visited, a:link {
 .scrollbar-y::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #3bb24a;
-  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 .scrollbar-y::-webkit-scrollbar-thumb:hover {
@@ -14337,8 +14307,7 @@ Output
 .bg-video-content {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .btn {
@@ -14347,8 +14316,7 @@ Output
   font-family: "Karla", sans-serif;
   font-size: 16px;
   border-radius: 8px;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   height: 40px;
   white-space: nowrap;
   padding: 8px 12px;
@@ -14358,9 +14326,7 @@ Output
   vertical-align: middle;
   transition: all ease-in-out 300ms;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   text-decoration: none;
   touch-action: manipulation;
   background-image: none;
@@ -14568,8 +14534,7 @@ Output
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
   background: transparent;
 }
 .btn-link:hover {
@@ -15208,7 +15173,6 @@ input[type=button].btn-block {
 .select2-container .select2-results__options::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #3bb24a;
-  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 .select2-container .select2-results__options::-webkit-scrollbar-thumb:hover {
@@ -15343,9 +15307,6 @@ input[type=button].btn-block {
   font-weight: 600;
   outline: none;
   font-size: 16px;
-}
-.form-custom .form-select::-moz-placeholder, .form-custom .form-control::-moz-placeholder {
-  color: #9e9e9e !important;
 }
 .form-custom .form-select::placeholder, .form-custom .form-control::placeholder {
   color: #9e9e9e !important;
@@ -15641,8 +15602,7 @@ table td {
 .slider-cards .card-img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .slider-cards .card-body {
   min-height: 165px;
@@ -16145,7 +16105,6 @@ table td {
   .atel-navbar-menu::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: #3bb24a;
-    -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
   }
   .atel-navbar-menu::-webkit-scrollbar-thumb:hover {
@@ -16353,6 +16312,12 @@ table td {
 }
 .atel-navbar .submenu-item-block.products-nav .submenu-grid-item {
   padding: 6px 8px;
+}
+.atel-navbar .submenu-item-block.products-nav .submenu-grid-item-text {
+  transition: all ease-in-out 300ms;
+}
+.atel-navbar .submenu-item-block.products-nav .submenu-grid-item:hover .submenu-grid-item-text {
+  color: #3bb24a !important;
 }
 @media (max-width: 1199.98px) {
   .atel-navbar .submenu-item-block.products-nav .submenu-grid-item {
@@ -16659,15 +16624,13 @@ table td {
 @media (max-width: 575.98px) {
   .atel-footer .footer-segment-links > .footer-links-block .footer-links-list {
     grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 12px;
-         column-gap: 12px;
+    column-gap: 12px;
   }
 }
 @media (max-width: 575.98px) {
   .atel-footer .footer-segment-links .footer-links-block-group {
     grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 12px;
-         column-gap: 12px;
+    column-gap: 12px;
   }
 }
 @media (max-width: 767.98px) {
@@ -16700,8 +16663,7 @@ table td {
 }
 @media (max-width: 767.98px) {
   .atel-footer .footer-segment-bottom .tac-list {
-    -moz-column-gap: 12px !important;
-         column-gap: 12px !important;
+    column-gap: 12px !important;
     row-gap: 4px !important;
   }
 }
@@ -17331,8 +17293,7 @@ table td {
 }
 @media (max-width: 991.98px) {
   .atel-solutions-block .solutions-block-item > .container {
-    -moz-column-gap: 16px;
-         column-gap: 16px;
+    column-gap: 16px;
   }
 }
 @media (max-width: 767.98px) {
@@ -18176,4 +18137,4 @@ table td {
 .atel-compare-plans .plan-block .btn-white-black:hover, .atel-compare-plans .plan-block .btn-white-black:active, .atel-compare-plans .plan-block .btn-white-black:focus {
   background: #e9f2ed !important;
   border-color: #3bb24a !important;
-}/*# sourceMappingURL=main.css.map */
+}

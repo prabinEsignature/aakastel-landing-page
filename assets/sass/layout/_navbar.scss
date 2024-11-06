@@ -290,6 +290,16 @@ $z-index-navbar-toggler: 1010;
         &-grid-item {
           padding: 6px 8px;
 
+          &-text{
+            transition: $default-transition;
+          }
+
+          &:hover{
+            .submenu-grid-item-text{
+              color: color("primary")!important;
+            }
+          }
+
           @include breakpoint-down(xl) {
             padding: 4px 8px !important;
           }
