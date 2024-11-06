@@ -15652,6 +15652,7 @@ table td {
   right: 0;
   z-index: 1000;
   transition: all 100ms ease-in-out;
+  background: transparent;
 }
 .atel-header > .container {
   max-width: 1400px !important;
@@ -15922,7 +15923,7 @@ table td {
   max-width: 730px;
 }
 .atel-top-banner.atel-whatsapp-business-pg {
-  margin-top: 80px;
+  padding-top: 80px;
 }
 .atel-top-banner.atel-whatsapp-business-pg > .container {
   max-width: 1400px !important;

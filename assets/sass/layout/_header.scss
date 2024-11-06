@@ -5,6 +5,7 @@
     right: 0;
     z-index: 1000;
     transition: all 100ms ease-in-out;
+    background: transparent;
 
     & > .container {
         max-width: 1400px !important;
@@ -307,7 +308,7 @@
     }
 
     &.atel-whatsapp-business-pg {
-        margin-top: 80px;
+        padding-top: 80px;
 
         & > .container {
             max-width: 1400px !important;
