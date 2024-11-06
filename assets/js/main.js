@@ -260,7 +260,7 @@ const formatTime = (seconds) => {
 playButton?.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
-    playIcon.src = "assets/icons/play_white.svg";
+    playIcon.src = "assets/icons/pause_white.svg";
   } else {
     audio.pause();
     playIcon.src = "assets/icons/play_white.svg";
@@ -288,7 +288,7 @@ progressBarContainer?.addEventListener("click", (e) => {
 volumeButton?.addEventListener("click", () => {
   audio.muted = !audio.muted;
   volumeIcon.src = audio.muted
-    ? "assets/icons/volume_grey.svg"
+    ? "assets/icons/muted_grey.svg"
     : "assets/icons/volume_grey.svg";
 });
 
