@@ -178,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   subMenuHeadItemsLink3.forEach((subMenuHeadItemLink, index) => {
     subMenuHeadItemLink.addEventListener("click", (event) => {
-      event.preventDefault();
 
       document
         .querySelectorAll(".submenu-03-head-list .submenu-grid-sp-wrapper.show")
