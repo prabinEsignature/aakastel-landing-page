@@ -1,8 +1,7 @@
-// JavaScript for Scroll Navbar Effect
+/* ####### FIXED NAVBAR EFFECT AFTER SCROLL ####### */
 const navbar = document.querySelector(".atel-header");
 const scrollThreshold = 40;
 
-// Function to handle the scroll effect
 const handleScroll = () => {
   if (window.scrollY > scrollThreshold) {
     navbar.classList.add("atel-header-fixed");
@@ -13,13 +12,11 @@ const handleScroll = () => {
   }
 };
 
-// Initial check on page load
 handleScroll();
-
-// Attach the scroll event listener
 window.addEventListener("scroll", handleScroll);
+/* ####### EOF FIXED NAVBAR EFFECT AFTER SCROLL ####### */
 
-// SIDEBAR TOGGLE
+/* ####### SIDEBAR TOGGLE ####### */
 const navbarSideMenuOpenBtn = document.querySelector(".btn-navbar-menu-open");
 const navbarSideMenuCloseBtn = document.querySelector(".btn-navbar-menu-close");
 const navbarMenuParent = document.querySelector(".atel-navbar-menu-parent");
@@ -29,66 +26,9 @@ navbarSideMenuOpenBtn.addEventListener("click", () => {
 navbarSideMenuCloseBtn.addEventListener("click", () => {
   navbarMenuParent.classList.remove("show");
 });
+/* ####### EOF SIDEBAR TOGGLE ####### */
 
-// NAVBAR MENU TOGGLE
-const menuItems = document.querySelectorAll(".menu-item");
-let activeSubMenu = null;
-let activeMenuItem = null;
-let leaveTimeout;
-
-menuItems.forEach((item) => {
-  const subMenuBlock = item.nextElementSibling;
-
-  // item.addEventListener("mouseenter", () => {
-  //   clearTimeout(leaveTimeout);
-  //   resetNavbarMenu();
-
-  //   if (subMenuBlock && subMenuBlock.classList.contains("submenu-item-block")) {
-  //     subMenuBlock.classList.add("show");
-  //     item.classList.add("active");
-  //     activeSubMenu = subMenuBlock;
-  //     activeMenuItem = item;
-  //   }
-  // });
-
-  // item.addEventListener("mouseleave", () => {
-  //   leaveTimeout = setTimeout(() => {
-  //     if (subMenuBlock) {
-  //       subMenuBlock.classList.remove("show");
-  //       item.classList.remove("active");
-  //       activeSubMenu = null;
-  //       activeMenuItem = null;
-  //     }
-  //   }, 100); // Adjust delay time as needed
-  // });
-});
-
-// Close the menu when clicking outside
-// document.addEventListener("click", (event) => {
-//   // Check if the click target is not within the active menu item or submenu
-//   if (
-//     activeMenuItem &&
-//     !activeMenuItem.contains(event.target) &&
-//     activeSubMenu &&
-//     !activeSubMenu.contains(event.target)
-//   ) {
-//     resetNavbarMenu();
-//     activeSubMenu = null;
-//     activeMenuItem = null;
-//   }
-// });
-
-// Reset function to clear all active menus
-// const resetNavbarMenu = () => {
-//   document
-//     .querySelectorAll(".submenu-item-block")
-//     .forEach((subMenuBlock) => subMenuBlock.classList.remove("show"));
-
-//   document
-//     .querySelectorAll(".menu-item")
-//     .forEach((menuItem) => menuItem.classList.remove("active"));
-// };
-
+/* ####### NAVBAR SUBMENU TOGGLE - PRODUCTS SUBMENU ####### */
 const subMenuHeadItems = document.querySelectorAll(".submenu-01-head-item");
 const subMenuBodyItems = document.querySelectorAll(".submenu-01-body-item");
 
@@ -101,11 +41,6 @@ subMenuHeadItems.forEach((subMenuHeadItem, index) => {
     subMenuBodyItems.forEach((bodyItem) => bodyItem.classList.remove("show"));
     subMenuBodyItems[index].classList.add("show");
   });
-
-  // subMenuHeadItem.addEventListener("mouseleave", () => {
-  //   subMenuBodyItems.forEach((bodyItem) => bodyItem.classList.remove("show"));
-  //   subMenuBodyItems[0].classList.add("show");
-  // });
 });
 
 const subMenuHeadItemsLink = document.querySelectorAll(
@@ -135,7 +70,9 @@ subMenuHeadItemsLink.forEach((subMenuHeadItemLink, index) => {
     subMenuHeadItemGrid.classList.toggle("show");
   });
 });
+/* ####### EOF NAVBAR SUBMENU TOGGLE - PRODUCTS SUBMENU ####### */
 
+/* ####### NAVBAR SUBMENU TOGGLE - SOLUTIONS SUBMENU ####### */
 const submenuGridBtnTtl = document.querySelectorAll(".submenu-grid-ttl-btn");
 submenuGridBtnTtl.forEach((submenuGridBtnTtl, index) => {
   submenuGridBtnTtl.addEventListener("click", (event) => {
@@ -156,7 +93,9 @@ submenuGridBtnTtl.forEach((submenuGridBtnTtl, index) => {
   });
 });
 
-// DEVELOPERS SUBMENU
+/* ####### EOF NAVBAR SUBMENU TOGGLE - PRODUCTS SUBMENU ####### */
+
+/* ####### NAVBAR SUBMENU TOGGLE - DEVELOPERS PRODUCTS SUBMENU ####### */
 document.addEventListener("DOMContentLoaded", () => {
   const subMenuHeadItems3 = document.querySelectorAll(".submenu-03-head-item");
   const subMenuBodyItems3 = document.querySelectorAll(".submenu-03-body-item");
@@ -203,27 +142,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+/* ####### EOF NAVBAR SUBMENU TOGGLE - PRODUCTS SUBMENU ####### */
 
-// const submenuGridBtnTtl = document.querySelectorAll(".submenu-grid-ttl-btn");
-// submenuGridBtnTtl.forEach((submenuGridBtnTtl, index) => {
-//   submenuGridBtnTtl.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     document
-//       .querySelectorAll(".solutions-nav .submenu-grid-list.show")
-//       .forEach((openMenu) => {
-//         if (
-//           openMenu !==
-//           submenuGridBtnTtl.parentElement.querySelector(".submenu-grid-list")
-//         ) {
-//           openMenu.classList.remove("show");
-//         }
-//       });
-//     const subMenuGridListBlock =
-//       submenuGridBtnTtl.parentElement.querySelector(".submenu-grid-list");
-//     subMenuGridListBlock.classList.toggle("show");
-//   });
-// });
-
+/* ####### TRANSITION & ANIMATION STOPPER ON RESIZE ####### */
 let resizeTimer;
 window.addEventListener("resize", () => {
   document.body.classList.add("resize-animation-stopper");
@@ -232,8 +153,9 @@ window.addEventListener("resize", () => {
     document.body.classList.remove("resize-animation-stopper");
   }, 400);
 });
+/* ####### EOF TRANSITION & ANIMATION STOPPER ON RESIZE ####### */
 
-// PASSWORD ICONS TOGGLE
+/* ####### PASSWORD SHOW/HIDE ####### */
 const passwordFormElem = $(".password-form-elem .form-elem-icon");
 $(passwordFormElem).on("click", function (event) {
   const button = $(this);
@@ -247,47 +169,9 @@ $(passwordFormElem).on("click", function (event) {
     $(button).removeClass("show-password");
   }
 });
+/* ####### EOF PASSWORD SHOW/HIDE ####### */
 
-// document.addEventListener("scroll", () => {
-//   const sections = document.querySelectorAll(".features-tabs-item");
-//   const navLinks = document.querySelectorAll(".features-tabs-btn");
-
-//   let currentSection = "";
-//   sections.forEach((section) => {
-//     const sectionTop = section.offsetTop;
-//     const sectionHeight = section.clientHeight;
-//     if (window.scrollY >= sectionTop - sectionHeight / 5) {
-//       currentSection = section.getAttribute("id");
-//     }
-//   });
-
-//   navLinks.forEach((link) => {
-//     link.classList.remove("active");
-//     if (link.getAttribute("href").substring(1) === currentSection) {
-//       link.classList.add("active");
-//     }
-//   });
-// });
-
-// JavaScript for smooth scrolling with offset adjustment
-document.querySelectorAll(".features-tabs li a").forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const targetId = this.getAttribute("href").substring(1);
-    const targetElement = document.getElementById(targetId);
-    const headerOffset = 110;
-    const elementPosition = targetElement.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
-  });
-});
-
-// AUDIO PLAYER
+/* ####### CUSTOM AUDIO PLAYER ####### */
 const audio = document.querySelector(".audio-play-file");
 const playButton = document.querySelector(".audio-play-btn");
 const playIcon = playButton?.querySelector("img");
@@ -302,6 +186,7 @@ const downloadOption = document.getElementById("download-option");
 const speedOption = document.getElementById("speed-option");
 const loopOption = document.getElementById("loop-option");
 
+// TIME FORMATING FOR AUDIO PLAY
 const formatTime = (seconds) => {
   const minutes = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60)
@@ -310,56 +195,55 @@ const formatTime = (seconds) => {
   return `${minutes}:${secs}`;
 };
 
+// PLAY/PAUSE AUDIO
 playButton?.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
-    playIcon.src = "assets/icons/play_white.svg"; // Change to pause icon
+    playIcon.src = "assets/icons/play_white.svg";
   } else {
     audio.pause();
-    playIcon.src = "assets/icons/play_white.svg"; // Change back to play icon
+    playIcon.src = "assets/icons/play_white.svg";
   }
 });
 
-// Update progress bar and time display as audio plays
+// UPDATE PROGRESS BAR AND TIME DISPLAY AS AUDIO PLAYS
 audio?.addEventListener("timeupdate", () => {
   const currentTime = audio.currentTime;
   const duration = audio.duration;
   const progressPercent = (currentTime / duration) * 100;
-
   progressBar.style.width = `${progressPercent}%`;
   timeDisplay.textContent = formatTime(currentTime);
 });
 
-// Seek functionality when clicking on progress bar
+// SEEK FUNCTIONALITY WHEN CLICKING ON PROGRESS BAR
 progressBarContainer?.addEventListener("click", (e) => {
   const clickX = e.offsetX;
   const width = progressBarContainer.clientWidth;
   const duration = audio.duration;
-
   audio.currentTime = (clickX / width) * duration;
 });
 
-// Volume control toggle (mute/unmute)
+// VOLUME CONTROL TOGGLE(MUTE/UNMUTE)
 volumeButton?.addEventListener("click", () => {
   audio.muted = !audio.muted;
   volumeIcon.src = audio.muted
-    ? "assets/icons/volume_grey.svg" // Change to muted icon
-    : "assets/icons/volume_grey.svg"; // Change back to volume icon
+    ? "assets/icons/volume_grey.svg"
+    : "assets/icons/volume_grey.svg";
 });
 
-// Toggle dropdown visibility
+// TOGGLE DROPDOWN VISIBILITY
 dotsButton?.addEventListener("click", () => {
   dropdown.classList.toggle("d-none");
 });
 
-// Close dropdown if clicked outside
+// CLOSE DROPDOWN IF CLICKED OUTSIDE
 document.addEventListener("click", (event) => {
   if (!dotsButton.contains(event.target) && !dropdown.contains(event.target)) {
     dropdown.classList.add("d-none");
   }
 });
 
-// Download audio file
+// DOWNLOAD AUDIO FILE
 downloadOption?.addEventListener("click", () => {
   const link = document.createElement("a");
   link.href = audio.querySelector("source").src;
@@ -368,7 +252,7 @@ downloadOption?.addEventListener("click", () => {
   dropdown.classList.add("d-none");
 });
 
-// Toggle loop functionality
+// TOGGLE LOOP FUNCTIONALITY
 let isLooping = false;
 loopOption?.addEventListener("click", () => {
   isLooping = !isLooping;
@@ -377,7 +261,7 @@ loopOption?.addEventListener("click", () => {
   dropdown.classList.add("d-none");
 });
 
-// Adjust playback speed
+// ADJUST PLAYBACK SPEED
 speedOption?.addEventListener("click", () => {
   let currentSpeed = audio.playbackRate;
   const newSpeed = currentSpeed === 1 ? 1.5 : currentSpeed === 1.5 ? 2 : 1;
@@ -385,6 +269,7 @@ speedOption?.addEventListener("click", () => {
   speedOption.textContent = `Speed: ${newSpeed}x`;
   dropdown.classList.add("d-none");
 });
+/* ####### EOF CUSTOM AUDIO PLAYER ####### */
 
 // document.querySelectorAll('.accordion-button').forEach(button => {
 //   button.addEventListener('mouseover', () => {
@@ -457,8 +342,9 @@ speedOption?.addEventListener("click", () => {
 // });
 // window.addEventListener("resize", setEqualHeights);
 
+/* ####### JQUERY BASED PLUGINGS ####### */
 $(document).ready(function () {
-  // WHO WE HELP SLIDER
+  // SLICK SLIDER
   $(".who-we-help-slider, .sms-service-slider").slick({
     dots: false,
     infinite: true,
@@ -492,6 +378,7 @@ $(document).ready(function () {
     ],
   });
 
+  // ANIMATE ON SCROLL (AOS)
   AOS.init({});
 });
 
