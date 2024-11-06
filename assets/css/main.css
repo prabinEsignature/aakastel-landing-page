@@ -16181,23 +16181,6 @@ table td {
   cursor: pointer;
 }
 @media (max-width: 991.98px) {
-  .atel-navbar .menu-item-text-icon {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
-.atel-navbar .menu-item:hover .submenu-item-block {
-  opacity: 1;
-  visibility: visible;
-  display: block;
-}
-@media (max-width: 991.98px) {
-  .atel-navbar .menu-item:hover .submenu-item-block {
-    max-height: 1000px;
-    border: 1px solid #e5e5e5 !important;
-  }
-}
-@media (max-width: 991.98px) {
   .atel-navbar .menu-item {
     width: 100%;
     display: flex;
@@ -16208,9 +16191,24 @@ table td {
     width: 100%;
   }
 }
-.atel-navbar .menu-item.active .menu-item-icon {
-  transform: rotate(180deg);
-  transition: all ease-in-out 300ms;
+@media (max-width: 991.98px) {
+  .atel-navbar .menu-item-text-icon {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 992px) {
+  .atel-navbar .menu-item:hover .submenu-item-block {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-navbar .menu-item.active .menu-item-icon {
+    transform: rotate(180deg);
+    transition: all ease-in-out 300ms;
+  }
 }
 .atel-navbar .menu-item-wrapper {
   height: 100%;
@@ -16275,13 +16273,11 @@ table td {
     max-width: 100% !important;
   }
 }
-.atel-navbar .submenu-item-block.show {
-  opacity: 1;
-  visibility: visible;
-  display: block;
-}
 @media (max-width: 991.98px) {
   .atel-navbar .submenu-item-block.show {
+    opacity: 1;
+    visibility: visible;
+    display: block;
     max-height: 1000px;
     border: 1px solid #e5e5e5 !important;
   }
@@ -16491,6 +16487,7 @@ table td {
 }
 .atel-navbar .submenu-item-block.developers-nav .submenu-grid-item .submenu-grid-sp-wrapper {
   display: none !important;
+  border-radius: 4px;
 }
 @media (max-width: 991.98px) {
   .atel-navbar .submenu-item-block.developers-nav .submenu-grid-item .submenu-grid-sp-wrapper {
@@ -16498,6 +16495,7 @@ table td {
     max-height: 0;
     overflow: hidden;
     transition: all ease-in-out 300ms;
+    margin-top: 12px;
   }
   .atel-navbar .submenu-item-block.developers-nav .submenu-grid-item .submenu-grid-sp-wrapper.show {
     max-height: 1000px;

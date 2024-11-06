@@ -19,6 +19,7 @@ $z-index-navbar-toggler: 1010;
     min-height: 72px;
   }
 
+  // ATEL NAVBAR MENU
   &-menu {
     position: relative;
     height: 100%;
@@ -63,6 +64,7 @@ $z-index-navbar-toggler: 1010;
     }
   }
 
+  // ATEL NAVBAR BUTTONS
   &-btns {
     gap: 6px;
     @include breakpoint-down(lg) {
@@ -70,6 +72,7 @@ $z-index-navbar-toggler: 1010;
     }
   }
 
+  // ATEL NAVBAR BRAND
   .navbar-brand {
     max-width: 152px;
     display: inline-flex;
@@ -83,31 +86,12 @@ $z-index-navbar-toggler: 1010;
     }
   }
 
+  // MENU ITEMS
   .menu-item {
     padding: 0 10px;
     height: 100%;
     position: relative;
     cursor: pointer;
-
-    &-text-icon {
-      @include breakpoint-down(lg) {
-        width: 100%;
-        justify-content: space-between;
-      }
-    }
-
-    &:hover {
-      .submenu-item-block {
-        opacity: 1;
-        visibility: visible;
-        display: block;
-
-        @include breakpoint-down(lg) {
-          max-height: 1000px;
-          border: 1px solid color("grey-2") !important;
-        }
-      }
-    }
 
     @include breakpoint-down(lg) {
       width: 100%;
@@ -119,15 +103,38 @@ $z-index-navbar-toggler: 1010;
       width: 100%;
     }
 
-    &.active {
-      .menu-item-icon {
-        transform: rotate(180deg);
-        transition: $default-transition;
+    &-text-icon {
+      @include breakpoint-down(lg) {
+        width: 100%;
+        justify-content: space-between;
       }
     }
 
+    // MENU HOVER EFFECT - FOR LARGE SCREEN DEVICE ONLY
+    &:hover {
+      .submenu-item-block {
+        @include breakpoint-up(lg) {
+          opacity: 1;
+          visibility: visible;
+          display: block;
+        }
+      }
+    }
+
+    // MENU ACTIVE EFFECT - FOR SMALL SCREEN DEVICE ONLY
+    &.active {
+      .menu-item-icon {
+        @include breakpoint-down(lg) {
+          transform: rotate(180deg);
+          transition: $default-transition;
+        }
+      }
+    }
+
+    // MENU ITEM WRAPPER
     &-wrapper {
       height: 100%;
+
       @include breakpoint-down(lg) {
         border: 1.5px solid color("grey-2");
         width: 100%;
@@ -152,6 +159,7 @@ $z-index-navbar-toggler: 1010;
     }
   }
 
+  // SUBMENU ITEM BLOCK
   .submenu-item-block {
     position: absolute;
     top: 60px;
@@ -192,17 +200,18 @@ $z-index-navbar-toggler: 1010;
       max-width: 100% !important;
     }
 
+    // SUBMENU BLOCK - ON SHOW STATE
     &.show {
-      opacity: 1;
-      visibility: visible;
-      display: block;
-
       @include breakpoint-down(lg) {
+        opacity: 1;
+        visibility: visible;
+        display: block;
         max-height: 1000px;
         border: 1px solid color("grey-2") !important;
       }
     }
 
+    // PRODUCT NAV
     &.products-nav {
       width: 920px;
       left: 225%;
@@ -234,6 +243,7 @@ $z-index-navbar-toggler: 1010;
             }
           }
 
+          // SUBMENU ITEM - ACTIVE & HOVER STATE
           &.active,
           &:hover {
             background: color("p-green-50") !important;
@@ -287,6 +297,7 @@ $z-index-navbar-toggler: 1010;
       }
     }
 
+    // SOLUTIONS NAV
     &.solutions-nav {
       width: 940px;
       left: 120%;
@@ -360,6 +371,7 @@ $z-index-navbar-toggler: 1010;
       }
     }
 
+    // DEVELOPERS NAV
     &.developers-nav {
       width: 840px;
       left: 20%;
@@ -419,12 +431,14 @@ $z-index-navbar-toggler: 1010;
 
           .submenu-grid-sp-wrapper {
             display: none !important;
+            border-radius: 4px;
 
             @include breakpoint-down(lg) {
               display: grid !important;
               max-height: 0;
               overflow: hidden;
               transition: $default-transition;
+              margin-top: 12px;
 
               &.show {
                 max-height: 1000px;
@@ -443,6 +457,7 @@ $z-index-navbar-toggler: 1010;
       }
     }
 
+    // RESOURCES NAV
     &.resources-nav {
       width: 506px;
 

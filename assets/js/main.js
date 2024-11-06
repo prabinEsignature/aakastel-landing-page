@@ -23,10 +23,71 @@ const navbarMenuParent = document.querySelector(".atel-navbar-menu-parent");
 navbarSideMenuOpenBtn.addEventListener("click", () => {
   navbarMenuParent.classList.add("show");
 });
+
 navbarSideMenuCloseBtn.addEventListener("click", () => {
   navbarMenuParent.classList.remove("show");
 });
 /* ####### EOF SIDEBAR TOGGLE ####### */
+
+/* ####### NAVBAR MENU TOGGLE ####### */
+const menuItems = document.querySelectorAll(".menu-item");
+let activeSubMenu = null;
+let activeMenuItem = null;
+
+menuItems.forEach((menuItem) => {
+  const subMenuBlock = menuItem.querySelector(".submenu-item-block");
+
+  // Prevent clicks inside submenu-item-block from triggering the parent menuItem event
+  if (subMenuBlock) {
+    subMenuBlock.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+  }
+
+  menuItem.addEventListener("click", () => {
+    if (subMenuBlock === activeSubMenu) {
+      subMenuBlock.classList.toggle("show");
+      menuItem.classList.toggle("active");
+    } else {
+      resetNavbarMenu();
+      if (subMenuBlock) {
+        subMenuBlock.classList.add("show");
+        menuItem.classList.add("active");
+        activeSubMenu = subMenuBlock;
+        activeMenuItem = menuItem;
+      } else {
+        activeSubMenu = null;
+        activeMenuItem = null;
+      }
+    }
+  });
+});
+
+// Close the menu when clicking outside
+document.addEventListener("click", (event) => {
+  // Check if the click target is not within the active menu item or submenu
+  if (
+    activeMenuItem &&
+    !activeMenuItem.contains(event.target) &&
+    activeSubMenu &&
+    !activeSubMenu.contains(event.target)
+  ) {
+    resetNavbarMenu();
+    activeSubMenu = null;
+    activeMenuItem = null;
+  }
+});
+
+const resetNavbarMenu = () => {
+  document
+    .querySelectorAll(".submenu-item-block")
+    .forEach((subMenuBlock) => subMenuBlock.classList.remove("show"));
+
+  document
+    .querySelectorAll(".menu-item")
+    .forEach((menuItem) => menuItem.classList.remove("active"));
+};
+/* ####### EOF NAVBAR MENU TOGGLE ####### */
 
 /* ####### NAVBAR SUBMENU TOGGLE - PRODUCTS SUBMENU ####### */
 const subMenuHeadItems = document.querySelectorAll(".submenu-01-head-item");
@@ -426,7 +487,7 @@ const svgElement = document.getElementById("nepal-map");
 const presenceInfoDiv = document.getElementById("presence-info");
 
 const changePathColor = (locationId) => {
-  const color = "#3bb24a";  
+  const color = "#3bb24a";
   const path = document.getElementById(locationId);
 
   if (path) {
@@ -446,7 +507,7 @@ const changePathColor = (locationId) => {
 const resetPathColor = () => {
   const paths = document.querySelectorAll("svg path");
   paths.forEach((path) => {
-    path.style.fill = "#C7E1E5";  
+    path.style.fill = "#C7E1E5";
     path.setAttribute("transform", "");
   });
 };
