@@ -2,16 +2,6 @@
     margin-top: -290px;
     position: relative;
 
-    &::after{
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 45%;
-        width: 100%;
-        background: color("white");
-    }
-
     .segment-office-ivr-vid {
         max-width: 1062px;
         min-height: 521px;

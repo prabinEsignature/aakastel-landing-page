@@ -448,7 +448,7 @@ $breakpoints: (
   xl: 12px,
   lg: 16px,
   md: 20px,
-  sm: 24px
+  sm: 24px,
 );
 
 @each $size, $value in $spacing-values {
@@ -732,4 +732,19 @@ code {
   overflow: hidden;
   height: 100vh;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

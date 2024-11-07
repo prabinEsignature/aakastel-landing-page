@@ -158,12 +158,16 @@ $button-variants: (
     height: 52px;
     min-width: 146px;
 
-    @include breakpoint-down(md) {
+    @include breakpoint-down(lg) {
       height: 48px;
     }
 
-    @include breakpoint-down(sm) {
+    @include breakpoint-down(md) {
       height: 44px;
+    }
+
+    @include breakpoint-down(sm) {
+      height: 40px;
     }
   }
 

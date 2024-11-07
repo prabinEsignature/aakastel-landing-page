@@ -2,6 +2,10 @@
     position: sticky;
     top: 100px;
 
+    @include breakpoint-down(sm){
+        top: 90px;
+    }
+
     .segment-heading {
         max-width: 626px;
     }
@@ -40,6 +44,10 @@
     }
 
     .features-tabs {
+        @include breakpoint-down(sm){
+            margin: 4px 0;
+        }
+
         .features-tabs-btn {
             &.active,
             &[aria-selected="true"] {
@@ -67,6 +75,7 @@
 
     @include breakpoint-down(sm) {
         margin-top: 40px;
+        top: 108px;
     }
 
     @include breakpoint-down(md) {
@@ -223,6 +232,10 @@
                 flex-direction: column;
             }
 
+            @include breakpoint-down(sm){
+                row-gap: 8px!important;
+            }
+
             &-icon {
                 transition: $default-transition;
             }
@@ -248,8 +261,11 @@
                 @include breakpoint-down(sm) {
                     min-height: 48px;
                     border-radius: 8px !important;
+                    padding-left: 12px;
+                    padding-right: 12px;
                 }
             }
+
             &-m {
                 width: 184px;
                 min-height: 96px;
@@ -293,6 +309,11 @@
                     transform: none;
                     flex-direction: row !important;
                 }
+
+                @include breakpoint-down(sm){
+                    min-height: 48px;
+                    width: 100%;
+                }
             }
 
             &-r {
@@ -322,6 +343,8 @@
                 @include breakpoint-down(sm) {
                     min-height: 48px;
                     border-radius: 8px !important;
+                    padding-left: 12px;
+                    padding-right: 12px;
                 }
 
                 .compare-data-item-icon {
@@ -360,6 +383,10 @@
             gap: 24px;
         }
 
+        .industry-features{
+            margin-top: 16px!important;
+        }
+
         .industry-feature-item,
         .industry-feature-item p {
             transition: $default-transition;
@@ -375,6 +402,18 @@
         }
         &-logo {
             max-width: 800px;
+        }
+
+        @include breakpoint-down(lg){
+            gap: 24px!important;
+        }
+
+        @include breakpoint-down(md){
+            gap: 16px!important;
+        }
+
+        @include breakpoint-down(sm){
+            gap: 12px!important;
         }
     }
 
@@ -410,6 +449,10 @@
             @include breakpoint-down(lg) {
                 padding: 20px !important;
             }
+
+            @include breakpoint-down(sm){
+                min-height: auto;
+            }
         }
 
         .downloads-app-link {
@@ -427,6 +470,7 @@
 
 .atel-lt-blogs {
     border-bottom: 1px solid color("grey-3");
+    overflow-y: hidden;
 
     &::after {
         content: "";
@@ -463,11 +507,21 @@
             grid-template-columns: 1fr;
         }
     }
+
+    .presence-map{
+        #nepal-map{
+            @include breakpoint-down(sm){
+                height: 100%!important;
+                width: 100%!important;
+            }
+        }
+    }
 }
 
 .atel-presence {
     .presence-tabs {
         margin: 30px 0;
+
         @include breakpoint-down(lg) {
             max-width: 400px;
             margin-right: auto;
@@ -477,6 +531,7 @@
 
         @include breakpoint-down(sm) {
             width: 100%;
+            margin-top: 0;
         }
 
         .nav-tabs {

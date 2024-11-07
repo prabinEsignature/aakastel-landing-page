@@ -58,6 +58,14 @@
     .atel-sms-gateway-segment {
         gap: 80px;
 
+        @include breakpoint-down(xxl){
+            gap: 60px;
+        }
+
+        @include breakpoint-down(xl){
+            gap: 40px;
+        }
+
         .sms-gateway-btns {
             .btn {
                 min-width: 180px;
@@ -69,6 +77,30 @@
 .atel-sms-features {
     .atel-sms-features-segment {
         max-width: 1064px;
+    }
+
+    .sms-features-list {
+        @include breakpoint-down(lg) {
+            gap: 24px !important;
+        }
+
+        @include breakpoint-down(sm) {
+            gap: 16px !important;
+        }
+
+        @include breakpoint-down(xs) {
+            gap: 12px !important;
+        }
+    }
+
+    .sms-features-item {
+        @include breakpoint-down(lg) {
+            padding: 20px !important;
+        }
+
+        @include breakpoint-down(sm){
+            padding: 16px!important;
+        }
     }
 }
 
@@ -126,17 +158,33 @@
     .atel-engagement-segment {
         max-width: 1064px;
     }
+
+    .engagement-list{
+        @include breakpoint-down(lg){
+            gap: 20px!important;
+        }
+
+        @include breakpoint-down(sm){
+            gap: 16px!important;
+        }
+
+        .engagement-item{
+            @include breakpoint-down(lg){
+                padding: 20px!important;
+            }
+        }
+    }
 }
 
 .atel-dev-resource {
     .atel-dev-resource-segment {
         grid-template-columns: 40% auto;
 
-        @include breakpoint-down(xxl){
+        @include breakpoint-down(xxl) {
             grid-template-columns: 30% auto;
         }
 
-        @include breakpoint-down(xl){
+        @include breakpoint-down(xl) {
             grid-template-columns: 100%;
         }
     }
@@ -151,7 +199,7 @@
 
                 &.active {
                     background: color("mdt-green-v3") !important;
-                    color: color("primary")!important;
+                    color: color("primary") !important;
                 }
             }
         }
@@ -162,7 +210,9 @@
     }
 }
 
-.atel-sms-service{
+.atel-sms-service {
+    overflow-y: hidden;
+
     .slider-cards {
         .card {
             height: 380px;

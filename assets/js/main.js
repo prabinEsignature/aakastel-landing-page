@@ -178,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   subMenuHeadItemsLink3.forEach((subMenuHeadItemLink, index) => {
     subMenuHeadItemLink.addEventListener("click", (event) => {
-
       document
         .querySelectorAll(".submenu-03-head-list .submenu-grid-sp-wrapper.show")
         .forEach((openMenu) => {
@@ -291,13 +290,16 @@ volumeButton?.addEventListener("click", () => {
 
 // TOGGLE DROPDOWN VISIBILITY
 dotsButton?.addEventListener("click", () => {
-  dropdown.classList.toggle("d-none");
+  dropdown?.classList.toggle("d-none");
 });
 
 // CLOSE DROPDOWN IF CLICKED OUTSIDE
 document.addEventListener("click", (event) => {
-  if (!dotsButton.contains(event.target) && !dropdown.contains(event.target)) {
-    dropdown.classList.add("d-none");
+  if (
+    !dotsButton?.contains(event.target) &&
+    !dropdown?.contains(event.target)
+  ) {
+    dropdown?.classList.add("d-none");
   }
 });
 
@@ -481,7 +483,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* ####### PRESENCE MAP - DISTRICT MAPPING ####### */
-const zoomScale = 1.5;
+const zoomScale = 1;
 const svgElement = document.getElementById("nepal-map");
 const presenceInfoDiv = document.getElementById("presence-info");
 
@@ -492,14 +494,23 @@ const changePathColor = (locationId) => {
   if (path) {
     path.style.fill = color;
     const bbox = path.getBBox();
-    const xOffset = (1 - zoomScale) * (bbox.x + bbox.width / 2);
-    const yOffset = (1 - zoomScale) * (bbox.y + bbox.height / 2);
+
+    // Get scale factors between viewBox and actual displayed size
+    const svgRect = svgElement.getBoundingClientRect();
+    const viewBoxWidth = svgElement.viewBox.baseVal.width;
+    const viewBoxHeight = svgElement.viewBox.baseVal.height;
+    const xScale = svgRect.width / viewBoxWidth;
+    const yScale = svgRect.height / viewBoxHeight;
+
+    // Scale the bounding box to match actual display size
+    const xOffset = (1 - zoomScale) * (bbox.x + bbox.width / 2) * xScale;
+    const yOffset = (1 - zoomScale) * (bbox.y + bbox.height / 2) * yScale;
     path.setAttribute(
       "transform",
       `translate(${xOffset}, ${yOffset}) scale(${zoomScale})`
     );
 
-    placeDivAtPathPosition(bbox);
+    placeDivAtPathPosition(bbox, xScale, yScale);
   }
 };
 
@@ -511,12 +522,13 @@ const resetPathColor = () => {
   });
 };
 
-function placeDivAtPathPosition(bbox) {
-  // Calculate the center of the path
-  const x = bbox.x + bbox.width / 2;
-  const y = bbox.y + bbox.height / 2;
+function placeDivAtPathPosition(bbox, xScale, yScale) {
+  // Calculate the center of the path, scaled for the displayed SVG
+  const x = (bbox.x + bbox.width / 2) * xScale;
+  const y = (bbox.y + bbox.height / 2) * yScale;
+  
   presenceInfoDiv.style.left = `${x - 100}px`;
-  presenceInfoDiv.style.top = `${y + bbox.height}px`;
+  presenceInfoDiv.style.top = `${y + bbox.height * yScale}px`;
   presenceInfoDiv.style.position = "absolute";
   presenceInfoDiv.classList.remove("d-none");
 }

@@ -32,10 +32,22 @@
             border-radius: 20px;
         }
 
+        .cta-call-ttl{
+            @include breakpoint-down(sm){
+                margin-top: 20px!important;
+            }
+        }
+
         .cta-call-icon {
             max-width: 80px;
         }
+
         .cta-call-btns {
+            @include breakpoint-down(sm){
+                margin-top: 24px!important;
+                width: 100%;
+            }
+
             .btn-white-black {
                 &:hover {
                     background: color("p-green-50") !important;

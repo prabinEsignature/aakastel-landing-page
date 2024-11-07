@@ -41,6 +41,15 @@
     @include breakpoint-down(lg) {
         gap: 24px !important;
     }
+
+    @include breakpoint-down(sm){
+        gap: 20px!important;
+    }
+
+    @include breakpoint-down(xs){
+        gap: 16px!important;
+    }
+
     .card {
         transition: $default-transition;
         &-img {
@@ -70,6 +79,14 @@
 }
 
 .plain-cards {
+    @include breakpoint-down(lg) {
+        gap: 24px !important;
+    }
+
+    @include breakpoint-down(sm) {
+        gap: 16px !important;
+    }
+
     .plain-card {
         &-item {
             &:hover {
@@ -89,6 +106,10 @@
                         color: color("white") !important;
                     }
                 }
+            }
+
+            @include breakpoint-down(sm){
+                padding: 16px 12px!important;
             }
         }
     }
