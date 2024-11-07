@@ -13769,22 +13769,22 @@ p, .text-8xl, .text-7xl, .text-6xl, .text-5xl, .text-4xl, .text-3xl, .text-2xl, 
     font-size: 36px !important;
   }
 }
-@media screen and (max-width: 575.98px) {
+@media screen and (max-width: 767.98px) {
   .text-8xl {
     font-size: 32px !important;
   }
 }
-@media screen and (max-width: 479.98px) {
+@media screen and (max-width: 575.98px) {
   .text-8xl {
     font-size: 28px !important;
   }
 }
-@media screen and (max-width: 419.98px) {
+@media screen and (max-width: 479.98px) {
   .text-8xl {
     font-size: 24px !important;
   }
 }
-@media screen and (max-width: 359.98px) {
+@media screen and (max-width: 419.98px) {
   .text-8xl {
     font-size: 20px !important;
   }
@@ -17749,8 +17749,7 @@ table td {
   .atel-power-voice .segment-power-voice {
     border-radius: 24px;
     flex-direction: column-reverse;
-    padding-left: 0;
-    padding-bottom: 0;
+    padding: 0 !important;
   }
 }
 .atel-power-voice .segment-power-voice .power-voice-img {
@@ -17768,7 +17767,7 @@ table td {
     position: relative !important;
     max-width: 100%;
     width: 100%;
-    left: 0;
+    left: -16px;
   }
 }
 .atel-power-voice .segment-heading .segment-ttl {
