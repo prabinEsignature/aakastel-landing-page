@@ -27,6 +27,43 @@
             grid-template-columns: 100%;
         }
     }
+
+    .work-step-item {
+        @include breakpoint-down(lg) {
+            padding: 20px !important;
+        }
+
+        @include breakpoint-down(sm) {
+            padding: 16px !important;
+            column-gap: 16px !important;
+        }
+
+        @include breakpoint-down(xs) {
+            padding: 12px !important;
+        }
+
+        &-icon {
+            @include breakpoint-down(xl) {
+                width: 48px;
+                height: 48px;
+                min-width: 48px;
+                min-height: 48px;
+            }
+
+            @include breakpoint-down(sm) {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                min-height: 40px;
+            }
+        }
+    }
+
+    .system-work-steps {
+        @include breakpoint-down(sm) {
+            row-gap: 16px !important;
+        }
+    }
 }
 
 .atel-call-solution {
@@ -53,9 +90,28 @@
         margin-right: auto;
         margin-left: auto;
 
-        @include breakpoint-down(lg) {
+        @include breakpoint-down(xl) {
             grid-template-columns: 100%;
             gap: 20px !important;
+        }
+
+        .accordion-item {
+            @include breakpoint-down(xl) {
+                padding-top: 12px !important;
+                padding-bottom: 12px !important;
+                margin-bottom: 0!important;
+            }
+
+            .accordion-button {
+                @include breakpoint-down(sm) {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
+            }
+
+            .accordion-body{
+                padding-left: 0!important;
+            }
         }
     }
 }

@@ -35,6 +35,9 @@
         .cta-call-ttl{
             @include breakpoint-down(sm){
                 margin-top: 20px!important;
+                max-width: 300px!important;
+                margin-right: auto;
+                margin-left: auto;
             }
         }
 
@@ -62,6 +65,12 @@
         @include breakpoint-down(sm){
             @include breakpoint-down(sm){
                 grid-template-columns: repeat(1, 1fr)!important;
+            }
+        }
+
+        .footer-links-list{
+            @include breakpoint-down(sm){
+                row-gap: 4px!important;
             }
         }
 
@@ -110,6 +119,11 @@
         @include breakpoint-down(lg) {
             flex-direction: column;
             gap: 20px;
+        }
+
+        @include breakpoint-down(sm){
+            padding-top: 0!important;
+            gap: 12px;
         }
 
         .tac-list{
