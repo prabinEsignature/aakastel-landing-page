@@ -6,13 +6,14 @@
             margin-bottom: 16px;
         }
 
-        @include breakpoint-down(md){
-            padding-top: 8px!important;
-            padding-bottom: 8px!important;
+        @include breakpoint-down(md) {
+            padding-top: 8px !important;
+            padding-bottom: 8px !important;
         }
     }
 
     &-button {
+        transition: $default-transition;
         &::after {
             display: none;
         }
@@ -21,11 +22,62 @@
             border-left-color: color("primary") !important;
             color: color("night") !important;
         }
+
+        &:hover {
+            color: color("night") !important;
+            border-color: color("primary") !important;
+        }
     }
 
     &-body {
         p {
             display: inline-block;
+        }
+    }
+}
+
+.atel-faq {
+    .accordion {
+        &-button {
+            display: flex;
+            justify-content: space-between;
+
+            &[aria-expanded="true"] {
+                .accordion-button-icon {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &:hover {
+                .accordion-button-icon {
+                    background-color: color("p-green-50")!important;
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233BB24A'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                }
+            }
+
+            &-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23757575'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                background-size: 24px;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: $default-transition;
+
+                @include breakpoint-down(lg){
+                    width: 32px!important;
+                    height: 32px!important;
+                    min-width: 32px!important;
+                    min-height: 32px!important;
+                    background-size: 20px;
+                }
+
+                @include breakpoint-down(lg){
+                    width: 28px!important;
+                    height: 28px!important;
+                    min-width: 28px!important;
+                    min-height: 28px!important;
+                    background-size: 16px;
+                }
+            }
         }
     }
 }

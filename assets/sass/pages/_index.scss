@@ -345,16 +345,6 @@
         border-radius: 28px;
     }
 
-    .accordion {
-        .accordion-button {
-            transition: $default-transition;
-            &:hover {
-                color: color("night") !important;
-                border-color: color("primary") !important;
-            }
-        }
-    }
-
     .support-industry-accordion {
         gap: 80px;
 
