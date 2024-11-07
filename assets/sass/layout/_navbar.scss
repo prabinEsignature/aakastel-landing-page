@@ -526,6 +526,12 @@ $z-index-navbar-toggler: 1010;
       .navbar-logo-default {
         display: none;
       }
+
+      .btn-navbar-menu-open{
+        img{
+          filter: invert(0) brightness(100);
+        }
+      }
     }
   }
 
@@ -537,6 +543,11 @@ $z-index-navbar-toggler: 1010;
         }
         .navbar-logo-default {
           display: block;
+        }
+        .btn-navbar-menu-open{
+          img{
+            filter: none;
+          }
         }
       }
     }

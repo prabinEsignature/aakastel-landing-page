@@ -16515,11 +16515,17 @@ table td {
 .atel-header .atel-navbar.atel-navbar-invert .navbar-logo-default {
   display: none;
 }
+.atel-header .atel-navbar.atel-navbar-invert .btn-navbar-menu-open img {
+  filter: invert(0) brightness(100);
+}
 .atel-header.atel-header-fixed .atel-navbar.atel-navbar-invert .navbar-logo-white {
   display: none;
 }
 .atel-header.atel-header-fixed .atel-navbar.atel-navbar-invert .navbar-logo-default {
   display: block;
+}
+.atel-header.atel-header-fixed .atel-navbar.atel-navbar-invert .btn-navbar-menu-open img {
+  filter: none;
 }
 .atel-header:not(.atel-header-fixed) .atel-navbar.atel-navbar-invert .menu-item-text {
   color: #fff;
