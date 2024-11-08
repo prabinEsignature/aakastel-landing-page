@@ -562,12 +562,16 @@ $z-index-navbar-toggler: 1010;
       &.atel-navbar-invert {
         .menu-item {
           &-text {
-            color: color("white");
+            @include breakpoint-up(lg){
+              color: color("white");
+            }
           }
 
           &-icon {
             img {
-              filter: invert(0) brightness(100);
+              @include breakpoint-up(lg){
+                filter: invert(0) brightness(100);
+              }
             }
           }
         }

@@ -1,5 +1,10 @@
 .atel-benefits {
     margin-top: -76px;
+
+    @include breakpoint-down(lg){
+        margin-top:  -48px;
+    }
+
     .benefits-item {
         position: relative;
 
@@ -66,6 +71,10 @@
             gap: 40px;
         }
 
+        @include breakpoint-down(sm){
+            gap: 24px;
+        }
+
         .sms-gateway-btns {
             .btn {
                 min-width: 180px;
@@ -109,16 +118,20 @@
         .textline-item {
             position: relative;
 
-            @include breakpoint-down(sm) {
+            @include breakpoint-down(md) {
                 text-align: center;
                 margin-bottom: 60px;
+            }
+
+            @include breakpoint-down(sm){
+                margin-bottom: 36px;
             }
 
             &::after {
                 position: absolute;
                 content: "";
-                bottom: -60px;
-                height: 60px;
+                bottom: -36px;
+                height: 36px;
                 width: 1px;
                 border-left: 1px dashed color("primary");
                 left: 50%;
@@ -152,6 +165,8 @@
 }
 
 .atel-engagement {
+    overflow-y: hidden;
+    
     .segment-heading {
         max-width: 732px;
     }

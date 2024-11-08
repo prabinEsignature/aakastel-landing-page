@@ -73,6 +73,18 @@
     .why-voice-broadcast-accordion{
         max-width: 1064px;
         gap: 80px;
+
+        @include breakpoint-down(lg){
+            gap: 60px;
+        }
+
+        @include breakpoint-down(md){
+            gap: 60px;
+        }
+
+        @include breakpoint-down(sm){
+            gap: 40px;
+        }
     }
 }
 
@@ -81,6 +93,11 @@
         @include breakpoint-down(lg){
             padding-left: 24px!important;
             padding-right: 24px!important;
+        }
+
+        @include breakpoint-down(sm){
+            padding-left: 16px!important;
+            padding-right: 16px!important;
         }
     }
 }

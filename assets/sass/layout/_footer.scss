@@ -12,6 +12,10 @@
         @include breakpoint-down(lg) {
             grid-template-columns: 100% !important;
         }
+
+        @include breakpoint-down(sm){
+            gap: 24px !important;
+        }
     }
 
     .footer-segment-cta {

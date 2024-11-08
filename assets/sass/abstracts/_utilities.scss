@@ -448,7 +448,7 @@ $breakpoints: (
   xl: 12px,
   lg: 16px,
   md: 20px,
-  sm: 24px,
+  sm: 24px
 );
 
 @each $size, $value in $spacing-values {
@@ -531,6 +531,14 @@ $negative-margin-values: (
   }
 }
 
+$font-size-breakpoints: (
+  "xs": "479.98px",
+  "sm": "575.98px",
+  "md": "767.98px",
+  "lg": "991.98px",
+  "xl": "1199.98px"
+);
+
 // Mixin to generate margin and padding classes
 @mixin generate-spacing-classes($property, $prefix) {
   @each $key, $value in $sizes {
@@ -556,6 +564,34 @@ $negative-margin-values: (
     }
     .#{$prefix}-custom-#{$key} {
       #{$property}: #{$value};
+    }
+
+    @each $breakpoint, $breakpoint-width in $font-size-breakpoints {
+      @media (max-width: #{$breakpoint-width}) {
+        .#{$prefix}t-custom-#{$breakpoint}-#{$key} {
+          #{$property}-top: #{$value} !important;
+        }
+        .#{$prefix}b-custom-#{$breakpoint}-#{$key} {
+          #{$property}-bottom: #{$value} !important;
+        }
+        .#{$prefix}s-custom-#{$breakpoint}-#{$key} {
+          #{$property}-left: #{$value} !important;
+        }
+        .#{$prefix}e-custom-#{$breakpoint}-#{$key} {
+          #{$property}-right: #{$value} !important;
+        }
+        .#{$prefix}x-custom-#{$breakpoint}-#{$key} {
+          #{$property}-left: #{$value} !important;
+          #{$property}-right: #{$value} !important;
+        }
+        .#{$prefix}y-custom-#{$breakpoint}-#{$key} {
+          #{$property}-top: #{$value} !important;
+          #{$property}-bottom: #{$value} !important;
+        }
+        .#{$prefix}-custom-#{$breakpoint}-#{$key} {
+          #{$property}: #{$value} !important;
+        }
+      }
     }
   }
 }
@@ -733,18 +769,20 @@ code {
   height: 100vh;
 }
 
+// VIDEO
+/* 16:9 Aspect Ratio Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625 * 100) */
+  overflow: hidden;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Responsive Video */
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

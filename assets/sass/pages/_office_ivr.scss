@@ -4,10 +4,10 @@
 
     .segment-office-ivr-vid {
         max-width: 1062px;
-        min-height: 521px;
+        // min-height: 521px;
         z-index: 2;
 
-        .vid-play-btn {
+        .vid-play-pause-btn {
             background: rgba-color($night, 0.4);
             transform: translate(-50%, -50%);
 

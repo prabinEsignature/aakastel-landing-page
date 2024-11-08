@@ -526,7 +526,7 @@ function placeDivAtPathPosition(bbox, xScale, yScale) {
   // Calculate the center of the path, scaled for the displayed SVG
   const x = (bbox.x + bbox.width / 2) * xScale;
   const y = (bbox.y + bbox.height / 2) * yScale;
-  
+
   presenceInfoDiv.style.left = `${x - 100}px`;
   presenceInfoDiv.style.top = `${y + bbox.height * yScale}px`;
   presenceInfoDiv.style.position = "absolute";
@@ -542,3 +542,50 @@ locationItems.forEach((locationItem) => {
   });
 });
 /* ####### EOF PRESENCE MAP - DISTRICT MAPPING ####### */
+
+/* ####### VIDEO PLAY/PAUSE FEATURE ####### */
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.querySelector(".video-container video");
+  const videoContainer = document.querySelector(".video-container");
+  const playPauseBtn = document.querySelector(".vid-play-pause-btn");
+  const playIcon = "assets/icons/play_large_white.svg";
+  const pauseIcon = "assets/icons/pause_white.svg";
+
+  function togglePlayPause() {
+    if (video.paused || video.ended) {
+      video.play();
+      playPauseBtn.classList.add("d-none");
+      playPauseBtn.querySelector("img").src = pauseIcon;
+    } else {
+      video.pause();
+      playPauseBtn.classList.remove("d-none");
+      playPauseBtn.querySelector("img").src = playIcon;
+    }
+  }
+
+  video.addEventListener("pause", () => {
+    playPauseBtn.classList.remove("d-none");
+    playPauseBtn.querySelector("img").src = playIcon;
+  });
+
+  video.addEventListener("ended", () => {
+    playPauseBtn.classList.remove("d-none");
+    playPauseBtn.querySelector("img").src = playIcon;
+  });
+
+  // Show button on hover if video is playing, hide it on mouse leave
+  videoContainer.addEventListener("mouseenter", () => {
+    if (!video.paused && !video.ended) {
+      playPauseBtn.classList.remove("d-none");
+    }
+  });
+
+  videoContainer.addEventListener("mouseleave", () => {
+    if (!video.paused && !video.ended) {
+      playPauseBtn.classList.add("d-none");
+    }
+  });
+
+  playPauseBtn.addEventListener("click", togglePlayPause);
+});
+/* ####### EOF VIDEO PLAY/PAUSE FEATURE ####### */
