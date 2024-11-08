@@ -35,6 +35,27 @@
     }
 }
 
+.atel-whatsapp-api-for {
+    .whatsapp-api-for-item{
+        transition: $default-transition;
+        &:hover{
+            background: color("primary")!important;
+
+            p, h3{
+                color: color("white")!important;
+            }
+
+            .btn{
+                background: color("white")!important;
+            }
+        }
+
+        @include breakpoint-down(sm){
+            row-gap: 16px!important;
+        }
+    }
+}
+
 .atel-build-better {
     .atel-build-better-segment {
         border-radius: 40px;

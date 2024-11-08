@@ -563,28 +563,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // video.addEventListener("pause", () => {
-  //   playPauseBtn.classList.remove("d-none");
-  //   playPauseBtn.querySelector("img").src = playIcon;
-  // });
-
-  // video.addEventListener("ended", () => {
-  //   playPauseBtn.classList.remove("d-none");
-  //   playPauseBtn.querySelector("img").src = playIcon;
-  // });
-
-  // videoContainer.addEventListener("mouseenter", () => {
-  //   if (!video.paused && !video.ended) {
-  //     playPauseBtn.classList.remove("d-none");
-  //   }
-  // });
-
-  // videoContainer.addEventListener("mouseleave", () => {
-  //   if (!video.paused && !video.ended) {
-  //     playPauseBtn.classList.add("d-none");
-  //   }
-  // });
-
-  playPauseBtn.addEventListener("click", togglePlayPause);
+  playPauseBtn?.addEventListener("click", togglePlayPause);
 });
 /* ####### EOF VIDEO PLAY/PAUSE FEATURE ####### */

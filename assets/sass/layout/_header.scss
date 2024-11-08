@@ -35,15 +35,15 @@
                 margin: 80px auto;
             }
 
-            @include breakpoint-down(lg){
+            @include breakpoint-down(lg) {
                 margin: 60px auto;
             }
 
-            @include breakpoint-down(sm){
+            @include breakpoint-down(sm) {
                 margin: 40px auto;
             }
 
-            @include breakpoint-down(sm){
+            @include breakpoint-down(sm) {
                 margin: 20px auto;
             }
         }
@@ -81,8 +81,8 @@
                     display: none;
                 }
 
-                &-wrapper{
-                    @include breakpoint-down(sm){
+                &-wrapper {
+                    @include breakpoint-down(sm) {
                         width: 100%;
                     }
                 }
@@ -116,13 +116,13 @@
                     width: 280px;
                 }
 
-                @include breakpoint-down(xs){
+                @include breakpoint-down(xs) {
                     width: 90%;
                     bottom: 20px;
                 }
             }
 
-            .audio-play-file{
+            .audio-play-file {
                 display: none;
             }
 
@@ -133,7 +133,7 @@
                     max-width: 240px;
                 }
 
-                @include breakpoint-down(sm){
+                @include breakpoint-down(sm) {
                     max-width: 100%;
                 }
             }
@@ -147,14 +147,14 @@
                 }
             }
 
-            .audio-dots-btn{
+            .audio-dots-btn {
                 position: relative;
 
-                &:hover{
-                    opacity: 1!important;
+                &:hover {
+                    opacity: 1 !important;
                 }
 
-                .audio-options-dropdown{
+                .audio-options-dropdown {
                     background: color("white");
                     position: absolute;
                     top: 100%;
@@ -164,18 +164,18 @@
                     width: 140px;
                 }
 
-                .audio-options-list{
+                .audio-options-list {
                     padding: 0;
                     margin: 0;
                 }
 
-                .audio-option{
+                .audio-option {
                     color: color("primary");
                     font-size: 12px;
                     padding: 6px 0;
                     border-radius: 6px;
 
-                    &:hover{
+                    &:hover {
                         background: color("p-green-50");
                     }
                 }
@@ -232,7 +232,7 @@
 
                 @include breakpoint-down(lg) {
                     grid-template-columns: 1fr;
-                    gap: 24px!important;
+                    gap: 24px !important;
                 }
             }
 
@@ -372,11 +372,8 @@
 
                 @include breakpoint-down(xl) {
                     max-width: 320px;
-
-                    @include breakpoint-down(lg) {
-                        margin-left: auto;
-                        margin-right: auto;
-                    }
+                    margin-left: auto;
+                    margin-right: auto;
                 }
             }
         }

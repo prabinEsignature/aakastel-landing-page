@@ -1,8 +1,8 @@
 .atel-benefits {
     margin-top: -76px;
 
-    @include breakpoint-down(lg){
-        margin-top:  -48px;
+    @include breakpoint-down(lg) {
+        margin-top: -48px;
     }
 
     .benefits-item {
@@ -57,8 +57,8 @@
             }
         }
 
-        @include breakpoint-down(xs){
-            &::after{
+        @include breakpoint-down(xs) {
+            &::after {
                 display: none;
             }
         }
@@ -69,20 +69,20 @@
     .atel-sms-gateway-segment {
         gap: 80px;
 
-        @include breakpoint-down(xxl){
+        @include breakpoint-down(xxl) {
             gap: 60px;
         }
 
-        @include breakpoint-down(xl){
+        @include breakpoint-down(xl) {
             gap: 40px;
         }
 
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
             gap: 24px;
         }
 
         .sms-gateway-btns {
-            @include breakpoint-down(sm){
+            @include breakpoint-down(sm) {
                 flex-direction: column;
             }
             .btn {
@@ -112,12 +112,27 @@
     }
 
     .sms-features-item {
+        transition: $default-transition;
+        &:hover {
+            background: color("primary") !important;
+            border-color: darken(color("primary"), 5%) !important;
+
+            p,
+            h3 {
+                color: color("white") !important;
+            }
+
+            .btn {
+                background: color("white") !important;
+            }
+        }
+
         @include breakpoint-down(lg) {
             padding: 20px !important;
         }
 
-        @include breakpoint-down(sm){
-            padding: 16px!important;
+        @include breakpoint-down(sm) {
+            padding: 16px !important;
         }
     }
 }
@@ -132,7 +147,7 @@
                 margin-bottom: 60px;
             }
 
-            @include breakpoint-down(sm){
+            @include breakpoint-down(sm) {
                 margin-bottom: 36px;
             }
 
@@ -175,7 +190,7 @@
 
 .atel-engagement {
     overflow-y: hidden;
-    
+
     .segment-heading {
         max-width: 732px;
     }
@@ -183,18 +198,29 @@
         max-width: 1064px;
     }
 
-    .engagement-list{
-        @include breakpoint-down(lg){
-            gap: 20px!important;
+    .engagement-list {
+        @include breakpoint-down(lg) {
+            gap: 20px !important;
         }
 
-        @include breakpoint-down(sm){
-            gap: 16px!important;
+        @include breakpoint-down(sm) {
+            gap: 16px !important;
         }
 
-        .engagement-item{
-            @include breakpoint-down(lg){
-                padding: 20px!important;
+        .engagement-item {
+            transition: $default-transition;
+            &:hover {
+                background: color("primary") !important;
+                border-color: darken(color("primary"), 5%) !important;
+
+                p,
+                h3 {
+                    color: color("white") !important;
+                }
+
+                .btn {
+                    background: color("white") !important;
+                }
             }
         }
     }
@@ -217,18 +243,18 @@
         border: 1px solid rgba-color(color("white"), 0.2);
 
         .nav-tabs {
-            @include breakpoint-down(sm){
+            @include breakpoint-down(sm) {
                 row-gap: 4px;
             }
-            
+
             .nav-link {
                 border-top-left-radius: 12px !important;
                 border-top-right-radius: 12px !important;
 
-                @include breakpoint-down(sm){
-                    border-top-left-radius: 8px!important;
-                    border-top-right-radius: 8px!important;
-                    padding: 8px 10px!important;
+                @include breakpoint-down(sm) {
+                    border-top-left-radius: 8px !important;
+                    border-top-right-radius: 8px !important;
+                    padding: 8px 10px !important;
                 }
 
                 &.active {
@@ -241,9 +267,9 @@
             border-top-right-radius: 0 !important;
             border-top-left-radius: 0 !important;
 
-            @include breakpoint-down(sm){
-                padding-top: 0!important;
-                padding-bottom: 0!important;
+            @include breakpoint-down(sm) {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
             }
         }
     }

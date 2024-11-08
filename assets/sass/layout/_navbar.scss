@@ -19,7 +19,7 @@ $z-index-navbar-toggler: 1010;
     min-height: 72px;
   }
 
-  @include breakpoint-down(xs){
+  @include breakpoint-down(xs) {
     min-height: 60px;
   }
 
@@ -105,6 +105,13 @@ $z-index-navbar-toggler: 1010;
       flex-direction: column;
       align-items: flex-start !important;
       width: 100%;
+    }
+
+    &-text {
+      @include breakpoint-down(lg) {
+        color: color("night") !important;
+        font-size: 16px!important;
+      }
     }
 
     &-text-icon {
@@ -294,13 +301,13 @@ $z-index-navbar-toggler: 1010;
         &-grid-item {
           padding: 6px 8px;
 
-          &-text{
+          &-text {
             transition: $default-transition;
           }
 
-          &:hover{
-            .submenu-grid-item-text{
-              color: color("primary")!important;
+          &:hover {
+            .submenu-grid-item-text {
+              color: color("primary") !important;
             }
           }
 
@@ -531,8 +538,8 @@ $z-index-navbar-toggler: 1010;
         display: none;
       }
 
-      .btn-navbar-menu-open{
-        img{
+      .btn-navbar-menu-open {
+        img {
           filter: invert(0) brightness(100);
         }
       }
@@ -548,8 +555,8 @@ $z-index-navbar-toggler: 1010;
         .navbar-logo-default {
           display: block;
         }
-        .btn-navbar-menu-open{
-          img{
+        .btn-navbar-menu-open {
+          img {
             filter: none;
           }
         }
@@ -562,14 +569,14 @@ $z-index-navbar-toggler: 1010;
       &.atel-navbar-invert {
         .menu-item {
           &-text {
-            @include breakpoint-up(lg){
+            @include breakpoint-up(lg) {
               color: color("white");
             }
           }
 
           &-icon {
             img {
-              @include breakpoint-up(lg){
+              @include breakpoint-up(lg) {
                 filter: invert(0) brightness(100);
               }
             }
@@ -626,5 +633,3 @@ $z-index-navbar-toggler: 1010;
     display: none !important;
   }
 }
-
-

@@ -532,11 +532,11 @@ $negative-margin-values: (
 }
 
 $font-size-breakpoints: (
-  "xs": "479.98px",
-  "sm": "575.98px",
-  "md": "767.98px",
+  "xl": "1199.98px",
   "lg": "991.98px",
-  "xl": "1199.98px"
+  "md": "767.98px",
+  "sm": "575.98px",
+  "xs": "479.98px"
 );
 
 // Mixin to generate margin and padding classes
@@ -565,7 +565,11 @@ $font-size-breakpoints: (
     .#{$prefix}-custom-#{$key} {
       #{$property}: #{$value};
     }
+  }
+}
 
+@mixin generate-spacing-breakpoint-classes($property, $prefix) {
+  @each $key, $value in $sizes {
     @each $breakpoint, $breakpoint-width in $font-size-breakpoints {
       @media (max-width: #{$breakpoint-width}) {
         .#{$prefix}t-custom-#{$breakpoint}-#{$key} {
@@ -599,6 +603,8 @@ $font-size-breakpoints: (
 // Generate padding and margin classes
 @include generate-spacing-classes(padding, p);
 @include generate-spacing-classes(margin, m);
+@include generate-spacing-breakpoint-classes(padding, p);
+@include generate-spacing-breakpoint-classes(margin, m);
 
 $border-colors: (
   timberwolf: color("timberwolf"),
