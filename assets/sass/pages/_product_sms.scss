@@ -82,6 +82,9 @@
         }
 
         .sms-gateway-btns {
+            @include breakpoint-down(sm){
+                flex-direction: column;
+            }
             .btn {
                 min-width: 180px;
             }
@@ -214,9 +217,19 @@
         border: 1px solid rgba-color(color("white"), 0.2);
 
         .nav-tabs {
+            @include breakpoint-down(sm){
+                row-gap: 4px;
+            }
+            
             .nav-link {
                 border-top-left-radius: 12px !important;
                 border-top-right-radius: 12px !important;
+
+                @include breakpoint-down(sm){
+                    border-top-left-radius: 8px!important;
+                    border-top-right-radius: 8px!important;
+                    padding: 8px 10px!important;
+                }
 
                 &.active {
                     background: color("mdt-green-v3") !important;
@@ -227,6 +240,11 @@
         .tab-content {
             border-top-right-radius: 0 !important;
             border-top-left-radius: 0 !important;
+
+            @include breakpoint-down(sm){
+                padding-top: 0!important;
+                padding-bottom: 0!important;
+            }
         }
     }
 }
