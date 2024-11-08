@@ -21190,6 +21190,8 @@ code.code-customized {
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625 * 100) */
   overflow: hidden;
+  background: #b5ccd0;
+  border-radius: 8px;
 }
 
 /* Responsive Video */
@@ -25469,6 +25471,35 @@ table td {
 .atel-office-ivr-vid .segment-office-ivr-vid .vid-play-pause-btn:hover {
   background: #3bb24a;
 }
+@media (max-width: 991.98px) {
+  .atel-office-ivr-vid .segment-office-ivr-vid .vid-play-pause-btn {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+  }
+  .atel-office-ivr-vid .segment-office-ivr-vid .vid-play-pause-btn img {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-office-ivr-vid .segment-office-ivr-vid .vid-play-pause-btn {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    border-radius: 8px !important;
+  }
+  .atel-office-ivr-vid .segment-office-ivr-vid .vid-play-pause-btn img {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+  }
+}
 
 .atel-system-work .segment-system-work {
   grid-template-columns: 40% auto;
@@ -25778,6 +25809,11 @@ table td {
 }
 @media (max-width: 767.98px) {
   .atel-benefits .benefits-item:nth-child(even)::after {
+    display: none;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-benefits .benefits-item::after {
     display: none;
   }
 }

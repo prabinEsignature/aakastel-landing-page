@@ -56,6 +56,12 @@
                 }
             }
         }
+
+        @include breakpoint-down(xs){
+            &::after{
+                display: none;
+            }
+        }
     }
 }
 

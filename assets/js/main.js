@@ -554,37 +554,36 @@ document.addEventListener("DOMContentLoaded", function () {
   function togglePlayPause() {
     if (video.paused || video.ended) {
       video.play();
-      playPauseBtn.classList.add("d-none");
+      // playPauseBtn.classList.add("d-none");
       playPauseBtn.querySelector("img").src = pauseIcon;
     } else {
       video.pause();
-      playPauseBtn.classList.remove("d-none");
+      // playPauseBtn.classList.remove("d-none");
       playPauseBtn.querySelector("img").src = playIcon;
     }
   }
 
-  video.addEventListener("pause", () => {
-    playPauseBtn.classList.remove("d-none");
-    playPauseBtn.querySelector("img").src = playIcon;
-  });
+  // video.addEventListener("pause", () => {
+  //   playPauseBtn.classList.remove("d-none");
+  //   playPauseBtn.querySelector("img").src = playIcon;
+  // });
 
-  video.addEventListener("ended", () => {
-    playPauseBtn.classList.remove("d-none");
-    playPauseBtn.querySelector("img").src = playIcon;
-  });
+  // video.addEventListener("ended", () => {
+  //   playPauseBtn.classList.remove("d-none");
+  //   playPauseBtn.querySelector("img").src = playIcon;
+  // });
 
-  // Show button on hover if video is playing, hide it on mouse leave
-  videoContainer.addEventListener("mouseenter", () => {
-    if (!video.paused && !video.ended) {
-      playPauseBtn.classList.remove("d-none");
-    }
-  });
+  // videoContainer.addEventListener("mouseenter", () => {
+  //   if (!video.paused && !video.ended) {
+  //     playPauseBtn.classList.remove("d-none");
+  //   }
+  // });
 
-  videoContainer.addEventListener("mouseleave", () => {
-    if (!video.paused && !video.ended) {
-      playPauseBtn.classList.add("d-none");
-    }
-  });
+  // videoContainer.addEventListener("mouseleave", () => {
+  //   if (!video.paused && !video.ended) {
+  //     playPauseBtn.classList.add("d-none");
+  //   }
+  // });
 
   playPauseBtn.addEventListener("click", togglePlayPause);
 });
