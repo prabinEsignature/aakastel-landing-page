@@ -17,8 +17,19 @@
     }
 
     .blogs-category {
+        &-btns{
+            @include breakpoint-down(sm){
+                gap: 6px!important;
+            }
+        }
+
         &-btn {
             transition: $default-transition;
+
+            @include breakpoint-down(sm){
+                padding: 2px 8px!important;
+                border-radius: 6px!important;
+            }
 
             &:hover,
             &.active {

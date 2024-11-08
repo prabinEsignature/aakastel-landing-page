@@ -26142,9 +26142,22 @@ table td {
     gap: 28px;
   }
 }
+@media (max-width: 575.98px) {
+  .atel-blogs-pg .blogs-category-btns,
+  .atel-blogs-details-pg .blogs-category-btns {
+    gap: 6px !important;
+  }
+}
 .atel-blogs-pg .blogs-category-btn,
 .atel-blogs-details-pg .blogs-category-btn {
   transition: all ease-in-out 300ms;
+}
+@media (max-width: 575.98px) {
+  .atel-blogs-pg .blogs-category-btn,
+  .atel-blogs-details-pg .blogs-category-btn {
+    padding: 2px 8px !important;
+    border-radius: 6px !important;
+  }
 }
 .atel-blogs-pg .blogs-category-btn:hover, .atel-blogs-pg .blogs-category-btn.active,
 .atel-blogs-details-pg .blogs-category-btn:hover,
