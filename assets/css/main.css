@@ -24304,6 +24304,9 @@ table td {
 .atel-navbar .submenu-item-block.products-nav .submenu-item {
   transition: all ease-in-out 300ms;
 }
+.atel-navbar .submenu-item-block.products-nav .submenu-item:hover .submenu-item-text {
+  color: #3bb24a !important;
+}
 @media (max-width: 1199.98px) {
   .atel-navbar .submenu-item-block.products-nav .submenu-item {
     padding: 8px !important;
