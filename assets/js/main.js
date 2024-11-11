@@ -527,3 +527,96 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 /* ####### EOF VIDEO PLAY/PAUSE FEATURE ####### */
 
+var StackCards = function(element) {
+  this.element = element;
+  this.items = this.element.getElementsByClassName("key-products-block d-grid");
+  this.scrollingListener = false;
+  this.scrolling = false;
+  this.atelKeyProducts = document.querySelector(".atel-key-products"); // Parent sticky div
+  this.stickyTop = 130; // The position when scrolling starts (sticky top position)
+  this.whoWeHelpSection = document.querySelector(".atel-who-we-help"); // The "who we help" section
+  this.lastScrollTop = 0; // Track last scroll position for scroll direction
+  this.init();
+};
+
+StackCards.prototype.init = function() {
+  // use Intersection Observer to trigger animation
+  var observer = new IntersectionObserver(stackCardsCallback.bind(this));
+  observer.observe(this.element);
+};
+
+function stackCardsCallback(entries) {
+  if (entries[0].isIntersecting) {
+    // cards inside viewport - add scroll listener
+    if (this.scrollingListener) return; // listener for scroll event already added
+    stackCardsInitEvent(this);
+  } else {
+    // cards not inside viewport - remove scroll listener
+    if (!this.scrollingListener) return; // listener for scroll event already removed
+    window.removeEventListener("scroll", this.scrollingListener);
+    this.scrollingListener = false;
+  }
+}
+
+function stackCardsInitEvent(element) {
+  element.scrollingListener = stackCardsScrolling.bind(element);
+  window.addEventListener("scroll", element.scrollingListener);
+}
+
+function stackCardsScrolling() {
+  var currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var scrollDirection = currentScrollTop > this.lastScrollTop ? 'down' : 'up';
+  this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Prevent negative scroll
+
+  // Get the position of the parent sticky div
+  var parentTop = this.atelKeyProducts.getBoundingClientRect().top;
+
+  // Scroll down logic: Ensure .atel-key-products reaches the sticky top position before scroll down is allowed
+  if (scrollDirection === 'down') {
+    if (parentTop > this.stickyTop) {
+      return; // Prevent scroll until the sticky div has reached its sticky position (top)
+    }
+    // If .atel-key-products is already in position, allow scrolling down
+    if (!this.scrolling && parentTop <= this.stickyTop) {
+      this.scrolling = true;
+      window.requestAnimationFrame(animateStackCards.bind(this));
+    }
+  }
+
+  // Scroll up logic: Ensure .atel-who-we-help section is fully scrolled up before allowing scroll up on .atel-key-products
+  if (scrollDirection === 'up') {
+    var whoWeHelpTop = this.whoWeHelpSection.getBoundingClientRect().top;
+    if (whoWeHelpTop < window.innerHeight) {
+      // The .atel-who-we-help section is not completely scrolled out of view
+      return; // Prevent scrolling up for .atel-key-products
+    }
+    // Allow scrolling up for .atel-key-products once .atel-who-we-help has fully scrolled out of view
+    this.scrolling = false;
+    window.requestAnimationFrame(animateStackCards.bind(this));
+  }
+}
+
+function animateStackCards() {
+  var top = this.element.getBoundingClientRect().top;
+  var offsetTop = 100,
+    cardHeight = 300,
+    marginY = 15;
+
+  for (var i = 0; i < this.items.length; i++) {
+    var scrolling = offsetTop - top - i * (cardHeight + marginY);
+  }
+
+  this.scrolling = false;
+}
+
+// Initialize the StackCards on both sections
+var stackCards = document.getElementsByClassName("card-deck-js");
+var intersectionObserverSupported =
+  "IntersectionObserver" in window && "IntersectionObserverEntry" in window;
+
+if (stackCards.length > 0 && intersectionObserverSupported) {
+  for (var i = 0; i < stackCards.length; i++) {
+    new StackCards(stackCards[i]);
+  }
+}
+

@@ -24851,7 +24851,8 @@ table td {
 
 .atel-key-products {
   margin-top: -120px;
-  position: relative;
+  position: sticky;
+  top: 130px;
 }
 @media (max-width: 991.98px) {
   .atel-key-products {
@@ -24881,6 +24882,11 @@ table td {
     border-top-right-radius: 24px !important;
     border-top-left-radius: 24px !important;
   }
+}
+.atel-key-products-wrapper {
+  scroll-behavior: smooth;
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 .atel-key-products .segment-heading {
   max-width: 846px;
@@ -25353,6 +25359,25 @@ table td {
 .swiper-slide {
   height: 100% !important;
   width: 100% !important;
+}
+
+.key-products-block {
+  position: sticky;
+  top: 40px;
+  transform-origin: center top;
+  margin: 0.5em;
+  height: 100%;
+  background-color: #fff;
+}
+.key-products-block:nth-child(1), .key-products-block:nth-child(2), .key-products-block:nth-child(3) {
+  min-height: 480px;
+}
+.key-products-block:nth-child(4) {
+  min-height: 380px;
+}
+.key-products-block:nth-child(5) {
+  min-height: 480px;
+  padding-bottom: 130px;
 }
 
 .atel-success-pvmt .segment-heading {

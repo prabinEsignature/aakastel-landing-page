@@ -2,7 +2,7 @@
     position: sticky;
     top: 100px;
 
-    @include breakpoint-down(sm){
+    @include breakpoint-down(sm) {
         top: 90px;
     }
 
@@ -44,7 +44,7 @@
     }
 
     .features-tabs {
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
             margin: 4px 0;
         }
 
@@ -66,9 +66,8 @@
 
 .atel-key-products {
     margin-top: -120px;
-    position: relative;
-    // position: sticky;
-    // top: 130px;
+    position: sticky;
+    top: 130px;
 
     @include breakpoint-down(lg) {
         margin-top: 80px;
@@ -95,9 +94,9 @@
     }
 
     &-wrapper {
-        // scroll-behavior: smooth;
-        // max-height: 100vh;
-        // overflow-y: scroll;
+        scroll-behavior: smooth;
+        max-height: 100vh;
+        overflow-y: scroll;
     }
 
     .segment-heading {
@@ -233,8 +232,8 @@
                 flex-direction: column;
             }
 
-            @include breakpoint-down(sm){
-                row-gap: 8px!important;
+            @include breakpoint-down(sm) {
+                row-gap: 8px !important;
             }
 
             &-icon {
@@ -311,7 +310,7 @@
                     flex-direction: row !important;
                 }
 
-                @include breakpoint-down(sm){
+                @include breakpoint-down(sm) {
                     min-height: 48px;
                     width: 100%;
                 }
@@ -322,7 +321,7 @@
                 transition: $default-transition;
                 cursor: pointer;
 
-                p{
+                p {
                     transition: $default-transition;
                 }
 
@@ -384,8 +383,8 @@
             gap: 24px;
         }
 
-        .industry-features{
-            margin-top: 16px!important;
+        .industry-features {
+            margin-top: 16px !important;
         }
 
         .industry-feature-item,
@@ -405,16 +404,16 @@
             max-width: 800px;
         }
 
-        @include breakpoint-down(lg){
-            gap: 24px!important;
+        @include breakpoint-down(lg) {
+            gap: 24px !important;
         }
 
-        @include breakpoint-down(md){
-            gap: 16px!important;
+        @include breakpoint-down(md) {
+            gap: 16px !important;
         }
 
-        @include breakpoint-down(sm){
-            gap: 12px!important;
+        @include breakpoint-down(sm) {
+            gap: 12px !important;
         }
     }
 
@@ -451,7 +450,7 @@
                 padding: 20px !important;
             }
 
-            @include breakpoint-down(sm){
+            @include breakpoint-down(sm) {
                 min-height: auto;
             }
         }
@@ -509,11 +508,11 @@
         }
     }
 
-    .presence-map{
-        #nepal-map{
-            @include breakpoint-down(sm){
-                height: 100%!important;
-                width: 100%!important;
+    .presence-map {
+        #nepal-map {
+            @include breakpoint-down(sm) {
+                height: 100% !important;
+                width: 100% !important;
             }
         }
     }
@@ -574,20 +573,19 @@
             outline-offset: -2px;
         }
 
-        .presence-location-name{
+        .presence-location-name {
             transition: $default-transition;
-            &:hover{
+            &:hover {
                 opacity: 0.8;
             }
         }
     }
 
-    #presence-info{
+    #presence-info {
         width: 180px;
         z-index: 1;
-        
 
-        &::after{
+        &::after {
             content: "";
             position: absolute;
             bottom: 100%;
@@ -601,14 +599,38 @@
     }
 }
 
-
-.swiper-slide{
-    height: 100%!important;
-    width: 100%!important;
+.swiper-slide {
+    height: 100% !important;
+    width: 100% !important;
 }
 
-// .key-products-block{
-//     background-color: color("white")!important;
-//     position: sticky!important;
-//     top: 40px;
-// }
+@mixin translateY {
+    @for $i from 0 through 15 {
+        &:nth-child(#{$i}) {
+            transform: translateY(#{$i * 16}px);
+        }
+    }
+}
+
+.key-products-block {
+    position: sticky;
+    top: 40px;
+    transform-origin: center top;
+    margin: 0.5em;
+    height: 100%;
+    // @include translateY;
+    background-color: color("white");
+
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        min-height: 480px;
+    }
+
+    &:nth-child(4){
+        min-height: 380px;
+    }
+
+    &:nth-child(5){
+        min-height: 480px;
+        padding-bottom: 130px;
+    }
+}
