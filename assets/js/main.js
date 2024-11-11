@@ -532,27 +532,27 @@ var StackCards = function(element) {
   this.items = this.element.getElementsByClassName("key-products-block d-grid");
   this.scrollingListener = false;
   this.scrolling = false;
-  this.atelKeyProducts = document.querySelector(".atel-key-products"); // Parent sticky div
-  this.stickyTop = 130; // The position when scrolling starts (sticky top position)
-  this.whoWeHelpSection = document.querySelector(".atel-who-we-help"); // The "who we help" section
+  this.atelKeyProducts = document.querySelector(".atel-key-products"); // The sticky div
+  this.atelKeyProductsWrapper = document.querySelector(".atel-key-products-wrapper"); // Wrapper to control scroll
+  this.stickyTop = 130; // The sticky top position when scrolling should be allowed
   this.lastScrollTop = 0; // Track last scroll position for scroll direction
   this.init();
 };
 
 StackCards.prototype.init = function() {
-  // use Intersection Observer to trigger animation
+  // Use Intersection Observer to trigger animation
   var observer = new IntersectionObserver(stackCardsCallback.bind(this));
   observer.observe(this.element);
 };
 
 function stackCardsCallback(entries) {
   if (entries[0].isIntersecting) {
-    // cards inside viewport - add scroll listener
-    if (this.scrollingListener) return; // listener for scroll event already added
+    // Cards inside viewport - add scroll listener
+    if (this.scrollingListener) return; // Listener for scroll event already added
     stackCardsInitEvent(this);
   } else {
-    // cards not inside viewport - remove scroll listener
-    if (!this.scrollingListener) return; // listener for scroll event already removed
+    // Cards not inside viewport - remove scroll listener
+    if (!this.scrollingListener) return; // Listener for scroll event already removed
     window.removeEventListener("scroll", this.scrollingListener);
     this.scrollingListener = false;
   }
@@ -571,26 +571,25 @@ function stackCardsScrolling() {
   // Get the position of the parent sticky div
   var parentTop = this.atelKeyProducts.getBoundingClientRect().top;
 
-  // Scroll down logic: Ensure .atel-key-products reaches the sticky top position before scroll down is allowed
-  if (scrollDirection === 'down') {
-    if (parentTop > this.stickyTop) {
-      return; // Prevent scroll until the sticky div has reached its sticky position (top)
+  // Check if .atel-key-products has reached the sticky position (top of the viewport)
+  if (parentTop <= this.stickyTop) {
+    // Allow scroll on .atel-key-products-wrapper once .atel-key-products touches the top
+    this.atelKeyProductsWrapper.style.overflow = 'auto'; // Enable scrolling
+
+    // Scroll down logic: Enable scroll only after .atel-key-products is at the top
+    if (scrollDirection === 'down') {
+      if (!this.scrolling) {
+        this.scrolling = true;
+        window.requestAnimationFrame(animateStackCards.bind(this));
+      }
     }
-    // If .atel-key-products is already in position, allow scrolling down
-    if (!this.scrolling && parentTop <= this.stickyTop) {
-      this.scrolling = true;
-      window.requestAnimationFrame(animateStackCards.bind(this));
-    }
+  } else {
+    // Disable scroll if .atel-key-products has not reached the top
+    this.atelKeyProductsWrapper.style.overflow = 'hidden'; // Disable scrolling
   }
 
-  // Scroll up logic: Ensure .atel-who-we-help section is fully scrolled up before allowing scroll up on .atel-key-products
+  // Scroll up logic (optional): You can control this if necessary, e.g., reset scroll state
   if (scrollDirection === 'up') {
-    var whoWeHelpTop = this.whoWeHelpSection.getBoundingClientRect().top;
-    if (whoWeHelpTop < window.innerHeight) {
-      // The .atel-who-we-help section is not completely scrolled out of view
-      return; // Prevent scrolling up for .atel-key-products
-    }
-    // Allow scrolling up for .atel-key-products once .atel-who-we-help has fully scrolled out of view
     this.scrolling = false;
     window.requestAnimationFrame(animateStackCards.bind(this));
   }
