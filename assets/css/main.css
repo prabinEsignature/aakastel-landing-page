@@ -23822,6 +23822,16 @@ table td {
   min-height: 638px;
   padding-top: 80px;
 }
+@media (max-width: 575.98px) {
+  .atel-top-banner.atel-solution-pg, .atel-top-banner.atel-onpremises-pg, .atel-top-banner.atel-product-sms-pg {
+    padding-top: 72px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-top-banner.atel-solution-pg, .atel-top-banner.atel-onpremises-pg, .atel-top-banner.atel-product-sms-pg {
+    padding-top: 60px;
+  }
+}
 .atel-top-banner.atel-solution-pg .top-banner-text-group, .atel-top-banner.atel-onpremises-pg .top-banner-text-group, .atel-top-banner.atel-product-sms-pg .top-banner-text-group {
   max-width: 700px;
 }
@@ -23850,6 +23860,16 @@ table td {
   background: url("../../../assets/images/ivr_solution/office_ivr_solutions_banner.svg") center/cover no-repeat;
   min-height: 800px;
   padding-top: 80px;
+}
+@media (max-width: 575.98px) {
+  .atel-top-banner.atel-office-ivr-pg {
+    padding-top: 72px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-top-banner.atel-office-ivr-pg {
+    padding-top: 60px;
+  }
 }
 .atel-top-banner.atel-office-ivr-pg .top-banner-text-group {
   max-width: 1062px;
@@ -23905,6 +23925,16 @@ table td {
 }
 .atel-top-banner.atel-whatsapp-business-pg {
   padding-top: 80px;
+}
+@media (max-width: 575.98px) {
+  .atel-top-banner.atel-whatsapp-business-pg {
+    padding-top: 72px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-top-banner.atel-whatsapp-business-pg {
+    padding-top: 60px;
+  }
 }
 .atel-top-banner.atel-whatsapp-business-pg > .container {
   max-width: 1400px !important;
@@ -23964,6 +23994,16 @@ table td {
   margin-top: 80px;
   position: relative;
 }
+@media (max-width: 575.98px) {
+  .atel-blogs-pg {
+    margin-top: 72px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-blogs-pg {
+    margin-top: 60px;
+  }
+}
 .atel-blogs-pg > .container {
   position: relative;
 }
@@ -24012,6 +24052,16 @@ table td {
 .atel-blogs-details-pg {
   margin-top: 80px;
   position: relative;
+}
+@media (max-width: 575.98px) {
+  .atel-blogs-details-pg {
+    margin-top: 72px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-blogs-details-pg {
+    margin-top: 60px;
+  }
 }
 
 .atel-navbar {

@@ -5,10 +5,10 @@ const scrollThreshold = 40;
 const handleScroll = () => {
   if (window.scrollY > scrollThreshold) {
     navbar.classList.add("atel-header-fixed");
-    navbar.classList.add("shadow-default");
+    navbar.classList.add("shadow-sm");
   } else {
     navbar.classList.remove("atel-header-fixed");
-    navbar.classList.remove("shadow-default");
+    navbar.classList.remove("shadow-sm");
   }
 };
 
