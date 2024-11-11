@@ -25258,7 +25258,6 @@ table td {
 
 .atel-lt-blogs {
   border-bottom: 1px solid #d1d1d1;
-  overflow-y: hidden;
 }
 .atel-lt-blogs::after {
   content: "";
