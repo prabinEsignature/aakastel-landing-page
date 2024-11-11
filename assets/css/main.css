@@ -24395,6 +24395,11 @@ table td {
 }
 @media (max-width: 991.98px) {
   .atel-navbar .submenu-item-block.solutions-nav .submenu-item-main {
+    height: auto !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-navbar .submenu-item-block.solutions-nav .submenu-item-main {
     gap: 0 !important;
   }
 }
