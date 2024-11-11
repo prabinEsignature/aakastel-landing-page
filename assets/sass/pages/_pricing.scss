@@ -1,4 +1,8 @@
 .atel-pricing-pg {
+    @include breakpoint-down(xxl){
+        margin-top: 100px!important;
+    }
+
     .pricing-body-segment {
         .nav-tabs {
             padding: 6px;
@@ -31,14 +35,22 @@
             }
 
             &-head{
-                @include breakpoint-down(sm){
+                @include breakpoint-down(lg){
                     padding: 20px!important;
+                }
+
+                @include breakpoint-down(sm){
+                    padding: 16px!important;
                 }
             }
 
             &-body{
-                @include breakpoint-down(sm){
+                @include breakpoint-down(lg){
                     padding: 20px!important;
+                }
+
+                @include breakpoint-down(sm){
+                    padding: 16px!important;
                 }
             }
 
@@ -67,8 +79,10 @@
 
         @include breakpoint-down(lg) {
             padding: 12px !important;
+            display: none;
         }
     }
+    
     div[class*="plan-label"] {
         border-bottom: 1px solid color("grey-3");
         min-height: 68px;

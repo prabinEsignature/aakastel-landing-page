@@ -22,6 +22,17 @@
         min-height: 100vh;
         background: url($img-path + "home/home_top_banner.png") center/cover no-repeat;
         @include flex-center;
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: "";
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: color("p-green-50");
+        }
 
         .top-banner-segment {
             height: 100vh;

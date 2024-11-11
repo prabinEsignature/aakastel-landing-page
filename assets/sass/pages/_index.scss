@@ -66,8 +66,9 @@
 
 .atel-key-products {
     margin-top: -120px;
-    position: sticky;
-    top: 140px;
+    position: relative;
+    // position: sticky;
+    // top: 130px;
 
     @include breakpoint-down(lg) {
         margin-top: 80px;
@@ -94,9 +95,9 @@
     }
 
     &-wrapper {
-        max-height: 100vh;
-        overflow-y: auto;
-        scroll-behavior: smooth;
+        // scroll-behavior: smooth;
+        // max-height: 100vh;
+        // overflow-y: scroll;
     }
 
     .segment-heading {
@@ -599,3 +600,15 @@
         }
     }
 }
+
+
+.swiper-slide{
+    height: 100%!important;
+    width: 100%!important;
+}
+
+// .key-products-block{
+//     background-color: color("white")!important;
+//     position: sticky!important;
+//     top: 40px;
+// }

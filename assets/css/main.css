@@ -23634,6 +23634,16 @@ table td {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  position: relative;
+}
+.atel-top-banner.atel-home-pg::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: #e9f2ed;
 }
 .atel-top-banner.atel-home-pg .top-banner-segment {
   height: 100vh;
@@ -24841,8 +24851,7 @@ table td {
 
 .atel-key-products {
   margin-top: -120px;
-  position: sticky;
-  top: 140px;
+  position: relative;
 }
 @media (max-width: 991.98px) {
   .atel-key-products {
@@ -24872,11 +24881,6 @@ table td {
     border-top-right-radius: 24px !important;
     border-top-left-radius: 24px !important;
   }
-}
-.atel-key-products-wrapper {
-  max-height: 100vh;
-  overflow-y: auto;
-  scroll-behavior: smooth;
 }
 .atel-key-products .segment-heading {
   max-width: 846px;
@@ -25344,6 +25348,11 @@ table td {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid transparent;
+}
+
+.swiper-slide {
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .atel-success-pvmt .segment-heading {
@@ -26501,6 +26510,11 @@ table td {
   color: #121212;
 }
 
+@media (max-width: 1399.98px) {
+  .atel-pricing-pg {
+    margin-top: 100px !important;
+  }
+}
 .atel-pricing-pg .pricing-body-segment .nav-tabs {
   padding: 6px;
   min-height: 60px;
@@ -26519,14 +26533,24 @@ table td {
 .atel-pricing-pg .pricing-cards .pricing-top .pricing-tag {
   min-height: 24px;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .atel-pricing-pg .pricing-cards .pricing-head {
     padding: 20px !important;
   }
 }
 @media (max-width: 575.98px) {
+  .atel-pricing-pg .pricing-cards .pricing-head {
+    padding: 16px !important;
+  }
+}
+@media (max-width: 991.98px) {
   .atel-pricing-pg .pricing-cards .pricing-body {
     padding: 20px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-pricing-pg .pricing-cards .pricing-body {
+    padding: 16px !important;
   }
 }
 @media (max-width: 1199.98px) {
@@ -26549,6 +26573,7 @@ table td {
 @media (max-width: 991.98px) {
   .atel-compare-plans .plan-block-head {
     padding: 12px !important;
+    display: none;
   }
 }
 .atel-compare-plans div[class*=plan-label] {
