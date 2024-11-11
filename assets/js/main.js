@@ -527,19 +527,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 /* ####### EOF VIDEO PLAY/PAUSE FEATURE ####### */
 
-var StackCards = function(element) {
+var StackCards = function (element) {
   this.element = element;
   this.items = this.element.getElementsByClassName("key-products-block d-grid");
   this.scrollingListener = false;
   this.scrolling = false;
   this.atelKeyProducts = document.querySelector(".atel-key-products"); // The sticky div
-  this.atelKeyProductsWrapper = document.querySelector(".atel-key-products-wrapper"); // Wrapper to control scroll
+  this.atelKeyProductsWrapper = document.querySelector(
+    ".atel-key-products-wrapper"
+  ); // Wrapper to control scroll
   this.stickyTop = 130; // The sticky top position when scrolling should be allowed
   this.lastScrollTop = 0; // Track last scroll position for scroll direction
   this.init();
 };
 
-StackCards.prototype.init = function() {
+StackCards.prototype.init = function () {
   // Use Intersection Observer to trigger animation
   var observer = new IntersectionObserver(stackCardsCallback.bind(this));
   observer.observe(this.element);
@@ -564,8 +566,9 @@ function stackCardsInitEvent(element) {
 }
 
 function stackCardsScrolling() {
-  var currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  var scrollDirection = currentScrollTop > this.lastScrollTop ? 'down' : 'up';
+  var currentScrollTop =
+    window.pageYOffset || document.documentElement.scrollTop;
+  var scrollDirection = currentScrollTop > this.lastScrollTop ? "down" : "up";
   this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Prevent negative scroll
 
   // Get the position of the parent sticky div
@@ -574,10 +577,10 @@ function stackCardsScrolling() {
   // Check if .atel-key-products has reached the sticky position (top of the viewport)
   if (parentTop <= this.stickyTop) {
     // Allow scroll on .atel-key-products-wrapper once .atel-key-products touches the top
-    this.atelKeyProductsWrapper.style.overflow = 'auto'; // Enable scrolling
+    this.atelKeyProductsWrapper.style.overflow = "auto"; // Enable scrolling
 
     // Scroll down logic: Enable scroll only after .atel-key-products is at the top
-    if (scrollDirection === 'down') {
+    if (scrollDirection === "down") {
       if (!this.scrolling) {
         this.scrolling = true;
         window.requestAnimationFrame(animateStackCards.bind(this));
@@ -585,11 +588,11 @@ function stackCardsScrolling() {
     }
   } else {
     // Disable scroll if .atel-key-products has not reached the top
-    this.atelKeyProductsWrapper.style.overflow = 'hidden'; // Disable scrolling
+    this.atelKeyProductsWrapper.style.overflow = "hidden"; // Disable scrolling
   }
 
   // Scroll up logic (optional): You can control this if necessary, e.g., reset scroll state
-  if (scrollDirection === 'up') {
+  if (scrollDirection === "up") {
     this.scrolling = false;
     window.requestAnimationFrame(animateStackCards.bind(this));
   }
@@ -619,3 +622,74 @@ if (stackCards.length > 0 && intersectionObserverSupported) {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".submenu-item").forEach(function (item) {
+    // Attach the event listener to the chevron element within each submenu-item
+    item
+      .querySelector(".submenu-item-chevron")
+      .addEventListener("click", function (event) {
+        if (window.innerWidth <= 991.98) {
+          // Prevent the <a> tag click event
+          event.stopPropagation();
+          event.preventDefault(); // Prevents the link navigation
+        }
+      });
+
+    // Attach a separate event listener for the text span to ensure it functions as a link
+    item
+      .querySelector(".submenu-item-text")
+      .addEventListener("click", function (event) {
+        // Only allow the link behavior on smaller screens
+        if (window.innerWidth <= 991.98) {
+          event.stopPropagation(); // Ensures only the text click triggers the link
+        }
+      });
+  });
+
+  // Optionally, add resize listener to adjust behavior on screen size change
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 991.98) {
+      // On larger screens, remove any effects if they exist (in case of dynamic updates)
+      document
+        .querySelectorAll(".submenu-item-chevron")
+        .forEach(function (chevron) {
+          chevron.removeEventListener("click", function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+          });
+        });
+    }
+  });
+});
+
+subMenuHeadItemsLink.forEach((subMenuHeadItemLink) => {
+  const chevronButton = subMenuHeadItemLink.querySelector(
+    ".submenu-item-chevron"
+  );
+
+  chevronButton.addEventListener("click", (event) => {
+    if (window.innerWidth <= 991.98) {
+      event.stopPropagation();
+      event.preventDefault();
+
+      document
+        .querySelectorAll(".submenu-01-head-list .submenu-grid-sp-wrapper.show")
+        .forEach((openMenu) => {
+          if (
+            openMenu !==
+            subMenuHeadItemLink.parentElement.querySelector(
+              ".submenu-grid-sp-wrapper"
+            )
+          ) {
+            openMenu.classList.remove("show");
+          }
+        });
+
+      const subMenuHeadItemGrid =
+        subMenuHeadItemLink.parentElement.querySelector(
+          ".submenu-grid-sp-wrapper"
+        );
+      subMenuHeadItemGrid.classList.toggle("show");
+    }
+  });
+});

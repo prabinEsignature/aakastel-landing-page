@@ -260,6 +260,13 @@ $z-index-navbar-toggler: 1010;
             }
           }
 
+          &-chevron{
+            @include breakpoint-down(lg){
+              display: block!important;
+              transform: rotate(90deg);
+            }
+          }
+
           // SUBMENU ITEM - ACTIVE & HOVER STATE
           &.active,
           &:hover {
