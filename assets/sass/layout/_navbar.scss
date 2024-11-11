@@ -469,10 +469,10 @@ $z-index-navbar-toggler: 1010;
               max-height: 0;
               overflow: hidden;
               transition: $default-transition;
-              margin-top: 12px;
-
+              
               &.show {
                 max-height: 1000px;
+                margin-top: 12px;
               }
             }
           }
@@ -507,6 +507,10 @@ $z-index-navbar-toggler: 1010;
         &-main {
           @include breakpoint-down(xl) {
             padding: 12px !important;
+          }
+
+          @include breakpoint-down(lg){
+            height: auto!important;
           }
 
           @include breakpoint-down(sm) {

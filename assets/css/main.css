@@ -24524,10 +24524,10 @@ table td {
     max-height: 0;
     overflow: hidden;
     transition: all ease-in-out 300ms;
-    margin-top: 12px;
   }
   .atel-navbar .submenu-item-block.developers-nav .submenu-grid-item .submenu-grid-sp-wrapper.show {
     max-height: 1000px;
+    margin-top: 12px;
   }
 }
 @media (max-width: 991.98px) {
@@ -24547,6 +24547,11 @@ table td {
 @media (max-width: 1199.98px) {
   .atel-navbar .submenu-item-block.resources-nav .submenu-item-main {
     padding: 12px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-navbar .submenu-item-block.resources-nav .submenu-item-main {
+    height: auto !important;
   }
 }
 @media (max-width: 575.98px) {
