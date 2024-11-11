@@ -22197,6 +22197,12 @@ Output
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+@media (max-width: 419.98px) {
+  .btn {
+    white-space: wrap;
+    height: auto !important;
+  }
+}
 .btn:hover, .btn:focus, .btn.focus {
   text-decoration: none;
 }
@@ -26173,6 +26179,11 @@ table td {
     row-gap: 16px !important;
   }
 }
+@media (max-width: 479.98px) {
+  .atel-whatsapp-api-for .whatsapp-api-for-item .btn {
+    width: 100%;
+  }
+}
 
 .atel-build-better .atel-build-better-segment {
   border-radius: 40px;
@@ -26186,9 +26197,16 @@ table td {
 @media (max-width: 575.98px) {
   .atel-build-better .atel-build-better-segment {
     border-radius: 16px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
+@media (max-width: 991.98px) {
+  .atel-adv-msg-features .segment-heading {
+    text-align: center !important;
+  }
+}
 .atel-adv-msg-features .atel-adv-msg-features-segment {
   border-radius: 40px;
   max-width: 1064px;
@@ -26196,14 +26214,36 @@ table td {
   gap: 80px;
   background: url("../../../assets/images/whatsapp_business/advance_messaging_banner.svg") center/cover no-repeat;
 }
+@media (max-width: 1199.98px) {
+  .atel-adv-msg-features .atel-adv-msg-features-segment {
+    padding: 80px;
+  }
+}
 @media (max-width: 991.98px) {
   .atel-adv-msg-features .atel-adv-msg-features-segment {
     border-radius: 20px;
+    padding: 60px;
+    gap: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .atel-adv-msg-features .atel-adv-msg-features-segment {
+    padding: 40px;
+    gap: 40px;
   }
 }
 @media (max-width: 575.98px) {
   .atel-adv-msg-features .atel-adv-msg-features-segment {
     border-radius: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    gap: 24px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-adv-msg-features .atel-adv-msg-features-segment {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .atel-adv-msg-features .btn-white-black:hover {
@@ -26212,6 +26252,18 @@ table td {
 .atel-adv-msg-features .adv-msg-features-img img {
   max-width: 332px;
   margin-bottom: -176px;
+}
+@media (max-width: 991.98px) {
+  .atel-adv-msg-features .adv-msg-features-img img {
+    margin-bottom: -140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .atel-adv-msg-features .adv-msg-features-img img {
+    margin-bottom: -100px;
+  }
 }
 
 @media (max-width: 991.98px) {

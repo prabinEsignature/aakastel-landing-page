@@ -53,6 +53,12 @@
         @include breakpoint-down(sm){
             row-gap: 16px!important;
         }
+
+        .btn{
+            @include breakpoint-down(xs){
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -67,11 +73,18 @@
 
         @include breakpoint-down(sm){
             border-radius: 16px;
+            padding-left: 0!important;
+            padding-right: 0!important;
         }
     }
 }
 
 .atel-adv-msg-features {
+    .segment-heading{
+        @include breakpoint-down(lg){
+            text-align: center!important;
+        }
+    }
     .atel-adv-msg-features-segment {
         border-radius: 40px;
         max-width: 1064px;
@@ -79,12 +92,31 @@
         gap: 80px;
         background: url($img-path + "whatsapp_business/advance_messaging_banner.svg") center/cover no-repeat;
 
+        @include breakpoint-down(xl){
+            padding: 80px;
+        }
+
         @include breakpoint-down(lg){
             border-radius: 20px;
+            padding: 60px;
+            gap: 60px;
+        }
+
+        @include breakpoint-down(md){
+            padding: 40px;
+            gap: 40px;
         }
 
         @include breakpoint-down(sm){
             border-radius: 16px;
+            padding-left: 24px;
+            padding-right: 24px;
+            gap: 24px;
+        }
+
+        @include breakpoint-down(xs){
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 
@@ -98,6 +130,16 @@
         img{
             max-width: 332px;
             margin-bottom: -176px;
+
+            @include breakpoint-down(lg){
+                margin-bottom: -140px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @include breakpoint-down(md){
+                margin-bottom: -100px;
+            }
         }
     }
 }

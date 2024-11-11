@@ -112,6 +112,11 @@ $button-variants: (
   -webkit-appearance: none;
   -moz-appearance: none;
 
+  @include breakpoint-down(xxs){
+    white-space: wrap;
+    height: auto!important;
+  }
+
   // EFFECTS
   &:hover,
   &:focus,
