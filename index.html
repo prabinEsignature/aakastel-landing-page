@@ -2502,6 +2502,13 @@
             </ul>
             <div class="d-flex align-items-center flex-column gap-3 d-lg-none">
               <a href="javascript:void(0)" class="btn btn-transparent w-100" data-bs-toggle="modal"
+                data-bs-target="#signAuthModal">
+                <span class="btn-text">Sign In</span>
+                <span class="btn-icon">
+                  <img src="assets/icons/sign_in_green.svg" alt="" />
+                </span>
+              </a>
+              <a href="javascript:void(0)" class="btn btn-transparent w-100 d-none" data-bs-toggle="modal"
                 data-bs-target="#getInTouchModal">
                 <span class="btn-text">Sign In</span>
                 <span class="btn-icon">
@@ -2517,6 +2524,13 @@
 
           <div class="atel-navbar-btns d-flex align-items-center">
             <a href="javascript:void(0)" class="btn btn-transparent" data-bs-toggle="modal"
+              data-bs-target="#signAuthModal">
+              <span class="btn-text">Sign In</span>
+              <span class="btn-icon">
+                <img src="assets/icons/sign_in_green.svg" alt="" />
+              </span>
+            </a>
+            <a href="javascript:void(0)" class="btn btn-transparent d-none" data-bs-toggle="modal"
               data-bs-target="#getInTouchModal">
               <span class="btn-text">Sign In</span>
               <span class="btn-icon">
@@ -2762,7 +2776,7 @@
                     <img src="assets/images/home/office_ivr_solutionsi.svg" alt="" />
                   </div>
                 </div>
-  
+
                 <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
                   <div class="key-products-block-l" data-aos-disabled="fade-left">
                     <div
@@ -2788,7 +2802,7 @@
                     <img src="assets/images/home/voicecall_compaign_solutionsi.svg" alt="" />
                   </div>
                 </div>
-  
+
                 <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
                   <div class="key-products-block-l" data-aos-disabled="fade-right">
                     <div
@@ -2814,7 +2828,7 @@
                     <img src="assets/images/home/onpremises_ivr_solutions.svg" alt="" />
                   </div>
                 </div>
-  
+
                 <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
                   <div class="key-products-block-l" data-aos-disabled="fade-left">
                     <div
@@ -2840,7 +2854,7 @@
                     <img src="assets/images/home/sms_and_api_provider.svg" alt="" />
                   </div>
                 </div>
-  
+
                 <div class="key-products-block d-grid lg-grid-cols-2 grid-cols-1">
                   <div class="key-products-block-l" data-aos-disabled="fade-right">
                     <div
@@ -4316,6 +4330,111 @@
       </div>
     </footer>
   </div>
+
+  <!-- SIGN IN MODAL -->
+  <div class="modal modal-customized fade" id="signAuthModal" tabindex="-1" aria-labelledby="signAuthModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header d-flex flex-column align-items-center">
+          <h2 class="modal-title text-center text-7xl font-bold text-night mb-custom-4" id="signAuthModalLabel">
+            Sign In
+          </h2>
+          <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+          <p class="text-base text-gray font-semibold mb-0">Don't have an account? <a href="#" class="text-primary">Get
+              Started for Free!</a></p>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs d-flex justify-content-center border-0 gap-2" id="loginOptTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link font-semibold text-base text-grey-4 py-custom-2 border-0 px-custom-3 active"
+                id="customer-login" data-bs-toggle="tab" data-bs-target="#customer-login-pane" type="button" role="tab"
+                aria-controls="customer-login-pane" aria-selected="true">Customer Login</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link font-semibold text-base text-grey-4 py-custom-2 border-0 px-custom-3"
+                id="sip-user-login" data-bs-toggle="tab" data-bs-target="#sip-user-login-pane" type="button" role="tab"
+                aria-controls="sip-user-login-pane" aria-selected="false">SIP User
+                Login</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="loginOptTabContent">
+            <div class="tab-pane fade show active" id="customer-login-pane" role="tabpanel"
+              aria-labelledby="customer-login" tabindex="0">
+              <form action="">
+                <div class="form-custom mt-custom-7">
+                  <div class="form-elem-group">
+                    <div class="form-elem">
+                      <label for="" class="form-label">Your Email*<span class="text-red-500">*</span></label>
+                      <input type="text" class="form-control" placeholder="you@company.com" />
+                    </div>
+                    <div class="form-elem password-form-elem">
+                      <label for="" class="form-label">Password<span>*</span></label>
+                      <div class="form-control-wrapper">
+                        <input type="password" class="form-control" placeholder="Your password" />
+                        <button type="button" class="form-elem-icon icon-24">
+                          <img class="slashed" src="assets/icons/eye_slash_gray.svg" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-3">
+                      <div class="checkbox-elem d-inline-flex align-items-center gap-x-3">
+                        <div class="checkbox border-grey-3-1 rounded-4">
+                          <input type="checkbox" name="" />
+                          <span class="icon"></span>
+                        </div>
+                        <span class="text-gray font-semibold text-base">Remember me</span>
+                      </div>
+                      <a href="#" class="text-primary text-base font-semibold">Forgot password?</a>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary flex-1 mt-custom-10 mb-custom-2 btn-block">
+                    Sign In
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="sip-user-login-pane" role="tabpanel" aria-labelledby="sip-user-login"
+              tabindex="0">
+              <form action="">
+                <div class="form-custom mt-custom-7">
+                  <div class="form-elem-group">
+                    <div class="form-elem">
+                      <label for="" class="form-label">Your Email*<span class="text-red-500">*</span></label>
+                      <input type="text" class="form-control" placeholder="you@company.com" />
+                    </div>
+                    <div class="form-elem password-form-elem">
+                      <label for="" class="form-label">Password<span>*</span></label>
+                      <div class="form-control-wrapper">
+                        <input type="password" class="form-control" placeholder="Your password" />
+                        <button type="button" class="form-elem-icon icon-24">
+                          <img class="slashed" src="assets/icons/eye_slash_gray.svg" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-3">
+                      <div class="checkbox-elem d-inline-flex align-items-center gap-x-3">
+                        <div class="checkbox border-grey-3-1 rounded-4">
+                          <input type="checkbox" name="" />
+                          <span class="icon"></span>
+                        </div>
+                        <span class="text-gray font-semibold text-base">Remember me</span>
+                      </div>
+                      <a href="#" class="text-primary text-base font-semibold">Forgot password?</a>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary flex-1 mt-custom-10 mb-custom-2 btn-block">
+                    Sign In
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END OF SIGN IN MODAL -->
 
   <!-- TRY FREE TRIAL MODAL -->
   <div class="modal modal-customized fade" id="tryForFreeModal" tabindex="-1" aria-labelledby="tryForFreeModalLabel"

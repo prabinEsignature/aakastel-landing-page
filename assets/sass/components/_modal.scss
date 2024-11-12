@@ -118,6 +118,7 @@
             min-width: 580px;
         }
     }
+
     &#getInTouchModal {
         .modal-dialog {
             min-width: 800px;
@@ -143,6 +144,17 @@
                     }
                 }
             }
+        }
+    }
+
+    &#signAuthModal{
+        .nav-tabs{
+          .nav-link{
+            &.active{
+                border-bottom: 2px solid color("primary")!important;
+                color: color("primary")!important;
+            }
+          }  
         }
     }
 }

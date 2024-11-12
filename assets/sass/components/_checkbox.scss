@@ -1,6 +1,14 @@
 .checkbox {
   position: relative;
+  overflow: hidden;
   @include box(24px);
+  @include flex-center;
+
+  &:hover {
+    .icon {
+      background: color("grey-1") !important;
+    }
+  }
 
   input[type="checkbox"],
   input[type="radio"] {
@@ -10,6 +18,7 @@
     left: 0;
     top: 0;
     @include box(100%);
+    cursor: pointer;
   }
 
   input:checked + .icon::after {
@@ -20,9 +29,10 @@
     position: relative;
     @include box(24px);
     background-color: color("white");
-    border: 2px solid color("white");
+    border: none;
     border-radius: 4px;
     display: inline-flex;
+    transition: $default-transition;
 
     &::after {
       position: absolute;
@@ -32,8 +42,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: url($icon-path + "tick_primary.svg") center/cover
-        no-repeat;
+      background: url($icon-path + "tick_primary.svg") center/cover no-repeat;
       opacity: 0;
     }
   }

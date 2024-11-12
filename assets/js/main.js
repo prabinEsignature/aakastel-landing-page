@@ -3,13 +3,9 @@ const navbar = document.querySelector(".atel-header");
 const scrollThreshold = 40;
 
 const handleScroll = () => {
-  if (window.scrollY > scrollThreshold) {
-    navbar.classList.add("atel-header-fixed");
-    navbar.classList.add("shadow-sm");
-  } else {
-    navbar.classList.remove("atel-header-fixed");
-    navbar.classList.remove("shadow-sm");
-  }
+  const isScrolled = window.scrollY > scrollThreshold;
+  navbar.classList.toggle("atel-header-fixed", isScrolled);
+  navbar.classList.toggle("shadow-sm", isScrolled);
 };
 
 handleScroll();
@@ -31,6 +27,11 @@ navSideMenuCloseBtn.addEventListener("click", () =>
 
 /* ####### NAVBAR MENU TOGGLE ####### */
 const menuItems = document.querySelectorAll(".menu-item");
+const resetNavbarMenu = () => {
+  document.querySelectorAll(".submenu-item-block.show").forEach(el => el.classList.remove("show"));
+  document.querySelectorAll(".menu-item.active").forEach(el => el.classList.remove("active"));
+};
+
 const subMenuItemBlocks = document.querySelectorAll(".submenu-item-block");
 let activeSubMenu = null;
 let activeMenuItem = null;
@@ -76,12 +77,7 @@ document.addEventListener("click", (event) => {
   }
 });
 
-const resetNavbarMenu = () => {
-  subMenuItemBlocks.forEach((subMenuBlock) =>
-    subMenuBlock.classList.remove("show")
-  );
-  menuItems.forEach((menuItem) => menuItem.classList.remove("active"));
-};
+
 /* ####### EOF NAVBAR MENU TOGGLE ####### */
 
 /* ####### NAVBAR SUBMENU TOGGLE - PRODUCTS SUBMENU ####### */
