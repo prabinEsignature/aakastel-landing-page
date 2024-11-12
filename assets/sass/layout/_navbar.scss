@@ -110,7 +110,7 @@ $z-index-navbar-toggler: 1010;
     &-text {
       @include breakpoint-down(lg) {
         color: color("night") !important;
-        font-size: 16px!important;
+        font-size: 16px !important;
       }
     }
 
@@ -231,8 +231,8 @@ $z-index-navbar-toggler: 1010;
         &-item {
           transition: $default-transition;
 
-          &:hover{
-            .submenu-item-text{
+          &:hover {
+            .submenu-item-text {
               color: color("primary") !important;
             }
           }
@@ -260,9 +260,27 @@ $z-index-navbar-toggler: 1010;
             }
           }
 
-          &-chevron{
-            @include breakpoint-down(lg){
-              display: block!important;
+          &-icon {
+            @include breakpoint-down(xs) {
+              width: 36px;
+              height: 36px;
+              min-width: 36px;
+              min-height: 36px;
+            }
+
+            img {
+              @include breakpoint-down(xs) {
+                width: 24px;
+                height: 24px;
+                min-width: 24px;
+                min-height: 24px;
+              }
+            }
+          }
+
+          &-chevron {
+            @include breakpoint-down(lg) {
+              display: block !important;
               transform: rotate(90deg);
             }
           }
@@ -290,6 +308,14 @@ $z-index-navbar-toggler: 1010;
           @include breakpoint-down(xl) {
             padding: 12px !important;
           }
+
+          @include breakpoint-down(lg) {
+            grid-template-columns: 100%;
+          }
+
+          @include breakpoint-down(xs) {
+            padding: 8px !important;
+          }
         }
 
         &-grid {
@@ -299,6 +325,11 @@ $z-index-navbar-toggler: 1010;
 
           @include breakpoint-down(sm) {
             padding: 8px !important;
+            gap: 4px!important;
+          }
+
+          @include breakpoint-down(xxs){
+            grid-template-columns: 100%;
           }
         }
 
@@ -327,6 +358,10 @@ $z-index-navbar-toggler: 1010;
           @include breakpoint-down(xl) {
             padding: 4px 8px !important;
           }
+
+          @include breakpoint-down(xs){
+            padding: 4px!important;
+          }
         }
       }
     }
@@ -343,8 +378,8 @@ $z-index-navbar-toggler: 1010;
             gap: 12px !important;
           }
 
-          @include breakpoint-down(lg){
-            height: auto!important;
+          @include breakpoint-down(lg) {
+            height: auto !important;
           }
 
           @include breakpoint-down(lg) {
@@ -476,7 +511,7 @@ $z-index-navbar-toggler: 1010;
               max-height: 0;
               overflow: hidden;
               transition: $default-transition;
-              
+
               &.show {
                 max-height: 1000px;
                 margin-top: 12px;
@@ -516,8 +551,8 @@ $z-index-navbar-toggler: 1010;
             padding: 12px !important;
           }
 
-          @include breakpoint-down(lg){
-            height: auto!important;
+          @include breakpoint-down(lg) {
+            height: auto !important;
           }
 
           @include breakpoint-down(sm) {
