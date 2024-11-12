@@ -7,11 +7,19 @@
         .nav-tabs {
             padding: 6px;
             min-height: 60px;
+
+            @include breakpoint-down(xs){
+                width: 100%;
+            }
         }
 
         button {
             &.nav-link {
                 min-width: 173px;
+
+                @include breakpoint-down(xs){
+                    width: 100%;
+                }
 
                 &.active {
                     background: color("dark-cyprus");
@@ -109,6 +117,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include breakpoint-down(md){
+            justify-content: space-between;
+            gap: 8px;
+        }
     }
 
     .plan-block{

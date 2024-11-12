@@ -26736,8 +26736,18 @@ table td {
   padding: 6px;
   min-height: 60px;
 }
+@media (max-width: 479.98px) {
+  .atel-pricing-pg .pricing-body-segment .nav-tabs {
+    width: 100%;
+  }
+}
 .atel-pricing-pg .pricing-body-segment button.nav-link {
   min-width: 173px;
+}
+@media (max-width: 479.98px) {
+  .atel-pricing-pg .pricing-body-segment button.nav-link {
+    width: 100%;
+  }
 }
 .atel-pricing-pg .pricing-body-segment button.nav-link.active {
   background: #0d3f46;
@@ -26815,6 +26825,12 @@ table td {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 767.98px) {
+  .atel-compare-plans .plan-label-info {
+    justify-content: space-between;
+    gap: 8px;
+  }
 }
 .atel-compare-plans .plan-block .btn-white-black:hover, .atel-compare-plans .plan-block .btn-white-black:active, .atel-compare-plans .plan-block .btn-white-black:focus {
   background: #e9f2ed !important;
