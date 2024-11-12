@@ -23919,14 +23919,26 @@ table td {
   min-height: 800px;
   padding-top: 80px;
 }
+@media (max-width: 991.98px) {
+  .atel-top-banner.atel-office-ivr-pg {
+    min-height: 770px;
+  }
+}
+@media (max-width: 767.98px) {
+  .atel-top-banner.atel-office-ivr-pg {
+    min-height: 700px;
+  }
+}
 @media (max-width: 575.98px) {
   .atel-top-banner.atel-office-ivr-pg {
     padding-top: 72px;
+    min-height: 650px;
   }
 }
 @media (max-width: 479.98px) {
   .atel-top-banner.atel-office-ivr-pg {
     padding-top: 60px;
+    min-height: 600px;
   }
 }
 .atel-top-banner.atel-office-ivr-pg .top-banner-text-group {
@@ -25663,8 +25675,28 @@ table td {
 }
 
 .atel-office-ivr-vid {
-  margin-top: -15.5%;
+  margin-top: -284px;
   position: relative;
+}
+@media (max-width: 991.98px) {
+  .atel-office-ivr-vid {
+    margin-top: -250px;
+  }
+}
+@media (max-width: 767.98px) {
+  .atel-office-ivr-vid {
+    margin-top: -215px;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-office-ivr-vid {
+    margin-top: -150px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-office-ivr-vid {
+    margin-top: -100px;
+  }
 }
 .atel-office-ivr-vid .segment-office-ivr-vid {
   max-width: 1062px;

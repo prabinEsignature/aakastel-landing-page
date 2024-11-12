@@ -1,10 +1,25 @@
 .atel-office-ivr-vid {
-    margin-top: -15.5%;
+    margin-top: -284px;
     position: relative;
+
+    @include breakpoint-down(lg){
+        margin-top: -250px;
+    }
+
+    @include breakpoint-down(md){
+        margin-top: -215px;
+    }
+
+    @include breakpoint-down(sm){
+        margin-top: -150px;
+    }
+
+    @include breakpoint-down(xs){
+        margin-top: -100px;
+    }
 
     .segment-office-ivr-vid {
         max-width: 1062px;
-        // min-height: 521px;
         z-index: 2;
 
         .vid-play-pause-btn {

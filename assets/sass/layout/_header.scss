@@ -270,12 +270,22 @@
         min-height: 800px;
         padding-top: 80px;
 
+        @include breakpoint-down(lg){
+            min-height: 770px;
+        }
+
+        @include breakpoint-down(md){
+            min-height: 700px;
+        }
+
         @include breakpoint-down(sm) {
             padding-top: 72px;
+            min-height: 650px;
         }
 
         @include breakpoint-down(xs) {
             padding-top: 60px;
+            min-height: 600px;
         }
 
         .top-banner {
