@@ -17,26 +17,26 @@ window.addEventListener("scroll", handleScroll);
 /* ####### EOF FIXED NAVBAR EFFECT AFTER SCROLL ####### */
 
 /* ####### SIDEBAR TOGGLE ####### */
-const navbarSideMenuOpenBtn = document.querySelector(".btn-navbar-menu-open");
-const navbarSideMenuCloseBtn = document.querySelector(".btn-navbar-menu-close");
-const navbarMenuParent = document.querySelector(".atel-navbar-menu-parent");
-navbarSideMenuOpenBtn.addEventListener("click", () => {
-  navbarMenuParent.classList.add("show");
-});
+const navSideMenuOpenBtn = document.querySelector(".btn-navbar-menu-open");
+const navSideMenuCloseBtn = document.querySelector(".btn-navbar-menu-close");
+const navMenuParent = document.querySelector(".atel-navbar-menu-parent");
+navSideMenuOpenBtn.addEventListener("click", () =>
+  navMenuParent.classList.add("show")
+);
 
-navbarSideMenuCloseBtn.addEventListener("click", () => {
-  navbarMenuParent.classList.remove("show");
-});
+navSideMenuCloseBtn.addEventListener("click", () =>
+  navMenuParent.classList.remove("show")
+);
 /* ####### EOF SIDEBAR TOGGLE ####### */
 
 /* ####### NAVBAR MENU TOGGLE ####### */
 const menuItems = document.querySelectorAll(".menu-item");
+const subMenuItemBlocks = document.querySelectorAll(".submenu-item-block");
 let activeSubMenu = null;
 let activeMenuItem = null;
 
 menuItems.forEach((menuItem) => {
   const subMenuBlock = menuItem.querySelector(".submenu-item-block");
-
   // Prevent clicks inside submenu-item-block from triggering the parent menuItem event
   if (subMenuBlock) {
     subMenuBlock.addEventListener("click", (event) => {
@@ -63,9 +63,7 @@ menuItems.forEach((menuItem) => {
   });
 });
 
-// Close the menu when clicking outside
 document.addEventListener("click", (event) => {
-  // Check if the click target is not within the active menu item or submenu
   if (
     activeMenuItem &&
     !activeMenuItem.contains(event.target) &&
@@ -79,13 +77,10 @@ document.addEventListener("click", (event) => {
 });
 
 const resetNavbarMenu = () => {
-  document
-    .querySelectorAll(".submenu-item-block")
-    .forEach((subMenuBlock) => subMenuBlock.classList.remove("show"));
-
-  document
-    .querySelectorAll(".menu-item")
-    .forEach((menuItem) => menuItem.classList.remove("active"));
+  subMenuItemBlocks.forEach((subMenuBlock) =>
+    subMenuBlock.classList.remove("show")
+  );
+  menuItems.forEach((menuItem) => menuItem.classList.remove("active"));
 };
 /* ####### EOF NAVBAR MENU TOGGLE ####### */
 
@@ -243,7 +238,7 @@ const downloadOption = document.getElementById("download-option");
 const speedOption = document.getElementById("speed-option");
 const loopOption = document.getElementById("loop-option");
 
-// TIME FORMATING FOR AUDIO PLAY
+// TIME FORMATING FOR AUDIO PLAY TIME
 const formatTime = (seconds) => {
   const minutes = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60)
@@ -252,7 +247,7 @@ const formatTime = (seconds) => {
   return `${minutes}:${secs}`;
 };
 
-// PLAY/PAUSE AUDIO
+// PLAY/PAUSE AUDIO FUNCTIONALITY
 playButton?.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
@@ -263,7 +258,7 @@ playButton?.addEventListener("click", () => {
   }
 });
 
-// UPDATE PROGRESS BAR AND TIME DISPLAY AS AUDIO PLAYS
+// UPDATE PROGRESS BAR AND TIME DISPLAY AS AUDIO PLAYS 
 audio?.addEventListener("timeupdate", () => {
   const currentTime = audio.currentTime;
   const duration = audio.duration;
@@ -483,7 +478,6 @@ const resetPathColor = () => {
 };
 
 function placeDivAtPathPosition(bbox, xScale, yScale) {
-  // Calculate the center of the path, scaled for the displayed SVG
   const x = (bbox.x + bbox.width / 2) * xScale;
   const y = (bbox.y + bbox.height / 2) * yScale;
 
@@ -514,11 +508,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function togglePlayPause() {
     if (video.paused || video.ended) {
       video.play();
-      // playPauseBtn.classList.add("d-none");
       playPauseBtn.querySelector("img").src = pauseIcon;
     } else {
       video.pause();
-      // playPauseBtn.classList.remove("d-none");
       playPauseBtn.querySelector("img").src = playIcon;
     }
   }
@@ -527,129 +519,105 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 /* ####### EOF VIDEO PLAY/PAUSE FEATURE ####### */
 
-var StackCards = function (element) {
-  this.element = element;
-  this.items = this.element.getElementsByClassName("key-products-block d-grid");
-  this.scrollingListener = false;
-  this.scrolling = false;
-  this.atelKeyProducts = document.querySelector(".atel-key-products"); // The sticky div
-  this.atelKeyProductsWrapper = document.querySelector(
-    ".atel-key-products-wrapper"
-  ); // Wrapper to control scroll
-  this.stickyTop = 130; // The sticky top position when scrolling should be allowed
-  this.lastScrollTop = 0; // Track last scroll position for scroll direction
-  this.init();
-};
-
-StackCards.prototype.init = function () {
-  // Use Intersection Observer to trigger animation
-  var observer = new IntersectionObserver(stackCardsCallback.bind(this));
-  observer.observe(this.element);
-};
-
-function stackCardsCallback(entries) {
-  if (entries[0].isIntersecting) {
-    // Cards inside viewport - add scroll listener
-    if (this.scrollingListener) return; // Listener for scroll event already added
-    stackCardsInitEvent(this);
-  } else {
-    // Cards not inside viewport - remove scroll listener
-    if (!this.scrollingListener) return; // Listener for scroll event already removed
-    window.removeEventListener("scroll", this.scrollingListener);
+/* ####### STACK CARDS EFFECT ####### */
+class StackCards {
+  constructor(element) {
+    this.element = element;
+    this.items = this.element.querySelectorAll(".key-products-block.d-grid");
     this.scrollingListener = false;
-  }
-}
-
-function stackCardsInitEvent(element) {
-  element.scrollingListener = stackCardsScrolling.bind(element);
-  window.addEventListener("scroll", element.scrollingListener);
-}
-
-function stackCardsScrolling() {
-  var currentScrollTop =
-    window.pageYOffset || document.documentElement.scrollTop;
-  var scrollDirection = currentScrollTop > this.lastScrollTop ? "down" : "up";
-  this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Prevent negative scroll
-
-  // Get the position of the parent sticky div
-  var parentTop = this.atelKeyProducts.getBoundingClientRect().top;
-
-  // Check if .atel-key-products has reached the sticky position (top of the viewport)
-  if (parentTop <= this.stickyTop) {
-    // Allow scroll on .atel-key-products-wrapper once .atel-key-products touches the top
-    this.atelKeyProductsWrapper.style.overflow = "auto"; // Enable scrolling
-
-    // Scroll down logic: Enable scroll only after .atel-key-products is at the top
-    if (scrollDirection === "down") {
-      if (!this.scrolling) {
-        this.scrolling = true;
-        window.requestAnimationFrame(animateStackCards.bind(this));
-      }
-    }
-  } else {
-    // Disable scroll if .atel-key-products has not reached the top
-    this.atelKeyProductsWrapper.style.overflow = "hidden"; // Disable scrolling
-  }
-
-  // Scroll up logic (optional): You can control this if necessary, e.g., reset scroll state
-  if (scrollDirection === "up") {
     this.scrolling = false;
-    window.requestAnimationFrame(animateStackCards.bind(this));
+    this.atelKeyProducts = document.querySelector(".atel-key-products");
+    this.atelKeyProductsWrapper = document.querySelector(".atel-key-products-wrapper");
+    this.stickyTop = 130;
+    this.lastScrollTop = 0;
+    this.init();
+  }
+
+  init() {
+    const observer = new IntersectionObserver(this.stackCardsCallback.bind(this));
+    observer.observe(this.element);
+  }
+
+  stackCardsCallback(entries) {
+    if (entries[0].isIntersecting && !this.scrollingListener) {
+      this.stackCardsInitEvent();
+    } else if (!entries[0].isIntersecting && this.scrollingListener) {
+      window.removeEventListener("scroll", this.scrollingListener);
+      this.scrollingListener = false;
+    }
+  }
+
+  stackCardsInitEvent() {
+    this.scrollingListener = this.stackCardsScrolling.bind(this);
+    window.addEventListener("scroll", this.scrollingListener);
+  }
+
+  stackCardsScrolling() {
+    const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollDirection = currentScrollTop > this.lastScrollTop ? "down" : "up";
+    this.lastScrollTop = Math.max(0, currentScrollTop);
+
+    const parentTop = this.atelKeyProducts.getBoundingClientRect().top;
+
+    if (parentTop <= this.stickyTop) {
+      this.atelKeyProductsWrapper.style.overflow = "auto";
+      if (scrollDirection === "down" && !this.scrolling) {
+        this.scrolling = true;
+        window.requestAnimationFrame(this.animateStackCards.bind(this));
+      }
+    } else {
+      this.atelKeyProductsWrapper.style.overflow = "hidden";
+    }
+
+    if (scrollDirection === "up") {
+      this.scrolling = false;
+      window.requestAnimationFrame(this.animateStackCards.bind(this));
+    }
+  }
+
+  animateStackCards() {
+    const top = this.element.getBoundingClientRect().top;
+    const offsetTop = 100;
+    const cardHeight = 300;
+    const marginY = 15;
+
+    this.items.forEach((item, i) => {
+      const scrolling = offsetTop - top - i * (cardHeight + marginY);
+    });
+
+    this.scrolling = false;
   }
 }
 
-function animateStackCards() {
-  var top = this.element.getBoundingClientRect().top;
-  var offsetTop = 100,
-    cardHeight = 300,
-    marginY = 15;
-
-  for (var i = 0; i < this.items.length; i++) {
-    var scrolling = offsetTop - top - i * (cardHeight + marginY);
-  }
-
-  this.scrolling = false;
+const stackCardsElements = document.querySelectorAll(".card-deck-js");
+if (stackCardsElements.length > 0 && "IntersectionObserver" in window) {
+  stackCardsElements.forEach((stackCardElement) => new StackCards(stackCardElement));
 }
 
-// Initialize the StackCards on both sections
-var stackCards = document.getElementsByClassName("card-deck-js");
-var intersectionObserverSupported =
-  "IntersectionObserver" in window && "IntersectionObserverEntry" in window;
-
-if (stackCards.length > 0 && intersectionObserverSupported) {
-  for (var i = 0; i < stackCards.length; i++) {
-    new StackCards(stackCards[i]);
-  }
-}
+/* ####### EOF STACK CARDS EFFECT ####### */
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".submenu-item").forEach(function (item) {
-    // Attach the event listener to the chevron element within each submenu-item
     item
       .querySelector(".submenu-item-chevron")
       .addEventListener("click", function (event) {
         if (window.innerWidth <= 991.98) {
-          // Prevent the <a> tag click event
           event.stopPropagation();
-          event.preventDefault(); // Prevents the link navigation
+          event.preventDefault();
         }
       });
 
-    // Attach a separate event listener for the text span to ensure it functions as a link
     item
       .querySelector(".submenu-item-text")
       .addEventListener("click", function (event) {
-        // Only allow the link behavior on smaller screens
         if (window.innerWidth <= 991.98) {
-          event.stopPropagation(); // Ensures only the text click triggers the link
+          event.stopPropagation();
         }
       });
   });
 
-  // Optionally, add resize listener to adjust behavior on screen size change
   window.addEventListener("resize", function () {
     if (window.innerWidth > 991.98) {
-      // On larger screens, remove any effects if they exist (in case of dynamic updates)
       document
         .querySelectorAll(".submenu-item-chevron")
         .forEach(function (chevron) {
