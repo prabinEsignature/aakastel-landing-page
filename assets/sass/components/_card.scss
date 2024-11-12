@@ -42,12 +42,12 @@
         gap: 24px !important;
     }
 
-    @include breakpoint-down(sm){
-        gap: 20px!important;
+    @include breakpoint-down(sm) {
+        gap: 20px !important;
     }
 
-    @include breakpoint-down(xs){
-        gap: 16px!important;
+    @include breakpoint-down(xs) {
+        gap: 16px !important;
     }
 
     .card {
@@ -88,29 +88,28 @@
     }
 
     .plain-card {
-        &-item {
-            &:hover {
-                border-color: color("primary") !important;
-                box-shadow: map-get($shadows, "default");
+        &:hover {
+            border-color: color("primary") !important;
+            box-shadow: map-get($shadows, "default");
+        }
+
+        &:focus {
+            background: color("primary") !important;
+
+            .plain-card-bottom {
+                color: color("white") !important;
             }
 
-            &:focus {
-                background: color("primary") !important;
-
-                .plain-card-item-bottom {
+            .plain-card-top {
+                h4 {
                     color: color("white") !important;
                 }
-
-                .plain-card-item-top {
-                    h4 {
-                        color: color("white") !important;
-                    }
-                }
             }
+        }
 
-            @include breakpoint-down(sm){
-                padding: 16px 12px!important;
-            }
+        @include breakpoint-down(sm) {
+            padding: 16px 12px !important;
         }
     }
 }
+
