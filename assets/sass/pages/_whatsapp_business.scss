@@ -36,6 +36,11 @@
 }
 
 .atel-whatsapp-api-for {
+    .whatsapp-api-for-list{
+        @include breakpoint-down(sm){
+            gap: 16px!important;
+        }
+    }
     .whatsapp-api-for-item{
         transition: $default-transition;
         &:hover{

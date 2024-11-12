@@ -26185,6 +26185,16 @@ table td {
     grid-template-columns: 100%;
   }
 }
+@media (max-width: 575.98px) {
+  .atel-dev-resource .dev-resource-btns {
+    gap: 8px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-dev-resource .dev-resource-btns .btn {
+    flex: 1;
+  }
+}
 .atel-dev-resource .dev-resource-tabs {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -26255,6 +26265,11 @@ table td {
   }
 }
 
+@media (max-width: 575.98px) {
+  .atel-whatsapp-api-for .whatsapp-api-for-list {
+    gap: 16px !important;
+  }
+}
 .atel-whatsapp-api-for .whatsapp-api-for-item {
   transition: all ease-in-out 300ms;
 }
