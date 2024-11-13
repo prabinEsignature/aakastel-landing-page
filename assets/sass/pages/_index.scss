@@ -539,6 +539,10 @@
             margin-top: 0;
         }
 
+        @include breakpoint-down(xs) {
+            padding: 12px !important;
+        }
+
         .nav-tabs {
             outline: 2px solid color("grey-2") !important;
             outline-offset: -2px !important;
@@ -576,6 +580,10 @@
         .presence-locations {
             outline: 2px solid color("white");
             outline-offset: -2px;
+
+            @include breakpoint-down(sm) {
+                column-gap: 12px!important;
+            }
         }
 
         .presence-location-name {

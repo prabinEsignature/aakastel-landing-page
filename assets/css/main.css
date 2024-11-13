@@ -25479,6 +25479,11 @@ table td {
     margin-top: 0;
   }
 }
+@media (max-width: 479.98px) {
+  .atel-presence .presence-tabs {
+    padding: 12px !important;
+  }
+}
 .atel-presence .presence-tabs .nav-tabs {
   outline: 2px solid #e5e5e5 !important;
   outline-offset: -2px !important;
@@ -25511,6 +25516,12 @@ table td {
 .atel-presence .presence-tabs .presence-locations {
   outline: 2px solid #fff;
   outline-offset: -2px;
+}
+@media (max-width: 575.98px) {
+  .atel-presence .presence-tabs .presence-locations {
+    -moz-column-gap: 12px !important;
+         column-gap: 12px !important;
+  }
 }
 .atel-presence .presence-tabs .presence-location-name {
   transition: all ease-in-out 300ms;
