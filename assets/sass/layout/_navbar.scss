@@ -107,6 +107,10 @@ $z-index-navbar-toggler: 1010;
       width: 100%;
     }
 
+    @include breakpoint-down(xs){
+      padding: 8px;
+    }
+
     &-text {
       @include breakpoint-down(lg) {
         color: color("night") !important;
@@ -164,7 +168,7 @@ $z-index-navbar-toggler: 1010;
 
       &:has(.submenu-item-block.show) {
         @include breakpoint-down(lg) {
-          padding-bottom: 20px;
+          // padding-bottom: 20px;
         }
       }
     }
@@ -205,6 +209,7 @@ $z-index-navbar-toggler: 1010;
       margin-left: auto;
       border: 1px solid color("white") !important;
       margin-top: 12px;
+      max-width: 100% !important;
     }
 
     @include breakpoint-down(sm) {
@@ -217,7 +222,7 @@ $z-index-navbar-toggler: 1010;
         opacity: 1;
         visibility: visible;
         display: block;
-        max-height: 1000px;
+        max-height: 1200px;
         border: 1px solid color("grey-2") !important;
       }
     }
@@ -255,7 +260,7 @@ $z-index-navbar-toggler: 1010;
               transition: $default-transition;
 
               &.show {
-                max-height: 1000px;
+                max-height: 1200px;
               }
             }
           }
@@ -325,10 +330,10 @@ $z-index-navbar-toggler: 1010;
 
           @include breakpoint-down(sm) {
             padding: 8px !important;
-            gap: 4px!important;
+            gap: 4px !important;
           }
 
-          @include breakpoint-down(xxs){
+          @include breakpoint-down(xxs) {
             grid-template-columns: 100%;
           }
         }
@@ -359,8 +364,8 @@ $z-index-navbar-toggler: 1010;
             padding: 4px 8px !important;
           }
 
-          @include breakpoint-down(xs){
-            padding: 4px!important;
+          @include breakpoint-down(xs) {
+            padding: 4px !important;
           }
         }
       }
@@ -433,7 +438,7 @@ $z-index-navbar-toggler: 1010;
             transition: $default-transition;
 
             &.show {
-              max-height: 1000px;
+              max-height: 1200px;
             }
           }
 
@@ -460,6 +465,7 @@ $z-index-navbar-toggler: 1010;
           @include breakpoint-down(lg) {
             grid-template-columns: 100%;
             gap: 0 !important;
+            height: auto !important;
           }
         }
       }
@@ -513,8 +519,18 @@ $z-index-navbar-toggler: 1010;
               transition: $default-transition;
 
               &.show {
-                max-height: 1000px;
+                max-height: 1200px;
                 margin-top: 12px;
+              }
+            }
+
+            @include breakpoint-down(xs){
+              width: 100%;
+            }
+
+            & > div.d-grid {
+              @include breakpoint-down(xs) {
+                grid-template-columns: 100% !important;
               }
             }
           }
@@ -543,6 +559,13 @@ $z-index-navbar-toggler: 1010;
             }
           }
         }
+
+        &-head{
+          @include breakpoint-down(xs){
+            padding-top: 8px!important;
+            padding-bottom: 8px!important;
+          }
+        }
       }
 
       .submenu-item {
@@ -557,6 +580,10 @@ $z-index-navbar-toggler: 1010;
 
           @include breakpoint-down(sm) {
             padding: 8px !important;
+          }
+
+          @include breakpoint-down(xs){
+            grid-template-columns: 100%!important;
           }
         }
 
