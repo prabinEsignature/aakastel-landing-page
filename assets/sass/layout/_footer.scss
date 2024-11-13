@@ -13,7 +13,7 @@
             grid-template-columns: 100% !important;
         }
 
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
             gap: 24px !important;
         }
     }
@@ -36,10 +36,10 @@
             border-radius: 20px;
         }
 
-        .cta-call-ttl{
-            @include breakpoint-down(sm){
-                margin-top: 20px!important;
-                max-width: 300px!important;
+        .cta-call-ttl {
+            @include breakpoint-down(sm) {
+                margin-top: 20px !important;
+                max-width: 300px !important;
                 margin-right: auto;
                 margin-left: auto;
             }
@@ -50,8 +50,8 @@
         }
 
         .cta-call-btns {
-            @include breakpoint-down(sm){
-                margin-top: 24px!important;
+            @include breakpoint-down(sm) {
+                margin-top: 24px !important;
                 width: 100%;
             }
 
@@ -66,29 +66,29 @@
     .footer-segment-links {
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
-        @include breakpoint-down(sm){
-            @include breakpoint-down(sm){
-                grid-template-columns: repeat(1, 1fr)!important;
+        @include breakpoint-down(sm) {
+            @include breakpoint-down(sm) {
+                grid-template-columns: repeat(1, 1fr) !important;
             }
         }
 
-        .footer-links-list{
-            @include breakpoint-down(sm){
-                row-gap: 4px!important;
+        .footer-links-list {
+            @include breakpoint-down(sm) {
+                row-gap: 4px !important;
             }
         }
 
-        & > .footer-links-block{
-            .footer-links-list{
-                @include breakpoint-down(sm){
+        & > .footer-links-block {
+            .footer-links-list {
+                @include breakpoint-down(sm) {
                     grid-template-columns: repeat(2, 1fr);
                     column-gap: 12px;
                 }
             }
         }
 
-        .footer-links-block-group{
-            @include breakpoint-down(sm){
+        .footer-links-block-group {
+            @include breakpoint-down(sm) {
                 grid-template-columns: repeat(2, 1fr);
                 column-gap: 12px;
             }
@@ -100,19 +100,27 @@
             flex-direction: column;
         }
 
-        .contact-info-group{
+        @include breakpoint-down(sm) {
+            margin-top: 20px !important;
+        }
+
+        .contact-info-group {
             @include breakpoint-down(sm) {
                 justify-content: center;
-                gap: 12px!important;
+                gap: 12px !important;
             }
 
-            .contact-info-item{
-                span{
+            @include breakpoint-down(xs) {
+                gap: 8px !important;
+            }
+
+            .contact-info-item {
+                span {
                     transition: $default-transition;
                 }
-                &:hover{
-                    span{
-                        color: color("primary")!important;
+                &:hover {
+                    span {
+                        color: color("primary") !important;
                     }
                 }
             }
@@ -125,53 +133,72 @@
             gap: 20px;
         }
 
-        @include breakpoint-down(sm){
-            padding-top: 0!important;
+        @include breakpoint-down(sm) {
+            padding-top: 0 !important;
+            padding-bottom: 8px !important;
             gap: 12px;
         }
 
-        .tac-list{
-            @include breakpoint-down(lg){
+        .tac-list {
+            @include breakpoint-down(lg) {
                 justify-content: center;
             }
 
-            @include breakpoint-down(md){
-                column-gap: 12px!important;
-                row-gap: 4px!important;
+            @include breakpoint-down(md) {
+                column-gap: 12px !important;
+                row-gap: 4px !important;
             }
         }
     }
 
-    .footer-links-block{
-        .footer-link-elem, a{
+    .footer-links-block {
+        .footer-link-elem,
+        a {
             transition: $default-transition;
-            &:hover{
-                opacity: 1!important;
-                color: color("white")!important;
+            &:hover {
+                opacity: 1 !important;
+                color: color("white") !important;
                 text-decoration: underline;
             }
         }
     }
 
-    .contact-social-link{
-        &-item{
+    .contact-social-link {
+        &-item {
             transition: $default-transition;
-            &:hover{
-                background: color("primary")!important;
+
+            &:hover {
+                background: color("primary") !important;
                 border-radius: 4px;
                 box-shadow: map-get($shadows, "sm");
-                img{
+                img {
                     filter: invert(1) brightness(100);
+                }
+            }
+
+            @include breakpoint-down(xs) {
+                width: 36px;
+                height: 36px;
+                min-width: 36px;
+                min-height: 36px;
+            }
+
+            img {
+                @include breakpoint-down(xs) {
+                    width: 16px;
+                    height: 16px;
+                    min-width: 16px;
+                    min-height: 16px;
                 }
             }
         }
     }
 
-    .tac-list{
-        .tac-link{
+    .tac-list {
+        .tac-link {
             transition: $default-transition;
-            &:hover{
-                color: color("white")!important;
+            &:hover {
+                color: color("white") !important;
                 text-decoration: underline;
             }
         }
