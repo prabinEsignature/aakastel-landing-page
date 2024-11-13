@@ -200,9 +200,8 @@ $flex-classes: (
 @include responsive-grid-template(12);
 
 // Responsive Grid Column Utilities
-// Responsive Grid Column Utilities
 $grid-column-classes: (
-  span: (
+  column: (
     "col-auto": "auto",
     "col-span-1": "span 1 / span 1",
     "col-span-2": "span 2 / span 2",
@@ -256,14 +255,20 @@ $grid-column-classes: (
 @each $type, $classes in $grid-column-classes {
   @each $class, $value in $classes {
     .#{$class} {
-      grid-#{$type}: #{$value};
+      @if $type == 'column' {
+        grid-column: #{$value};
+      } @else if $type == 'start' {
+        grid-column-start: #{$value};
+      } @else if $type == 'end' {
+        grid-column-end: #{$value};
+      }
     }
   }
 }
 
 // Grid Row Utilities
 $grid-row-classes: (
-  span: (
+  row: (
     "row-auto": "auto",
     "row-span-1": "span 1 / span 1",
     "row-span-2": "span 2 / span 2",
@@ -311,7 +316,13 @@ $grid-row-classes: (
 @each $type, $classes in $grid-row-classes {
   @each $class, $value in $classes {
     .#{$class} {
-      grid-#{$type}: #{$value};
+      @if $type == 'row' {
+        grid-row: #{$value};
+      } @else if $type == 'start' {
+        grid-row-start: #{$value};
+      } @else if $type == 'end' {
+        grid-row-end: #{$value};
+      }
     }
   }
 }
