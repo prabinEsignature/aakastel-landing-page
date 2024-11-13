@@ -5842,6 +5842,7 @@
         templateResult: formatTemplate,
         templateSelection: formatCountry,
         data: isoCountries,
+        allowClear: true,
       });
 
       $("#countrySelect2").select2({
@@ -5850,7 +5851,10 @@
         templateResult: formatTemplate,
         templateSelection: formatCountry,
         data: isoCountries,
+        allowClear: true,
       });
+
+      $('input.select2-search__field')[0].focus();
 
       // Format the country display in the dropdown
       function formatTemplate(country) {

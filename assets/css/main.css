@@ -23386,6 +23386,14 @@ input[type=button].btn-block {
   border-color: #e5e5e5 !important;
 }
 
+.select2-container--default .select2-selection--single .select2-selection__clear {
+  width: 20px;
+  height: 20px !important;
+  background-color: #fe4d16 !important;
+  border-radius: 4px;
+  margin-right: 0 !important;
+}
+
 .pagination-block .page-link {
   width: 28px;
   min-width: 28px;
