@@ -276,4 +276,5 @@
   background-color: color("red-500")!important;
   border-radius: 4px;
   margin-right: 0!important;
+  @include flex-center;
 }

@@ -2,7 +2,7 @@
 @use "sass:color";
 
 // Configuration Variables
-$font-size-base: 16px; // Base font size for rem conversions
+$font-size-base: 16px; 
 
 // Color Utility Functions
 @function set-text-color($color, $light-threshold: 40%) {

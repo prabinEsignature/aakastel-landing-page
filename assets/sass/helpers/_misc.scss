@@ -1,15 +1,15 @@
 ::selection {
   background: color("primary") !important;
-  color: #fff;
+  color: color("white");
   text-shadow: none;
 }
 ::-moz-selection {
   background: color("primary");
-  color: #fff;
+  color: color("white");
   text-shadow: none;
 }
 ::-webkit-selection {
   background: color("primary");
-  color: #fff;
+  color: color("white");
   text-shadow: none;
 }

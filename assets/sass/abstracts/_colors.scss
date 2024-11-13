@@ -52,7 +52,7 @@ $grey-2: #e5e5e5;
 $grey-3: #d1d1d1;
 $grey-4: #9e9e9e;
 
-// Map of All Colors
+// MAP OF ALL COLORS
 $colors: (
   "primary": $theme,
   "primary-light": $theme-light,
@@ -102,7 +102,7 @@ $grayscale: (
   "gray-950": $gray-950
 );
 
-// CSS Custom Properties for Colors
+// CSS CUSTOM PROPERTIES FOR COLORS
 :root {
   @each $name, $value in $colors {
     --color-#{$name}: #{$value};
@@ -112,7 +112,7 @@ $grayscale: (
   }
 }
 
-// Utility Function for Color Retrieval
+// UTILITY FUNCTION FOR COLOR RETRIEVAL
 @function color($name, $map: $colors) {
   @if map-has-key($map, $name) {
     @return map-get($map, $name);

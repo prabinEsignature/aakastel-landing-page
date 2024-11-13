@@ -29,23 +29,23 @@ html {
 
 body {
   min-height: 100vh;
-  // overflow-x: hidden; /* Disabling Scrolling - For X Axis */
+  // overflow-x: hidden; 
   padding: 0;
   margin: 0;
 
   &.no-scroll {
-    overflow: hidden; // Disable all scrolling when .no-scroll is applied
+    overflow: hidden; 
     touch-action: none; // Prevent touch events for better control
   }
 }
 
 .page-wrapper {
   position: relative;
-  // overflow: hidden !important; // Ensure no overflow
-  min-height: 100vh; // Expand to full viewport height
+  // overflow: hidden !important; 
+  min-height: 100vh; 
 }
 
-// Accessibility Improvements
+// ACCESSIBILITY IMPORVEMENTS
 :focus-visible {
   outline: 2px solid color("primary"); // Focus outline for keyboard accessibility
   outline-offset: 2px;
@@ -59,7 +59,7 @@ body {
   }
 }
 
-// High Contrast Mode Support
+// HIGH CONTRAST MODE SUPPORT
 @media (forced-colors: active) {
   html {
     background-color: Canvas;

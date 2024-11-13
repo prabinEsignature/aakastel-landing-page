@@ -87,7 +87,7 @@ $line-hover-decoration: underline;
 /* #### TYPOGRAPHY VARIABLES #### */
 $paragraph-margin-bottom: 0;
 
-// Headings Configuration Map
+// HEADINGS CONFIGURATION MAP
 $headings-config: (
   "margin-bottom": 0,
   "font-family": $font-family-base,
@@ -105,7 +105,7 @@ $headings-config: (
   )
 );
 
-// Mixin to Apply Heading Styles
+// MIXIN TO APPLY HEADING STYLES
 @mixin heading-styles($level) {
   margin-bottom: map-get($headings-config, "margin-bottom");
   font-family: map-get($headings-config, "font-family");
@@ -116,20 +116,20 @@ $headings-config: (
   letter-spacing: map-get($headings-config, "letter-spacing");
 }
 
-// Advanced Z-INDEX Configuration
+// ADVANCED Z-INDEX CONFIGURATION
 $z-index: (
   "pothole": -1,            // Below everything
   "basement": 0,            // Default level
-  "1": 1,               // Basic stacking level 1
-  "2": 2,               // Basic stacking level 2
-  "3": 3,               // Basic stacking level 3
-  "4": 4,               // Basic stacking level 4
-  "5": 5,               // Basic stacking level 5
-  "6": 6,               // Basic stacking level 6
-  "7": 7,               // Basic stacking level 7
-  "8": 8,               // Basic stacking level 8
-  "9": 9,               // Basic stacking level 9
-  "10": 10,             // Basic stacking level 10
+  "1": 1,                   // Basic stacking level 1
+  "2": 2,                   // Basic stacking level 2
+  "3": 3,                   // Basic stacking level 3
+  "4": 4,                   // Basic stacking level 4
+  "5": 5,                   // Basic stacking level 5
+  "6": 6,                   // Basic stacking level 6
+  "7": 7,                   // Basic stacking level 7
+  "8": 8,                   // Basic stacking level 8
+  "9": 9,                   // Basic stacking level 9
+  "10": 10,                 // Basic stacking level 10
   "ground": 15,             // Ground level
   "sidewalk": 20,           // Elements just above the ground
   "streetlight": 30,        // Elevated elements like floating labels
@@ -154,7 +154,7 @@ $z-index: (
   "highest": 1300           // Highest level for urgent items
 );
 
-// Utility Classes for Z-INDEX
+// UTILITY CLASSES FOR Z-INDEX
 @each $name, $value in $z-index {
   .z-#{$name} {
     z-index: $value;

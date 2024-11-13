@@ -23392,6 +23392,10 @@ input[type=button].btn-block {
   background-color: #fe4d16 !important;
   border-radius: 4px;
   margin-right: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .pagination-block .page-link {
