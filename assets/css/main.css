@@ -23522,13 +23522,14 @@ table td {
     background-size: 20px;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 575.98px) {
   .accordion-button-icon {
     width: 28px !important;
     height: 28px !important;
     min-width: 28px !important;
     min-height: 28px !important;
-    background-size: 16px;
+    background-size: 16px !important;
+    border-radius: 4px !important;
   }
 }
 @media (max-width: 575.98px) {
@@ -23638,6 +23639,9 @@ table td {
   .plain-cards {
     gap: 16px !important;
   }
+}
+.plain-cards .plain-card-top {
+  align-items: center;
 }
 .plain-cards .plain-card:hover {
   border-color: #3bb24a !important;
@@ -26019,6 +26023,12 @@ table td {
 }
 .atel-benefits .benefits-item {
   position: relative;
+}
+@media (max-width: 479.98px) {
+  .atel-benefits .benefits-item {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
 }
 .atel-benefits .benefits-item::after {
   content: "";

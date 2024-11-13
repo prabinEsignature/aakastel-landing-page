@@ -483,13 +483,12 @@ function placeDivAtPathPosition(bbox, xScale, yScale) {
   presenceInfoDiv.classList.remove("d-none");
 }
 
-const locationItems = document.querySelectorAll(".presence-location-name");
-locationItems.forEach((locationItem) => {
-  locationItem.addEventListener("click", () => {
-    const dataLocationId = locationItem.getAttribute("data-location-id");
+document.body.addEventListener("click", (event) => {
+  if (event.target.classList.contains("presence-location-name")) {
+    const dataLocationId = event.target.getAttribute("data-location-id");
     resetPathColor();
     changePathColor(dataLocationId);
-  });
+  }
 });
 /* ####### EOF PRESENCE MAP - DISTRICT MAPPING ####### */
 

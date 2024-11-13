@@ -8,6 +8,11 @@
     .benefits-item {
         position: relative;
 
+        @include breakpoint-down(xs){
+            padding-top: 8px!important;
+            padding-bottom: 8px!important;
+        }
+
         &::after {
             content: "";
             position: absolute;
