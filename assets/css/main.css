@@ -24285,7 +24285,7 @@ table td {
 }
 @media (max-width: 479.98px) {
   .atel-navbar .menu-item {
-    padding: 8px;
+    padding: 10px 8px;
   }
 }
 .atel-navbar .menu-item.active .menu-item-text {

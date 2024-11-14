@@ -3229,11 +3229,11 @@
                 Customer Ever Again!
               </h3>
               <div class="cta-call-btns d-flex flex-wrap gap-2 mt-custom-12">
-                <a href="#" class="btn btn-primary btn-lg flex-1">Try for Free</a>
-                <a href="#" class="btn btn-white-black btn-lg flex-1">See Our Pricing</a>
+                <a href="#" class="btn btn-primary btn-lg flex-1" role="button">Try for Free</a>
+                <a href="#" class="btn btn-white-black btn-lg flex-1" role="button">See Our Pricing</a>
               </div>
             </div>
-            <div class="footer-segment-block">
+            <nav class="footer-segment-block" aria-label="Footer Navigation">
               <div class="footer-segment-links d-grid align-items-start grid-cols-3 gap-5 segment-py-40">
                 <div class="footer-links-block" data-aos="fade-up" data-aos-duration="800">
                   <p class="text-base font-semibold text-light-cyprus">
@@ -3391,44 +3391,51 @@
               <div
                 class="footer-segment-contact mt-custom-8 mb-custom-2 d-flex align-items-center justify-content-between gap-2">
                 <div class="contact-info-group d-flex flex-wrap gap-5">
-                  <a href="#" class="contact-info-item d-flex align-items-center gap-2">
+                  <a href="tel:+9779808139797" class="contact-info-item d-flex align-items-center gap-2"
+                    aria-label="Call us">
                     <span class="contact-info-icon icon-24 d-inline-flex align-items-center justify-content-center">
-                      <img class="icon-20" src="assets/icons/phone_green.svg" />
+                      <img class="icon-20" src="assets/icons/phone_green.svg" alt="phone green icon"
+                        aria-hidden="true" />
                     </span>
                     <span class="font-semibold text-base text-white">+977 9808139797</span>
                   </a>
-                  <a href="mailto:info@aakashtech.com.np" class="contact-info-item d-flex align-items-center gap-2">
+                  <a href="mailto:info@aakashtech.com.np" class="contact-info-item d-flex align-items-center gap-2"
+                    aria-label="Email us">
                     <span class="contact-info-icon icon-24 d-inline-flex align-items-center justify-content-center">
-                      <img class="icon-20" src="assets/icons/envelope_green.svg" />
+                      <img class="icon-20" src="assets/icons/envelope_green.svg" alt="envelope green icon"
+                        aria-hidden="true" />
                     </span>
                     <span class="font-semibold text-base text-white">info@aakashtech.com.np</span>
                   </a>
                 </div>
-                <div class="contact-social-link">
+                <div class="contact-social-link" aria-label="Social Media Links">
                   <a href="#" class="contact-social-link-item icon-40">
-                    <img class="icon-20" src="assets/icons/facebook_gray.svg" alt="facebook icon" />
+                    <img class="icon-20" aria-hidden="true" src="assets/icons/facebook_gray.svg" alt="facebook icon" />
                   </a>
                   <a href="#" class="contact-social-link-item icon-40">
-                    <img class="icon-20" src="assets/icons/instagram_gray.svg" alt="instagram icon" />
+                    <img class="icon-20" aria-hidden="true" src="assets/icons/instagram_gray.svg"
+                      alt="instagram icon" />
                   </a>
                   <a href="#" class="contact-social-link-item icon-40">
-                    <img class="icon-20" src="assets/icons/linkedin_gray.svg" alt="linkedin icon" />
+                    <img class="icon-20" aria-hidden="true" src="assets/icons/linkedin_gray.svg" alt="linkedin icon" />
                   </a>
                   <a href="#" class="contact-social-link-item icon-40">
-                    <img class="icon-20" src="assets/icons/youtube_gray.svg" alt="youtube icon" />
+                    <img class="icon-20" aria-hidden="true" src="assets/icons/youtube_gray.svg" alt="youtube icon" />
                   </a>
                   <a href="#" class="contact-social-link-item icon-40">
-                    <img class="icon-20" src="assets/icons/discord_gray.svg" alt="pinterest icon" />
+                    <img class="icon-20" aria-hidden="true" src="assets/icons/discord_gray.svg" alt="pinterest icon" />
                   </a>
                   <a href="#" class="contact-social-link-item icon-40">
-                    <img class="icon-20" src="assets/icons/twitter_gray.svg" alt="twitter icon" />
+                    <img class="icon-20" aria-hidden="true" src="assets/icons/twitter_gray.svg" alt="twitter icon" />
                   </a>
                 </div>
               </div>
-            </div>
+            </nav>
           </div>
-          <div class="footer-segment-bottom d-flex align-items-center justify-content-between py-custom-7">
-            <span class="font-bold text-xs text-light-cyprus copyright-text tracking-04">Copyright © 2024
+          <nav class="footer-segment-bottom d-flex align-items-center justify-content-between py-custom-7"
+            aria-label="Legal links">
+            <span class="font-bold text-xs text-light-cyprus copyright-text tracking-04">Copyright © <time
+                datetime="2024">2024</time>
               Aakashtech.</span>
             <ul class="unstyled tac-list d-flex align-items-center flex-wrap gap-x-4 gap-y-2">
               <li>
@@ -3455,7 +3462,7 @@
                   Conditions</a>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
       </div>
     </footer>

@@ -108,7 +108,7 @@ $z-index-navbar-toggler: 1010;
     }
 
     @include breakpoint-down(xs){
-      padding: 8px;
+      padding: 10px 8px;
     }
 
     &.active{
