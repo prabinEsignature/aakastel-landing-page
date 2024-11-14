@@ -593,7 +593,6 @@ if (stackCardsElements.length > 0 && "IntersectionObserver" in window) {
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".submenu-item").forEach(function (item) {
-    console.log(item);
     item
       .addEventListener("click", function (event) {
         if (window.innerWidth <= 991.98) {
