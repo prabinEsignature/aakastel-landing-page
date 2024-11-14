@@ -25923,6 +25923,9 @@ table td {
     margin-bottom: 0 !important;
   }
 }
+.atel-faq .segment-faq .accordion-item .accordion-button:hover {
+  color: #3bb24a !important;
+}
 @media (max-width: 575.98px) {
   .atel-faq .segment-faq .accordion-item .accordion-button {
     padding-left: 0 !important;

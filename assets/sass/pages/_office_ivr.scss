@@ -147,6 +147,10 @@
             }
 
             .accordion-button {
+                &:hover{
+                    color: color("primary") !important;
+                }
+                
                 @include breakpoint-down(sm) {
                     padding-left: 0 !important;
                     padding-right: 0 !important;
