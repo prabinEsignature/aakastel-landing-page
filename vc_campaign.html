@@ -42,16 +42,18 @@
                 <img class="icon-20" src="assets/icons/close_dark.svg" alt="" />
               </button>
             </div>
-            <ul class="atel-navbar-menu d-flex align-items-center justify-content-center">
-              <li class="menu-item-wrapper">
-                <div class="menu-item d-inline-flex align-items-center text-base font-semibold">
+            <ul class="atel-navbar-menu d-flex align-items-center justify-content-center" role="menubar">
+              <li class="menu-item-wrapper" role="none">
+                <div class="menu-item d-inline-flex align-items-center text-base font-semibold" role="menuitem"
+                  aria-haspopup="true">
                   <div class="d-inline-flex align-items-center text-base font-semibold menu-item-text-icon">
                     <span class="menu-item-text default-transition">Products</span>
                     <span class="menu-item-icon icon-24">
-                      <img src="assets/icons/chevron_down_grey.svg" />
+                      <img loading="lazy" src="assets/icons/chevron_down_grey.svg" alt="chevron down grey icon" />
                     </span>
                   </div>
-                  <div class="submenu-item-block products-nav shadow-default border-grey-2-1">
+                  <div class="submenu-item-block products-nav shadow-default border-grey-2-1" role="menu"
+                    aria-label="Products submenu">
                     <div class="submenu-item-main d-grid align-items-start">
                       <ul
                         class="py-custom-7 px-custom-5 h-100 submenu-list submenu-01-head-list bg-light-cyprus d-grid align-items-start gap-y-2">
@@ -60,21 +62,32 @@
                             href="office_ivr_solution.html">
                             <span
                               class="submenu-item-icon icon-40 d-inline-flex align-items-center justify-content-center bg-white rounded-8">
-                              <img class="icon-24" src="assets/icons/grid_black.svg" />
+                              <img loading="lazy" class="icon-24" src="assets/icons/grid_black.svg"
+                                alt="grid black icon" />
                             </span>
                             <span class="submenu-item-text font-semibold text-base text-night me-auto">Office IVR
                               Solutions</span>
                             <span class="submenu-item-chevron icon-24 d-none">
-                              <img src="assets/icons/chevron_right_gray.svg" />
+                              <img loading="lazy" src="assets/icons/chevron_right_gray.svg"
+                                alt="chevron right gray icon" />
                             </span>
                           </a>
                           <div class="submenu-grid-sp-wrapper">
                             <ul
                               class="submenu-grid h-100 p-custom-7 bg-white d-grid align-items-start grid-cols-2 gap-x-3 gap-y-2 rounded-8">
+                              <a href="office_ivr_solution.html"
+                                class="d-flex align-items-center justify-content-between bg-primary px-custom-3 py-custom-2 rounded-6 d-lg-none col-span-full mb-custom-1">
+                                <span class="text-white font-semibold text-base">Office IVR Solutions</span>
+                                <span class="icon-24">
+                                  <img class="invert-to-white icon-24" src="assets/icons/arrow_right_white.svg"
+                                    alt="" />
+                                </span>
+                              </a>
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/extensions.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/extensions.svg"
+                                      alt="extensions icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Extensions</span>
@@ -83,7 +96,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/voicemail_green.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/voicemail_green.svg"
+                                      alt="voicemail green icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Voicemail</span>
@@ -92,7 +106,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/3_way_calling.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/3_way_calling.svg"
+                                      alt="3 way calling icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">3 Way
                                     Calling</span>
@@ -101,7 +116,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/call_transfers.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/call_transfers.svg"
+                                      alt="call transfers icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                     Transfers</span>
@@ -110,7 +126,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/campaigns.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/campaigns.svg"
+                                      alt="campaigns icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Campaigns</span>
@@ -119,7 +136,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/smart_dailer.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/smart_dailer.svg"
+                                      alt="smart dailer icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Smart
                                     Dailer</span>
@@ -128,7 +146,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/power_dialer.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/power_dialer.svg"
+                                      alt="power dialer icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Power
                                     Dailer</span>
@@ -137,7 +156,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/voicemail_drop.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/voicemail_drop.svg"
+                                      alt="voicemail drop icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail
                                     Drop</span>
@@ -146,7 +166,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/click_to_call.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/click_to_call.svg"
+                                      alt="click to call icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Click-to-Call</span>
@@ -155,7 +176,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/customer_details.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/customer_details.svg"
+                                      alt="customer details icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Customer
                                     Details</span>
@@ -164,7 +186,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/call_notes.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/call_notes.svg"
+                                      alt="call notes icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                     Notes</span>
@@ -173,7 +196,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/call_tagging.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/call_tagging.svg"
+                                      alt="call tagging icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                     Tagging</span>
@@ -182,7 +206,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/unlimited.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/unlimited.svg"
+                                      alt="unlimited icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Unlimited
                                     Concurrent Calls</span>
@@ -191,7 +216,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/notification.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/notification.svg"
+                                      alt="notification icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Notifications</span>
@@ -200,7 +226,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/personalized_messages.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/personalized_messages.svg"
+                                      alt="personalized messages icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Personalized
                                     Messages</span>
@@ -214,21 +241,32 @@
                             href="vc_campaign.html">
                             <span
                               class="submenu-item-icon icon-40 d-inline-flex align-items-center justify-content-center bg-white rounded-8">
-                              <img class="icon-24" src="assets/icons/mike_black.svg" />
+                              <img loading="lazy" class="icon-24" src="assets/icons/mike_black.svg"
+                                alt="mike black icon" />
                             </span>
                             <span class="submenu-item-text font-semibold text-base text-night me-auto">Voice Call
                               Campaign Solutions</span>
                             <span class="submenu-item-chevron icon-24 d-none">
-                              <img src="assets/icons/chevron_right_gray.svg" />
+                              <img loading="lazy" src="assets/icons/chevron_right_gray.svg"
+                                alt="chevron right gray icon" />
                             </span>
                           </a>
                           <div class="submenu-grid-sp-wrapper">
                             <ul
                               class="submenu-grid h-100 p-custom-7 bg-white d-grid align-items-start grid-cols-2 gap-x-3 gap-y-2 rounded-8">
+                              <a href="vc_campaign.html"
+                                class="d-flex align-items-center justify-content-between bg-primary px-custom-3 py-custom-2 rounded-6 d-lg-none col-span-full mb-custom-1">
+                                <span class="text-white font-semibold text-base">Voice Call Campaign Solutions</span>
+                                <span class="icon-24">
+                                  <img class="invert-to-white icon-24" src="assets/icons/arrow_right_white.svg"
+                                    alt="" />
+                                </span>
+                              </a>
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/campaigns.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/campaigns.svg"
+                                      alt="campaigns icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Campaigns</span>
@@ -237,7 +275,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/smart_dailer.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/smart_dailer.svg"
+                                      alt="smart dailer icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Smart
                                     Dailer</span>
@@ -246,7 +285,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/power_dialer.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/power_dialer.svg"
+                                      alt="power dialer icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Power
                                     Dailer</span>
@@ -255,7 +295,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/voicemail_drop.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/voicemail_drop.svg"
+                                      alt="voicemail drop icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail
                                     Drop</span>
@@ -264,7 +305,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/click_to_call.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/click_to_call.svg"
+                                      alt="click to call icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Click-to-Call</span>
@@ -273,7 +315,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/customer_details.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/customer_details.svg"
+                                      alt="customer details icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Customer
                                     Details</span>
@@ -282,7 +325,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/call_notes.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/call_notes.svg"
+                                      alt="call notes icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                     Notes</span>
@@ -291,7 +335,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/call_tagging.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/call_tagging.svg"
+                                      alt="call tagging icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                     Tagging</span>
@@ -300,7 +345,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/unlimited.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/unlimited.svg"
+                                      alt="unlimited icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Unlimited
                                     Concurrent Calls</span>
@@ -309,7 +355,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/notification.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/notification.svg"
+                                      alt="notification icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Notifications</span>
@@ -318,7 +365,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/personalized_messages.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/personalized_messages.svg"
+                                      alt="personalized messages icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Personalized
                                     Messages</span>
@@ -332,21 +380,32 @@
                             href="onpremises_solution.html">
                             <span
                               class="submenu-item-icon icon-40 d-inline-flex align-items-center justify-content-center bg-white rounded-8">
-                              <img class="icon-24" src="assets/icons/voicemail_black.svg" />
+                              <img loading="lazy" class="icon-24" src="assets/icons/voicemail_black.svg"
+                                alt="voicemail black icon" />
                             </span>
                             <span class="submenu-item-text font-semibold text-base text-night me-auto">On-Premises
                               Office IVR Solutions</span>
                             <span class="submenu-item-chevron icon-24 d-none">
-                              <img src="assets/icons/chevron_right_gray.svg" />
+                              <img loading="lazy" src="assets/icons/chevron_right_gray.svg"
+                                alt="chevron right gray icon" />
                             </span>
                           </a>
                           <div class="submenu-grid-sp-wrapper">
                             <ul
                               class="submenu-grid h-100 p-custom-7 bg-white d-grid align-items-start grid-cols-2 gap-x-3 gap-y-2 rounded-8">
+                              <a href="onpremises_solution.html"
+                                class="d-flex align-items-center justify-content-between bg-primary px-custom-3 py-custom-2 rounded-6 col-span-full">
+                                <span class="text-white font-semibold text-base">On-Premises Office IVR Solutions</span>
+                                <span class="icon-24">
+                                  <img class="invert-to-white icon-24" src="assets/icons/arrow_right_white.svg"
+                                    alt="" />
+                                </span>
+                              </a>
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/smart_dailer.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/smart_dailer.svg"
+                                      alt="smart dailer icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Smart
                                     Dailer</span>
@@ -355,7 +414,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/power_dialer.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/power_dialer.svg"
+                                      alt="power dailer icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Power
                                     Dailer</span>
@@ -364,7 +424,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/voicemail_drop.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/voicemail_drop.svg"
+                                      alt="voicemail drop icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail
                                     Drop</span>
@@ -373,7 +434,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/click_to_call.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/click_to_call.svg"
+                                      alt="click to call icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Click-to-Call</span>
@@ -382,7 +444,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/customer_details.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/customer_details.svg"
+                                      alt="customer details icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Customer
                                     Details</span>
@@ -391,7 +454,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/call_notes.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/call_notes.svg"
+                                      alt="call notes icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                     Notes</span>
@@ -405,21 +469,32 @@
                             href="product_sms.html">
                             <span
                               class="submenu-item-icon icon-40 d-inline-flex align-items-center justify-content-center bg-white rounded-8">
-                              <img class="icon-24" src="assets/icons/sms_black.svg" />
+                              <img loading="lazy" class="icon-24" src="assets/icons/sms_black.svg"
+                                alt="sms black icon" />
                             </span>
                             <span class="submenu-item-text font-semibold text-base text-night me-auto">Bulk SMS & SMS
                               API Provider</span>
                             <span class="submenu-item-chevron icon-24 d-none">
-                              <img src="assets/icons/chevron_right_gray.svg" />
+                              <img loading="lazy" src="assets/icons/chevron_right_gray.svg"
+                                alt="chevron right gray icon" />
                             </span>
                           </a>
                           <div class="submenu-grid-sp-wrapper">
                             <ul
                               class="submenu-grid h-100 p-custom-7 bg-white d-grid align-items-start grid-cols-2 gap-x-3 gap-y-2 rounded-8">
+                              <a href="product_sms.html"
+                                class="d-flex align-items-center justify-content-between bg-primary px-custom-3 py-custom-2 rounded-6 d-lg-none col-span-full mb-custom-1">
+                                <span class="text-white font-semibold text-base ">Bulk SMS & SMS API Provider</span>
+                                <span class="icon-24">
+                                  <img class="invert-to-white icon-24" src="assets/icons/arrow_right_white.svg"
+                                    alt="" />
+                                </span>
+                              </a>
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/extensions.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/extensions.svg"
+                                      alt="extensions icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Extensions</span>
@@ -428,7 +503,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/voicemail_green.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/voicemail_green.svg"
+                                      alt="voicemail green icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Voicemail</span>
@@ -437,7 +513,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/3_way_calling.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/3_way_calling.svg"
+                                      alt="3 way calling icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">3 Way
                                     Calling</span>
@@ -446,7 +523,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/call_transfers.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/call_transfers.svg"
+                                      alt="call transfers icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                     Transfers</span>
@@ -455,7 +533,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/campaigns.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/campaigns.svg"
+                                      alt="campaigns icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Campaigns</span>
@@ -464,7 +543,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/smart_dailer.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/smart_dailer.svg"
+                                      alt="smart dailer icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Smart
                                     Dailer</span>
@@ -473,7 +553,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/call_tagging.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/call_tagging.svg"
+                                      alt="call tagging icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                     Tagging</span>
@@ -482,7 +563,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/unlimited.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/unlimited.svg"
+                                      alt="unlimited icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Unlimited
                                     Concurrent Calls</span>
@@ -491,7 +573,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/notification.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/notification.svg"
+                                      alt="notification icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Notifications</span>
@@ -500,7 +583,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/personalized_messages.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/personalized_messages.svg"
+                                      alt="personalized messages icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Personalized
                                     Messages</span>
@@ -514,21 +598,33 @@
                             href="whatsapp_business.html">
                             <span
                               class="submenu-item-icon icon-40 d-inline-flex align-items-center justify-content-center bg-white rounded-8">
-                              <img class="icon-24" src="assets/icons/whatsapp_black.svg" />
+                              <img loading="lazy" class="icon-24" src="assets/icons/whatsapp_black.svg"
+                                alt="whatsapp black icon" />
                             </span>
                             <span class="submenu-item-text font-semibold text-base text-night me-auto">WhatsApp Business
                               API Gateway Provider</span>
                             <span class="submenu-item-chevron icon-24 d-none">
-                              <img src="assets/icons/chevron_right_gray.svg" />
+                              <img loading="lazy" src="assets/icons/chevron_right_gray.svg"
+                                alt="chevron right gray icon" />
                             </span>
                           </a>
                           <div class="submenu-grid-sp-wrapper">
                             <ul
                               class="submenu-grid h-100 p-custom-7 bg-white d-grid align-items-start grid-cols-2 gap-x-3 gap-y-2 rounded-8">
+                              <a href="whatsapp_business.html"
+                                class="d-flex align-items-center justify-content-between bg-primary px-custom-3 py-custom-2 rounded-6 d-lg-none col-span-full mb-custom-1">
+                                <span class="text-white font-semibold text-base">WhatsApp Business API Gateway
+                                  Provider</span>
+                                <span class="icon-24">
+                                  <img class="invert-to-white icon-24" src="assets/icons/arrow_right_white.svg"
+                                    alt="" />
+                                </span>
+                              </a>
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/extensions.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/extensions.svg"
+                                      alt="extensions icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Extensions</span>
@@ -537,7 +633,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/smart_dailer.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/smart_dailer.svg"
+                                      alt="smart dailer icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Smart
                                     Dailer</span>
@@ -546,7 +643,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/power_dialer.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/power_dialer.svg"
+                                      alt=" power dailer icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Power
                                     Dailer</span>
@@ -555,7 +653,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/voicemail_drop.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/voicemail_drop.svg"
+                                      alt="voicemail drop icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail
                                     Drop</span>
@@ -564,7 +663,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/click_to_call.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/click_to_call.svg"
+                                      alt="click to call icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Click-to-Call</span>
@@ -573,7 +673,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/call_tagging.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/call_tagging.svg"
+                                      alt="call tagging icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                     Tagging</span>
@@ -582,7 +683,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/unlimited.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/unlimited.svg"
+                                      alt="unlimited icon" />
                                   </span>
                                   <span class="submenu-grid-item-text text-night font-semibold text-base">Unlimited
                                     Concurrent Calls</span>
@@ -591,7 +693,8 @@
                               <li>
                                 <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                                   <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                    <img class="icon-20" src="assets/icons/notification.svg" alt="" />
+                                    <img loading="lazy" class="icon-20" src="assets/icons/notification.svg"
+                                      alt="notification icon" />
                                   </span>
                                   <span
                                     class="submenu-grid-item-text text-night font-semibold text-base">Notifications</span>
@@ -607,7 +710,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/extensions.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/extensions.svg"
+                                  alt="extensions icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Extensions</span>
                             </a>
@@ -615,7 +719,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/voicemail_green.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/voicemail_green.svg"
+                                  alt="voicemail green icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail</span>
                             </a>
@@ -623,7 +728,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/3_way_calling.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/3_way_calling.svg"
+                                  alt="3 way calling icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">3 Way
                                 Calling</span>
@@ -632,7 +738,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/call_transfers.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/call_transfers.svg"
+                                  alt="call transfers icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                 Transfers</span>
@@ -641,7 +748,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/campaigns.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/campaigns.svg"
+                                  alt="campaigns icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Campaigns</span>
                             </a>
@@ -649,7 +757,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/smart_dailer.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/smart_dailer.svg"
+                                  alt="smart dailer icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Smart
                                 Dailer</span>
@@ -658,7 +767,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/power_dialer.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/power_dialer.svg"
+                                  alt="power dailer icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Power
                                 Dailer</span>
@@ -667,7 +777,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/voicemail_drop.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/voicemail_drop.svg"
+                                  alt="voicemail drop icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail
                                 Drop</span>
@@ -676,7 +787,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/click_to_call.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/click_to_call.svg"
+                                  alt="click to call icon" />
                               </span>
                               <span
                                 class="submenu-grid-item-text text-night font-semibold text-base">Click-to-Call</span>
@@ -685,7 +797,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/customer_details.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/customer_details.svg"
+                                  alt="customer details icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Customer
                                 Details</span>
@@ -694,7 +807,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/call_notes.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/call_notes.svg"
+                                  alt="call notes icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Call Notes</span>
                             </a>
@@ -702,7 +816,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/call_tagging.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/call_tagging.svg"
+                                  alt="call tagging icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                 Tagging</span>
@@ -711,16 +826,19 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/unlimited.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/unlimited.svg"
+                                  alt="unlimited icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Unlimited
-                                Concurrent Calls</span>
+                                Concurrent
+                                Calls</span>
                             </a>
                           </li>
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/notification.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/notification.svg"
+                                  alt="notification icon" />
                               </span>
                               <span
                                 class="submenu-grid-item-text text-night font-semibold text-base">Notifications</span>
@@ -729,7 +847,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/personalized_messages.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/personalized_messages.svg"
+                                  alt="personalized messages icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Personalized
                                 Messages</span>
@@ -741,7 +860,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/campaigns.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/campaigns.svg"
+                                  alt="campaigns icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Campaigns</span>
                             </a>
@@ -749,7 +869,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/smart_dailer.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/smart_dailer.svg"
+                                  alt="smart dailer icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Smart
                                 Dailer</span>
@@ -758,7 +879,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/power_dialer.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/power_dialer.svg"
+                                  alt="power dailer icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Power
                                 Dailer</span>
@@ -767,7 +889,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/voicemail_drop.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/voicemail_drop.svg"
+                                  alt="voicemail drop icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail
                                 Drop</span>
@@ -776,7 +899,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/click_to_call.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/click_to_call.svg"
+                                  alt="click to call icon" />
                               </span>
                               <span
                                 class="submenu-grid-item-text text-night font-semibold text-base">Click-to-Call</span>
@@ -785,7 +909,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/customer_details.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/customer_details.svg"
+                                  alt="customer details icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Customer
                                 Details</span>
@@ -794,7 +919,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/call_notes.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/call_notes.svg"
+                                  alt="call notes icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Call Notes</span>
                             </a>
@@ -802,7 +928,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/call_tagging.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/call_tagging.svg"
+                                  alt="call tagging icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                 Tagging</span>
@@ -811,16 +938,19 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/unlimited.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/unlimited.svg"
+                                  alt="unlimited icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Unlimited
-                                Concurrent Calls</span>
+                                Concurrent
+                                Calls</span>
                             </a>
                           </li>
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/notification.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/notification.svg"
+                                  alt="notification icon" />
                               </span>
                               <span
                                 class="submenu-grid-item-text text-night font-semibold text-base">Notifications</span>
@@ -829,7 +959,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/personalized_messages.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/personalized_messages.svg"
+                                  alt="personalized messages icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Personalized
                                 Messages</span>
@@ -841,7 +972,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/extensions.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/extensions.svg"
+                                  alt="extensions icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Extensions</span>
                             </a>
@@ -849,7 +981,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/call_transfers.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/call_transfers.svg"
+                                  alt="call transfers icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                 Transfers</span>
@@ -858,7 +991,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/campaigns.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/campaigns.svg"
+                                  alt="campaigns icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Campaigns</span>
                             </a>
@@ -866,7 +1000,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/smart_dailer.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/smart_dailer.svg"
+                                  alt="smart dailer icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Smart
                                 Dailer</span>
@@ -875,7 +1010,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/customer_details.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/customer_details.svg"
+                                  alt="customer details icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Customer
                                 Details</span>
@@ -884,7 +1020,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/call_notes.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/call_notes.svg"
+                                  alt="call notes icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Call Notes</span>
                             </a>
@@ -892,7 +1029,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/call_tagging.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/call_tagging.svg"
+                                  alt="call tagging icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                 Tagging</span>
@@ -901,16 +1039,19 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/unlimited.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/unlimited.svg"
+                                  alt="unlimited icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Unlimited
-                                Concurrent Calls</span>
+                                Concurrent
+                                Calls</span>
                             </a>
                           </li>
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/notification.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/notification.svg"
+                                  alt="notification icon" />
                               </span>
                               <span
                                 class="submenu-grid-item-text text-night font-semibold text-base">Notifications</span>
@@ -919,7 +1060,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/personalized_messages.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/personalized_messages.svg"
+                                  alt="personalized mesages icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Personalized
                                 Messages</span>
@@ -931,7 +1073,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/extensions.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/extensions.svg"
+                                  alt="extesions icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Extensions</span>
                             </a>
@@ -939,7 +1082,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/campaigns.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/campaigns.svg"
+                                  alt="campaigns icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Campaigns</span>
                             </a>
@@ -947,7 +1091,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/smart_dailer.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/smart_dailer.svg"
+                                  alt="smart dailer icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Smart
                                 Dailer</span>
@@ -956,7 +1101,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/power_dialer.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/power_dialer.svg"
+                                  alt="power dailer icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Power
                                 Dailer</span>
@@ -965,7 +1111,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/voicemail_drop.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/voicemail_drop.svg"
+                                  alt="voicemail drop icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail
                                 Drop</span>
@@ -974,7 +1121,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/click_to_call.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/click_to_call.svg"
+                                  alt="click to call icon" />
                               </span>
                               <span
                                 class="submenu-grid-item-text text-night font-semibold text-base">Click-to-Call</span>
@@ -983,7 +1131,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/customer_details.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/customer_details.svg"
+                                  alt="customer details icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Customer
                                 Details</span>
@@ -992,7 +1141,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/call_notes.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/call_notes.svg"
+                                  alt="call notes icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Call Notes</span>
                             </a>
@@ -1001,16 +1151,19 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/unlimited.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/unlimited.svg"
+                                  alt="unlimited icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Unlimited
-                                Concurrent Calls</span>
+                                Concurrent
+                                Calls</span>
                             </a>
                           </li>
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/notification.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/notification.svg"
+                                  alt="notification icon" />
                               </span>
                               <span
                                 class="submenu-grid-item-text text-night font-semibold text-base">Notifications</span>
@@ -1019,7 +1172,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/personalized_messages.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/personalized_messages.svg"
+                                  alt="personalized messages icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Personalized
                                 Messages</span>
@@ -1031,7 +1185,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/power_dialer.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/power_dialer.svg"
+                                  alt="power dailer icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Power
                                 Dailer</span>
@@ -1040,7 +1195,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/extensions.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/extensions.svg"
+                                  alt="extensions icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Extensions</span>
                             </a>
@@ -1048,7 +1204,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/voicemail_green.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/voicemail_green.svg"
+                                  alt="voicemail green icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail</span>
                             </a>
@@ -1056,7 +1213,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/3_way_calling.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/3_way_calling.svg"
+                                  alt="3 way calling icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">3 Way
                                 Calling</span>
@@ -1065,7 +1223,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/call_transfers.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/call_transfers.svg"
+                                  alt="call transfers icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Call
                                 Transfers</span>
@@ -1074,7 +1233,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/campaigns.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/campaigns.svg"
+                                  alt="campaigns icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Campaigns</span>
                             </a>
@@ -1082,7 +1242,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/smart_dailer.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/smart_dailer.svg"
+                                  alt="smart dailer icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Smart
                                 Dailer</span>
@@ -1092,7 +1253,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/voicemail_drop.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/voicemail_drop.svg"
+                                  alt="voicemail drop icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Voicemail
                                 Drop</span>
@@ -1102,7 +1264,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/customer_details.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/customer_details.svg"
+                                  alt="customer details icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Customer
                                 Details</span>
@@ -1111,7 +1274,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/call_notes.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/call_notes.svg"
+                                  alt="call notes icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Call Notes</span>
                             </a>
@@ -1120,7 +1284,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/notification.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/notification.svg"
+                                  alt="notification icon" />
                               </span>
                               <span
                                 class="submenu-grid-item-text text-night font-semibold text-base">Notifications</span>
@@ -1129,7 +1294,8 @@
                           <li>
                             <a href="#" class="submenu-grid-item d-flex align-items-center gap-x-3">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/personalized_messages.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/personalized_messages.svg"
+                                  alt="personalized message icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Personalized
                                 Messages</span>
@@ -1142,7 +1308,8 @@
                       class="submenu-item-foot bg-p-green-50 py-custom-5 px-custom-7 d-flex align-items-center justify-content-between gap-2">
                       <div class="d-flex align-items-center justify-content-start gap-3">
                         <div class="icon-52">
-                          <img src="assets/icons/green_50_cloud_and_phone.svg" />
+                          <img loading="lazy" src="assets/icons/green_50_cloud_and_phone.svg"
+                            alt="green cloud and phone icon" />
                         </div>
                         <p class="font-semibold text-base text-night mb-0">
                           <span class="text-primary">Never Miss a Call</span>
@@ -1154,15 +1321,17 @@
                   </div>
                 </div>
               </li>
-              <li class="menu-item-wrapper">
-                <div class="menu-item d-inline-flex align-items-center text-base font-semibold">
+              <li class="menu-item-wrapper" role="none">
+                <div class="menu-item d-inline-flex align-items-center text-base font-semibold" role="menuitem"
+                  aria-haspopup="true">
                   <div class="d-inline-flex align-items-center text-base font-semibold menu-item-text-icon">
                     <span class="menu-item-text default-transition">Solutions</span>
                     <span class="menu-item-icon icon-24">
-                      <img src="assets/icons/chevron_down_grey.svg" />
+                      <img loading="lazy" src="assets/icons/chevron_down_grey.svg" alt="chevron down grey icon" />
                     </span>
                   </div>
-                  <div class="submenu-item-block solutions-nav shadow-default border-grey-2-1">
+                  <div class="submenu-item-block solutions-nav shadow-default border-grey-2-1" role="menu"
+                    aria-label="Solutions submenu">
                     <div
                       class="submenu-item-main d-grid align-items-start h-100 p-custom-6 bg-white d-grid align-items-start grid-cols-1 lg-grid-cols-4 gap-5">
                       <div class="submenu-grid">
@@ -1174,7 +1343,8 @@
                             <a href="solution.html"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/it_and_operations.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/it_and_operations.svg"
+                                  alt="it and operations icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">IT &
                                 Operations</span>
@@ -1184,7 +1354,7 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/sales.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/sales.svg" alt="sales icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Sales</span>
                             </a>
@@ -1193,7 +1363,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/customer_support.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/customer_support.svg"
+                                  alt="customer support icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Customer
                                 support</span>
@@ -1203,7 +1374,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/company_wide.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/company_wide.svg"
+                                  alt="company wide icon" />
                               </span>
                               <span
                                 class="submenu-grid-item-text text-night font-semibold text-base">Company-wide</span>
@@ -1220,7 +1392,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/software_and_tech.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/software_and_tech.svg"
+                                  alt="software and tech icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Software &
                                 Tech</span>
@@ -1230,7 +1403,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/financial_services.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/financial_services.svg"
+                                  alt="financial services icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Financial
                                 Services</span>
@@ -1240,7 +1414,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/professional_services.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/professional_services.svg"
+                                  alt="professional services icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Professional
                                 services</span>
@@ -1250,7 +1425,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/education_and_elearning.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/education_and_elearning.svg"
+                                  alt="education and elearning icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Education &
                                 E-learning</span>
@@ -1267,7 +1443,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/remote_teams.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/remote_teams.svg"
+                                  alt="remote teams icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Remote
                                 Teams</span>
@@ -1277,7 +1454,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/business_phone_system.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/business_phone_system.svg"
+                                  alt="business phone system icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Business Phone
                                 System</span>
@@ -1287,7 +1465,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/calling_for_salesforce.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/calling_for_salesforce.svg"
+                                  alt="calling for salesforce icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Calling for
                                 Salesforce</span>
@@ -1297,7 +1476,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/calling_for_hubspot.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/calling_for_hubspot.svg"
+                                  alt="calling for hubspot icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Calling for
                                 HubSpot</span>
@@ -1314,7 +1494,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/it_and_operations.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/it_and_operations.svg"
+                                  alt="it and operations icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Micro
                                 Business</span>
@@ -1324,7 +1505,7 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/sales.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/sales.svg" alt="sales icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Small
                                 businesses</span>
@@ -1334,7 +1515,8 @@
                             <a href="#"
                               class="submenu-grid-item d-flex align-items-center p-custom-2 gap-x-3 rounded-8 default-transition">
                               <span class="submenu-grid-item-icon icon-28 bg-p-green-50 rounded-8">
-                                <img class="icon-20" src="assets/icons/customer_support.svg" alt="" />
+                                <img loading="lazy" class="icon-20" src="assets/icons/customer_support.svg"
+                                  alt="customer support icon" />
                               </span>
                               <span class="submenu-grid-item-text text-night font-semibold text-base">Medium & Large
                                 businesses</span>
@@ -1347,7 +1529,8 @@
                       class="submenu-item-foot bg-p-green-50 py-custom-5 px-custom-7 d-flex align-items-center justify-content-between gap-2">
                       <div class="d-flex align-items-center justify-content-start gap-3">
                         <div class="icon-52">
-                          <img src="assets/icons/green_50_cloud_and_phone.svg" />
+                          <img loading="lazy" src="assets/icons/green_50_cloud_and_phone.svg"
+                            alt="green cloud and phone icon" />
                         </div>
                         <p class="font-semibold text-base text-night mb-0">
                           <span class="text-primary">Never Miss a Call</span>
@@ -1359,26 +1542,30 @@
                   </div>
                 </div>
               </li>
-              <li class="menu-item-wrapper">
-                <a href="pricing.html" class="menu-item d-inline-flex align-items-center text-base font-semibold">
+              <li class="menu-item-wrapper" role="none">
+                <a href="pricing.html" class="menu-item d-inline-flex align-items-center text-base font-semibold"
+                  role="menuitem" aria-haspopup="false">
                   <span class="menu-item-text default-transition">Pricing</span>
                 </a>
               </li>
-              <li class="menu-item-wrapper">
-                <div class="menu-item d-inline-flex align-items-center text-base font-semibold">
+              <li class="menu-item-wrapper" role="none">
+                <div class="menu-item d-inline-flex align-items-center text-base font-semibold" role="menuitem"
+                  aria-haspopup="true">
                   <div class="d-inline-flex align-items-center text-base font-semibold menu-item-text-icon">
                     <span class="menu-item-text default-transition">Developers</span>
                     <span class="menu-item-icon icon-24">
-                      <img src="assets/icons/chevron_down_grey.svg" />
+                      <img loading="lazy" src="assets/icons/chevron_down_grey.svg" alt="chevron down grey" />
                     </span>
                   </div>
-                  <div class="submenu-item-block developers-nav shadow-default border-grey-2-1">
+                  <div class="submenu-item-block developers-nav shadow-default border-grey-2-1" role="menu"
+                    aria-label="Developers submenu">
                     <div class="submenu-item-main d-grid align-items-start h-100 bg-white d-grid align-items-start">
                       <div class="submenu-grid bg-light-cyprus py-custom-7 px-custom-5">
                         <div
                           class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                           <span class="bg-white icon-24 rounded-6">
-                            <img class="icon-16" src="assets/icons/documentation.svg" alt="" />
+                            <img loading="lazy" class="icon-16" src="assets/icons/documentation.svg"
+                              alt="documentation icon" />
                           </span>
                           <span class="text-primary">Documentation</span>
                         </div>
@@ -1394,7 +1581,8 @@
                                   <div
                                     class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                                     <span class="bg-p-green-50 icon-24 rounded-6">
-                                      <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                                      <img loading="lazy" class="icon-16" src="assets/icons/community.svg"
+                                        alt="community icon" />
                                     </span>
                                     <span class="text-primary">Community</span>
                                   </div>
@@ -1443,7 +1631,8 @@
                                   <div
                                     class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                                     <span class="bg-light-cyprus icon-24 rounded-6">
-                                      <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                                      <img loading="lazy" class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                        alt="tools and resources icon" />
                                     </span>
                                     <span class="text-primary">Tools & Resources</span>
                                   </div>
@@ -1491,7 +1680,8 @@
                                   <div
                                     class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                                     <span class="bg-p-green-50 icon-24 rounded-6">
-                                      <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                                      <img loading="lazy" class="icon-16" src="assets/icons/community.svg"
+                                        alt="community" />
                                     </span>
                                     <span class="text-primary">Community</span>
                                   </div>
@@ -1540,7 +1730,8 @@
                                   <div
                                     class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                                     <span class="bg-light-cyprus icon-24 rounded-6">
-                                      <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                                      <img loading="lazy" class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                        alt="tools and resources icon" />
                                     </span>
                                     <span class="text-primary">Tools & Resources</span>
                                   </div>
@@ -1624,7 +1815,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-p-green-50 icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/community.svg"
+                                  alt="community icon" />
                               </span>
                               <span class="text-primary">Community</span>
                             </div>
@@ -1669,7 +1861,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-light-cyprus icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                  alt="tools and resources icon" />
                               </span>
                               <span class="text-primary">Tools & Resources</span>
                             </div>
@@ -1707,7 +1900,7 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-p-green-50 icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/community.svg" alt="community" />
                               </span>
                               <span class="text-primary">Group SMS</span>
                             </div>
@@ -1743,7 +1936,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-light-cyprus icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                  alt="tools and resources icon" />
                               </span>
                               <span class="text-primary">Tools & Resources</span>
                             </div>
@@ -1781,7 +1975,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-p-green-50 icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/community.svg"
+                                  alt="community icon" />
                               </span>
                               <span class="text-primary">Community Voice</span>
                             </div>
@@ -1826,7 +2021,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-light-cyprus icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                  alt="tools and resources icon" />
                               </span>
                               <span class="text-primary">Tools & Resources</span>
                             </div>
@@ -1856,7 +2052,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-p-green-50 icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/community.svg"
+                                  alt="community icon" />
                               </span>
                               <span class="text-primary">Community Email</span>
                             </div>
@@ -1892,7 +2089,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-light-cyprus icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                  alt="tools and resources icon" />
                               </span>
                               <span class="text-primary">Tools & Resources</span>
                             </div>
@@ -1922,7 +2120,7 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-p-green-50 icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/community.svg" alt="community" />
                               </span>
                               <span class="text-primary">Community</span>
                             </div>
@@ -1967,90 +2165,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-light-cyprus icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
-                              </span>
-                              <span class="text-primary">Tools & Resources</span>
-                            </div>
-                            <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-5">
-                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
-                                <a href="#" class="mb-0 font-semibold text-base text-night">
-                                  CodeExchange!
-                                </a>
-                                <p class="mb-0 text-gray text-sm font-semibold">
-                                  Usable code samples for faster builds
-                                </p>
-                              </li>
-                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
-                                <a href="#" class="mb-0 font-semibold text-base text-night">
-                                  Changelog
-                                </a>
-                                <p class="mb-0 text-gray text-sm font-semibold">
-                                  See updates and additions to Twilio products
-                                </p>
-                              </li>
-                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
-                                <a href="#" class="mb-0 font-semibold text-base text-night">
-                                  API Status
-                                </a>
-                                <p class="mb-0 text-gray text-sm font-semibold">
-                                  Check real-time monitoring of APIs and all
-                                  services
-                                </p>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="submenu-03-body-item d-grid align-items-start grid-cols-2">
-                          <div class="submenu-grid bg-white py-custom-7 px-custom-5">
-                            <div
-                              class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
-                              <span class="bg-p-green-50 icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/community.svg" alt="" />
-                              </span>
-                              <span class="text-primary">Community</span>
-                            </div>
-                            <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-5">
-                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
-                                <a href="#" class="mb-0 font-semibold text-base text-night">
-                                  Ahoy!
-                                </a>
-                                <p class="mb-0 text-gray text-sm font-semibold">
-                                  Get inspired by the latest from our
-                                  developer community
-                                </p>
-                              </li>
-                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
-                                <a href="#" class="mb-0 font-semibold text-base text-night">
-                                  Developer Blog
-                                </a>
-                                <p class="mb-0 text-gray text-sm font-semibold">
-                                  Read tutorials, community projects, and
-                                  product updates
-                                </p>
-                              </li>
-                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
-                                <a href="#" class="mb-0 font-semibold text-base text-night">
-                                  Stack Overflow!
-                                </a>
-                                <p class="mb-0 text-gray text-sm font-semibold">
-                                  Ask the community for help
-                                </p>
-                              </li>
-                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
-                                <a href="#" class="mb-0 font-semibold text-base text-night">
-                                  Champions
-                                </a>
-                                <p class="mb-0 text-gray text-sm font-semibold">
-                                  Become a community Champion
-                                </p>
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="submenu-grid bg-white py-custom-7 px-custom-5">
-                            <div
-                              class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
-                              <span class="bg-light-cyprus icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                  alt="tools and resources icon" />
                               </span>
                               <span class="text-primary">Tools & Resources</span>
                             </div>
@@ -2088,7 +2204,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-p-green-50 icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/community.svg"
+                                  alt="community icon" />
                               </span>
                               <span class="text-primary">Community</span>
                             </div>
@@ -2133,7 +2250,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-light-cyprus icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                  alt="tools and resources icon" />
                               </span>
                               <span class="text-primary">Tools & Resources</span>
                             </div>
@@ -2171,7 +2289,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-p-green-50 icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/community.svg"
+                                  alt="community icon" />
                               </span>
                               <span class="text-primary">Community</span>
                             </div>
@@ -2216,7 +2335,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-light-cyprus icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                  alt="tools and resources icon" />
                               </span>
                               <span class="text-primary">Tools & Resources</span>
                             </div>
@@ -2254,7 +2374,7 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-p-green-50 icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/community.svg" alt="community" />
                               </span>
                               <span class="text-primary">Community</span>
                             </div>
@@ -2299,7 +2419,8 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-light-cyprus icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                  alt="tools and resources icon" />
                               </span>
                               <span class="text-primary">Tools & Resources</span>
                             </div>
@@ -2337,7 +2458,7 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-p-green-50 icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/community.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/community.svg" alt="community" />
                               </span>
                               <span class="text-primary">Community</span>
                             </div>
@@ -2382,7 +2503,92 @@
                             <div
                               class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
                               <span class="bg-light-cyprus icon-24 rounded-6">
-                                <img class="icon-16" src="assets/icons/tools_and_resources.svg" alt="" />
+                                <img loading="lazy" class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                  alt="tools and resources icon" />
+                              </span>
+                              <span class="text-primary">Tools & Resources</span>
+                            </div>
+                            <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-5">
+                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                                <a href="#" class="mb-0 font-semibold text-base text-night">
+                                  CodeExchange!
+                                </a>
+                                <p class="mb-0 text-gray text-sm font-semibold">
+                                  Usable code samples for faster builds
+                                </p>
+                              </li>
+                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                                <a href="#" class="mb-0 font-semibold text-base text-night">
+                                  Changelog
+                                </a>
+                                <p class="mb-0 text-gray text-sm font-semibold">
+                                  See updates and additions to Twilio products
+                                </p>
+                              </li>
+                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                                <a href="#" class="mb-0 font-semibold text-base text-night">
+                                  API Status
+                                </a>
+                                <p class="mb-0 text-gray text-sm font-semibold">
+                                  Check real-time monitoring of APIs and all
+                                  services
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="submenu-03-body-item d-grid align-items-start grid-cols-2">
+                          <div class="submenu-grid bg-white py-custom-7 px-custom-5">
+                            <div
+                              class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
+                              <span class="bg-p-green-50 icon-24 rounded-6">
+                                <img loading="lazy" class="icon-16" src="assets/icons/community.svg" alt="community" />
+                              </span>
+                              <span class="text-primary">Community</span>
+                            </div>
+                            <ul class="submenu-grid-list unstyled d-grid align-items-start gap-y-5">
+                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                                <a href="#" class="mb-0 font-semibold text-base text-night">
+                                  Ahoy!
+                                </a>
+                                <p class="mb-0 text-gray text-sm font-semibold">
+                                  Get inspired by the latest from our
+                                  developer community
+                                </p>
+                              </li>
+                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                                <a href="#" class="mb-0 font-semibold text-base text-night">
+                                  Developer Blog
+                                </a>
+                                <p class="mb-0 text-gray text-sm font-semibold">
+                                  Read tutorials, community projects, and
+                                  product updates
+                                </p>
+                              </li>
+                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                                <a href="#" class="mb-0 font-semibold text-base text-night">
+                                  Stack Overflow!
+                                </a>
+                                <p class="mb-0 text-gray text-sm font-semibold">
+                                  Ask the community for help
+                                </p>
+                              </li>
+                              <li class="submenu-grid-item d-flex flex-column gap-y-1 py-custom-1 px-custom-2 gap-x-3">
+                                <a href="#" class="mb-0 font-semibold text-base text-night">
+                                  Champions
+                                </a>
+                                <p class="mb-0 text-gray text-sm font-semibold">
+                                  Become a community Champion
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="submenu-grid bg-white py-custom-7 px-custom-5">
+                            <div
+                              class="py-custom-3 px-custom-2 font-semibold text-lg text-primary d-flex align-items-center gap-x-3 mb-custom-2 submenu-grid-head">
+                              <span class="bg-light-cyprus icon-24 rounded-6">
+                                <img class="icon-16" src="assets/icons/tools_and_resources.svg"
+                                  alt="tools and resources" />
                               </span>
                               <span class="text-primary">Tools & Resources</span>
                             </div>
@@ -2421,7 +2627,7 @@
                       class="submenu-item-foot bg-p-green-50 py-custom-5 px-custom-7 d-flex align-items-center justify-content-between gap-2">
                       <div class="d-flex align-items-center justify-content-start gap-3">
                         <div class="icon-52">
-                          <img src="assets/icons/green_50_cloud_and_phone.svg" />
+                          <img src="assets/icons/green_50_cloud_and_phone.svg" alt="green cloud and phone icon" />
                         </div>
                         <p class="font-semibold text-base text-night mb-0">
                           <span class="text-primary">Never Miss a Call</span>
@@ -2433,15 +2639,17 @@
                   </div>
                 </div>
               </li>
-              <li class="menu-item-wrapper">
-                <div class="menu-item d-inline-flex align-items-center text-base font-semibold">
+              <li class="menu-item-wrapper" role="none">
+                <div class="menu-item d-inline-flex align-items-center text-base font-semibold" role="menuitem"
+                  aria-haspopup="true">
                   <div class="d-inline-flex align-items-center text-base font-semibold menu-item-text-icon">
                     <span class="menu-item-text default-transition">Resources</span>
                     <span class="menu-item-icon icon-24">
-                      <img src="assets/icons/chevron_down_grey.svg" />
+                      <img src="assets/icons/chevron_down_grey.svg" alt="chevron down grey icon" />
                     </span>
                   </div>
-                  <div class="submenu-item-block resources-nav shadow-default border-grey-2-1">
+                  <div class="submenu-item-block resources-nav shadow-default border-grey-2-1" role="menu"
+                    aria-label="Resources submenu">
                     <div
                       class="submenu-item-main d-grid align-items-start h-100 bg-white d-grid align-items-start grid-cols-2 py-custom-7 px-custom-5">
                       <div class="submenu-grid bg-white">
@@ -2481,7 +2689,7 @@
                       class="submenu-item-foot bg-p-green-50 py-custom-5 px-custom-7 d-flex align-items-center justify-content-between gap-2">
                       <div class="d-flex align-items-center justify-content-start gap-3">
                         <div class="icon-52">
-                          <img src="assets/icons/green_50_cloud_and_phone.svg" />
+                          <img src="assets/icons/green_50_cloud_and_phone.svg" alt="green cloud and phone icon" />
                         </div>
                         <p class="font-semibold text-base text-night mb-0 submenu-item-foot-text">
                           <span class="text-primary">Never Miss a Call</span>
