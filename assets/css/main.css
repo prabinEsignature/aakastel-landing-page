@@ -23831,6 +23831,11 @@ table td {
   height: 8px;
   width: 96px;
 }
+@media (max-width: 991.98px) {
+  .atel-top-banner.atel-home-pg .top-banner-audio .audio-play-progress {
+    width: 100%;
+  }
+}
 .atel-top-banner.atel-home-pg .top-banner-audio .audio-play-progress-bar {
   height: 8px;
 }

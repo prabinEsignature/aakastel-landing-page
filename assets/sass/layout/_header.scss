@@ -153,6 +153,10 @@
                 height: 8px;
                 width: 96px;
 
+                @include breakpoint-down(lg){
+                    width: 100%;
+                }
+
                 &-bar {
                     height: 8px;
                 }
