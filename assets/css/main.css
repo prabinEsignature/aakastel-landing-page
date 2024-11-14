@@ -24275,6 +24275,9 @@ table td {
     padding: 8px;
   }
 }
+.atel-navbar .menu-item.active .menu-item-text {
+  color: #3bb24a !important;
+}
 @media (max-width: 991.98px) {
   .atel-navbar .menu-item-text {
     color: #121212 !important;

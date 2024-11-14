@@ -111,6 +111,12 @@ $z-index-navbar-toggler: 1010;
       padding: 8px;
     }
 
+    &.active{
+      .menu-item-text{
+        color: color("primary") !important;
+      }
+    }
+
     &-text {
       @include breakpoint-down(lg) {
         color: color("night") !important;
