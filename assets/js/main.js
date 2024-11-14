@@ -593,20 +593,12 @@ if (stackCardsElements.length > 0 && "IntersectionObserver" in window) {
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".submenu-item").forEach(function (item) {
+    console.log(item);
     item
-      .querySelector(".submenu-item-chevron")
       .addEventListener("click", function (event) {
         if (window.innerWidth <= 991.98) {
           event.stopPropagation();
           event.preventDefault();
-        }
-      });
-
-    item
-      .querySelector(".submenu-item-text")
-      .addEventListener("click", function (event) {
-        if (window.innerWidth <= 991.98) {
-          event.stopPropagation();
         }
       });
   });

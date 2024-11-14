@@ -21203,6 +21203,14 @@ code.code-customized {
   height: 100%;
 }
 
+.invert-to-black {
+  filter: invert(1) brightness(100);
+}
+
+.invert-to-white {
+  filter: invert(0) brightness(100);
+}
+
 html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;

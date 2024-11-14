@@ -805,3 +805,12 @@ code {
   width: 100%;
   height: 100%;
 }
+
+// invert
+.invert-to-black{
+  filter: invert(1) brightness(100);
+}
+
+.invert-to-white{
+  filter: invert(0) brightness(100);
+}
