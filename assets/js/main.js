@@ -490,6 +490,8 @@ function placeDivAtPathPosition(bbox, xScale, yScale) {
 
 document.body.addEventListener("click", (event) => {
   if (event.target.classList.contains("presence-location-name")) {
+    document.querySelectorAll('.presence-location-name').forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
     const dataLocationId = event.target.getAttribute("data-location-id");
     resetPathColor();
     changePathColor(dataLocationId);

@@ -596,6 +596,10 @@
             &:hover {
                 opacity: 0.8;
             }
+
+            &.active{
+                color: color("primary")!important;
+            }
         }
     }
 

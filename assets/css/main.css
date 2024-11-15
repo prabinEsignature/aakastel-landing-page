@@ -25720,6 +25720,9 @@ table td {
 .atel-presence .presence-tabs .presence-location-name:hover {
   opacity: 0.8;
 }
+.atel-presence .presence-tabs .presence-location-name.active {
+  color: #3bb24a !important;
+}
 .atel-presence #presence-info {
   width: 180px;
   z-index: 1;
