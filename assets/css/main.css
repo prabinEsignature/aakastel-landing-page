@@ -2044,6 +2044,59 @@
   grid-row-end: auto;
 }
 
+/* ORDER */
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.order-4 {
+  order: 4;
+}
+
+.order-5 {
+  order: 5;
+}
+
+.order-6 {
+  order: 6;
+}
+
+.order-7 {
+  order: 7;
+}
+
+.order-8 {
+  order: 8;
+}
+
+.order-9 {
+  order: 9;
+}
+
+.order-10 {
+  order: 10;
+}
+
+.order-first {
+  order: -9999;
+}
+
+.order-last {
+  order: 9999;
+}
+
+.order-none {
+  order: 0;
+}
+
 /* TEXT UTILS - CLAMP */
 .clamp-line-1 {
   overflow: hidden;
@@ -25580,21 +25633,15 @@ table td {
 
 .key-products-block {
   position: sticky;
-  top: 40px;
+  top: 40px !important;
   transform-origin: center top;
-  margin: 0.5em;
   height: 100%;
   background-color: #fff;
-}
-.key-products-block:nth-child(1), .key-products-block:nth-child(2), .key-products-block:nth-child(3) {
   min-height: 480px;
 }
-.key-products-block:nth-child(4) {
-  min-height: 380px;
-}
-.key-products-block:nth-child(5) {
-  min-height: 480px;
-  padding-bottom: 130px;
+.key-products-block:nth-child(6) {
+  min-height: 200px;
+  background: transparent;
 }
 
 .atel-success-pvmt .segment-heading {

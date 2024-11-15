@@ -442,10 +442,10 @@
             padding: 16px !important;
         }
 
-        @include breakpoint-down(xs){
-            padding-left: 12px!important;
-            padding-right: 12px!important;
-            gap: 16px!important;
+        @include breakpoint-down(xs) {
+            padding-left: 12px !important;
+            padding-right: 12px !important;
+            gap: 16px !important;
         }
 
         .segment-downloads-mobile,
@@ -582,7 +582,7 @@
             outline-offset: -2px;
 
             @include breakpoint-down(sm) {
-                column-gap: 12px!important;
+                column-gap: 12px !important;
             }
         }
 
@@ -627,23 +627,14 @@
 
 .key-products-block {
     position: sticky;
-    top: 40px;
+    top: 40px!important;
     transform-origin: center top;
-    margin: 0.5em;
     height: 100%;
-    // @include translateY;
     background-color: color("white");
+    min-height: 480px;
 
-    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
-        min-height: 480px;
-    }
-
-    &:nth-child(4){
-        min-height: 380px;
-    }
-
-    &:nth-child(5){
-        min-height: 480px;
-        padding-bottom: 130px;
+    &:nth-child(6) {
+        min-height: 200px;
+        background: transparent;
     }
 }

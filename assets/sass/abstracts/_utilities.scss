@@ -255,11 +255,11 @@ $grid-column-classes: (
 @each $type, $classes in $grid-column-classes {
   @each $class, $value in $classes {
     .#{$class} {
-      @if $type == 'column' {
+      @if $type == "column" {
         grid-column: #{$value};
-      } @else if $type == 'start' {
+      } @else if $type == "start" {
         grid-column-start: #{$value};
-      } @else if $type == 'end' {
+      } @else if $type == "end" {
         grid-column-end: #{$value};
       }
     }
@@ -316,16 +316,39 @@ $grid-row-classes: (
 @each $type, $classes in $grid-row-classes {
   @each $class, $value in $classes {
     .#{$class} {
-      @if $type == 'row' {
+      @if $type == "row" {
         grid-row: #{$value};
-      } @else if $type == 'start' {
+      } @else if $type == "start" {
         grid-row-start: #{$value};
-      } @else if $type == 'end' {
+      } @else if $type == "end" {
         grid-row-end: #{$value};
       }
     }
   }
 }
+
+/* ORDER */
+@mixin grid-and-flexbox-order($min: 1, $max: 10) {
+  @for $i from $min through $max {
+    .order-#{$i} {
+      order: $i;
+    }
+  }
+
+  .order-first {
+    order: -9999;
+  }
+
+  .order-last {
+    order: 9999;
+  }
+
+  .order-none {
+    order: 0;
+  }
+}
+
+@include grid-and-flexbox-order();
 
 /* TEXT UTILS - CLAMP */
 @for $i from 1 through 4 {
@@ -807,10 +830,10 @@ code {
 }
 
 // invert
-.invert-to-black{
+.invert-to-black {
   filter: invert(1) brightness(100);
 }
 
-.invert-to-white{
+.invert-to-white {
   filter: invert(0) brightness(100);
 }
