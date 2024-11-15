@@ -20,7 +20,7 @@
     border-top-right-radius: 60px !important;
     border-top-left-radius: 60px !important;
   }
-  
+
   @include breakpoint-down(lg) {
     border-top-right-radius: 48px !important;
     border-top-left-radius: 48px !important;
@@ -41,3 +41,4 @@
     border-top-left-radius: 20px !important;
   }
 }
+
