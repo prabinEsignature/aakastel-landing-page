@@ -13,3 +13,31 @@
   color: color("white");
   text-shadow: none;
 }
+
+// BORDER TOP LEFT-RIGHT RADIUS BREAKPOINT MIXIN
+@mixin border-t-responsive {
+  @include breakpoint-down(xl) {
+    border-top-right-radius: 60px !important;
+    border-top-left-radius: 60px !important;
+  }
+  
+  @include breakpoint-down(lg) {
+    border-top-right-radius: 48px !important;
+    border-top-left-radius: 48px !important;
+  }
+
+  @include breakpoint-down(md) {
+    border-top-right-radius: 36px !important;
+    border-top-left-radius: 36px !important;
+  }
+
+  @include breakpoint-down(sm) {
+    border-top-right-radius: 24px !important;
+    border-top-left-radius: 24px !important;
+  }
+
+  @include breakpoint-down(xs) {
+    border-top-right-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+  }
+}

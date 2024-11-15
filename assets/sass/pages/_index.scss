@@ -11,22 +11,7 @@
     }
 
     &-wrapper {
-        scroll-margin-top: 100px;
-
-        @include breakpoint-down(md) {
-            border-top-right-radius: 60px !important;
-            border-top-left-radius: 60px !important;
-        }
-
-        @include breakpoint-down(sm) {
-            border-top-right-radius: 40px !important;
-            border-top-left-radius: 40px !important;
-        }
-
-        @include breakpoint-down(xs) {
-            border-top-right-radius: 24px !important;
-            border-top-left-radius: 24px !important;
-        }
+        @include border-t-responsive;
     }
 
     &-segment {
@@ -67,7 +52,7 @@
 .atel-key-products {
     margin-top: -120px;
     position: sticky;
-    top: 130px;
+    top: 120px;
 
     @include breakpoint-down(lg) {
         margin-top: 80px;
@@ -78,25 +63,15 @@
         top: 108px;
     }
 
-    @include breakpoint-down(md) {
-        border-top-right-radius: 60px !important;
-        border-top-left-radius: 60px !important;
-    }
-
-    @include breakpoint-down(sm) {
-        border-top-right-radius: 40px !important;
-        border-top-left-radius: 40px !important;
-    }
-
-    @include breakpoint-down(xs) {
-        border-top-right-radius: 24px !important;
-        border-top-left-radius: 24px !important;
-    }
+    @include border-t-responsive;
 
     &-wrapper {
         scroll-behavior: smooth;
         max-height: 100vh;
         overflow-y: scroll;
+        border-top-right-radius: 80px;
+        border-top-left-radius: 80px;
+        @include border-t-responsive;
     }
 
     .segment-heading {
@@ -119,12 +94,35 @@
         gap: 60px;
         align-items: center;
 
-        @include breakpoint-down(md) {
+        @include breakpoint-down(xl) {
             gap: 40px;
+        }
+
+        @include breakpoint-down(lg) {
+            gap: 24px;
         }
 
         &-l {
             max-width: 504px;
+
+            @include breakpoint-down(lg) {
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+
+                .key-products-block-icon {
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+        }
+
+        &-r {
+            @include breakpoint-down(lg) {
+                max-width: 420px;
+                margin-right: auto;
+                margin-left: auto;
+            }
         }
 
         &:nth-child(even) {
@@ -166,6 +164,13 @@
 
 .atel-who-we-help {
     overflow-x: hidden !important;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    position: sticky !important;
+    top: 140px;
+
+    @include border-t-responsive;
+
     .segment-heading {
         max-width: 860px;
     }
@@ -627,13 +632,19 @@
 
 .key-products-block {
     position: sticky;
-    top: 40px!important;
+    top: 40px !important;
     transform-origin: center top;
     height: 100%;
     background-color: color("white");
     min-height: 480px;
+    overflow: hidden;
+    padding: 24px 0 !important;
 
-    &:nth-child(6) {
+    @include breakpoint-down(lg) {
+        min-height: auto;
+    }
+
+    &:last-child {
         min-height: 200px;
         background: transparent;
     }
