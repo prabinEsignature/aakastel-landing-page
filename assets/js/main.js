@@ -254,6 +254,11 @@ playButton?.addEventListener("click", () => {
   }
 });
 
+// CHANGE ICON BACK TO PLAY WHEN AUDIO FINISHES
+audio?.addEventListener("ended", () => {
+  playIcon.src = "assets/icons/play_white.svg";
+});
+
 // UPDATE PROGRESS BAR AND TIME DISPLAY AS AUDIO PLAYS 
 audio?.addEventListener("timeupdate", () => {
   const currentTime = audio.currentTime;
