@@ -1,39 +1,39 @@
-.atel-power-voice{
-    .power-voice-img{
+.atel-power-voice {
+    .power-voice-img {
         max-width: 920px;
         max-height: 600px;
 
-        @include breakpoint-down(xxl){
+        @include breakpoint-down(xxl) {
             max-width: 750px;
         }
     }
 
-    .segment-power-voice{
+    .segment-power-voice {
         background: url($img-path + "vc_campaign/power_voice_banner.svg") center/cover no-repeat;
         border-radius: 40px;
         min-height: 673px;
 
-        @include breakpoint-down(xl){
+        @include breakpoint-down(xl) {
             min-height: 516px;
         }
 
-        @include breakpoint-down(lg){
+        @include breakpoint-down(lg) {
             border-radius: 24px;
             flex-direction: column-reverse;
-            padding: 0!important;
+            padding: 0 !important;
         }
 
-        .power-voice-img{
+        .power-voice-img {
             bottom: -6px;
             left: -98px;
 
-            @include breakpoint-down(xl){
+            @include breakpoint-down(xl) {
                 bottom: 0;
                 max-width: 540px;
             }
 
-            @include breakpoint-down(lg){
-                position: relative!important;
+            @include breakpoint-down(lg) {
+                position: relative !important;
                 max-width: 100%;
                 width: 100%;
                 left: -16px;
@@ -41,63 +41,82 @@
         }
     }
 
-    .segment-heading{
-        .segment-ttl{
+    .segment-heading {
+        .segment-ttl {
             line-height: 1.1;
         }
 
-        @include breakpoint-down(lg){
-            margin-bottom: 20px!important;
+        @include breakpoint-down(lg) {
+            margin-bottom: 20px !important;
         }
     }
 
-    .power-voice-content{
+    .power-voice-content {
         max-width: 420px;
 
-        @include breakpoint-down(lg){
+        @include breakpoint-down(lg) {
             max-width: 100%;
             padding: 40px;
         }
 
-        @include breakpoint-down(md){
+        @include breakpoint-down(md) {
             padding: 24px;
         }
 
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
             padding: 16px;
         }
     }
 }
 
-.atel-why-voice-broadcast{
-    .why-voice-broadcast-accordion{
+.atel-why-voice-broadcast {
+    .why-voice-broadcast-accordion {
         max-width: 1064px;
         gap: 80px;
 
-        @include breakpoint-down(lg){
+        @include breakpoint-down(lg) {
             gap: 60px;
         }
 
-        @include breakpoint-down(md){
+        @include breakpoint-down(md) {
             gap: 60px;
         }
 
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
             gap: 40px;
+        }
+    }
+
+    .why-voice-broadcast-img {
+        position: relative;
+
+        .audio-player {
+            position: absolute;
+            left: 47%;
+            bottom: 18.5%;
+            transform: translate(-50%, -50%);
+
+            @include breakpoint-down(md){
+                left: 50%;
+            }
+
+            @include breakpoint-down(xs){
+                bottom: 17.5%;
+            }
         }
     }
 }
 
-.atel-explore-campaign{
-    .atel-explore-campaign-segment{
-        @include breakpoint-down(lg){
-            padding-left: 24px!important;
-            padding-right: 24px!important;
+.atel-explore-campaign {
+    .atel-explore-campaign-segment {
+        @include breakpoint-down(lg) {
+            padding-left: 24px !important;
+            padding-right: 24px !important;
         }
 
-        @include breakpoint-down(sm){
-            padding-left: 16px!important;
-            padding-right: 16px!important;
+        @include breakpoint-down(sm) {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
         }
     }
 }

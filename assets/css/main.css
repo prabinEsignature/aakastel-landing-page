@@ -22107,6 +22107,69 @@ a:visited, a:link {
   text-shadow: none;
 }
 
+.audio-player {
+  position: absolute;
+  bottom: 30px;
+  left: -100px;
+  box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.08);
+}
+@media (max-width: 991.98px) {
+  .audio-player {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+  }
+}
+@media (max-width: 479.98px) {
+  .audio-player {
+    width: 90%;
+    bottom: 20px;
+  }
+}
+.audio-player .audio-play-file {
+  display: none;
+}
+.audio-player .audio-play-progress {
+  height: 8px;
+  width: 96px;
+}
+@media (max-width: 991.98px) {
+  .audio-player .audio-play-progress {
+    width: 100%;
+  }
+}
+.audio-player .audio-play-progress-bar {
+  height: 8px;
+}
+.audio-player .audio-dots-btn {
+  position: relative;
+}
+.audio-player .audio-dots-btn:hover {
+  opacity: 1 !important;
+}
+.audio-player .audio-dots-btn .audio-options-dropdown {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 10px;
+  border-radius: 8px;
+  width: 140px;
+}
+.audio-player .audio-dots-btn .audio-options-list {
+  padding: 0;
+  margin: 0;
+}
+.audio-player .audio-dots-btn .audio-option {
+  color: #3bb24a;
+  font-size: 12px;
+  padding: 6px 0;
+  border-radius: 6px;
+}
+.audio-player .audio-dots-btn .audio-option:hover {
+  background: #e9f2ed;
+}
+
 .menu-bar {
   position: relative;
   margin-top: 7px;
@@ -23853,28 +23916,6 @@ table td {
     margin-top: 28px !important;
   }
 }
-.atel-top-banner.atel-home-pg .top-banner-audio .audio-player {
-  position: absolute;
-  bottom: 30px;
-  left: -100px;
-  box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.08);
-}
-@media (max-width: 991.98px) {
-  .atel-top-banner.atel-home-pg .top-banner-audio .audio-player {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 280px;
-  }
-}
-@media (max-width: 479.98px) {
-  .atel-top-banner.atel-home-pg .top-banner-audio .audio-player {
-    width: 90%;
-    bottom: 20px;
-  }
-}
-.atel-top-banner.atel-home-pg .top-banner-audio .audio-play-file {
-  display: none;
-}
 .atel-top-banner.atel-home-pg .top-banner-audio .audio-img {
   max-width: 288px;
 }
@@ -23887,46 +23928,6 @@ table td {
   .atel-top-banner.atel-home-pg .top-banner-audio .audio-img {
     max-width: 100%;
   }
-}
-.atel-top-banner.atel-home-pg .top-banner-audio .audio-play-progress {
-  height: 8px;
-  width: 96px;
-}
-@media (max-width: 991.98px) {
-  .atel-top-banner.atel-home-pg .top-banner-audio .audio-play-progress {
-    width: 100%;
-  }
-}
-.atel-top-banner.atel-home-pg .top-banner-audio .audio-play-progress-bar {
-  height: 8px;
-}
-.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn {
-  position: relative;
-}
-.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn:hover {
-  opacity: 1 !important;
-}
-.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn .audio-options-dropdown {
-  background: #fff;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  padding: 10px;
-  border-radius: 8px;
-  width: 140px;
-}
-.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn .audio-options-list {
-  padding: 0;
-  margin: 0;
-}
-.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn .audio-option {
-  color: #3bb24a;
-  font-size: 12px;
-  padding: 6px 0;
-  border-radius: 6px;
-}
-.atel-top-banner.atel-home-pg .top-banner-audio .audio-dots-btn .audio-option:hover {
-  background: #e9f2ed;
 }
 .atel-top-banner .top-banner-ttl {
   font-size: 56px;
@@ -24014,13 +24015,12 @@ table td {
 @media (max-width: 575.98px) {
   .atel-top-banner.atel-office-ivr-pg {
     padding-top: 72px;
-    min-height: 650px;
+    min-height: 460px;
   }
 }
 @media (max-width: 479.98px) {
   .atel-top-banner.atel-office-ivr-pg {
     padding-top: 60px;
-    min-height: 600px;
   }
 }
 .atel-top-banner.atel-office-ivr-pg .top-banner-text-group {
@@ -25959,12 +25959,7 @@ table td {
 }
 @media (max-width: 575.98px) {
   .atel-office-ivr-vid {
-    margin-top: -150px;
-  }
-}
-@media (max-width: 479.98px) {
-  .atel-office-ivr-vid {
-    margin-top: -100px;
+    margin-top: 48px;
   }
 }
 .atel-office-ivr-vid .segment-office-ivr-vid {
@@ -26194,6 +26189,25 @@ table td {
     gap: 40px;
   }
 }
+.atel-why-voice-broadcast .why-voice-broadcast-img {
+  position: relative;
+}
+.atel-why-voice-broadcast .why-voice-broadcast-img .audio-player {
+  position: absolute;
+  left: 47%;
+  bottom: 18.5%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 767.98px) {
+  .atel-why-voice-broadcast .why-voice-broadcast-img .audio-player {
+    left: 50%;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-why-voice-broadcast .why-voice-broadcast-img .audio-player {
+    bottom: 17.5%;
+  }
+}
 
 @media (max-width: 991.98px) {
   .atel-explore-campaign .atel-explore-campaign-segment {
@@ -26223,6 +26237,16 @@ table td {
 @media (max-width: 991.98px) {
   .atel-why-onpremises .why-onpremises-segment {
     gap: 24px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-why-onpremises .why-onpremises-grid {
+    gap: 20px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-why-onpremises .why-onpremises-grid {
+    gap: 16px !important;
   }
 }
 .atel-why-onpremises .why-onpremises-item {

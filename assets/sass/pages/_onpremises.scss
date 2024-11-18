@@ -17,6 +17,16 @@
         }
     }
 
+    .why-onpremises-grid {
+        @include breakpoint-down(sm) {
+            gap: 20px !important;
+        }
+
+        @include breakpoint-down(sm) {
+            gap: 16px !important;
+        }
+    }
+
     .why-onpremises-item {
         min-height: 370px;
 

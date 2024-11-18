@@ -24,7 +24,7 @@
         @include flex-center;
         position: relative;
 
-        &::after{
+        &::after {
             position: absolute;
             content: "";
             top: 100%;
@@ -115,28 +115,6 @@
                 margin-top: 28px !important;
             }
 
-            .audio-player {
-                position: absolute;
-                bottom: 30px;
-                left: -100px;
-                box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.08);
-
-                @include breakpoint-down(lg) {
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 280px;
-                }
-
-                @include breakpoint-down(xs) {
-                    width: 90%;
-                    bottom: 20px;
-                }
-            }
-
-            .audio-play-file {
-                display: none;
-            }
-
             .audio-img {
                 max-width: 288px;
 
@@ -146,53 +124,6 @@
 
                 @include breakpoint-down(sm) {
                     max-width: 100%;
-                }
-            }
-
-            .audio-play-progress {
-                height: 8px;
-                width: 96px;
-
-                @include breakpoint-down(lg){
-                    width: 100%;
-                }
-
-                &-bar {
-                    height: 8px;
-                }
-            }
-
-            .audio-dots-btn {
-                position: relative;
-
-                &:hover {
-                    opacity: 1 !important;
-                }
-
-                .audio-options-dropdown {
-                    background: color("white");
-                    position: absolute;
-                    top: 100%;
-                    right: 0;
-                    padding: 10px;
-                    border-radius: 8px;
-                    width: 140px;
-                }
-
-                .audio-options-list {
-                    padding: 0;
-                    margin: 0;
-                }
-
-                .audio-option {
-                    color: color("primary");
-                    font-size: 12px;
-                    padding: 6px 0;
-                    border-radius: 6px;
-
-                    &:hover {
-                        background: color("p-green-50");
-                    }
                 }
             }
         }
@@ -274,22 +205,21 @@
         min-height: 800px;
         padding-top: 80px;
 
-        @include breakpoint-down(lg){
+        @include breakpoint-down(lg) {
             min-height: 770px;
         }
 
-        @include breakpoint-down(md){
+        @include breakpoint-down(md) {
             min-height: 700px;
         }
 
         @include breakpoint-down(sm) {
             padding-top: 72px;
-            min-height: 650px;
+            min-height: 460px;
         }
 
         @include breakpoint-down(xs) {
             padding-top: 60px;
-            min-height: 600px;
         }
 
         .top-banner {
