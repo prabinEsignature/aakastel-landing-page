@@ -25094,6 +25094,26 @@ table td {
   height: 250px;
   background: linear-gradient(0deg, rgba(13, 63, 70, 0.4) 0%, rgba(13, 63, 70, 0) 100%);
 }
+@media (max-width: 991.98px) {
+  .atel-features-segment::after {
+    height: 200px;
+  }
+}
+@media (max-width: 767.98px) {
+  .atel-features-segment::after {
+    height: 150px;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-features-segment::after {
+    height: 100px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-features-segment::after {
+    height: 60px;
+  }
+}
 @media (max-width: 575.98px) {
   .atel-features .features-tabs {
     margin: 4px 0;
@@ -25102,12 +25122,12 @@ table td {
 .atel-features .features-tabs .features-tabs-btn.active, .atel-features .features-tabs .features-tabs-btn[aria-selected=true] {
   color: #121212 !important;
   background: #e9f2ed !important;
-  border-radius: 8px !important;
+  border-radius: 6px !important;
 }
 @media (max-width: 479.98px) {
   .atel-features .features-tabs .features-tabs-btn {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
+    padding: 4px 8px !important;
+    border-radius: 6px !important;
   }
 }
 

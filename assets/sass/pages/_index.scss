@@ -25,6 +25,22 @@
             bottom: 0;
             height: 250px;
             background: linear-gradient(0deg, rgba(13, 63, 70, 0.4) 0%, rgba(13, 63, 70, 0) 100%);
+
+            @include breakpoint-down(lg) {
+                height: 200px;
+            }
+
+            @include breakpoint-down(md) {
+                height: 150px;
+            }
+
+            @include breakpoint-down(sm) {
+                height: 100px;
+            }
+
+            @include breakpoint-down(xs) {
+                height: 60px;
+            }
         }
     }
 
@@ -38,12 +54,12 @@
             &[aria-selected="true"] {
                 color: color("night") !important;
                 background: color("p-green-50") !important;
-                border-radius: 8px !important;
+                border-radius: 6px !important;
             }
 
             @include breakpoint-down(xs) {
-                padding-left: 8px !important;
-                padding-right: 8px !important;
+                padding: 4px 8px !important;
+                border-radius: 6px !important;
             }
         }
     }
@@ -597,8 +613,8 @@
                 opacity: 0.8;
             }
 
-            &.active{
-                color: color("primary")!important;
+            &.active {
+                color: color("primary") !important;
             }
         }
     }
