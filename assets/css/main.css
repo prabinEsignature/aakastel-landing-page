@@ -26121,6 +26121,16 @@ table td {
     gap: 20px !important;
   }
 }
+@media (max-width: 575.98px) {
+  .atel-faq .segment-faq {
+    gap: 12px !important;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-faq .segment-faq {
+    gap: 8px !important;
+  }
+}
 @media (max-width: 1199.98px) {
   .atel-faq .segment-faq .accordion-item {
     padding-top: 12px !important;
@@ -26650,13 +26660,14 @@ table td {
 .atel-whatsapp-api-for .whatsapp-api-for-item {
   transition: all ease-in-out 300ms;
 }
-.atel-whatsapp-api-for .whatsapp-api-for-item:hover {
+.atel-whatsapp-api-for .whatsapp-api-for-item:not(:first-child):hover {
   background: #3bb24a !important;
 }
-.atel-whatsapp-api-for .whatsapp-api-for-item:hover p, .atel-whatsapp-api-for .whatsapp-api-for-item:hover h3 {
+.atel-whatsapp-api-for .whatsapp-api-for-item:not(:first-child):hover p,
+.atel-whatsapp-api-for .whatsapp-api-for-item:not(:first-child):hover h3 {
   color: #fff !important;
 }
-.atel-whatsapp-api-for .whatsapp-api-for-item:hover .btn {
+.atel-whatsapp-api-for .whatsapp-api-for-item:not(:first-child):hover .btn {
   background: #fff !important;
 }
 @media (max-width: 575.98px) {

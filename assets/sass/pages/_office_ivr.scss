@@ -135,6 +135,14 @@
             gap: 20px !important;
         }
 
+        @include breakpoint-down(sm){
+            gap: 12px !important;
+        }
+
+        @include breakpoint-down(xs){
+            gap: 8px !important;
+        }
+
         .accordion-item {
             @include breakpoint-down(xl) {
                 padding-top: 12px !important;
