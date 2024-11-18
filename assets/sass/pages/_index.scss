@@ -187,6 +187,10 @@
 
     @include border-t-responsive;
 
+    @include breakpoint-down(sm) {
+        top: 126px;
+    }
+
     .segment-heading {
         max-width: 860px;
     }

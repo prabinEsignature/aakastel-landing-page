@@ -25336,6 +25336,11 @@ table td {
     border-top-left-radius: 20px !important;
   }
 }
+@media (max-width: 575.98px) {
+  .atel-who-we-help {
+    top: 126px;
+  }
+}
 .atel-who-we-help .segment-heading {
   max-width: 860px;
 }
