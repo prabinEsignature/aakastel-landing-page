@@ -79,6 +79,11 @@
             }
 
             &-card{
+                transition: $default-transition;
+                &:hover{
+                    scale: 1.02;
+                }
+
                 @include breakpoint-down(xl){
                     height: 100%;
                 }

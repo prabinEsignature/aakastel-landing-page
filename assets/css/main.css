@@ -27252,6 +27252,12 @@ table td {
     padding: 16px !important;
   }
 }
+.atel-pricing-pg .pricing-cards .pricing-card {
+  transition: all ease-in-out 300ms;
+}
+.atel-pricing-pg .pricing-cards .pricing-card:hover {
+  scale: 1.02;
+}
 @media (max-width: 1199.98px) {
   .atel-pricing-pg .pricing-cards .pricing-card {
     height: 100%;
