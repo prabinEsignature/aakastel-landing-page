@@ -26199,6 +26199,11 @@ table td {
 .atel-faq .segment-heading .segment-img {
   max-width: 80px;
 }
+@media (min-width: 992px) {
+  .atel-faq .segment-heading .segment-lead {
+    max-width: 320px;
+  }
+}
 .atel-faq .segment-faq {
   grid-template-columns: 28% auto;
   max-width: 1162px;

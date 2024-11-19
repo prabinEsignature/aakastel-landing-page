@@ -131,6 +131,12 @@
         .segment-img {
             max-width: 80px;
         }
+
+        .segment-lead{
+            @include breakpoint-up(lg){
+                max-width: 320px;
+            }
+        }
     }
 
     .segment-faq {
