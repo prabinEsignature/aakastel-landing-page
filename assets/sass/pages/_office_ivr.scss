@@ -73,7 +73,7 @@
             padding: 20px !important;
         }
 
-        @include breakpoint-down(sm) {
+        @include breakpoint-down(md) {
             padding: 16px !important;
             column-gap: 16px !important;
         }
@@ -100,6 +100,15 @@
     }
 
     .system-work-steps {
+        @include breakpoint-down(lg){
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        @include breakpoint-down(md){
+            grid-template-columns: 100%;
+        }
+
         @include breakpoint-down(sm) {
             row-gap: 16px !important;
         }

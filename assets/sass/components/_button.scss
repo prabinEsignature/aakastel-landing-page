@@ -202,6 +202,9 @@ $button-variants: (
   &.btn-narrow {
     min-width: 100px;
   }
+  &.btn-semi-middle{
+    min-width: 160px;
+  }
   &.btn-middle {
     min-width: 180px;
   }

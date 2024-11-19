@@ -113,6 +113,7 @@
 
         @include breakpoint-down(sm) {
             padding: 16px 12px !important;
+            gap: 12px!important;
         }
     }
 }
