@@ -99,6 +99,10 @@
 }
 
 .atel-compare-plans {
+    .compare-plans-segment{
+        overflow: hidden;
+    }
+
     .plan-block-head {
         border-bottom: 1px solid color("grey-3");
 

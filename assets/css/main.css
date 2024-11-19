@@ -24398,6 +24398,9 @@ table td {
 .atel-navbar .menu-item.active .menu-item-text {
   color: #3bb24a !important;
 }
+.atel-navbar .menu-item:hover .menu-item-text {
+  color: #424242 !important;
+}
 @media (max-width: 991.98px) {
   .atel-navbar .menu-item-text {
     color: #121212 !important;
@@ -27272,6 +27275,9 @@ table td {
   background: #e9f2ed !important;
 }
 
+.atel-compare-plans .compare-plans-segment {
+  overflow: hidden;
+}
 .atel-compare-plans .plan-block-head {
   border-bottom: 1px solid #d1d1d1;
 }
