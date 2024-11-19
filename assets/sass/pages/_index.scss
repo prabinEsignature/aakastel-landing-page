@@ -422,15 +422,9 @@
     }
 
     .business-companies {
-        &-text {
-            max-width: 223px;
-        }
-        &-logo {
-            max-width: 800px;
-        }
-
         @include breakpoint-down(lg) {
-            gap: 24px !important;
+            gap: 12px !important;
+            flex-direction: column;
         }
 
         @include breakpoint-down(md) {
@@ -439,6 +433,44 @@
 
         @include breakpoint-down(sm) {
             gap: 12px !important;
+        }
+
+        &-text {
+            max-width: 223px;
+
+            @include breakpoint-down(lg) {
+                text-align: center;
+                max-width: 100%;
+            }
+        }
+        &-logo {
+            max-width: 800px;
+        }
+
+        &-item {
+            img {
+                max-width: 150px;
+
+                @include breakpoint-down(sm){
+                    max-width: 120px;
+                }
+            }
+
+            @include breakpoint-down(md) {
+                width: calc(50% - 12px);
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &-list {
+            @include breakpoint-down(lg) {
+                width: 100%;
+            }
+
+            @include breakpoint-down(md) {
+                flex-wrap: wrap;
+            }
         }
     }
 

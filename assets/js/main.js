@@ -600,29 +600,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ####### EOF STACK CARDS EFFECT ####### */
 
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".submenu-item").forEach(function (item) {
-      item
-        .addEventListener("click", function (event) {
-          if (window.innerWidth <= 991.98) {
+  document.querySelectorAll(".submenu-item").forEach(function (item) {
+    item
+      .addEventListener("click", function (event) {
+        if (window.innerWidth <= 991.98) {
+          event.stopPropagation();
+          event.preventDefault();
+        }
+      });
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 991.98) {
+      document
+        .querySelectorAll(".submenu-item-chevron")
+        .forEach(function (chevron) {
+          chevron.removeEventListener("click", function (event) {
             event.stopPropagation();
             event.preventDefault();
-          }
-        });
-    });
-
-    window.addEventListener("resize", function () {
-      if (window.innerWidth > 991.98) {
-        document
-          .querySelectorAll(".submenu-item-chevron")
-          .forEach(function (chevron) {
-            chevron.removeEventListener("click", function (event) {
-              event.stopPropagation();
-              event.preventDefault();
-            });
           });
-      }
-    });
+        });
+    }
   });
 
   subMenuHeadItemsLink.forEach((subMenuHeadItemLink) => {

@@ -25613,15 +25613,10 @@ table td {
 .atel-support-industry .support-industry-accordion .industry-feature-item p:hover {
   color: #3bb24a !important;
 }
-.atel-support-industry .business-companies-text {
-  max-width: 223px;
-}
-.atel-support-industry .business-companies-logo {
-  max-width: 800px;
-}
 @media (max-width: 991.98px) {
   .atel-support-industry .business-companies {
-    gap: 24px !important;
+    gap: 12px !important;
+    flex-direction: column;
   }
 }
 @media (max-width: 767.98px) {
@@ -25632,6 +25627,43 @@ table td {
 @media (max-width: 575.98px) {
   .atel-support-industry .business-companies {
     gap: 12px !important;
+  }
+}
+.atel-support-industry .business-companies-text {
+  max-width: 223px;
+}
+@media (max-width: 991.98px) {
+  .atel-support-industry .business-companies-text {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+.atel-support-industry .business-companies-logo {
+  max-width: 800px;
+}
+.atel-support-industry .business-companies-item img {
+  max-width: 150px;
+}
+@media (max-width: 575.98px) {
+  .atel-support-industry .business-companies-item img {
+    max-width: 120px;
+  }
+}
+@media (max-width: 767.98px) {
+  .atel-support-industry .business-companies-item {
+    width: calc(50% - 12px);
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-support-industry .business-companies-list {
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .atel-support-industry .business-companies-list {
+    flex-wrap: wrap;
   }
 }
 .atel-support-industry .atel-downloads {
