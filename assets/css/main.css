@@ -26701,6 +26701,7 @@ table td {
 .atel-engagement .engagement-list .engagement-item:hover {
   background: #3bb24a !important;
   border-color: #359f42 !important;
+  box-shadow: 0 0 12px rgba(59, 178, 74, 0.5490196078) !important;
 }
 .atel-engagement .engagement-list .engagement-item:hover p,
 .atel-engagement .engagement-list .engagement-item:hover h3 {
@@ -26812,6 +26813,7 @@ table td {
 }
 .atel-whatsapp-api-for .whatsapp-api-for-item:not(:first-child):hover {
   background: #3bb24a !important;
+  box-shadow: 0 0 12px rgba(59, 178, 74, 0.5490196078) !important;
 }
 .atel-whatsapp-api-for .whatsapp-api-for-item:not(:first-child):hover p,
 .atel-whatsapp-api-for .whatsapp-api-for-item:not(:first-child):hover h3 {

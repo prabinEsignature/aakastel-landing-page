@@ -47,6 +47,7 @@
         &:not(:first-child) {
             &:hover {
                 background: color("primary") !important;
+                box-shadow: 0 0 12px #3bb24a8c !important;
 
                 p,
                 h3 {
