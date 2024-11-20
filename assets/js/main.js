@@ -483,7 +483,7 @@ function placeDivAtPathPosition(bbox, xScale, yScale) {
   const y = (bbox.y + bbox.height / 2) * yScale;
 
   presenceInfoDiv.style.left = `${x - 100}px`;
-  presenceInfoDiv.style.top = `${y + bbox.height * yScale}px`;
+  presenceInfoDiv.style.top = `${y + (bbox.height / 2) * yScale}px`;
   presenceInfoDiv.style.position = "absolute";
   presenceInfoDiv.classList.remove("d-none");
 }

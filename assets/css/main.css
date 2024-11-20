@@ -25755,6 +25755,7 @@ table td {
 .atel-presence .presence-block {
   grid-template-columns: 64% auto;
   gap: 80px;
+  align-items: center !important;
 }
 @media (max-width: 1399.98px) {
   .atel-presence .presence-block {
@@ -25770,6 +25771,9 @@ table td {
   .atel-presence .presence-block {
     grid-template-columns: 1fr;
   }
+}
+.atel-presence .presence-map {
+  max-width: 798px;
 }
 @media (max-width: 575.98px) {
   .atel-presence .presence-map #nepal-map {

@@ -556,6 +556,7 @@
     .presence-block {
         grid-template-columns: 64% auto;
         gap: 80px;
+        align-items: center!important;
 
         @include breakpoint-down(xxl) {
             gap: 40px;
@@ -571,6 +572,8 @@
     }
 
     .presence-map {
+        max-width: 798px;
+        
         #nepal-map {
             @include breakpoint-down(sm) {
                 height: 100% !important;
