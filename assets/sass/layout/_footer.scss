@@ -166,11 +166,13 @@
     .contact-social-link {
         &-item {
             transition: $default-transition;
+            position: relative;
 
             &:hover {
                 background: color("primary") !important;
                 border-radius: 4px;
-                box-shadow: map-get($shadows, "sm");
+                // box-shadow: map-get($shadows, "sm");
+                box-shadow: 0 0 12px color("primary");
                 img {
                     filter: invert(1) brightness(100);
                 }

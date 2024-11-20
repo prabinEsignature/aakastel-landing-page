@@ -25075,11 +25075,12 @@ table td {
 }
 .atel-footer .contact-social-link-item {
   transition: all ease-in-out 300ms;
+  position: relative;
 }
 .atel-footer .contact-social-link-item:hover {
   background: #3bb24a !important;
   border-radius: 4px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 12px #3bb24a;
 }
 .atel-footer .contact-social-link-item:hover img {
   filter: invert(1) brightness(100);
