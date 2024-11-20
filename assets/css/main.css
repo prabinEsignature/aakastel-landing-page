@@ -26613,6 +26613,7 @@ table td {
 .atel-sms-features .sms-features-item:hover {
   background: #3bb24a !important;
   border-color: #359f42 !important;
+  box-shadow: 0 0 12px rgba(59, 178, 74, 0.5490196078) !important;
 }
 .atel-sms-features .sms-features-item:hover p,
 .atel-sms-features .sms-features-item:hover h3 {
