@@ -24479,6 +24479,7 @@ table td {
     border-radius: 4px;
     transition: all ease-in-out 300ms;
     height: auto;
+    background: #e9f2ed !important;
   }
   .atel-navbar .menu-item-wrapper:hover {
     border-color: #3bb24a;
@@ -24615,6 +24616,7 @@ table td {
 @media (max-width: 991.98px) {
   .atel-navbar .submenu-item-block.products-nav .submenu-list {
     grid-template-columns: 100%;
+    background: #fff !important;
   }
 }
 @media (max-width: 479.98px) {
@@ -24893,6 +24895,7 @@ table td {
 @media (max-width: 575.98px) {
   .atel-navbar .submenu-item-foot {
     flex-direction: column;
+    display: none !important;
   }
 }
 
