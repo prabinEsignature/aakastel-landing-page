@@ -1,0 +1,152 @@
+.atel-product-features-hero {
+    max-width: 1060px;
+    min-height: 520px;
+    margin-top: -280px;
+    padding: 20px 0;
+
+    @include breakpoint-down(sm) {
+        margin-top: 0;
+        min-height: auto;
+        padding-top: 40px;
+    }
+
+    @include breakpoint-down(xs) {
+        padding-top: 20px;
+    }
+
+    .segment-product-features-hero {
+        padding: 20px;
+        img {
+            max-width: 900px;
+        }
+    }
+}
+
+.atel-product-features {
+    .product-features-block {
+        grid-template-columns: 520px auto;
+        gap: 80px;
+
+        @include breakpoint-down(xl) {
+            grid-template-columns: 420px auto;
+            gap: 60px;
+        }
+
+        @include breakpoint-down(lg) {
+            grid-template-columns: 100%;
+            gap: 40px;
+        }
+
+        @include breakpoint-down(sm) {
+            gap: 32px;
+        }
+
+        &-group {
+            row-gap: 120px;
+
+            @include breakpoint-down(xl) {
+                row-gap: 80px;
+            }
+        }
+
+        &:nth-child(even) {
+            grid-template-columns: auto 520px;
+
+            @include breakpoint-down(xl) {
+                grid-template-columns: auto 420px;
+            }
+
+            @include breakpoint-down(lg) {
+                grid-template-columns: 100%;
+            }
+
+            .product-features-block-img {
+                order: 2;
+                @include breakpoint-down(lg) {
+                    order: 1;
+                }
+            }
+            .product-features-block-content {
+                order: 1;
+                @include breakpoint-down(lg) {
+                    order: 2;
+                }
+            }
+        }
+    }
+    .product-features-block-img {
+        background: linear-gradient(180deg, rgba(233, 242, 237, 1) 2%, rgba(255, 255, 255, 1) 23%);
+        padding: 16px;
+
+        img {
+            max-width: 500px;
+            @include breakpoint-down(lg) {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+    .product-features-block-content {
+        p {
+            color: color("night") !important;
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}
+
+.atel-product-features-more {
+    background: url($img-path + "features/benefits_banner.svg") center/cover no-repeat;
+    .product-features-more-item {
+        p {
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+
+            a {
+                color: color("primary") !important;
+            }
+        }
+    }
+}
+
+.atel-product-features-guide {
+    &-container {
+        gap: 80px;
+
+        @include breakpoint-down(xl){
+            gap: 60px;
+        }
+
+        @include breakpoint-down(lg){
+            gap: 40px;
+        }
+
+        @include breakpoint-down(sm){
+            gap: 32px;
+        }
+    }
+
+    .features-guide-img {
+        img {
+            @include breakpoint-down(lg) {
+                max-width: 500px;
+            }
+        }
+    }
+
+    .features-guide-list {
+        ul {
+            list-style-type: decimal !important;
+            padding-left: 20px;
+            &:not([class]) > li::marker {
+                color: color("primary");
+            }
+
+            li {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

@@ -27378,4 +27378,151 @@ table td {
 .atel-compare-plans .plan-block .btn-white-black:hover, .atel-compare-plans .plan-block .btn-white-black:active, .atel-compare-plans .plan-block .btn-white-black:focus {
   background: #e9f2ed !important;
   border-color: #3bb24a !important;
+}
+
+.atel-product-features-hero {
+  max-width: 1060px;
+  min-height: 520px;
+  margin-top: -280px;
+  padding: 20px 0;
+}
+@media (max-width: 575.98px) {
+  .atel-product-features-hero {
+    margin-top: 0;
+    min-height: auto;
+    padding-top: 40px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-product-features-hero {
+    padding-top: 20px;
+  }
+}
+.atel-product-features-hero .segment-product-features-hero {
+  padding: 20px;
+}
+.atel-product-features-hero .segment-product-features-hero img {
+  max-width: 900px;
+}
+
+.atel-product-features .product-features-block {
+  grid-template-columns: 520px auto;
+  gap: 80px;
+}
+@media (max-width: 1199.98px) {
+  .atel-product-features .product-features-block {
+    grid-template-columns: 420px auto;
+    gap: 60px;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-product-features .product-features-block {
+    grid-template-columns: 100%;
+    gap: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-product-features .product-features-block {
+    gap: 32px;
+  }
+}
+.atel-product-features .product-features-block-group {
+  row-gap: 120px;
+}
+@media (max-width: 1199.98px) {
+  .atel-product-features .product-features-block-group {
+    row-gap: 80px;
+  }
+}
+.atel-product-features .product-features-block:nth-child(even) {
+  grid-template-columns: auto 520px;
+}
+@media (max-width: 1199.98px) {
+  .atel-product-features .product-features-block:nth-child(even) {
+    grid-template-columns: auto 420px;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-product-features .product-features-block:nth-child(even) {
+    grid-template-columns: 100%;
+  }
+}
+.atel-product-features .product-features-block:nth-child(even) .product-features-block-img {
+  order: 2;
+}
+@media (max-width: 991.98px) {
+  .atel-product-features .product-features-block:nth-child(even) .product-features-block-img {
+    order: 1;
+  }
+}
+.atel-product-features .product-features-block:nth-child(even) .product-features-block-content {
+  order: 1;
+}
+@media (max-width: 991.98px) {
+  .atel-product-features .product-features-block:nth-child(even) .product-features-block-content {
+    order: 2;
+  }
+}
+.atel-product-features .product-features-block-img {
+  background: linear-gradient(180deg, rgb(233, 242, 237) 2%, rgb(255, 255, 255) 23%);
+  padding: 16px;
+}
+.atel-product-features .product-features-block-img img {
+  max-width: 500px;
+}
+@media (max-width: 991.98px) {
+  .atel-product-features .product-features-block-img img {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.atel-product-features .product-features-block-content p {
+  color: #121212 !important;
+}
+.atel-product-features .product-features-block-content p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.atel-product-features-more {
+  background: url("../../../assets/images/features/benefits_banner.svg") center/cover no-repeat;
+}
+.atel-product-features-more .product-features-more-item p:last-child {
+  margin-bottom: 0 !important;
+}
+.atel-product-features-more .product-features-more-item p a {
+  color: #3bb24a !important;
+}
+
+.atel-product-features-guide-container {
+  gap: 80px;
+}
+@media (max-width: 1199.98px) {
+  .atel-product-features-guide-container {
+    gap: 60px;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-product-features-guide-container {
+    gap: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-product-features-guide-container {
+    gap: 32px;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-product-features-guide .features-guide-img img {
+    max-width: 500px;
+  }
+}
+.atel-product-features-guide .features-guide-list ul {
+  list-style-type: decimal !important;
+  padding-left: 20px;
+}
+.atel-product-features-guide .features-guide-list ul:not([class]) > li::marker {
+  color: #3bb24a;
+}
+.atel-product-features-guide .features-guide-list ul li {
+  margin-bottom: 12px;
 }/*# sourceMappingURL=main.css.map */
