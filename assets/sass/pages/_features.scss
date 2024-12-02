@@ -22,6 +22,18 @@
     }
 }
 
+.atel-product-features-group {
+    .product-features-group-list {
+        @include breakpoint-down(lg) {
+            gap: 24px !important;
+        }
+
+        @include breakpoint-down(sm) {
+            gap: 16px !important;
+        }
+    }
+}
+
 .atel-product-features {
     .product-features-block {
         grid-template-columns: 520px auto;
@@ -46,6 +58,14 @@
 
             @include breakpoint-down(xl) {
                 row-gap: 80px;
+            }
+
+            @include breakpoint-down(lg) {
+                gap: 60px;
+            }
+
+            @include breakpoint-down(sm) {
+                gap: 40px;
             }
         }
 
@@ -115,15 +135,15 @@
     &-container {
         gap: 80px;
 
-        @include breakpoint-down(xl){
+        @include breakpoint-down(xl) {
             gap: 60px;
         }
 
-        @include breakpoint-down(lg){
+        @include breakpoint-down(lg) {
             gap: 40px;
         }
 
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
             gap: 32px;
         }
     }
@@ -149,4 +169,56 @@
             }
         }
     }
+}
+
+.atel-product-contact {
+    &-container {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(199, 225, 229, 1) 100%);
+        grid-template-columns: 372px auto;
+        padding-left: 120px;
+        padding-right: 120px;
+
+        @include breakpoint-down(xxl) {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+
+        @include breakpoint-down(xl) {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        @include breakpoint-down(lg) {
+            padding-left: 40px;
+            padding-right: 40px;
+            grid-template-columns: 320px auto;
+            gap: 28px !important;
+        }
+
+        @include breakpoint-down(md) {
+            padding-left: 32px;
+            padding-right: 32px;
+            grid-template-columns: 240px auto;
+            gap: 20px !important;
+        }
+
+        @include breakpoint-down(sm) {
+            grid-template-columns: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .product-contact-img {
+        @include breakpoint-down(sm) {
+            max-width: 240px;
+            margin-right: auto;
+            margin-left: auto;
+            order: 2;
+        }
+    }
+}
+
+.atel-product-features-other {
+    background: url($img-path + "features/features_more_banner.svg") center/cover no-repeat;
 }
