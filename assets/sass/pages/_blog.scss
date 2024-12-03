@@ -302,3 +302,12 @@
         }
     }
 }
+
+
+.single-post{
+    .atel-lt-blogs{
+        &::after{
+            display: none!important;
+        }
+    }
+}

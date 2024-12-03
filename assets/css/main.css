@@ -24306,6 +24306,32 @@ table td {
   }
 }
 
+.header-2 .atel-header .atel-navbar .navbar-logo-default {
+  display: none;
+}
+.header-2 .atel-header .atel-navbar .btn-navbar-menu-open img {
+  filter: invert(0) brightness(100);
+}
+.header-2 .atel-header.atel-header-fixed .atel-navbar .navbar-logo-white {
+  display: none;
+}
+.header-2 .atel-header.atel-header-fixed .atel-navbar .navbar-logo-default {
+  display: block;
+}
+.header-2 .atel-header.atel-header-fixed .atel-navbar .btn-navbar-menu-open img {
+  filter: none;
+}
+@media (min-width: 992px) {
+  .header-2 .atel-header:not(.atel-header-fixed) .atel-navbar .menu-item-text {
+    color: #fff !important;
+  }
+}
+@media (min-width: 992px) {
+  .header-2 .atel-header:not(.atel-header-fixed) .atel-navbar .menu-item-icon img {
+    filter: invert(0) brightness(100);
+  }
+}
+
 .atel-navbar {
   min-height: 80px;
   display: flex;
@@ -24438,7 +24464,7 @@ table td {
     padding: 10px 8px;
   }
 }
-.atel-navbar .menu-item.active .menu-item-text {
+.atel-navbar .menu-item.active .menu-item-text, .atel-navbar .menu-item.current_page_item .menu-item-text {
   color: #3bb24a !important;
 }
 .atel-navbar .menu-item:hover .menu-item-text {
@@ -24916,7 +24942,7 @@ table td {
 }
 @media (min-width: 992px) {
   .atel-header:not(.atel-header-fixed) .atel-navbar.atel-navbar-invert .menu-item-text {
-    color: #fff;
+    color: #fff !important;
   }
 }
 @media (min-width: 992px) {
@@ -25902,6 +25928,7 @@ table td {
 .atel-presence #presence-info {
   width: 180px;
   z-index: 1;
+  font-family: "Karla", sans-serif;
 }
 .atel-presence #presence-info::after {
   content: "";
@@ -26500,6 +26527,12 @@ table td {
     padding-right: 0 !important;
   }
 }
+.atel-trust-compliance .trust-compliance-accordion .accordion-item .accordion-body p, .atel-trust-compliance .trust-compliance-accordion .accordion-item .accordion-body ul, .atel-trust-compliance .trust-compliance-accordion .accordion-item .accordion-body div {
+  color: #c7e1e5 !important;
+}
+.atel-trust-compliance .trust-compliance-accordion .accordion-item .accordion-body a {
+  color: #3bb24a !important;
+}
 @media (max-width: 575.98px) {
   .atel-trust-compliance .trust-compliance-accordion .accordion-item .accordion-body {
     padding-left: 0 !important;
@@ -26795,6 +26828,9 @@ table td {
   .atel-miss-moment .segment-heading {
     text-align: center !important;
   }
+}
+.atel-miss-moment .segment-heading .segment-lead {
+  margin-bottom: 12px !important;
 }
 .atel-miss-moment .miss-moment-img img {
   max-width: 337px;
@@ -27248,6 +27284,10 @@ table td {
 }
 .content-stylings ul:not([class]) > li::marker {
   color: #121212;
+}
+
+.single-post .atel-lt-blogs::after {
+  display: none !important;
 }
 
 @media (max-width: 1399.98px) {

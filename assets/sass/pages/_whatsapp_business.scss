@@ -20,6 +20,10 @@
         @include breakpoint-down(md) {
             text-align: center !important;
         }
+
+        .segment-lead{
+            margin-bottom: 12px!important;
+        }
     }
 
     .miss-moment-img {

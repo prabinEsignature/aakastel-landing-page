@@ -661,6 +661,7 @@
     #presence-info {
         width: 180px;
         z-index: 1;
+        font-family: $font-family-karla;
 
         &::after {
             content: "";
