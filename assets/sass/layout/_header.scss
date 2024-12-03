@@ -202,20 +202,20 @@
 
     &.atel-office-ivr-pg {
         background: url($img-path + "ivr_solution/office_ivr_solutions_banner.svg") center/cover no-repeat;
-        min-height: 800px;
+        min-height: 860px;
         padding-top: 80px;
 
         @include breakpoint-down(lg) {
-            min-height: 770px;
+            min-height: 820px;
         }
 
         @include breakpoint-down(md) {
-            min-height: 700px;
+            min-height: 750px;
         }
 
         @include breakpoint-down(sm) {
             padding-top: 72px;
-            min-height: 460px;
+            min-height: 500px;
         }
 
         @include breakpoint-down(xs) {

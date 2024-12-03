@@ -26,10 +26,10 @@ navSideMenuCloseBtn.addEventListener("click", () =>
 /* ####### EOF SIDEBAR TOGGLE ####### */
 
 /* ####### NAVBAR MENU TOGGLE ####### */
-const menuItems = document.querySelectorAll(".menu-item");
+const menuItems = document.querySelectorAll(".custom-menu-item");
 const resetNavbarMenu = () => {
   document.querySelectorAll(".submenu-item-block.show").forEach(el => el.classList.remove("show"));
-  document.querySelectorAll(".menu-item.active").forEach(el => el.classList.remove("active"));
+  document.querySelectorAll(".custom-menu-item.active").forEach(el => el.classList.remove("active"));
 };
 
 const subMenuItemBlocks = document.querySelectorAll(".submenu-item-block");
