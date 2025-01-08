@@ -668,3 +668,110 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500);
   });
 });
+
+// TOC LIST
+// const createTableOfContent = () => {
+//   const TOCListWrapper = $(".blogs-details-bookmark");
+//   const blogContentWrapper = $(".blogs-details-content .content-stylings");
+//   const headings = blogContentWrapper.find("h1, h2, h3, h4");
+
+//   headings.each(function (index) {
+//     const tagName = $(this).prop("tagName").toLowerCase();
+//     const id = $(this)
+//       .html()
+//       .replace(/&nbsp;/g, "")
+//       .replace(/<\/?[^>]+(>|$)/g, "")
+//       .trim()
+//       .toLowerCase()
+//       .split(" ")
+//       .join("-");
+
+//     $(this).addClass(tagName).attr("id", id);
+//     const listItem = $(`<div class="blogs-bookmark-item text-night font-semibold text-base"></div>`);
+//     const link = $(`<a href="#" class="p-custom-3 d-block rounded-12"></a>`)
+//       .attr("href", `#${id}`)
+//       .text($(this).text())
+//       .addClass("atel" + tagName);
+//     listItem.append(link);
+//     TOCListWrapper.append(listItem)
+//   });
+
+//   TOCListWrapper.on("click", ".blogs-bookmark-item", function (event) {
+//     $(".blogs-bookmark-item").removeClass("active");
+//     $(this).addClass("active");
+//   });
+// };
+// createTableOfContent();
+
+const createTableOfContent = () => {
+  const TOCListWrapper = $(".blogs-details-bookmark");
+  const blogContentWrapper = $(".blogs-details-content .content-stylings");
+  const headings = blogContentWrapper.find("h1, h2, h3, h4");
+
+  // Create bookmarks dynamically
+  headings.each(function () {
+    const tagName = $(this).prop("tagName").toLowerCase();
+    let id = $(this)
+      .html()
+      .replace(/&nbsp;/g, "")
+      .replace(/<\/?[^>]+(>|$)/g, "")
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, "") // Remove special characters except spaces and hyphens
+      .replace(/\s+/g, "-"); // Replace multiple spaces with a single hyphen
+
+    // Trim to 20 characters and add a random 4-digit number
+    const randomNumber = Math.floor(1000 + Math.random() * 9000); // Generate a random 4-digit number
+    id = id.substring(0, 100) + "-" + randomNumber;
+    $(this).addClass(tagName).attr("id", id);
+    const listItem = $(`<div class="blogs-bookmark-item text-night font-semibold text-base"></div>`);
+    const link = $(`<a href="#" class="p-custom-3 d-block rounded-12"></a>`)
+      .attr("href", `#${id}`)
+      .text($(this).text())
+      .addClass("atel" + tagName);
+    listItem.append(link);
+    TOCListWrapper.append(listItem);
+  });
+
+  // Scroll to section on click
+  TOCListWrapper.on("click", ".blogs-bookmark-item a", function (event) {
+    event.preventDefault();
+    const targetId = $(this).attr("href").substring(1);
+    const target = $("#" + targetId);
+
+    $("html, body").animate(
+      {
+        scrollTop: target.offset().top - 100, 
+      },
+      200,
+      "swing" 
+    );
+
+    $(".blogs-bookmark-item a").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  // Highlight the active item while scrolling
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.id;
+        if (entry.isIntersecting) {
+          $(".blogs-bookmark-item a").removeClass("active");
+          $(`a[href="#${id}"]`).addClass("active");
+        }
+      });
+    },
+    {
+      root: null, // Use the viewport as the root
+      rootMargin: "0px 0px -80% 0px", // Adjust based on when the heading should be considered "active"
+      threshold: 0.1, // Adjust as needed for more precise triggering
+    }
+  );
+
+  headings.each(function () {
+    observer.observe(this);
+  });
+};
+
+createTableOfContent();

@@ -1,0 +1,66 @@
+.atel-about-block-one {
+    background: rgba(241, 249, 255, 1);
+
+    &-segment {
+        max-width: 892px;
+    }
+}
+
+.atel-about-block-two {
+    .about-block-two-cards {
+        gap: 60px;
+
+        @include breakpoint-down(xl) {
+            gap: 40px;
+        }
+
+        @include breakpoint-down(lg){
+            padding: 24px 28px!important;
+        }
+
+        @include breakpoint-down(sm){
+            padding: 20px 24px!important;
+        }
+    }
+
+    .about-block-two-card {
+        gap: 100px;
+
+        @include breakpoint-down(xxxl) {
+            gap: 80px;
+        }
+
+        @include breakpoint-down(xxl) {
+            gap: 60px;
+        }
+
+        @include breakpoint-down(xl) {
+            gap: 40px;
+        }
+
+        @include breakpoint-down(lg) {
+            gap: 24px;
+        }
+
+        &-img {
+            box-shadow: 0 4px 16px 0 rgba(84, 82, 82, 0.25);
+            height: 324px;
+            max-width: 546px;
+        }
+    }
+}
+
+.atel-need-quote{
+    background: linear-gradient(rgba(199, 255, 229, 0.3), rgba(23, 43, 47, 0.3), rgba(199, 255, 229, 0.3)), url($img-path + "about/need_quote_bg.png") center/cover no-repeat;
+    padding-top: 57px;
+    padding-bottom: 74px;
+
+    &-segment{
+        max-width: 416px;
+        gap: 40px;
+
+        .form-elem-group{
+            gap: 40px!important;
+        }
+    }
+}

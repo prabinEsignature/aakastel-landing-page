@@ -786,6 +786,14 @@ $tracking-classes: (
   }
 }
 
+.text-justify{
+  text-align: justify;
+}
+
+.filter-dark{
+  filter: invert(1) brightness(0);
+}
+
 code {
   &.code-customized {
     white-space: break-spaces;

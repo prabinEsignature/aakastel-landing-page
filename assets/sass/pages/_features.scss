@@ -93,6 +93,16 @@
                 }
             }
         }
+
+        &-content{
+            .content-stylings{
+                p{
+                    span{
+                        font-weight: 600!important;
+                    }
+                }
+            }
+        }
     }
     .product-features-block-img {
         background: linear-gradient(180deg, rgba(233, 242, 237, 1) 2%, rgba(255, 255, 255, 1) 23%);
@@ -112,6 +122,11 @@
             &:last-child {
                 margin-bottom: 0 !important;
             }
+        }
+
+        ol, ul{
+            padding-left: 1rem!important;
+            list-style-type: auto!important;
         }
     }
 }

@@ -15,27 +15,32 @@
 }
 
 .slick-slider {
+    &.slick-initialized {
+        visibility: visible!important;
+        opacity: 1!important;
+    }
+
     .slick-prev,
     .slick-next {
         &::before {
             display: none !important;
         }
 
-        &:hover{
-            background: color("primary")!important;
-            border-color: darken(color("primary"), 10%)!important;
+        &:hover {
+            background: color("primary") !important;
+            border-color: darken(color("primary"), 10%) !important;
 
-            img{
+            img {
                 filter: brightness(0) invert(1);
             }
         }
 
         @include breakpoint-down(xxl) {
-            min-width: 40px!important;
-            min-height: 40px!important;
-            width: 40px!important;
-            height: 40px!important;
-            border-radius: 8px!important;
+            min-width: 40px !important;
+            min-height: 40px !important;
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 8px !important;
         }
     }
 
@@ -46,20 +51,20 @@
     .slick-dots {
         bottom: -52px !important;
 
-        li{
-            button{
+        li {
+            button {
                 width: 12px;
                 height: 12px;
                 background: rgba-color(color("black"), 0.25);
                 border-radius: 100%;
 
-                &::before{
-                    color: transparent!important;
+                &::before {
+                    color: transparent !important;
                 }
             }
 
-            &.slick-active{
-                button{
+            &.slick-active {
+                button {
                     background: color("primary");
                 }
             }
@@ -73,7 +78,7 @@
         right: 65px;
         left: auto;
 
-        @include breakpoint-down(xl){
+        @include breakpoint-down(xl) {
             top: -30%;
         }
     }
@@ -82,18 +87,18 @@
         top: -38%;
         right: 0;
 
-        @include breakpoint-down(xl){
+        @include breakpoint-down(xl) {
             top: -30%;
         }
     }
 }
 
-.slider-cards{
-    .card{
-        @include breakpoint-down(md){
-            max-width: 100%!important;
+.slider-cards {
+    .card {
+        @include breakpoint-down(md) {
+            max-width: 100% !important;
             min-height: 400px;
-            height: 100%!important;
+            height: 100% !important;
         }
     }
 }

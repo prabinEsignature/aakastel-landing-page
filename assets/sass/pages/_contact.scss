@@ -1,0 +1,151 @@
+.atel-contact {
+    &::before{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 460px;
+        height: 463px;
+        background: url($img-path + "contact/contact_wave.svg");
+        background-repeat: no-repeat;
+        opacity: 0.5;
+    }
+    &-segment {
+        gap: 80px;
+        position: relative;
+
+        @include breakpoint-down(xl) {
+            gap: 60px;
+        }
+
+        @include breakpoint-down(lg) {
+            gap: 80px;
+        }
+    }
+    .contact-info-group {
+        gap: 60px;
+
+        @include breakpoint-down(xxl) {
+            gap: 40px;
+        }
+
+        @include breakpoint-down(xl) {
+            gap: 24px;
+        }
+    }
+
+    .contact-content {
+        min-width: 628px;
+
+        @include breakpoint-down(xl) {
+            min-width: auto;
+        }
+
+        @include breakpoint-down(lg) {
+            min-width: auto;
+        }
+    }
+
+    .contact-form {
+        max-width: 462px;
+        margin-left: 40px;
+
+        @include breakpoint-down(xxl) {
+            margin-left: 32px;
+        }
+
+        @include breakpoint-down(lg) {
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+        }
+
+        &-wrapper{
+            @include breakpoint-down(md){
+                max-width: 90%;
+                margin-right: auto;
+                margin-left: auto;
+                width: 100%;
+            }
+        }
+
+        &-shape {
+            position: absolute;
+            right: -14%;
+            top: -12%;
+            width: 126px;
+
+            @include breakpoint-down(xxl) {
+                right: -12%;
+                top: -9%;
+                width: 100px;
+            }
+
+            @include breakpoint-down(md) {
+                right: -10%;
+                top: -9%;
+                width: 100px;
+                scale: 0.7;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url($img-path + "contact/dotted_grid.svg");
+            width: 118px;
+            height: 208px;
+            bottom: -20px;
+            left: -40px;
+
+            @include breakpoint-down(xxl) {
+                scale: 0.8;
+                bottom: -36px;
+                left: -44px;
+            }
+
+            @include breakpoint-down(md) {
+                scale: 0.6;
+                bottom: -52px;
+                left: -48px;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: url($img-path + "contact/dotted_grid.svg");
+            width: 118px;
+            height: 208px;
+            top: 40px;
+            right: -33px;
+
+            @include breakpoint-down(xxl) {
+                scale: 0.8;
+                right: -40px;
+                top: 20px;
+            }
+
+            @include breakpoint-down(md) {
+                scale: 0.6;
+                right: -44px;
+                top: -8px;
+            }
+        }
+
+        .form-custom {
+            @include breakpoint-down(xxl) {
+                padding: 32px !important;
+            }
+
+            @include breakpoint-down(md){
+                padding: 20px!important;
+            }
+        }
+
+        .form-btn {
+            min-width: 204px;
+            height: 44px;
+        }
+    }
+}

@@ -112,9 +112,9 @@ $button-variants: (
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  @include breakpoint-down(xxs){
+  @include breakpoint-down(xxs) {
     white-space: wrap;
-    height: auto!important;
+    height: auto !important;
   }
 
   // EFFECTS
@@ -159,6 +159,23 @@ $button-variants: (
   }
 
   // BUTTON SIZE VARIANTS
+  &.btn-xl {
+    height: 56px;
+    min-width: 150px;
+
+    @include breakpoint-down(lg) {
+      height: 52px;
+    }
+
+    @include breakpoint-down(md) {
+      height: 48px;
+    }
+
+    @include breakpoint-down(sm) {
+      height: 44px;
+    }
+  }
+
   &.btn-lg {
     height: 52px;
     min-width: 146px;
@@ -202,7 +219,7 @@ $button-variants: (
   &.btn-narrow {
     min-width: 100px;
   }
-  &.btn-semi-middle{
+  &.btn-semi-middle {
     min-width: 160px;
   }
   &.btn-middle {
@@ -228,6 +245,10 @@ $button-variants: (
       background: map-get($props, hover-bg) !important;
       border-color: map-get($props, hover-border-color) !important;
       color: map-get($props, hover-text-color) !important;
+
+      .btn-text{
+        color: map-get($props, hover-text-color) !important;
+      }
     }
 
     &:disabled,
@@ -306,5 +327,14 @@ input[type="reset"],
 input[type="button"] {
   &.btn-block {
     width: 100%;
+  }
+}
+
+.btn-see-how{
+  gap: 10px;
+  border: none!important;
+
+  .btn-text{
+    color: rgba(141, 194, 218, 1);
   }
 }

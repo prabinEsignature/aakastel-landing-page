@@ -3,6 +3,7 @@
         max-width: 300px;
 
         .segment-ttl {
+            margin-top: 20px;
             @include breakpoint-down(xl) {
                 text-align: center !important;
             }
@@ -43,23 +44,24 @@
         }
 
         &-item {
-            border-top-right-radius: 80px;
-            border-top-left-radius: 80px;
+            // border-top-right-radius: 80px;
+            // border-top-left-radius: 80px;
+            border-radius: 0 !important;
 
-            @include breakpoint-down(lg) {
-                border-top-right-radius: 60px;
-                border-top-left-radius: 60px;
-            }
+            // @include breakpoint-down(lg) {
+            //     border-top-right-radius: 60px;
+            //     border-top-left-radius: 60px;
+            // }
 
-            @include breakpoint-down(md) {
-                border-top-right-radius: 40px;
-                border-top-left-radius: 40px;
-            }
+            // @include breakpoint-down(md) {
+            //     border-top-right-radius: 40px;
+            //     border-top-left-radius: 40px;
+            // }
 
-            @include breakpoint-down(sm) {
-                border-top-right-radius: 24px;
-                border-top-left-radius: 24px;
-            }
+            // @include breakpoint-down(sm) {
+            //     border-top-right-radius: 24px;
+            //     border-top-left-radius: 24px;
+            // }
 
             & > .container {
                 max-width: 1096px !important;
@@ -87,8 +89,8 @@
             }
 
             &:nth-child(1) {
-                position: sticky;
-                top: 100px;
+                // position: sticky;
+                // top: 100px;
 
                 & > .container {
                     grid-template-columns: 37% auto;
@@ -97,13 +99,13 @@
             }
 
             &:nth-child(2) {
-                margin-top: -100px;
-                position: sticky;
-                top: 120px;
+                // margin-top: -100px;
+                // position: sticky;
+                // top: 120px;
 
-                @include breakpoint-down(sm) {
-                    margin-top: -80px;
-                }
+                // @include breakpoint-down(sm) {
+                //     margin-top: -80px;
+                // }
 
                 .solutions-block {
                     &-img {
@@ -122,13 +124,13 @@
             }
 
             &:nth-child(3) {
-                margin-top: -100px;
-                position: sticky;
-                top: 140px;
+                // margin-top: -100px;
+                // position: sticky;
+                // top: 140px;
 
-                @include breakpoint-down(sm) {
-                    margin-top: -80px;
-                }
+                // @include breakpoint-down(sm) {
+                //     margin-top: -80px;
+                // }
             }
 
             &:last-child {

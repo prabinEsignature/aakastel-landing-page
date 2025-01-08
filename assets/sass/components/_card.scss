@@ -88,8 +88,15 @@
     }
 
     .plain-card {
+        align-content: flex-start;
         &-top {
             align-items: center;
+        }
+        &-bottom{
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         &:hover {

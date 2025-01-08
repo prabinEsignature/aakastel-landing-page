@@ -5,7 +5,7 @@
         margin-top: -48px;
     }
 
-    &-segment{
+    &-segment {
         max-width: 1064px;
         margin-right: auto;
         margin-left: auto;
@@ -14,9 +14,9 @@
     .benefits-item {
         position: relative;
 
-        @include breakpoint-down(xs){
-            padding-top: 8px!important;
-            padding-bottom: 8px!important;
+        @include breakpoint-down(xs) {
+            padding-top: 8px !important;
+            padding-bottom: 8px !important;
         }
 
         &::after {
@@ -252,13 +252,13 @@
         }
     }
 
-    .dev-resource-btns{
-        @include breakpoint-down(sm){
+    .dev-resource-btns {
+        @include breakpoint-down(sm) {
             gap: 8px !important;
         }
 
-        .btn{
-            @include breakpoint-down(sm){
+        .btn {
+            @include breakpoint-down(sm) {
                 flex: 1;
             }
         }
@@ -301,6 +301,12 @@
 
 .atel-sms-service {
     overflow-y: hidden;
+
+    .sms-service-slider {
+        opacity: 0;
+        visibility: hidden;
+        transition: $default-transition;
+    }
 
     .slider-cards {
         .card {

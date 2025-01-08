@@ -8,11 +8,6 @@ $z-index-navbar: 1000;
 $z-index-navbar-toggler: 1010;
 
 .header-2 {
-  .atel-navbar {
-    .navbar-brand {
-    }
-  }
-
   .atel-header {
     .atel-navbar {
       .navbar-logo-default {
@@ -22,6 +17,26 @@ $z-index-navbar-toggler: 1010;
       .btn-navbar-menu-open {
         img {
           filter: invert(0) brightness(100);
+        }
+      }
+
+      .atel-navbar-btns{
+        .btn-transparent{
+          .btn-text{
+            color: color("white")!important;
+          }
+          .btn-icon{
+            filter: invert(1) brightness(100);
+          }
+
+          &:hover{
+            .btn-text{
+              color: color("primary")!important;
+            }
+            .btn-icon{
+              filter: none;
+            }
+          }
         }
       }
     }
@@ -44,6 +59,16 @@ $z-index-navbar-toggler: 1010;
 
     &:not(.atel-header-fixed) {
       .atel-navbar {
+        .current-menu-parent, .current_page_item, .current-menu-ancestor{
+          .custom-menu-item{
+            &-text{
+              color: #3bb24a !important;
+            }
+            &-icon{
+              filter: invert(47%) sepia(11%) saturate(2854%) hue-rotate(76deg) brightness(122%) contrast(81%);
+            }
+          }
+        }
         .custom-menu-item {
           &-text {
             @include breakpoint-up(lg) {
@@ -265,6 +290,9 @@ $z-index-navbar-toggler: 1010;
       transform 0.3s ease,
       opacity 0.3s ease,
       visibility 0.3s ease;
+    cursor: initial;
+    // max-height: calc(100vh - 86px);
+    // @include scrollbar("y");
 
     @include breakpoint-down(xl) {
       max-width: 800px !important;
@@ -514,7 +542,7 @@ $z-index-navbar-toggler: 1010;
           }
         }
 
-        &:last-child {
+        &:nth-child(4) {
           padding-right: 0;
           border-right: 0;
         }
@@ -593,6 +621,10 @@ $z-index-navbar-toggler: 1010;
           @include breakpoint-down(lg) {
             gap: 4px !important;
             grid-template-columns: 100%;
+          }
+
+          &.submenu-03-head-list{
+            gap: 4px!important;
           }
         }
 
@@ -867,6 +899,17 @@ $z-index-navbar-toggler: 1010;
           color: color("white") !important;
         }
       }
+    }
+  }
+}
+
+.current-menu-parent, .current_page_item, .current-menu-ancestor{
+  .custom-menu-item{
+    &-text{
+      color: #3bb24a !important;
+    }
+    &-icon{
+      filter: invert(47%) sepia(11%) saturate(2854%) hue-rotate(76deg) brightness(122%) contrast(81%);
     }
   }
 }

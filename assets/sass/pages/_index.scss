@@ -1,17 +1,19 @@
 .atel-features {
-    position: sticky;
-    top: 100px;
+    // position: sticky;
+    position: relative;
+    // top: 100px;
 
-    @include breakpoint-down(sm) {
-        top: 90px;
-    }
+    // @include breakpoint-down(sm) {
+    //     top: 90px;
+    // }
 
     .segment-heading {
         max-width: 626px;
     }
 
     &-wrapper {
-        @include border-t-responsive;
+        // @include border-t-responsive;
+        border-radius: 0 !important;
     }
 
     &-segment {
@@ -67,8 +69,10 @@
 
 .atel-key-products {
     margin-top: -120px;
-    position: sticky;
-    top: 120px;
+    position: relative;
+    // position: sticky;
+    // top: 120px;
+    border-radius: 0 !important;
 
     @include breakpoint-down(lg) {
         margin-top: 80px;
@@ -76,18 +80,19 @@
 
     @include breakpoint-down(sm) {
         margin-top: 40px;
-        top: 108px;
+        // top: 108px;
     }
 
-    @include border-t-responsive;
+    // @include border-t-responsive;
 
     &-wrapper {
-        scroll-behavior: smooth;
-        max-height: 100vh;
-        overflow-y: scroll;
+        // scroll-behavior: smooth;
+        // max-height: 100vh;
+        // overflow-y: scroll;
         border-top-right-radius: 80px;
         border-top-left-radius: 80px;
-        @include border-t-responsive;
+        // @include border-t-responsive;
+        border-radius: 0 !important;
     }
 
     .segment-heading {
@@ -96,6 +101,9 @@
 
     .key-products-block-group {
         row-gap: 80px;
+        max-width: 1064px;
+        margin-right: auto;
+        margin-left: auto;
 
         @include breakpoint-down(md) {
             row-gap: 60px;
@@ -118,6 +126,10 @@
             gap: 24px;
         }
 
+        &:last-child {
+            display: none !important;
+        }
+
         &-l {
             max-width: 504px;
 
@@ -134,6 +146,7 @@
         }
 
         &-r {
+            max-width: 500px;
             @include breakpoint-down(lg) {
                 max-width: 420px;
                 margin-right: auto;
@@ -179,17 +192,18 @@
 }
 
 .atel-who-we-help {
-    overflow-x: hidden !important;
+    overflow: hidden !important;
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
-    position: sticky !important;
-    top: 140px;
+    // position: sticky !important;
+    position: relative;
+    // top: 140px;
+    border-radius: 0 !important;
+    // @include border-t-responsive;
 
-    @include border-t-responsive;
-
-    @include breakpoint-down(sm) {
-        top: 126px;
-    }
+    // @include breakpoint-down(sm) {
+    //     top: 126px;
+    // }
 
     .segment-heading {
         max-width: 860px;
@@ -210,6 +224,12 @@
                 }
             }
         }
+    }
+
+    .who-we-help-slider {
+        opacity: 0;
+        visibility: hidden;
+        transition: $default-transition;
     }
 }
 
@@ -408,6 +428,16 @@
             gap: 24px;
         }
 
+        .accordion-item {
+            &:last-child {
+                margin-bottom: 0 !important;
+
+                .accordion-collapse {
+                    border-radius: 0 !important;
+                }
+            }
+        }
+
         .industry-features {
             margin-top: 16px !important;
         }
@@ -437,6 +467,7 @@
 
         &-text {
             max-width: 223px;
+            margin-bottom: 0 !important;
 
             @include breakpoint-down(lg) {
                 text-align: center;
@@ -450,9 +481,19 @@
         &-item {
             img {
                 max-width: 150px;
+                filter: grayscale(1);
+                opacity: 0.7;
+                transition: $default-transition;
 
-                @include breakpoint-down(sm){
+                @include breakpoint-down(sm) {
                     max-width: 120px;
+                }
+            }
+
+            &:hover {
+                img {
+                    filter: none;
+                    opacity: 1;
                 }
             }
 
@@ -475,7 +516,7 @@
     }
 
     .atel-downloads {
-        grid-template-columns: 280px 1fr 1fr;
+        grid-template-columns: 261px 1fr 1fr;
         box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.08);
 
         @include breakpoint-down(xl) {
@@ -508,6 +549,11 @@
         .segment-downloads-mobile,
         .segment-downloads-desktop {
             min-height: 320px;
+
+            p {
+                margin-top: 8px;
+                margin-bottom: 20px !important;
+            }
 
             @include breakpoint-down(lg) {
                 padding: 20px !important;
@@ -556,11 +602,7 @@
     .presence-block {
         grid-template-columns: 64% auto;
         gap: 80px;
-        align-items: center!important;
-
-        @include breakpoint-down(xxl) {
-            gap: 40px;
-        }
+        align-items: center !important;
 
         @include breakpoint-down(xl) {
             grid-template-columns: 50% auto;
@@ -573,7 +615,7 @@
 
     .presence-map {
         max-width: 798px;
-        
+
         #nepal-map {
             @include breakpoint-down(sm) {
                 height: 100% !important;
@@ -586,6 +628,9 @@
 .atel-presence {
     .presence-tabs {
         margin: 30px 0;
+        max-width: 355px;
+        // height: 392px;
+        // overflow-y: scroll;
 
         @include breakpoint-down(lg) {
             max-width: 400px;
@@ -659,7 +704,7 @@
     }
 
     #presence-info {
-        width: 180px;
+        width: 240px;
         z-index: 1;
         font-family: $font-family-karla;
 
@@ -674,12 +719,12 @@
             border-right: 10px solid transparent;
             border-top: 10px solid transparent;
         }
-    }
-}
 
-.swiper-slide {
-    height: 100% !important;
-    width: 100% !important;
+        @include breakpoint-down(md) {
+            padding: 8px !important;
+            font-size: 12px !important;
+        }
+    }
 }
 
 @mixin translateY {
@@ -691,14 +736,13 @@
 }
 
 .key-products-block {
-    position: sticky;
-    top: 40px !important;
+    // position: sticky;
+    position: relative;
+    // top: 40px !important;
     transform-origin: center top;
     height: 100%;
     background-color: color("white");
-    min-height: 480px;
     overflow: hidden;
-    padding: 24px 0 !important;
 
     @include breakpoint-down(lg) {
         min-height: auto;

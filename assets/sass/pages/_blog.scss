@@ -42,6 +42,31 @@
             }
         }
     }
+
+    .blogs-body-segment {
+        .card {
+            &.card-grid {
+                &:hover {
+                    .card-title {
+                        text-decoration: underline;
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+                    .badge {
+                        background: color("primary") !important;
+                        color: color("white") !important;
+                    }
+                }
+            }
+
+            .card-body {
+                @include breakpoint-down(lg) {
+                    padding: 1.25rem 0!important;
+                }
+            }
+        }
+    }
 }
 
 .atel-blogs-details-pg {
@@ -60,6 +85,20 @@
 
             @include breakpoint-down(sm) {
                 gap: 4px !important;
+            }
+        }
+
+        .card-img {
+            img {
+                min-height: 400px;
+
+                @include breakpoint-down(lg) {
+                    min-height: 320px;
+                }
+
+                @include breakpoint-down(sm) {
+                    min-height: auto;
+                }
             }
         }
     }
@@ -88,6 +127,7 @@
     .blogs-details-content {
         .content-stylings {
             padding: 10px 60px 10px 120px;
+            text-align: justify;
 
             @include breakpoint-down(xxxl) {
                 padding: 10px 40px 10px 100px;
@@ -108,6 +148,14 @@
     }
 
     .blogs-details-bookmark {
+        position: sticky;
+        top: 100px;
+
+        @include breakpoint-down(lg) {
+            position: relative;
+            top: 0;
+        }
+
         @include breakpoint-down(sm) {
             margin-top: 0 !important;
             margin-bottom: 0 !important;
@@ -153,6 +201,32 @@
         font-size: 14px !important;
     }
 
+    a,
+    a * {
+        color: color("primary") !important;
+        span,
+        i,
+        b,
+        strong,
+        em,
+        small {
+            color: color("primary") !important;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: left !important;
+    }
+
     h1,
     h2,
     h3,
@@ -160,45 +234,83 @@
     h5,
     h6,
     p {
-        margin-bottom: 28px !important;
+        margin-bottom: 24px !important;
         margin-top: 0 !important;
         letter-spacing: -0.04em;
 
         @include breakpoint-down(lg) {
-            margin-bottom: 24px !important;
+            margin-bottom: 20px !important;
         }
 
         @include breakpoint-down(md) {
-            margin-bottom: 20px !important;
+            margin-bottom: 16px !important;
+        }
+
+        b,
+        strong {
+            font-weight: 700 !important;
+            color: color("night") !important;
+        }
+        a,
+        a * {
+            color: color("primary") !important;
+            span,
+            i,
+            b,
+            strong,
+            em,
+            small {
+                color: color("primary") !important;
+            }
         }
     }
 
     h1 {
-        font-size: 44px !important;
+        font-size: 38px !important;
+
+        @include breakpoint-down(xl) {
+            font-size: 36px !important;
+        }
 
         @include breakpoint-down(lg) {
-            font-size: 40px !important;
+            font-size: 32px !important;
         }
 
         @include breakpoint-down(md) {
-            font-size: 36px !important;
+            font-size: 30px !important;
+        }
+
+        @include breakpoint-down(sm) {
+            font-size: 28px !important;
         }
     }
 
     h2 {
-        font-size: 40px;
+        font-size: 36px;
+
+        @include breakpoint-down(xl) {
+            font-size: 34px !important;
+        }
 
         @include breakpoint-down(lg) {
-            font-size: 36px !important;
+            font-size: 32px !important;
         }
 
         @include breakpoint-down(md) {
-            font-size: 32px !important;
+            font-size: 28px !important;
+        }
+
+        @include breakpoint-down(sm) {
+            font-size: 24px !important;
         }
     }
 
     h3 {
         font-size: 32px !important;
+
+        @include breakpoint-down(xl) {
+            font-size: 30px !important;
+        }
 
         @include breakpoint-down(lg) {
             font-size: 28px !important;
@@ -207,10 +319,58 @@
         @include breakpoint-down(md) {
             font-size: 24px !important;
         }
+
+        @include breakpoint-down(sm) {
+            font-size: 22px !important;
+        }
     }
 
     h4 {
+        font-size: 28px !important;
+
+        @include breakpoint-down(xl) {
+            font-size: 26px !important;
+        }
+
+        @include breakpoint-down(lg) {
+            font-size: 24px !important;
+        }
+
+        @include breakpoint-down(md) {
+            font-size: 22px !important;
+        }
+
+        @include breakpoint-down(sm) {
+            font-size: 20px !important;
+        }
+    }
+
+    h5 {
+        font-size: 26px !important;
+
+        @include breakpoint-down(xl) {
+            font-size: 24px !important;
+        }
+
+        @include breakpoint-down(lg) {
+            font-size: 22px !important;
+        }
+
+        @include breakpoint-down(md) {
+            font-size: 20px !important;
+        }
+
+        @include breakpoint-down(sm) {
+            font-size: 18px !important;
+        }
+    }
+
+    h6 {
         font-size: 24px !important;
+
+        @include breakpoint-down(xl) {
+            font-size: 22px !important;
+        }
 
         @include breakpoint-down(lg) {
             font-size: 20px !important;
@@ -219,16 +379,8 @@
         @include breakpoint-down(md) {
             font-size: 18px !important;
         }
-    }
 
-    h5 {
-        font-size: 20px !important;
-
-        @include breakpoint-down(lg) {
-            font-size: 18px !important;
-        }
-
-        @include breakpoint-down(md) {
+        @include breakpoint-down(sm) {
             font-size: 16px !important;
         }
     }
@@ -270,27 +422,31 @@
     h4,
     h5,
     h6 {
-        font-size: 24px;
+        scroll-margin-top: 100px;
 
         &:has(+ p) {
             margin-bottom: 12px !important;
         }
 
-        &:has(+ ul) {
+        &:has(+ ul),
+        &:has(+ ol) {
             margin-bottom: 12px !important;
         }
     }
 
-    ul {
-        list-style-type: disc !important;
+    ol {
+        list-style-type: auto !important;
         padding-left: 28px !important;
+        margin-bottom: 24px !important;
 
         @include breakpoint-down(lg) {
             padding-left: 24px !important;
+            margin-bottom: 20px !important;
         }
 
         @include breakpoint-down(md) {
             padding-left: 20px !important;
+            margin-bottom: 16px !important;
         }
 
         @include breakpoint-down(sm) {
@@ -300,14 +456,77 @@
         &:not([class]) > li::marker {
             color: color("night");
         }
+
+        li {
+            margin-bottom: 8px !important;
+        }
+
+        b,
+        strong {
+            font-weight: 700 !important;
+            color: color("night") !important;
+        }
+    }
+
+    ul {
+        list-style-type: disc !important;
+        padding-left: 28px !important;
+        margin-bottom: 24px !important;
+
+        @include breakpoint-down(lg) {
+            padding-left: 24px !important;
+            margin-bottom: 20px !important;
+        }
+
+        @include breakpoint-down(md) {
+            padding-left: 20px !important;
+            margin-bottom: 16px !important;
+        }
+
+        @include breakpoint-down(sm) {
+            padding-left: 16px !important;
+        }
+
+        &:not([class]) > li::marker {
+            color: color("night");
+        }
+
+        b,
+        strong {
+            font-weight: 700 !important;
+            color: color("night") !important;
+        }
+        li {
+            margin-bottom: 8px !important;
+        }
+    }
+
+    table {
+        margin-bottom: 24px;
+
+        td {
+            border: 1px solid adjust-alpha("primary", 0.4) !important;
+            padding: 12px 10px;
+            background: adjust-alpha("primary", 0.07) !important;
+        }
+
+        @include breakpoint-down(lg) {
+            margin-bottom: 20px !important;
+        }
+
+        @include breakpoint-down(md) {
+            margin-bottom: 16px !important;
+        }
+    }
+
+    &.default-content-stylings {
     }
 }
 
-
-.single-post{
-    .atel-lt-blogs{
-        &::after{
-            display: none!important;
+.single-post {
+    .atel-lt-blogs {
+        &::after {
+            display: none !important;
         }
     }
 }

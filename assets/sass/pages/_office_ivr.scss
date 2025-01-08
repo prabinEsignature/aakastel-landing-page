@@ -69,6 +69,11 @@
     }
 
     .work-step-item {
+        &-content{
+            p{
+                margin-bottom: 0!important;
+            }
+        }
         @include breakpoint-down(lg) {
             padding: 20px !important;
         }
