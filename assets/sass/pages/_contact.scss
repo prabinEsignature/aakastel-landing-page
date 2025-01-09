@@ -1,15 +1,6 @@
 .atel-contact {
-    &::before{
-        position: absolute;
-        content: "";
-        left: 0;
-        top: 0;
-        width: 460px;
-        height: 463px;
-        background: url($img-path + "contact/contact_wave.svg");
-        background-repeat: no-repeat;
-        opacity: 0.5;
-    }
+    background: url($img-path + "contact/contact_wave.svg") center/cover no-repeat;
+    
     &-segment {
         gap: 80px;
         position: relative;

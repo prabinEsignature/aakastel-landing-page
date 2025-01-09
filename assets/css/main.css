@@ -28355,16 +28355,8 @@ table td {
   gap: 40px !important;
 }
 
-.atel-contact::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 460px;
-  height: 463px;
-  background: url("../../../assets/images/contact/contact_wave.svg");
-  background-repeat: no-repeat;
-  opacity: 0.5;
+.atel-contact {
+  background: url("../../../assets/images/contact/contact_wave.svg") center/cover no-repeat;
 }
 .atel-contact-segment {
   gap: 80px;
