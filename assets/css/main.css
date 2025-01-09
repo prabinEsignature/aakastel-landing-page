@@ -24081,6 +24081,11 @@ table td {
   background: #fff;
 }
 
+@media (max-width: 767.98px) {
+  .atel-top-banner {
+    background-position: top left !important;
+  }
+}
 .atel-top-banner.atel-home-pg {
   min-height: 100vh;
   background: url("../../../assets/images/home/home_top_banner.png") center/cover no-repeat;
@@ -28357,6 +28362,12 @@ table td {
 
 .atel-contact {
   background: url("../../../assets/images/contact/contact_wave.svg") center/cover no-repeat;
+}
+@media (max-width: 767.98px) {
+  .atel-contact {
+    background-position: top left;
+    background-size: 1000px;
+  }
 }
 .atel-contact-segment {
   gap: 80px;

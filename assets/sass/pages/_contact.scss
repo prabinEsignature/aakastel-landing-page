@@ -1,5 +1,10 @@
 .atel-contact {
     background: url($img-path + "contact/contact_wave.svg") center/cover no-repeat;
+
+    @include breakpoint-down(md){
+        background-position: top left;
+        background-size: 1000px;
+    }
     
     &-segment {
         gap: 80px;

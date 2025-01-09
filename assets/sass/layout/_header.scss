@@ -18,6 +18,10 @@
 }
 
 .atel-top-banner {
+    @include breakpoint-down(md){
+        background-position: top left!important;
+    }
+
     &.atel-home-pg {
         min-height: 100vh;
         background: url($img-path + "home/home_top_banner.png") center/cover no-repeat;
