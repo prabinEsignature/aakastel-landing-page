@@ -486,13 +486,11 @@ $breakpoints: (
 );
 
 @each $size, $value in $spacing-values {
-  // Decrease the value by a large amount if the size is greater than 60
   $adjusted-value: if($size > 60, $value * 0.7, $value); // Adjust value by 30% reduction
 
   @each $property in (p, m) {
     $css-property: if($property == p, padding, margin);
 
-    // All vertical directions (top, bottom)
     .segment-#{$property}y-#{$size} {
       #{$css-property}-top: $value;
       #{$css-property}-bottom: $value;
@@ -505,7 +503,6 @@ $breakpoints: (
       }
     }
 
-    // Top only
     .segment-#{$property}t-#{$size} {
       #{$css-property}-top: $value;
 
@@ -516,7 +513,6 @@ $breakpoints: (
       }
     }
 
-    // Bottom only
     .segment-#{$property}b-#{$size} {
       #{$css-property}-bottom: $value;
 
@@ -528,6 +524,75 @@ $breakpoints: (
     }
   }
 }
+
+@mixin segment($property, $axis, $size, $breakpoints) {
+  @if $axis == y {
+    #{$property}-top: #{$size}px;
+    #{$property}-bottom: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-top: calc(#{$size}px - #{$offset});
+        #{$property}-bottom: calc(#{$size}px - #{$offset});
+      }
+    }
+  } @else if $axis == t {
+    #{$property}-top: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-top: calc(#{$size}px - #{$offset});
+      }
+    }
+  } @else if $axis == b {
+    #{$property}-bottom: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-bottom: calc(#{$size}px - #{$offset});
+      }
+    }
+  }
+}
+
+@mixin segment($property, $axis, $size, $breakpoints) {
+  @if $axis == y {
+    #{$property}-top: #{$size}px;
+    #{$property}-bottom: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-top: calc(#{$size}px - #{$offset});
+        #{$property}-bottom: calc(#{$size}px - #{$offset});
+      }
+    }
+  } @else if $axis == t {
+    #{$property}-top: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-top: calc(#{$size}px - #{$offset});
+      }
+    }
+  } @else if $axis == b {
+    #{$property}-bottom: #{$size}px;
+
+    @each $breakpoint, $offset in $breakpoints {
+      @include breakpoint-down($breakpoint) {
+        #{$property}-bottom: calc(#{$size}px - #{$offset});
+      }
+    }
+  }
+}
+
+// USAGE EXAMPLE
+// .my-class {
+//   @include segment(padding, y, 80, $breakpoints);
+// }
+
+// .my-class {
+//   @include segment(margin, y, 80, $breakpoints);
+// }
 
 @mixin display-utilities {
   .show-block {
@@ -786,11 +851,11 @@ $tracking-classes: (
   }
 }
 
-.text-justify{
+.text-justify {
   text-align: justify;
 }
 
-.filter-dark{
+.filter-dark {
   filter: invert(1) brightness(0);
 }
 

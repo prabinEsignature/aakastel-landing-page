@@ -94,11 +94,11 @@
             }
         }
 
-        &-content{
-            .content-stylings{
-                p{
-                    span{
-                        font-weight: 600!important;
+        &-content {
+            .content-stylings {
+                p {
+                    span {
+                        font-weight: 600 !important;
                     }
                 }
             }
@@ -124,9 +124,10 @@
             }
         }
 
-        ol, ul{
-            padding-left: 1rem!important;
-            list-style-type: auto!important;
+        ol,
+        ul {
+            padding-left: 1rem !important;
+            list-style-type: auto !important;
         }
     }
 }
@@ -236,4 +237,12 @@
 
 .atel-product-features-other {
     background: url($img-path + "features/features_more_banner.svg") center/cover no-repeat;
+}
+
+.atel-product-features-more + .atel-product-features {
+    @include segment(padding, t, 120, $breakpoints);
+}
+
+.atel-product-features-hero + .atel-product-features-more {
+    @include segment(margin, t, 80, $breakpoints);
 }

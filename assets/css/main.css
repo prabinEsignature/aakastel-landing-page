@@ -21497,7 +21497,7 @@ html {
   letter-spacing: normal;
 }
 
-p, .text-8xl, .text-7xl, .text-6xl, .text-5xl, .text-4xl, .text-3xl, .text-2xl, .text-xl, .text-lg, .text-base, .text-sm, .text-xs {
+.wpcf7-form .wpcf7-response-output, p, .text-8xl, .text-7xl, .text-6xl, .text-5xl, .text-4xl, .text-3xl, .text-2xl, .text-xl, .text-lg, .text-base, .text-sm, .text-xs {
   font-family: "Karla", sans-serif;
   font-weight: 600;
   color: #757575;
@@ -24416,7 +24416,7 @@ table td {
   }
 }
 .atel-top-banner.atel-about-pg {
-  background: url("../../../assets/images/about/about_top_banner.png") center/cover no-repeat;
+  background: url("../../../assets/about_top_banner.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26388,10 +26388,6 @@ table td {
     gap: 20px;
   }
 }
-.atel-solutions-block .solutions-block-item:nth-child(1) > .container {
-  grid-template-columns: 37% auto;
-  min-height: 400px;
-}
 .atel-solutions-block .solutions-block-item:nth-child(2) .solutions-block-img {
   order: 2;
 }
@@ -27385,7 +27381,7 @@ table td {
   }
 }
 .atel-blogs-details-pg .blogs-details-content .content-stylings {
-  padding: 10px 60px 10px 120px;
+  padding: 10px 0px 10px 120px;
   text-align: justify;
 }
 @media (max-width: 1535.98px) {
@@ -28190,7 +28186,8 @@ table td {
 .atel-product-features .product-features-block-content p:last-child {
   margin-bottom: 0 !important;
 }
-.atel-product-features .product-features-block-content ol, .atel-product-features .product-features-block-content ul {
+.atel-product-features .product-features-block-content ol,
+.atel-product-features .product-features-block-content ul {
   padding-left: 1rem !important;
   list-style-type: auto !important;
 }
@@ -28293,6 +28290,94 @@ table td {
   background: url("../../../assets/images/features/features_more_banner.svg") center/cover no-repeat;
 }
 
+.atel-product-features-more + .atel-product-features {
+  padding-top: 120px;
+}
+@media (max-width: ) {
+  .atel-product-features-more + .atel-product-features {
+    padding-top: calc(120px - 400px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-more + .atel-product-features {
+    padding-top: calc(120px - 480px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-more + .atel-product-features {
+    padding-top: calc(120px - 560px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-more + .atel-product-features {
+    padding-top: calc(120px - 640px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-more + .atel-product-features {
+    padding-top: calc(120px - 768px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-more + .atel-product-features {
+    padding-top: calc(120px - 1024px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-more + .atel-product-features {
+    padding-top: calc(120px - 1248px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-more + .atel-product-features {
+    padding-top: calc(120px - 1440px);
+  }
+}
+
+.atel-product-features-hero + .atel-product-features-more {
+  margin-top: 80px;
+}
+@media (max-width: ) {
+  .atel-product-features-hero + .atel-product-features-more {
+    margin-top: calc(80px - 400px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-hero + .atel-product-features-more {
+    margin-top: calc(80px - 480px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-hero + .atel-product-features-more {
+    margin-top: calc(80px - 560px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-hero + .atel-product-features-more {
+    margin-top: calc(80px - 640px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-hero + .atel-product-features-more {
+    margin-top: calc(80px - 768px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-hero + .atel-product-features-more {
+    margin-top: calc(80px - 1024px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-hero + .atel-product-features-more {
+    margin-top: calc(80px - 1248px);
+  }
+}
+@media (max-width: ) {
+  .atel-product-features-hero + .atel-product-features-more {
+    margin-top: calc(80px - 1440px);
+  }
+}
+
 .atel-about-block-one {
   background: rgb(241, 249, 255);
 }
@@ -28348,7 +28433,7 @@ table td {
 }
 
 .atel-need-quote {
-  background: linear-gradient(rgba(199, 255, 229, 0.3), rgba(23, 43, 47, 0.3), rgba(199, 255, 229, 0.3)), url("../../../assets/images/about/need_quote_bg.png") center/cover no-repeat;
+  background: linear-gradient(rgba(199, 255, 229, 0.3), rgba(23, 43, 47, 0.3), rgba(199, 255, 229, 0.3)), url("../../../assets/need_quote_bg.png") center/cover no-repeat;
   padding-top: 57px;
   padding-bottom: 74px;
 }
@@ -28359,9 +28444,18 @@ table td {
 .atel-need-quote-segment .form-elem-group {
   gap: 40px !important;
 }
+.atel-need-quote-segment .form-elem-group .form-elem p {
+  display: flex !important;
+  align-items: center;
+  margin-bottom: 0 !important;
+}
+
+.page-template-about_us-template .atel-lt-blogs::after {
+  display: none !important;
+}
 
 .atel-contact {
-  background: url("../../../assets/images/contact/contact_wave.svg") center/cover no-repeat;
+  background: url("../../../assets/contact_wave.svg") center/cover no-repeat;
 }
 @media (max-width: 767.98px) {
   .atel-contact {
@@ -28457,7 +28551,7 @@ table td {
 .atel-contact .contact-form::before {
   content: "";
   position: absolute;
-  background: url("../../../assets/images/contact/dotted_grid.svg");
+  background: url("../../../assets/dotted_grid.svg");
   width: 118px;
   height: 208px;
   bottom: -20px;
@@ -28480,7 +28574,7 @@ table td {
 .atel-contact .contact-form::after {
   content: "";
   position: absolute;
-  background: url("../../../assets/images/contact/dotted_grid.svg");
+  background: url("../../../assets/dotted_grid.svg");
   width: 118px;
   height: 208px;
   top: 40px;
@@ -28510,7 +28604,32 @@ table td {
     padding: 20px !important;
   }
 }
+.atel-contact .contact-form .form-custom .wpcf7-spinner {
+  margin-right: -24px;
+}
 .atel-contact .contact-form .form-btn {
   min-width: 204px;
   height: 44px;
+}
+
+.page-template-contact_us-template .atel-lt-blogs::after {
+  display: none !important;
+}
+
+/* WPCF7 */
+.wpcf7-form .wpcf7-response-output {
+  margin: 10px 0 !important;
+  border-radius: 4px !important;
+  padding: 8px 12px !important;
+  background: rgba(59, 178, 74, 0.1);
+  border: 1px solid #3bb24a !important;
+  font-weight: 500;
+  color: #121212 !important;
+}
+.wpcf7-form .wpcf7-not-valid-tip {
+  font-size: 14px !important;
+  margin-top: 2px;
+}
+.wpcf7-form .form-elem > p {
+  margin-bottom: 0 !important;
 }/*# sourceMappingURL=main.css.map */

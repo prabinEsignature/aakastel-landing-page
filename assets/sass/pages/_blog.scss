@@ -62,7 +62,7 @@
 
             .card-body {
                 @include breakpoint-down(lg) {
-                    padding: 1.25rem 0!important;
+                    padding: 1.25rem 0 !important;
                 }
             }
         }
@@ -126,7 +126,7 @@
 
     .blogs-details-content {
         .content-stylings {
-            padding: 10px 60px 10px 120px;
+            padding: 10px 0px 10px 120px;
             text-align: justify;
 
             @include breakpoint-down(xxxl) {

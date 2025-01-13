@@ -1,11 +1,11 @@
 .atel-contact {
-    background: url($img-path + "contact/contact_wave.svg") center/cover no-repeat;
+    background: url("../../../assets/contact_wave.svg") center/cover no-repeat;
 
-    @include breakpoint-down(md){
+    @include breakpoint-down(md) {
         background-position: top left;
         background-size: 1000px;
     }
-    
+
     &-segment {
         gap: 80px;
         position: relative;
@@ -56,8 +56,8 @@
             width: 100%;
         }
 
-        &-wrapper{
-            @include breakpoint-down(md){
+        &-wrapper {
+            @include breakpoint-down(md) {
                 max-width: 90%;
                 margin-right: auto;
                 margin-left: auto;
@@ -88,7 +88,7 @@
         &::before {
             content: "";
             position: absolute;
-            background: url($img-path + "contact/dotted_grid.svg");
+            background: url("../../../assets/dotted_grid.svg");
             width: 118px;
             height: 208px;
             bottom: -20px;
@@ -110,7 +110,7 @@
         &::after {
             content: "";
             position: absolute;
-            background: url($img-path + "contact/dotted_grid.svg");
+            background: url("../../../assets/dotted_grid.svg");
             width: 118px;
             height: 208px;
             top: 40px;
@@ -134,14 +134,49 @@
                 padding: 32px !important;
             }
 
-            @include breakpoint-down(md){
-                padding: 20px!important;
+            @include breakpoint-down(md) {
+                padding: 20px !important;
+            }
+
+            .wpcf7-spinner{
+                margin-right: -24px;
             }
         }
 
         .form-btn {
             min-width: 204px;
             height: 44px;
+        }
+    }
+}
+
+.page-template-contact_us-template {
+    .atel-lt-blogs {
+        &::after {
+            display: none !important;
+        }
+    }
+}
+
+/* WPCF7 */
+.wpcf7-form{
+    .wpcf7-response-output{
+        margin: 10px 0!important;
+        @extend %text-base;
+        border-radius: 4px!important;
+        padding: 8px 12px!important;
+        background: rgba-color(color("primary"), 0.1);
+        border: 1px solid color("primary")!important;
+        font-weight: 500;
+        color: color("night")!important;
+    }
+    .wpcf7-not-valid-tip{
+        font-size: 14px!important;
+        margin-top: 2px;
+    }
+    .form-elem{
+        & > p{
+            margin-bottom: 0!important;
         }
     }
 }

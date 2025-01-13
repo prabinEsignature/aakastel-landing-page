@@ -370,7 +370,7 @@
     }
 
     &.atel-about-pg {
-        background: url($img-path + "about/about_top_banner.png") center/cover no-repeat;
+        background: url("../../../assets/about_top_banner.png") center/cover no-repeat;
         @include flex-center;
         position: relative;
 

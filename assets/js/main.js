@@ -435,7 +435,10 @@ $(document).ready(function () {
   });
 
   // ANIMATE ON SCROLL (AOS)
-  AOS.init({});
+  AOS.init({
+    once: true,
+    duration: 700
+  });
 });
 
 /* ####### PRESENCE MAP - DISTRICT MAPPING ####### */
