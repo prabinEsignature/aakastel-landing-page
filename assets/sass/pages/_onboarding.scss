@@ -1,0 +1,15 @@
+.atel-onboard-portal-guide{
+    &-segment{
+        grid-template-columns: 413px auto;
+    }
+
+    .onboard-portal-guide-accordion{
+        .accordion-button{
+            &-right{
+                span[class*="text-"]{
+                    color: rgba(38, 145, 55, 1)!important;
+                }
+            }
+        }
+    }
+}

@@ -137,10 +137,10 @@
             @include breakpoint-down(md) {
                 padding: 20px !important;
             }
+        }
 
-            .wpcf7-spinner{
-                margin-right: -24px;
-            }
+        .wpcf7-spinner{
+            margin-right: -24px;
         }
 
         .form-btn {

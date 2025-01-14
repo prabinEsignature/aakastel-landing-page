@@ -1,0 +1,88 @@
+.atel-apps-type {
+    .apps-type-block {
+        &-content {
+            .content-stylings {
+                p {
+                    span {
+                        font-weight: 600 !important;
+                    }
+                }
+            }
+        }
+
+        &-wrapper {
+            grid-template-columns: 500px auto;
+            gap: 80px;
+
+            @include breakpoint-down(xl) {
+                grid-template-columns: 420px auto;
+                gap: 60px;
+            }
+
+            @include breakpoint-down(lg) {
+                grid-template-columns: 100%;
+                gap: 40px;
+            }
+
+            @include breakpoint-down(sm) {
+                gap: 32px;
+            }
+        }
+
+        &:nth-child(even) {
+            background: color("light-cyprus");
+
+            .apps-type-block-wrapper {
+                grid-template-columns: auto 500px;
+
+                @include breakpoint-down(xl) {
+                    grid-template-columns: auto 420px;
+                }
+
+                @include breakpoint-down(lg) {
+                    grid-template-columns: 100%;
+                }
+
+                .apps-type-block-img {
+                    order: 2;
+                    @include breakpoint-down(lg) {
+                        order: 1;
+                    }
+                }
+                .apps-type-block-content {
+                    order: 1;
+                    max-width: 630px;
+
+                    @include breakpoint-down(lg) {
+                        order: 2;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .apps-type-block-img {
+        img {
+            max-width: 500px;
+
+            @include breakpoint-down(lg){
+                max-width: 100%;
+            }
+        }
+    }
+    .apps-type-block-content {
+        p {
+            color: color("night") !important;
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ol,
+        ul {
+            padding-left: 1rem !important;
+            list-style-type: auto !important;
+        }
+    }
+}
