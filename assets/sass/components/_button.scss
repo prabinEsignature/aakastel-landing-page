@@ -25,6 +25,14 @@ $button-variants: (
     // hover-border-color: darken(color("primary"), 10%)
     hover-border-color: color("night")
   ),
+  "primary-outline": (
+    bg: transparent,
+    text: color("primary"),
+    border-color: color("primary"),
+    hover-bg: color("primary"),
+    hover-text-color: color("white"),
+    hover-border-color: color("primary")
+  ),
   "transparent": (
     bg: transparent,
     text: color("primary"),

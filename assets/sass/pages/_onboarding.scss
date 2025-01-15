@@ -1,15 +1,66 @@
-.atel-onboard-portal-guide{
-    &-segment{
-        grid-template-columns: 413px auto;
+.atel-onboard-portal-guide {
+  &-segment {
+    grid-template-columns: 413px auto;
+    max-width: 1060px;
+
+    @include breakpoint-down(lg) {
+      grid-template-columns: 100% !important;
+    }
+  }
+
+  .onboard-portal-guide {
+    &-img {
+      @include breakpoint-down(lg) {
+        max-width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+      }
     }
 
-    .onboard-portal-guide-accordion{
-        .accordion-button{
-            &-right{
-                span[class*="text-"]{
-                    color: rgba(38, 145, 55, 1)!important;
-                }
-            }
+    &-accordion {
+      .accordion-button {
+        transition: $default-transition;
+        &-right {
+          span[class*="text-"] {
+            color: rgba(38, 145, 55, 1) !important;
+          }
         }
+
+        &[aria-expanded="true"] {
+          border: 1px solid color("primary") !important;
+        }
+      }
+    }
+  }
+
+  &:nth-of-type(even) {
+    .atel-onboard-portal-guide {
+      &-segment {
+        grid-template-columns: auto 413px;
+
+        .onboard-portal-guide {
+          &-img {
+            order: 2;
+
+            @include breakpoint-down(lg) {
+              order: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.atel-getting-started{
+    &-segment{
+        max-width: 582px;
+    }
+}
+
+.atel-get-support-now{
+    &-segment{
+        max-width: 660px;
     }
 }

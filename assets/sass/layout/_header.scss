@@ -607,13 +607,30 @@
         margin-top: 80px;
 
         .top-banner{
+            &-text-group{
+                max-width: 730px;
+            }
+
             &-audio{
                 max-width: 288px;
             }
 
             &-segment{
-                grid-template-columns: auto 388px;
+                grid-template-columns: 1fr auto;
                 column-gap: 150px;
+
+                @include breakpoint-down(xl){
+                    column-gap: 100px;
+                }
+
+                @include breakpoint-down(lg){
+                    column-gap: 40px;
+                }
+
+                @include breakpoint-down(md){
+                    grid-template-columns: 100%;
+                    row-gap: 40px;
+                }
             }
         }
     }
