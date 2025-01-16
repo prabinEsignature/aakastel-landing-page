@@ -1,41 +1,68 @@
 .atel-client-testimonials {
-    .testimonials-list{
+    @include breakpoint-down(lg){
+        padding-top: 54px;
+    }
+
+    .testimonials-list {
         gap: 110px;
         padding-left: 48px;
 
-        @include breakpoint-down(xxl){
+        @include breakpoint-down(xxl) {
             gap: 80px;
             padding-left: 40px;
         }
 
-        @include breakpoint-down(xl){
+        @include breakpoint-down(xl) {
             gap: 60px;
+        }
+
+        @include breakpoint-down(lg){
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        @include breakpoint-down(lg){
+            gap: 20px;
         }
     }
     .testimonials-item {
         max-width: 315px;
         padding-bottom: 15px;
 
-        &-group{
+        @include breakpoint-down(sm){
+            max-width: 100%;
+        }
+
+        &-group {
             gap: 140px;
 
-            @include breakpoint-down(xxl){
+            @include breakpoint-down(xxl) {
                 gap: 100px;
             }
 
-            @include breakpoint-down(xl){
+            @include breakpoint-down(xl) {
                 gap: 60px;
             }
 
-            &:nth-child(1){
+            @include breakpoint-down(lg){
+                gap: 52px;
+                width: 100%;
+                margin-top: 0!important;
+            }
+
+            @include breakpoint-down(sm){
+                gap: 20px;
+            }
+
+            &:nth-child(1) {
                 margin-top: 80px;
             }
 
-            &:nth-child(2){
+            &:nth-child(2) {
                 margin-top: -100px;
             }
 
-            &:nth-child(3){
+            &:nth-child(3) {
                 margin-top: 80px;
             }
         }
@@ -51,11 +78,12 @@
             transform: translateX(-50%);
             z-index: -1;
 
-            @include breakpoint-down(xl){
+            @include breakpoint-down(xl) {
                 width: 80px;
                 height: 80px;
                 min-width: 80px;
                 min-height: 80px;
+                top: calc(100% - 8px);
             }
         }
 
@@ -68,6 +96,10 @@
 
         &-foot {
             margin-left: 65px;
+
+            @include breakpoint-down(xl){
+                margin-left: 58px;
+            }
         }
     }
 }

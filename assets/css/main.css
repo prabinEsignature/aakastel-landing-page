@@ -24806,7 +24806,7 @@ table td {
 }
 .atel-top-banner.atel-testimonials-pg {
   background: url("../../assets/customer_stories_banner.png") no-repeat;
-  background-position: right bottom;
+  background-position: right bottom !important;
   padding-top: 100px;
 }
 .atel-top-banner.atel-testimonials-pg .top-banner-segment {
@@ -29066,6 +29066,11 @@ table td {
   }
 }
 
+@media (max-width: 991.98px) {
+  .atel-client-testimonials {
+    padding-top: 54px;
+  }
+}
 .atel-client-testimonials .testimonials-list {
   gap: 110px;
   padding-left: 48px;
@@ -29081,9 +29086,25 @@ table td {
     gap: 60px;
   }
 }
+@media (max-width: 991.98px) {
+  .atel-client-testimonials .testimonials-list {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-client-testimonials .testimonials-list {
+    gap: 20px;
+  }
+}
 .atel-client-testimonials .testimonials-item {
   max-width: 315px;
   padding-bottom: 15px;
+}
+@media (max-width: 575.98px) {
+  .atel-client-testimonials .testimonials-item {
+    max-width: 100%;
+  }
 }
 .atel-client-testimonials .testimonials-item-group {
   gap: 140px;
@@ -29096,6 +29117,18 @@ table td {
 @media (max-width: 1199.98px) {
   .atel-client-testimonials .testimonials-item-group {
     gap: 60px;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-client-testimonials .testimonials-item-group {
+    gap: 52px;
+    width: 100%;
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-client-testimonials .testimonials-item-group {
+    gap: 20px;
   }
 }
 .atel-client-testimonials .testimonials-item-group:nth-child(1) {
@@ -29124,6 +29157,7 @@ table td {
     height: 80px;
     min-width: 80px;
     min-height: 80px;
+    top: calc(100% - 8px);
   }
 }
 .atel-client-testimonials .testimonials-item-body {
@@ -29134,4 +29168,9 @@ table td {
 }
 .atel-client-testimonials .testimonials-item-foot {
   margin-left: 65px;
+}
+@media (max-width: 1199.98px) {
+  .atel-client-testimonials .testimonials-item-foot {
+    margin-left: 58px;
+  }
 }/*# sourceMappingURL=main.css.map */
