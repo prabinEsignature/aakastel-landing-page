@@ -28964,4 +28964,8 @@ table td {
   .atel-performance-glance .performance-glance-grid {
     gap: 16px !important;
   }
+}
+
+.atel-partners-segment {
+  max-width: 1180px;
 }/*# sourceMappingURL=main.css.map */
