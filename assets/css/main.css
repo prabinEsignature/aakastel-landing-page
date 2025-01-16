@@ -24671,7 +24671,7 @@ table td {
   filter: invert(47%) sepia(11%) saturate(2854%) hue-rotate(76deg) brightness(122%) contrast(81%);
 }
 .atel-top-banner.atel-onboard-portal {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 .atel-top-banner.atel-onboard-portal .top-banner-text-group {
   max-width: 730px;
@@ -24701,6 +24701,37 @@ table td {
     grid-template-columns: 100%;
     row-gap: 40px;
   }
+}
+.atel-top-banner.atel-customer-stories-pg {
+  margin-top: 100px;
+}
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(1) {
+  margin-top: 110px;
+}
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(2) {
+  margin-top: 60px;
+}
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(3) {
+  margin-top: 118px;
+}
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(4) {
+  margin-top: 16px;
+}
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(5) {
+  margin-top: 80px;
+}
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(7) {
+  margin-top: 84px;
+}
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(8) {
+  margin-top: 82px;
+}
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(9) {
+  margin-top: 118px;
+}
+.atel-top-banner.atel-customer-stories-pg .top-banner-text-group {
+  max-width: 756px;
+  margin-top: -140px;
 }
 
 .atel-blogs-pg {
