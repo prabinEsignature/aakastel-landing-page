@@ -29068,7 +29068,18 @@ table td {
 
 .atel-client-testimonials .testimonials-list {
   gap: 110px;
-  margin-right: -48px;
+  padding-left: 48px;
+}
+@media (max-width: 1399.98px) {
+  .atel-client-testimonials .testimonials-list {
+    gap: 80px;
+    padding-left: 40px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .atel-client-testimonials .testimonials-list {
+    gap: 60px;
+  }
 }
 .atel-client-testimonials .testimonials-item {
   max-width: 315px;
@@ -29076,6 +29087,16 @@ table td {
 }
 .atel-client-testimonials .testimonials-item-group {
   gap: 140px;
+}
+@media (max-width: 1399.98px) {
+  .atel-client-testimonials .testimonials-item-group {
+    gap: 100px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .atel-client-testimonials .testimonials-item-group {
+    gap: 60px;
+  }
 }
 .atel-client-testimonials .testimonials-item-group:nth-child(1) {
   margin-top: 80px;
@@ -29097,6 +29118,14 @@ table td {
   transform: translateX(-50%);
   z-index: -1;
 }
+@media (max-width: 1199.98px) {
+  .atel-client-testimonials .testimonials-item-img {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+  }
+}
 .atel-client-testimonials .testimonials-item-body {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -29104,5 +29133,5 @@ table td {
   border-bottom-left-radius: 0;
 }
 .atel-client-testimonials .testimonials-item-foot {
-  max-width: 185px;
+  margin-left: 65px;
 }/*# sourceMappingURL=main.css.map */
