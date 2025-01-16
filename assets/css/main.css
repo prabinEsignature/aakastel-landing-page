@@ -24702,114 +24702,114 @@ table td {
     row-gap: 40px;
   }
 }
-.atel-top-banner.atel-partners-pg {
+.atel-top-banner.atel-customer-stories-pg {
   margin-top: 100px;
 }
-.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-elem {
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-elem {
   height: 160px;
 }
 @media (max-width: 1199.98px) {
-  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-elem {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-elem {
     height: 120px;
     border-radius: 12px !important;
   }
 }
 @media (max-width: 575.98px) {
-  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-elem {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-elem {
     height: 160px;
   }
 }
 @media (max-width: 479.98px) {
-  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-elem {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-elem {
     height: 100px;
   }
 }
-.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(1) {
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(1) {
   margin-top: 118px;
 }
-.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(2) {
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(2) {
   margin-top: 60px;
 }
-.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(3) {
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(3) {
   margin-top: 118px;
 }
-.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(4) {
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(4) {
   margin-top: 16px;
 }
-.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(5) {
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(5) {
   margin-top: 80px;
 }
-.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(6) {
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(6) {
   margin-top: 16px;
 }
-.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(7) {
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(7) {
   margin-top: 118px;
 }
-.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(8) {
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(8) {
   margin-top: 60px;
 }
-.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(9) {
+.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(9) {
   margin-top: 118px;
 }
 @media (max-width: 991.98px) {
-  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(1) {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(1) {
     display: none !important;
   }
-  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(9) {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(9) {
     display: none !important;
   }
 }
 @media (max-width: 767.98px) {
-  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(2) {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(2) {
     display: none !important;
   }
-  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(8) {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(8) {
     display: none !important;
   }
 }
 @media (max-width: 575.98px) {
-  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(3) {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(3) {
     display: none !important;
   }
-  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(7) {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(7) {
     display: none !important;
   }
 }
-.atel-top-banner.atel-partners-pg .top-banner-text-group {
+.atel-top-banner.atel-customer-stories-pg .top-banner-text-group {
   max-width: 756px;
   margin-top: -140px;
 }
 @media (max-width: 1199.98px) {
-  .atel-top-banner.atel-partners-pg .top-banner-text-group {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-text-group {
     margin-top: -100px;
   }
 }
 @media (max-width: 991.98px) {
-  .atel-top-banner.atel-partners-pg .top-banner-text-group {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-text-group {
     margin-top: -60px;
   }
 }
 @media (max-width: 767.98px) {
-  .atel-top-banner.atel-partners-pg .top-banner-text-group {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-text-group {
     margin-top: 0;
   }
 }
 @media (max-width: 575.98px) {
-  .atel-top-banner.atel-partners-pg .top-banner-text-group {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-text-group {
     margin-top: 40px;
   }
 }
 @media (max-width: 479.98px) {
-  .atel-top-banner.atel-partners-pg .top-banner-text-group {
+  .atel-top-banner.atel-customer-stories-pg .top-banner-text-group {
     margin-top: 24px;
   }
 }
-.atel-top-banner.atel-customer-stories-pg {
+.atel-top-banner.atel-testimonials-pg {
   background: url("../../assets/customer_stories_banner.png") no-repeat;
   background-position: right bottom;
   padding-top: 100px;
 }
-.atel-top-banner.atel-customer-stories-pg .top-banner-segment {
+.atel-top-banner.atel-testimonials-pg .top-banner-segment {
   min-height: 420px;
   max-width: 648px;
 }
