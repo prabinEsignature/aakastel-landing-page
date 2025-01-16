@@ -1,0 +1,67 @@
+.atel-client-testimonials {
+    .testimonials-list{
+        gap: 110px;
+        margin-right: -48px;
+    }
+    .testimonials-item {
+        max-width: 315px;
+        padding-bottom: 15px;
+
+        &-group{
+            gap: 140px;
+
+            &:nth-child(1){
+                margin-top: 80px;
+            }
+
+            &:nth-child(2){
+                margin-top: -100px;
+            }
+
+            &:nth-child(3){
+                margin-top: 80px;
+            }
+        }
+
+        &-img {
+            width: 96px;
+            height: 96px;
+            min-width: 96px;
+            min-height: 96px;
+            left: 0;
+            right: auto;
+            top: calc(100% - 16px);
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        &-body {
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 0;
+        }
+
+        &-foot {
+            max-width: 185px;
+        }
+
+        // &:nth-child(3) {
+        //     .testimonials-item {
+        //         &-body {
+        //             border-top-left-radius: 30px;
+        //             border-top-right-radius: 30px;
+        //             border-bottom-left-radius: 30px;
+        //             border-bottom-right-radius: 0;
+        //         }
+
+        //         &-img {
+        //             right: 0 !important;
+        //             left: auto;
+        //             top: calc(100% - 16px);
+        //             transform: translateX(50%);
+        //         }
+        //     }
+        // }
+    }
+}

@@ -1,49 +1,65 @@
-.atel-stories-details{
+.atel-stories-details {
     margin-top: 100px;
-    &-segment{
+    &-segment {
         max-width: 1000px;
     }
 }
 
-.atel-performance-glance{
-    &-segment{
+.atel-performance-glance {
+    &-segment {
         padding-left: 80px;
         padding-right: 80px;
 
-        @include breakpoint-down(xxl){
+        @include breakpoint-down(xxl) {
             padding-left: 60px;
             padding-right: 60px;
         }
 
-        @include breakpoint-down(xl){
+        @include breakpoint-down(xl) {
             padding-left: 40px;
             padding-right: 40px;
         }
 
-        @include breakpoint-down(lg){
+        @include breakpoint-down(lg) {
             padding-left: 24px;
             padding-right: 24px;
         }
 
-        @include breakpoint-down(md){
+        @include breakpoint-down(md) {
             padding-left: 16px;
             padding-right: 16px;
         }
     }
 
-    .performance-glance-grid{
-        @include breakpoint-down(xl){
-            gap: 24px!important;
+    .performance-glance-grid {
+        @include breakpoint-down(xl) {
+            gap: 24px !important;
         }
 
-        @include breakpoint-down(lg){
-            gap: 16px!important;
+        @include breakpoint-down(lg) {
+            gap: 16px !important;
         }
     }
 }
 
-.atel-partners{
-    &-segment{
+.atel-partners {
+    &-segment {
         max-width: 1180px;
+    }
+    .partners-item {
+        transition: $default-transition;
+        &:hover {
+            scale: 1.1;
+        }
+    }
+
+    .partners-list {
+        @include breakpoint-down(sm) {
+            gap: 28px !important;
+        }
+
+        @include breakpoint-down(xs) {
+            gap: 20px !important;
+        }
     }
 }
