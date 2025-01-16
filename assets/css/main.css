@@ -24626,7 +24626,6 @@ table td {
 }
 .atel-top-banner.atel-apps-pg {
   background: url("../../../assets/images/ivr_solution/office_ivr_solutions_banner.svg") center/cover no-repeat;
-  min-height: 860px;
   padding-top: 80px;
 }
 @media (max-width: 991.98px) {
@@ -24656,8 +24655,15 @@ table td {
 .atel-top-banner.atel-apps-pg .top-banner-apps {
   max-width: 375px;
 }
+.atel-top-banner.atel-apps-pg .top-banner-apps .banner-apps-head {
+  padding-left: 0 !important;
+  padding-top: 0 !important;
+}
 .atel-top-banner.atel-apps-pg .top-banner-apps .banner-apps-item {
   grid-template-columns: auto 1fr;
+}
+.atel-top-banner.atel-apps-pg .top-banner-apps .banner-apps-item:last-child {
+  border-bottom: 0 !important;
 }
 .atel-top-banner.atel-apps-pg .top-banner-apps .banner-apps-item-symbol {
   background: linear-gradient(#269137, #82a187);
@@ -28876,6 +28882,9 @@ table td {
   margin-bottom: 0 !important;
 }
 
+.atel-apps-type .apps-type-block {
+  scroll-margin-top: 80px !important;
+}
 .atel-apps-type .apps-type-block-content .content-stylings p span {
   font-weight: 600 !important;
 }
