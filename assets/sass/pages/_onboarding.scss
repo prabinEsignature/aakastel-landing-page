@@ -21,6 +21,7 @@
     &-accordion {
       .accordion-button {
         transition: $default-transition;
+
         &-right {
           span[class*="text-"] {
             color: rgba(38, 145, 55, 1) !important;
@@ -34,7 +35,7 @@
     }
   }
 
-  &:nth-of-type(even) {
+  &#onboard-portal-guide-2{
     .atel-onboard-portal-guide {
       &-segment {
         grid-template-columns: auto 413px;

@@ -24660,7 +24660,7 @@ table td {
   grid-template-columns: auto 1fr;
 }
 .atel-top-banner.atel-apps-pg .top-banner-apps .banner-apps-item-symbol {
-  background: linear-gradient(#269137, #82A187);
+  background: linear-gradient(#269137, #82a187);
   min-width: 33px;
   width: 33px;
 }
@@ -24702,36 +24702,116 @@ table td {
     row-gap: 40px;
   }
 }
-.atel-top-banner.atel-customer-stories-pg {
+.atel-top-banner.atel-partners-pg {
   margin-top: 100px;
 }
-.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(1) {
-  margin-top: 110px;
+.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-elem {
+  height: 160px;
 }
-.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(2) {
+@media (max-width: 1199.98px) {
+  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-elem {
+    height: 120px;
+    border-radius: 12px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-elem {
+    height: 160px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-elem {
+    height: 100px;
+  }
+}
+.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(1) {
+  margin-top: 118px;
+}
+.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(2) {
   margin-top: 60px;
 }
-.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(3) {
+.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(3) {
   margin-top: 118px;
 }
-.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(4) {
+.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(4) {
   margin-top: 16px;
 }
-.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(5) {
+.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(5) {
   margin-top: 80px;
 }
-.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(7) {
-  margin-top: 84px;
+.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(6) {
+  margin-top: 16px;
 }
-.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(8) {
-  margin-top: 82px;
-}
-.atel-top-banner.atel-customer-stories-pg .top-banner-stories .banner-stories-item:nth-child(9) {
+.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(7) {
   margin-top: 118px;
 }
-.atel-top-banner.atel-customer-stories-pg .top-banner-text-group {
+.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(8) {
+  margin-top: 60px;
+}
+.atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(9) {
+  margin-top: 118px;
+}
+@media (max-width: 991.98px) {
+  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(1) {
+    display: none !important;
+  }
+  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(9) {
+    display: none !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(2) {
+    display: none !important;
+  }
+  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(8) {
+    display: none !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(3) {
+    display: none !important;
+  }
+  .atel-top-banner.atel-partners-pg .top-banner-stories .banner-stories-item:nth-child(7) {
+    display: none !important;
+  }
+}
+.atel-top-banner.atel-partners-pg .top-banner-text-group {
   max-width: 756px;
   margin-top: -140px;
+}
+@media (max-width: 1199.98px) {
+  .atel-top-banner.atel-partners-pg .top-banner-text-group {
+    margin-top: -100px;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-top-banner.atel-partners-pg .top-banner-text-group {
+    margin-top: -60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .atel-top-banner.atel-partners-pg .top-banner-text-group {
+    margin-top: 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-top-banner.atel-partners-pg .top-banner-text-group {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-top-banner.atel-partners-pg .top-banner-text-group {
+    margin-top: 24px;
+  }
+}
+.atel-top-banner.atel-customer-stories-pg {
+  background: url("../../assets/customer_stories_banner.png") no-repeat;
+  background-position: right bottom;
+  padding-top: 100px;
+}
+.atel-top-banner.atel-customer-stories-pg .top-banner-segment {
+  min-height: 420px;
+  max-width: 648px;
 }
 
 .atel-blogs-pg {
@@ -28900,14 +28980,14 @@ table td {
 .atel-onboard-portal-guide .onboard-portal-guide-accordion .accordion-button[aria-expanded=true] {
   border: 1px solid #3bb24a !important;
 }
-.atel-onboard-portal-guide:nth-of-type(even) .atel-onboard-portal-guide-segment {
+.atel-onboard-portal-guide#onboard-portal-guide-2 .atel-onboard-portal-guide-segment {
   grid-template-columns: auto 413px;
 }
-.atel-onboard-portal-guide:nth-of-type(even) .atel-onboard-portal-guide-segment .onboard-portal-guide-img {
+.atel-onboard-portal-guide#onboard-portal-guide-2 .atel-onboard-portal-guide-segment .onboard-portal-guide-img {
   order: 2;
 }
 @media (max-width: 991.98px) {
-  .atel-onboard-portal-guide:nth-of-type(even) .atel-onboard-portal-guide-segment .onboard-portal-guide-img {
+  .atel-onboard-portal-guide#onboard-portal-guide-2 .atel-onboard-portal-guide-segment .onboard-portal-guide-img {
     order: 1;
   }
 }
@@ -28968,4 +29048,21 @@ table td {
 
 .atel-partners-segment {
   max-width: 1180px;
+}
+
+.atel-partners .partners-item {
+  transition: all ease-in-out 300ms;
+}
+.atel-partners .partners-item:hover {
+  scale: 1.1;
+}
+@media (max-width: 575.98px) {
+  .atel-partners .partners-list {
+    gap: 28px !important;
+  }
+}
+@media (max-width: 479.98px) {
+  .atel-partners .partners-list {
+    gap: 20px !important;
+  }
 }/*# sourceMappingURL=main.css.map */

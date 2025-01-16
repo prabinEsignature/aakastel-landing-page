@@ -575,26 +575,27 @@
                 max-width: 1062px;
             }
 
-            &-apps{
+            &-apps {
                 max-width: 375px;
 
-                .banner-apps-item{
+                .banner-apps-item {
                     grid-template-columns: auto 1fr;
 
-                    &-symbol{
-                        background: linear-gradient(#269137, #82A187);
+                    &-symbol {
+                        background: linear-gradient(#269137, #82a187);
                         min-width: 33px;
                         width: 33px;
                     }
 
-                    &:hover{
-                        .banner-apps-item-name{
-                            color: color("primary")!important;
+                    &:hover {
+                        .banner-apps-item-name {
+                            color: color("primary") !important;
                         }
 
-                        .banner-apps-item-btn{
-                            img{
-                                filter: invert(47%) sepia(11%) saturate(2854%) hue-rotate(76deg) brightness(122%) contrast(81%);
+                        .banner-apps-item-btn {
+                            img {
+                                filter: invert(47%) sepia(11%) saturate(2854%) hue-rotate(76deg) brightness(122%)
+                                    contrast(81%);
                             }
                         }
                     }
@@ -603,31 +604,31 @@
         }
     }
 
-    &.atel-onboard-portal{
+    &.atel-onboard-portal {
         margin-top: 100px;
 
-        .top-banner{
-            &-text-group{
+        .top-banner {
+            &-text-group {
                 max-width: 730px;
             }
 
-            &-audio{
+            &-audio {
                 max-width: 288px;
             }
 
-            &-segment{
+            &-segment {
                 grid-template-columns: 1fr auto;
                 column-gap: 150px;
 
-                @include breakpoint-down(xl){
+                @include breakpoint-down(xl) {
                     column-gap: 100px;
                 }
 
-                @include breakpoint-down(lg){
+                @include breakpoint-down(lg) {
                     column-gap: 40px;
                 }
 
-                @include breakpoint-down(md){
+                @include breakpoint-down(md) {
                     grid-template-columns: 100%;
                     row-gap: 40px;
                 }
@@ -635,42 +636,122 @@
         }
     }
 
-    &.atel-customer-stories-pg{
+    &.atel-partners-pg {
         margin-top: 100px;
 
-        .top-banner{
-            &-stories{
-                .banner-stories-item{
-                    &:nth-child(1){
-                        margin-top: 110px;
+        .top-banner {
+            &-stories {
+                .banner-stories-elem {
+                    height: 160px;
+
+                    @include breakpoint-down(xl) {
+                        height: 120px;
+                        border-radius: 12px !important;
                     }
-                    &:nth-child(2){
+
+                    @include breakpoint-down(sm) {
+                        height: 160px;
+                    }
+
+                    @include breakpoint-down(xs) {
+                        height: 100px;
+                    }
+                }
+
+                .banner-stories-item {
+                    &:nth-child(1) {
+                        margin-top: 118px;
+                    }
+                    &:nth-child(2) {
                         margin-top: 60px;
                     }
-                    &:nth-child(3){
+                    &:nth-child(3) {
                         margin-top: 118px;
                     }
-                    &:nth-child(4){
+                    &:nth-child(4) {
                         margin-top: 16px;
                     }
-                    &:nth-child(5){
+                    &:nth-child(5) {
                         margin-top: 80px;
                     }
-                    &:nth-child(7){
-                        margin-top: 84px;
+                    &:nth-child(6) {
+                        margin-top: 16px;
                     }
-                    &:nth-child(8){
-                        margin-top: 82px;
-                    }
-                    &:nth-child(9){
+                    &:nth-child(7) {
                         margin-top: 118px;
+                    }
+                    &:nth-child(8) {
+                        margin-top: 60px;
+                    }
+                    &:nth-child(9) {
+                        margin-top: 118px;
+                    }
+
+                    @include breakpoint-down(lg) {
+                        &:nth-child(1) {
+                            display: none !important;
+                        }
+                        &:nth-child(9) {
+                            display: none !important;
+                        }
+                    }
+
+                    @include breakpoint-down(md) {
+                        &:nth-child(2) {
+                            display: none !important;
+                        }
+                        &:nth-child(8) {
+                            display: none !important;
+                        }
+                    }
+
+                    @include breakpoint-down(sm) {
+                        &:nth-child(3) {
+                            display: none !important;
+                        }
+                        &:nth-child(7) {
+                            display: none !important;
+                        }
                     }
                 }
             }
 
-            &-text-group{
+            &-text-group {
                 max-width: 756px;
                 margin-top: -140px;
+
+                @include breakpoint-down(xl) {
+                    margin-top: -100px;
+                }
+
+                @include breakpoint-down(lg) {
+                    margin-top: -60px;
+                }
+
+                @include breakpoint-down(md) {
+                    margin-top: 0;
+                }
+
+                @include breakpoint-down(sm) {
+                    margin-top: 40px;
+                }
+
+                @include breakpoint-down(xs) {
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+
+    &.atel-customer-stories-pg {
+        background: url("../../assets/customer_stories_banner.png") no-repeat;
+        background-position: right bottom;
+        padding-top: 100px;
+
+        .top-banner {
+            &-segment {
+                min-height: 420px;
+                max-width: 648px;
             }
         }
     }
