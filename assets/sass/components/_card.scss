@@ -92,7 +92,7 @@
         &-top {
             align-items: center;
         }
-        &-bottom{
+        &-bottom {
             display: -webkit-box;
             -webkit-line-clamp: 4;
             -webkit-box-orient: vertical;
@@ -123,6 +123,25 @@
         @include breakpoint-down(sm) {
             padding: 16px 12px !important;
             gap: 12px !important;
+        }
+    }
+}
+
+.stories-card {
+    .card-metadata {
+        background: color("grey-1");
+        min-height: 37px;
+        display: flex;
+        align-items: center;
+        border-radius: 16px;
+
+        &-item{
+            padding: 10px!important;
+            border-right: 1px solid color("grey-3");
+
+            &:last-child{
+                border-right: 0;
+            }
         }
     }
 }

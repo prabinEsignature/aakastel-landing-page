@@ -24088,6 +24088,21 @@ table td {
   }
 }
 
+.stories-card .card-metadata {
+  background: #f5f5f5;
+  min-height: 37px;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+}
+.stories-card .card-metadata-item {
+  padding: 10px !important;
+  border-right: 1px solid #d1d1d1;
+}
+.stories-card .card-metadata-item:last-child {
+  border-right: 0;
+}
+
 .atel-header {
   position: fixed;
   top: 0;
@@ -29053,6 +29068,9 @@ table td {
   .atel-performance-glance .performance-glance-grid {
     gap: 16px !important;
   }
+}
+.atel-performance-glance .performance-glance-item {
+  gap: 20px;
 }
 
 .atel-partners-segment {
