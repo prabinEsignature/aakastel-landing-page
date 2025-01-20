@@ -22763,9 +22763,10 @@ Output
   -moz-column-gap: 8px;
        column-gap: 8px;
   background: transparent;
+  transition: all ease-in-out 300ms;
 }
 .btn-link:hover {
-  color: #3bb24a;
+  color: #3bb24a !important;
   font-weight: 600;
 }
 .btn-link .btn-icon {
@@ -24834,6 +24835,71 @@ table td {
   min-height: 420px;
   max-width: 648px;
 }
+.atel-top-banner.atel-partners-stories {
+  margin-top: 100px;
+}
+.atel-top-banner.atel-partners-stories .top-banner-stories-featured {
+  grid-template-columns: 1fr 400px;
+  gap: 116px;
+}
+@media (max-width: 1399.98px) {
+  .atel-top-banner.atel-partners-stories .top-banner-stories-featured {
+    gap: 100px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .atel-top-banner.atel-partners-stories .top-banner-stories-featured {
+    gap: 80px;
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-top-banner.atel-partners-stories .top-banner-stories-featured {
+    gap: 60px;
+    grid-template-columns: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-top-banner.atel-partners-stories .top-banner-stories-featured {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    gap: 40px;
+  }
+}
+.atel-top-banner.atel-partners-stories .banner-stories-featured-text {
+  max-width: 620px;
+}
+.atel-top-banner.atel-partners-stories .banner-stories-featured-img {
+  max-width: 468px;
+  height: 382px;
+  position: relative;
+}
+@media (max-width: 575.98px) {
+  .atel-top-banner.atel-partners-stories .banner-stories-featured-img {
+    height: 320px;
+  }
+}
+.atel-top-banner.atel-partners-stories .banner-stories-featured-img .squared-corners span {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+}
+.atel-top-banner.atel-partners-stories .banner-stories-featured-img .squared-corners span:nth-child(1) {
+  top: -9px;
+  left: -9px;
+}
+.atel-top-banner.atel-partners-stories .banner-stories-featured-img .squared-corners span:nth-child(2) {
+  top: -9px;
+  right: -9px;
+}
+.atel-top-banner.atel-partners-stories .banner-stories-featured-img .squared-corners span:nth-child(3) {
+  bottom: -9px;
+  left: -9px;
+}
+.atel-top-banner.atel-partners-stories .banner-stories-featured-img .squared-corners span:nth-child(4) {
+  right: -9px;
+  bottom: -9px;
+}
 
 .atel-blogs-pg {
   margin-top: 80px;
@@ -25680,6 +25746,10 @@ table td {
   filter: invert(47%) sepia(11%) saturate(2854%) hue-rotate(76deg) brightness(122%) contrast(81%);
 }
 
+.developers-nav-main {
+  display: none !important;
+}
+
 .atel-footer {
   position: relative;
 }
@@ -25809,6 +25879,15 @@ table td {
     padding-bottom: 8px !important;
     gap: 12px;
   }
+}
+.atel-footer .footer-segment-bottom .tac-list li:nth-child(1) {
+  border-right: 1px solid #e9f2ed;
+  padding-right: 20px;
+  margin-bottom: -2px;
+}
+.atel-footer .footer-segment-bottom .tac-list li:nth-child(1) .tac-link {
+  font-size: 16px !important;
+  pointer-events: none;
 }
 @media (max-width: 991.98px) {
   .atel-footer .footer-segment-bottom .tac-list {
@@ -26387,10 +26466,6 @@ table td {
     padding-right: 12px !important;
     gap: 16px !important;
   }
-}
-.atel-support-industry .atel-downloads .segment-downloads-mobile,
-.atel-support-industry .atel-downloads .segment-downloads-desktop {
-  min-height: 320px;
 }
 .atel-support-industry .atel-downloads .segment-downloads-mobile p,
 .atel-support-industry .atel-downloads .segment-downloads-desktop p {
@@ -28189,6 +28264,7 @@ table td {
     margin-bottom: 16px !important;
   }
 }
+
 .single-post .atel-lt-blogs::after {
   display: none !important;
 }
@@ -28259,6 +28335,22 @@ table td {
 }
 .atel-pricing-pg .pricing-cards .pricing-card {
   transition: all ease-in-out 300ms;
+  width: calc(25% - 16px);
+}
+@media (max-width: 1199.98px) {
+  .atel-pricing-pg .pricing-cards .pricing-card {
+    width: calc(33.3333% - 14px);
+  }
+}
+@media (max-width: 991.98px) {
+  .atel-pricing-pg .pricing-cards .pricing-card {
+    width: calc(50% - 12px);
+  }
+}
+@media (max-width: 575.98px) {
+  .atel-pricing-pg .pricing-cards .pricing-card {
+    width: 100%;
+  }
 }
 .atel-pricing-pg .pricing-cards .pricing-card:hover {
   scale: 1.02;
@@ -28283,7 +28375,7 @@ table td {
     padding: 16px !important;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .atel-compare-plans .plan-block-head {
     padding: 12px !important;
     display: none;
@@ -28879,24 +28971,6 @@ table td {
   display: none !important;
 }
 
-/* WPCF7 */
-.wpcf7-form .wpcf7-response-output {
-  margin: 10px 0 !important;
-  border-radius: 4px !important;
-  padding: 8px 12px !important;
-  background: rgba(59, 178, 74, 0.1);
-  border: 1px solid #3bb24a !important;
-  font-weight: 500;
-  color: #121212 !important;
-}
-.wpcf7-form .wpcf7-not-valid-tip {
-  font-size: 14px !important;
-  margin-top: 2px;
-}
-.wpcf7-form .form-elem > p {
-  margin-bottom: 0 !important;
-}
-
 .atel-apps-type .apps-type-block {
   scroll-margin-top: 80px !important;
 }
@@ -29200,4 +29274,26 @@ table td {
   .atel-client-testimonials .testimonials-item-foot {
     margin-left: 58px;
   }
+}
+
+/* WPCF7 */
+.wpcf7-form .wpcf7-response-output {
+  margin: 10px 0 !important;
+  border-radius: 4px !important;
+  padding: 8px 12px !important;
+  background: rgba(59, 178, 74, 0.1);
+  border: 1px solid #3bb24a !important;
+  font-weight: 500;
+  color: #121212 !important;
+}
+.wpcf7-form .wpcf7-not-valid-tip {
+  font-size: 14px !important;
+  margin-top: 2px;
+}
+.wpcf7-form .form-elem > p {
+  margin-bottom: 0 !important;
+}
+
+.not-found {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

@@ -577,16 +577,16 @@
             &-apps {
                 max-width: 375px;
 
-                .banner-apps-head{
-                    padding-left: 0!important;
-                    padding-top: 0!important;
+                .banner-apps-head {
+                    padding-left: 0 !important;
+                    padding-top: 0 !important;
                 }
 
                 .banner-apps-item {
                     grid-template-columns: auto 1fr;
 
-                    &:last-child{
-                        border-bottom: 0!important;
+                    &:last-child {
+                        border-bottom: 0 !important;
                     }
 
                     &-symbol {
@@ -753,13 +753,88 @@
 
     &.atel-testimonials-pg {
         background: url("../../assets/customer_stories_banner.png") no-repeat;
-        background-position: right bottom!important;
+        background-position: right bottom !important;
         padding-top: 100px;
 
         .top-banner {
             &-segment {
                 min-height: 420px;
                 max-width: 648px;
+            }
+        }
+    }
+
+    &.atel-partners-stories {
+        margin-top: 100px;
+
+        .top-banner {
+            &-stories-featured {
+                grid-template-columns: 1fr 400px;
+                gap: 116px;
+
+                @include breakpoint-down(xxl) {
+                    gap: 100px;
+                }
+
+                @include breakpoint-down(xl) {
+                    gap: 80px;
+                }
+
+                @include breakpoint-down(lg) {
+                    gap: 60px;
+                    grid-template-columns: 100%;
+                }
+
+                @include breakpoint-down(sm) {
+                    padding-left: 16px !important;
+                    padding-right: 16px !important;
+                    gap: 40px;
+                }
+            }
+        }
+
+        .banner-stories {
+            &-featured-text {
+                max-width: 620px;
+            }
+
+            &-featured-img {
+                max-width: 468px;
+                height: 382px;
+                position: relative;
+
+                @include breakpoint-down(sm) {
+                    height: 320px;
+                }
+
+                .squared-corners {
+                    span {
+                        display: inline-block;
+                        width: 17px;
+                        height: 17px;
+                        position: absolute;
+
+                        &:nth-child(1) {
+                            top: -9px;
+                            left: -9px;
+                        }
+
+                        &:nth-child(2) {
+                            top: -9px;
+                            right: -9px;
+                        }
+
+                        &:nth-child(3) {
+                            bottom: -9px;
+                            left: -9px;
+                        }
+
+                        &:nth-child(4) {
+                            right: -9px;
+                            bottom: -9px;
+                        }
+                    }
+                }
             }
         }
     }

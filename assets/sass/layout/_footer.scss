@@ -140,6 +140,19 @@
         }
 
         .tac-list {
+            li {
+                &:nth-child(1) {
+                    border-right: 1px solid color("p-green-50");
+                    padding-right: 20px;
+                    margin-bottom: -2px;
+
+                    .tac-link {
+                        font-size: 16px !important;
+                        pointer-events: none;
+                    }
+                }
+            }
+
             @include breakpoint-down(lg) {
                 justify-content: center;
             }
@@ -207,7 +220,7 @@
     }
 }
 
-#scrollToTopBtn{
+#scrollToTopBtn {
     position: fixed;
     bottom: 20px;
     right: 32px;
@@ -229,6 +242,6 @@
         transform: translateY(20px);
     }
     &:hover {
-        background-color: darken(color("primary"), 5%)!important;
+        background-color: darken(color("primary"), 5%) !important;
     }
 }

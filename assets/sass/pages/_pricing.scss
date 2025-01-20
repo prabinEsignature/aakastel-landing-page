@@ -1,14 +1,14 @@
 .atel-pricing-pg {
-    @include breakpoint-down(xxl){
-        margin-top: 100px!important;
+    @include breakpoint-down(xxl) {
+        margin-top: 100px !important;
     }
 
-    .pricing-header-segment{
-        .pricing-features{
-            &-list{
-                @include breakpoint-down(xs){
+    .pricing-header-segment {
+        .pricing-features {
+            &-list {
+                @include breakpoint-down(xs) {
                     max-width: 240px;
-                    justify-content: flex-start!important;
+                    justify-content: flex-start !important;
                     margin-right: auto;
                     margin-left: auto;
                 }
@@ -22,7 +22,7 @@
             min-height: 60px;
             flex-wrap: nowrap;
 
-            @include breakpoint-down(xs){
+            @include breakpoint-down(xs) {
                 width: 100%;
             }
         }
@@ -31,10 +31,10 @@
             &.nav-link {
                 min-width: 173px;
 
-                @include breakpoint-down(xs){
+                @include breakpoint-down(xs) {
                     width: 100%;
                     min-width: auto;
-                    padding: 4px 8px!important;
+                    padding: 4px 8px !important;
                 }
 
                 &.active {
@@ -58,33 +58,47 @@
                 }
             }
 
-            &-head{
-                @include breakpoint-down(lg){
-                    padding: 20px!important;
+            &-head {
+                @include breakpoint-down(lg) {
+                    padding: 20px !important;
                 }
 
-                @include breakpoint-down(sm){
-                    padding: 16px!important;
-                }
-            }
-
-            &-body{
-                @include breakpoint-down(lg){
-                    padding: 20px!important;
-                }
-
-                @include breakpoint-down(sm){
-                    padding: 16px!important;
+                @include breakpoint-down(sm) {
+                    padding: 16px !important;
                 }
             }
 
-            &-card{
+            &-body {
+                @include breakpoint-down(lg) {
+                    padding: 20px !important;
+                }
+
+                @include breakpoint-down(sm) {
+                    padding: 16px !important;
+                }
+            }
+
+            &-card {
                 transition: $default-transition;
-                &:hover{
+                width: calc(25% - 16px);
+
+                @include breakpoint-down(xl) {
+                    width: calc(33.3333% - 14px);
+                }
+
+                @include breakpoint-down(lg) {
+                    width: calc(50% - 12px);
+                }
+
+                @include breakpoint-down(sm) {
+                    width: 100%;
+                }
+
+                &:hover {
                     scale: 1.02;
                 }
 
-                @include breakpoint-down(xl){
+                @include breakpoint-down(xl) {
                     height: 100%;
                 }
             }
@@ -99,7 +113,7 @@
 }
 
 .atel-compare-plans {
-    .compare-plans-segment{
+    .compare-plans-segment {
         overflow: hidden;
     }
 
@@ -110,12 +124,12 @@
             padding: 16px !important;
         }
 
-        @include breakpoint-down(lg) {
+        @include breakpoint-down(md) {
             padding: 12px !important;
             display: none;
         }
     }
-    
+
     div[class*="plan-label"] {
         border-bottom: 1px solid color("grey-3");
         min-height: 68px;
@@ -143,17 +157,19 @@
         align-items: center;
         justify-content: center;
 
-        @include breakpoint-down(md){
+        @include breakpoint-down(md) {
             justify-content: space-between;
             gap: 8px;
         }
     }
 
-    .plan-block{
+    .plan-block {
         .btn-white-black {
-            &:hover, &:active, &:focus {
+            &:hover,
+            &:active,
+            &:focus {
                 background: color("p-green-50") !important;
-                border-color: color("primary")!important;
+                border-color: color("primary") !important;
             }
         }
     }

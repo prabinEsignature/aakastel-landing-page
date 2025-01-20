@@ -548,7 +548,7 @@
 
         .segment-downloads-mobile,
         .segment-downloads-desktop {
-            min-height: 320px;
+            // min-height: 320px;
 
             p {
                 margin-top: 8px;
@@ -727,13 +727,13 @@
     }
 }
 
-@mixin translateY {
-    @for $i from 0 through 15 {
-        &:nth-child(#{$i}) {
-            transform: translateY(#{$i * 16}px);
-        }
-    }
-}
+// @mixin translateY {
+//     @for $i from 0 through 15 {
+//         &:nth-child(#{$i}) {
+//             transform: translateY(#{$i * 16}px);
+//         }
+//     }
+// }
 
 .key-products-block {
     // position: sticky;
