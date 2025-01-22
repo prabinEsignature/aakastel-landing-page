@@ -901,6 +901,16 @@ $z-index-navbar-toggler: 1010;
       }
     }
   }
+
+  .submenu-item-main{
+    .submenu-item{
+      &-icon{
+        img{
+          filter: invert(1) brightness(0);
+        }
+      }
+    }
+  }
 }
 
 .current-menu-parent, .current_page_item, .current-menu-ancestor{

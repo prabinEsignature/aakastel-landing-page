@@ -52,8 +52,7 @@
         }
 
         .features-tabs-btn {
-            &.active,
-            &[aria-selected="true"] {
+            &.active {
                 color: color("night") !important;
                 background: color("p-green-50") !important;
                 border-radius: 6px !important;
@@ -287,9 +286,11 @@
 
             &-l {
                 min-height: 72px;
+                transition: $default-transition;
 
                 p {
                     margin-right: 90px;
+                    transition: $default-transition;
 
                     @include breakpoint-down(sm) {
                         margin-right: 0;
@@ -400,6 +401,15 @@
                     }
                 }
             }
+
+            &:has(.compare-data-item-m:hover) {
+                .compare-data-item-l {
+                    background: color("black") !important;
+                    p {
+                        color: color("white") !important;
+                    }
+                }
+            }
         }
     }
 }
@@ -447,6 +457,14 @@
             transition: $default-transition;
             &:hover {
                 color: color("primary") !important;
+            }
+        }
+
+        .industry-feature-item {
+            img {
+                &[class*="icon-"] {
+                    filter: invert(1) brightness(0);
+                }
             }
         }
     }

@@ -65,6 +65,8 @@
 
         &:hover {
             background: color("white") !important;
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+            transform: scale(1.02, 1.02);
 
             .badge {
                 background: color("primary") !important;
@@ -134,14 +136,43 @@
         display: flex;
         align-items: center;
         border-radius: 16px;
+        overflow: hidden;
 
-        &-item{
-            padding: 10px!important;
+        &-item {
+            padding: 10px !important;
             border-right: 1px solid color("grey-3");
+            transition: $default-transition;
 
-            &:last-child{
+            &:last-child {
                 border-right: 0;
             }
+
+            &:hover {
+                background: color("primary") !important;
+                color: color("white") !important;
+            }
+        }
+    }
+
+    .card-title {
+        transition: $default-transition;
+    }
+
+    .card-img {
+        img {
+            transition: $default-transition;
+        }
+    }
+
+    &:hover {
+        .card-img {
+            img {
+                scale: 1.05;
+            }
+        }
+        .card-title {
+            color: color("primary") !important;
+            text-decoration: underline;
         }
     }
 }

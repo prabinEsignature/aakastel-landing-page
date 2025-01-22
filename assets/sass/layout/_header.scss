@@ -64,6 +64,25 @@
         }
 
         .top-banner {
+            &-ttl {
+                .text-primary {
+                    background: linear-gradient(
+                        to right,
+                        lighten(color("primary"), 5%) 20%,
+                        darken(color("primary"), 2%) 40%,
+                        darken(color("primary"), 0%) 60%,
+                        lighten(color("primary"), 12%) 80%
+                    );
+                    background-size: 200% auto;
+                    color: color("primary");
+                    background-clip: text;
+                    text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: shine 6s linear infinite;
+                    padding: 0 1px;
+                }
+            }
             &-text-group {
                 max-width: 660px;
 
@@ -347,7 +366,7 @@
             }
 
             &-text-group {
-                max-width: 440px;
+                max-width: 520px;
 
                 @include breakpoint-down(lg) {
                     margin-right: auto;
@@ -755,6 +774,12 @@
         background: url("../../assets/customer_stories_banner.png") no-repeat;
         background-position: right bottom !important;
         padding-top: 100px;
+
+        @include breakpoint-down(md) {
+            background:
+                linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                url("../../assets/customer_stories_banner.png") no-repeat;
+        }
 
         .top-banner {
             &-segment {

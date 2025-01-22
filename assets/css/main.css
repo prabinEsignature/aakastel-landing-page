@@ -21497,7 +21497,7 @@ html {
   letter-spacing: normal;
 }
 
-.wpcf7-form .wpcf7-response-output, p, .text-8xl, .text-7xl, .text-6xl, .text-5xl, .text-4xl, .text-3xl, .text-2xl, .text-xl, .text-lg, .text-base, .text-sm, .text-xs {
+.wpcf7-form .wpcf7-response-output, .toast-body p, p, .text-8xl, .text-7xl, .text-6xl, .text-5xl, .text-4xl, .text-3xl, .text-2xl, .text-xl, .text-lg, .text-base, .text-sm, .text-xs {
   font-family: "Karla", sans-serif;
   font-weight: 600;
   color: #757575;
@@ -21987,6 +21987,11 @@ a:visited, a:link {
     transform: translateX(-6px) rotate(-1.2deg);
   }
 }
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
 .animate-none {
   animation: none;
 }
@@ -22082,6 +22087,11 @@ a:visited, a:link {
   }
   75% {
     transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
   }
 }
 .lazyload,
@@ -22598,6 +22608,12 @@ Output
   color: #fff !important;
   border: 1px solid #3bb24a !important;
 }
+.btn-primary .btn-icon {
+  transition: all ease-in-out 300ms;
+}
+.btn-primary:hover .btn-icon {
+  margin-left: 4px;
+}
 .btn-primary:hover, .btn-primary:focus, .btn-primary:disabled, .btn-primary:active, .btn-primary.disabled, .btn-primary.active {
   background: #121212 !important;
   border-color: #121212 !important;
@@ -22614,6 +22630,12 @@ Output
   background: transparent !important;
   color: #3bb24a !important;
   border: 1px solid #3bb24a !important;
+}
+.btn-primary-outline .btn-icon {
+  transition: all ease-in-out 300ms;
+}
+.btn-primary-outline:hover .btn-icon {
+  margin-left: 4px;
 }
 .btn-primary-outline:hover, .btn-primary-outline:focus, .btn-primary-outline:disabled, .btn-primary-outline:active, .btn-primary-outline.disabled, .btn-primary-outline.active {
   background: #3bb24a !important;
@@ -22632,6 +22654,12 @@ Output
   color: #3bb24a !important;
   border: 1px solid transparent !important;
 }
+.btn-transparent .btn-icon {
+  transition: all ease-in-out 300ms;
+}
+.btn-transparent:hover .btn-icon {
+  margin-left: 4px;
+}
 .btn-transparent:hover, .btn-transparent:focus, .btn-transparent:disabled, .btn-transparent:active, .btn-transparent.disabled, .btn-transparent.active {
   background: #fff !important;
   border-color: #3bb24a !important;
@@ -22648,6 +22676,12 @@ Output
   background: transparent !important;
   color: #fff !important;
   border: 1px solid transparent !important;
+}
+.btn-transparent-white .btn-icon {
+  transition: all ease-in-out 300ms;
+}
+.btn-transparent-white:hover .btn-icon {
+  margin-left: 4px;
 }
 .btn-transparent-white:hover, .btn-transparent-white:focus, .btn-transparent-white:disabled, .btn-transparent-white:active, .btn-transparent-white.disabled, .btn-transparent-white.active {
   background: transparent !important;
@@ -22666,6 +22700,12 @@ Output
   color: #3bb24a !important;
   border: 1px solid #e5e5e5 !important;
 }
+.btn-white-primary .btn-icon {
+  transition: all ease-in-out 300ms;
+}
+.btn-white-primary:hover .btn-icon {
+  margin-left: 4px;
+}
 .btn-white-primary:hover, .btn-white-primary:focus, .btn-white-primary:disabled, .btn-white-primary:active, .btn-white-primary.disabled, .btn-white-primary.active {
   background: #3bb24a !important;
   border-color: #3bb24a !important;
@@ -22682,6 +22722,12 @@ Output
   background: #fff !important;
   color: #121212 !important;
   border: 1px solid #e5e5e5 !important;
+}
+.btn-white-black .btn-icon {
+  transition: all ease-in-out 300ms;
+}
+.btn-white-black:hover .btn-icon {
+  margin-left: 4px;
 }
 .btn-white-black:hover, .btn-white-black:focus, .btn-white-black:disabled, .btn-white-black:active, .btn-white-black.disabled, .btn-white-black.active {
   background: #fff !important;
@@ -22700,6 +22746,12 @@ Output
   color: #121212 !important;
   border: 1px solid #e5e5e5 !important;
 }
+.btn-white-primary-outline .btn-icon {
+  transition: all ease-in-out 300ms;
+}
+.btn-white-primary-outline:hover .btn-icon {
+  margin-left: 4px;
+}
 .btn-white-primary-outline:hover, .btn-white-primary-outline:focus, .btn-white-primary-outline:disabled, .btn-white-primary-outline:active, .btn-white-primary-outline.disabled, .btn-white-primary-outline.active {
   background: transparent !important;
   border-color: #3bb24a !important;
@@ -22717,6 +22769,12 @@ Output
   color: #3bb24a !important;
   border: 1px solid #e5e5e5 !important;
 }
+.btn-grey-2-outline .btn-icon {
+  transition: all ease-in-out 300ms;
+}
+.btn-grey-2-outline:hover .btn-icon {
+  margin-left: 4px;
+}
 .btn-grey-2-outline:hover, .btn-grey-2-outline:focus, .btn-grey-2-outline:disabled, .btn-grey-2-outline:active, .btn-grey-2-outline.disabled, .btn-grey-2-outline.active {
   background: #e9f2ed !important;
   border-color: #e5e5e5 !important;
@@ -22733,6 +22791,12 @@ Output
   background: transparent !important;
   color: #fff !important;
   border: 1px solid #e5e5e5 !important;
+}
+.btn-transparent-white-outline .btn-icon {
+  transition: all ease-in-out 300ms;
+}
+.btn-transparent-white-outline:hover .btn-icon {
+  margin-left: 4px;
 }
 .btn-transparent-white-outline:hover, .btn-transparent-white-outline:focus, .btn-transparent-white-outline:disabled, .btn-transparent-white-outline:active, .btn-transparent-white-outline.disabled, .btn-transparent-white-outline.active {
   background: #fff !important;
@@ -23255,6 +23319,15 @@ input[type=button].btn-block {
     opacity: 0;
   }
 }
+.toast {
+  --bs-toast-max-width: 560px;
+}
+.toast-body p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #121212;
+}
+
 @media (max-width: 575.98px) {
   .modal-customized {
     padding-right: 0 !important;
@@ -24037,6 +24110,8 @@ table td {
 }
 .blog-cards .card:hover {
   background: #fff !important;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02, 1.02);
 }
 .blog-cards .card:hover .badge {
   background: #3bb24a !important;
@@ -24095,13 +24170,32 @@ table td {
   display: flex;
   align-items: center;
   border-radius: 16px;
+  overflow: hidden;
 }
 .stories-card .card-metadata-item {
   padding: 10px !important;
   border-right: 1px solid #d1d1d1;
+  transition: all ease-in-out 300ms;
 }
 .stories-card .card-metadata-item:last-child {
   border-right: 0;
+}
+.stories-card .card-metadata-item:hover {
+  background: #3bb24a !important;
+  color: #fff !important;
+}
+.stories-card .card-title {
+  transition: all ease-in-out 300ms;
+}
+.stories-card .card-img img {
+  transition: all ease-in-out 300ms;
+}
+.stories-card:hover .card-img img {
+  scale: 1.05;
+}
+.stories-card:hover .card-title {
+  color: #3bb24a !important;
+  text-decoration: underline;
 }
 
 .atel-header {
@@ -24171,6 +24265,17 @@ table td {
   .atel-top-banner.atel-home-pg .top-banner-segment {
     margin: 20px auto;
   }
+}
+.atel-top-banner.atel-home-pg .top-banner-ttl .text-primary {
+  background: linear-gradient(to right, #45c155 20%, #38aa47 40%, #3bb24a 60%, #60ca6d 80%);
+  background-size: 200% auto;
+  color: #3bb24a;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+  padding: 0 1px;
 }
 .atel-top-banner.atel-home-pg .top-banner-text-group {
   max-width: 660px;
@@ -24435,7 +24540,7 @@ table td {
   }
 }
 .atel-top-banner.atel-whatsapp-business-pg .top-banner-text-group {
-  max-width: 440px;
+  max-width: 520px;
 }
 @media (max-width: 991.98px) {
   .atel-top-banner.atel-whatsapp-business-pg .top-banner-text-group {
@@ -24830,6 +24935,11 @@ table td {
   background: url("../../assets/customer_stories_banner.png") no-repeat;
   background-position: right bottom !important;
   padding-top: 100px;
+}
+@media (max-width: 767.98px) {
+  .atel-top-banner.atel-testimonials-pg {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../assets/customer_stories_banner.png") no-repeat;
+  }
 }
 .atel-top-banner.atel-testimonials-pg .top-banner-segment {
   min-height: 420px;
@@ -25738,6 +25848,9 @@ table td {
 .products-nav .submenu-grid-sp-wrapper .submenu-grid > li:first-child .submenu-item-text {
   color: #fff !important;
 }
+.products-nav .submenu-item-main .submenu-item-icon img {
+  filter: invert(1) brightness(0);
+}
 
 .current-menu-parent .custom-menu-item-text, .current_page_item .custom-menu-item-text, .current-menu-ancestor .custom-menu-item-text {
   color: #3bb24a !important;
@@ -26018,7 +26131,7 @@ table td {
     margin: 4px 0;
   }
 }
-.atel-features .features-tabs .features-tabs-btn.active, .atel-features .features-tabs .features-tabs-btn[aria-selected=true] {
+.atel-features .features-tabs .features-tabs-btn.active {
   color: #121212 !important;
   background: #e9f2ed !important;
   border-radius: 6px !important;
@@ -26219,9 +26332,11 @@ table td {
 }
 .atel-upgrade .upgrade-compare-data .compare-data-item-l {
   min-height: 72px;
+  transition: all ease-in-out 300ms;
 }
 .atel-upgrade .upgrade-compare-data .compare-data-item-l p {
   margin-right: 90px;
+  transition: all ease-in-out 300ms;
 }
 @media (max-width: 575.98px) {
   .atel-upgrade .upgrade-compare-data .compare-data-item-l p {
@@ -26331,6 +26446,12 @@ table td {
     margin-left: 0;
   }
 }
+.atel-upgrade .upgrade-compare-data .compare-data-item:has(.compare-data-item-m:hover) .compare-data-item-l {
+  background: #000 !important;
+}
+.atel-upgrade .upgrade-compare-data .compare-data-item:has(.compare-data-item-m:hover) .compare-data-item-l p {
+  color: #fff !important;
+}
 
 .atel-support-industry-container {
   max-width: 1104px !important;
@@ -26372,6 +26493,9 @@ table td {
 .atel-support-industry .support-industry-accordion .industry-feature-item:hover,
 .atel-support-industry .support-industry-accordion .industry-feature-item p:hover {
   color: #3bb24a !important;
+}
+.atel-support-industry .support-industry-accordion .industry-feature-item img[class*=icon-] {
+  filter: invert(1) brightness(0);
 }
 @media (max-width: 991.98px) {
   .atel-support-industry .business-companies {
@@ -29072,6 +29196,9 @@ table td {
 .atel-onboard-portal-guide .onboard-portal-guide-accordion .accordion-button {
   transition: all ease-in-out 300ms;
 }
+.atel-onboard-portal-guide .onboard-portal-guide-accordion .accordion-button:focus {
+  box-shadow: 0 0 0.25rem rgba(59, 178, 74, 0.18);
+}
 .atel-onboard-portal-guide .onboard-portal-guide-accordion .accordion-button-right span[class*=text-] {
   color: rgb(38, 145, 55) !important;
 }
@@ -29250,7 +29377,12 @@ table td {
   right: auto;
   top: calc(100% - 16px);
   transform: translateX(-50%);
-  z-index: -1;
+  border: 4px solid #fff;
+  outline: 1px solid #c7e1e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
 }
 @media (max-width: 1199.98px) {
   .atel-client-testimonials .testimonials-item-img {
@@ -29296,4 +29428,8 @@ table td {
 
 .not-found {
   text-align: center;
+}
+
+.rc-anchor-content {
+  background: #fff !important;
 }/*# sourceMappingURL=main.css.map */

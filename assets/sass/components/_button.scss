@@ -244,6 +244,16 @@ $button-variants: (
     color: map-get($props, text) !important;
     border: $btn-border-width solid map-get($props, border-color) !important;
 
+    .btn-icon {
+      transition: $default-transition;
+    }
+
+    &:hover {
+      .btn-icon {
+        margin-left: 4px;
+      }
+    }
+
     &:hover,
     &:focus,
     &:disabled,
@@ -254,7 +264,7 @@ $button-variants: (
       border-color: map-get($props, hover-border-color) !important;
       color: map-get($props, hover-text-color) !important;
 
-      .btn-text{
+      .btn-text {
         color: map-get($props, hover-text-color) !important;
       }
     }
@@ -289,7 +299,7 @@ $button-variants: (
   transition: $default-transition;
 
   &:hover {
-    color: map-get($colors, "primary")!important;
+    color: map-get($colors, "primary") !important;
     font-weight: 600;
   }
 
@@ -339,11 +349,11 @@ input[type="button"] {
   }
 }
 
-.btn-see-how{
+.btn-see-how {
   gap: 10px;
-  border: none!important;
+  border: none !important;
 
-  .btn-text{
+  .btn-text {
     color: rgba(141, 194, 218, 1);
   }
 }

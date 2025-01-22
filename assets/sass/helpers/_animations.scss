@@ -102,3 +102,9 @@ $animations: (
     transform: translateX(-6px) rotate(-1.2deg);
   }
 }
+
+@keyframes shine {
+  to {
+      background-position: 200% center;
+  }
+}

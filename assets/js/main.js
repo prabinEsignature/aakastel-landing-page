@@ -500,6 +500,17 @@ document.body.addEventListener("click", (event) => {
     changePathColor(dataLocationId);
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const presenceLocationNames = document.querySelectorAll(".presence-location-name");
+  presenceLocationNames.forEach((presenceLocationName) => {
+    if (presenceLocationName.getAttribute("data-location-default") === "true") {
+      const dataLocationId = presenceLocationName.getAttribute("data-location-id");
+      changePathColor(dataLocationId);
+    }
+  });
+});
+
 /* ####### EOF PRESENCE MAP - DISTRICT MAPPING ####### */
 
 /* ####### VIDEO PLAY/PAUSE FEATURE ####### */
@@ -744,10 +755,10 @@ const createTableOfContent = () => {
 
     $("html, body").animate(
       {
-        scrollTop: target.offset().top - 100, 
+        scrollTop: target.offset().top - 100,
       },
       200,
-      "swing" 
+      "swing"
     );
 
     $(".blogs-bookmark-item a").removeClass("active");
@@ -778,3 +789,15 @@ const createTableOfContent = () => {
 };
 
 createTableOfContent();
+
+const toastTrigger = document.getElementById('cookiesToastBtn');
+const toastCookiesBox = document.getElementById('cookiesToast');
+const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastCookiesBox);
+
+toastBootstrap.show();
+
+if (toastTrigger) {
+  toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show()
+  });
+}

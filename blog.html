@@ -3225,7 +3225,7 @@
                 <a href="#" class="tac-link font-bold text-xs tracking-04 text-light-cyprus">Refund Policy</a>
               </li>
               <li>
-                <a href="#" class="tac-link font-bold text-xs tracking-04 text-light-cyprus">Cookies</a>
+                <a href="javascript:void(0)" class="tac-link font-bold text-xs tracking-04 text-light-cyprus" id="cookiesToastBtn">Cookies</a>
               </li>
               <li>
                 <a href="#" class="tac-link font-bold text-xs tracking-04 text-light-cyprus">Ncell - Terms &
@@ -3412,6 +3412,31 @@
   <!-- END OF SIGN UP MODAL -->
 
   <div class="cursor"></div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="cookiesToast" class="toast shadow-lg border-grey-1-1 bg-white rounded-8" role="alert" aria-live="assertive" aria-atomic="true"
+      data-bs-autohide="false">
+      <div class="toast-header d-flex align-items-center justify-content-between p-custom-3">
+        <div class="d-flex align-items-center gap-3">
+          <h3 class="my-0 font-semibold text-xl text-night">We value your privacy</h3>
+        </div>
+        <button type="button" class="btn-close me-1" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body p-custom-4">
+        <div class="text-night text-sm font-normal">
+          <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By
+            continuing to use our site, you consent to our use of cookies. You can manage your preferences and opt out
+            by
+            clicking the Settings button below. For more information about how CloudTalk uses cookies and processes your
+            data, please see our <a href="https://aakashtel.com/privacy-policy/" class="text-primary">Privacy Notice →</a>.</p>
+        </div>
+        <div class="d-flex gap-2">
+          <button type="button" class="btn btn-primary-outline flex-1">Manage cookies</button>
+          <button type="button" class="btn btn-primary flex-1">Accept</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- JQUERY JS -->
   <script src="assets/js/lib/jquery_3.7.1.js"></script>

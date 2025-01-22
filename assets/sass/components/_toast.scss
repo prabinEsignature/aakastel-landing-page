@@ -155,3 +155,16 @@ $toast-shadow-hover: 0 3px 9px 0 rgb(0 0 0 / 35%);
 //     <div class="toasts-text">Hllo chrisnte</div>
 //   </div>
 // </div>
+
+.toast{
+  --bs-toast-max-width: 560px;
+
+  &-body{
+    p{
+      @extend %text-base;
+      font-size: 16px;
+      font-weight: 500;
+      color: color("night");
+    }
+  }
+}
